@@ -1,0 +1,212 @@
+baseURL: https://www.freecad.org
+title: FreeCAD
+theme: FC
+
+defaultContentLanguage: en
+paginate: 6 # Sets the max number of listed posts (split) on home, section, taxonomy, and term pages
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: # Sets Google Analytics G-MEASUREMENT_ID
+
+# FC Theme parameters
+
+params:
+  env: production # Enables google analytics, opengraph and schema.
+  description: Your free and open-source parametric modeler
+  author: FreeCAD
+  DateFormat: 2006-01-02
+  logo: /FreeCAD-symbol.svg
+  mainSections: news
+  defaultTheme: auto
+  ShowAuthor: true
+  ShowReadingTime: true
+  ShowWordCount: false
+  ShowShareButtons: true
+  displayFullLangName: true
+  ShowPaginationLinks: true
+  ShowCopyCodeButton: true
+  ShowToc: true
+  TocOpen: false
+  TocSide: left
+  EnableInstantClick: true
+  EnableImageZoom: true
+  EnableLightbox: false # NOTE: Does not work for now if EnableInstantClick is true, because of JavaScript conflicts.
+
+  socialIcons:
+    - name: github-simple
+      url: https://github.com/FreeCAD
+
+permalinks:
+  /announcement: /:slugorfilename
+  /event: /:slugorfilename
+  /update: /:slugorfilename
+  /showcase: /:slugorfilename
+  /highlight: /:slugorfilename
+  /tutorial: /:slugorfilename
+
+# Languages
+
+languages:
+  en:
+    disabled: false
+    languageName: English
+    languageCode: en-US
+    languageDirection: ltr
+    weight: 1
+    params:
+      subtitle: Your own free and open-source parametric modeler
+      languageFlag: 🇬🇧
+
+  fr:
+    disabled: false
+    languageName: Français
+    languageCode: fr-FR
+    languageDirection: ltr
+    weight: 2
+    params:
+      subtitle: Votre modeleur paramétrique libre et open-source
+      languageFlag: 🇫🇷
+
+  de:
+    disabled: false
+    languageName: Deutsch
+    languageCode: de-DE
+    languageDirection: ltr
+    weight: 3
+    params:
+      subtitle: Ihr parametrischer frei und Open-Source 3D-Modellierer
+      languageFlag: 🇩🇪
+
+  it:
+    disabled: false
+    languageName: Italiano
+    languageCode: it-IT
+    languageDirection: ltr
+    weight: 4
+    params:
+      subtitle: Il tuo modellatore parametrico libero e open-source
+      languageFlag: 🇮🇹
+
+  es:
+    disabled: false
+    languageName: Español
+    languageCode: es-ES
+    languageDirection: ltr
+    weight: 5
+    params:
+      subtitle: Tu propio modelador paramétrico libre y de código abierto
+      languageFlag: 🇪🇸
+
+  br:
+    disabled: false
+    languageName: Português brasileiro
+    languageCode: pt-BR
+    languageDirection: ltr
+    weight: 6
+    params:
+      subtitle: Seu próprio modelador paramétrico livre e de código aberto
+      languageFlag: 🇧🇷
+
+  pl:
+    disabled: false
+    languageName: Polski
+    languageCode: pl-PL
+    languageDirection: ltr
+    weight: 7
+    params:
+      subtitle: Twój własny program do parametrycznego modelowania wolne i otwarte
+      languageFlag: 🇵🇱
+
+  nl:
+    disabled: false
+    languageName: Nederlands
+    languageCode: nl-NL
+    languageDirection: ltr
+    weight: 8
+    params:
+      subtitle: Jouw eigen parametrische vrije en opensource tekenprogramma
+      languageFlag: 🇳🇱
+
+  ru:
+    disabled: false
+    languageName: Русский
+    languageCode: ru-RU
+    languageDirection: ltr
+    weight: 9
+    params:
+      subtitle: Ваша собственная программа для параметрического моделирования с открытым исходным кодом
+      languageFlag: 🇷🇺
+
+  zh:
+    disabled: false
+    languageName: 汉语
+    languageCode: zh-CN
+    languageDirection: ltr
+    weight: 10
+    params:
+      subtitle: 你自己的免费开源参数建模器
+      languageFlag: 🇨🇳
+
+  ar:
+    disabled: false
+    languageName: عربي
+    languageCode: ar
+    languageDirection: rtl
+    weight: 11
+    params:
+      subtitle: أداة النمذجة البارامترية المجانية والمفتوحة المصدر الخاصة بك
+      languageFlag: 🇸🇦
+
+# Others Hugo settings
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+markup:
+  goldmark:
+    duplicateResourceFiles: false # NOTE: False by default for Markdown files since Hugo 0.123, keep this setting for now
+    renderHooks:
+      link:
+        enableDefault: true
+      image:
+        enableDefault: true
+    renderer:
+      unsafe: true
+  highlight:
+    style: dracula # NOTE: Currently overriden by FC/assets/css/highlight.css, keep this setting for now
+    lineNos: false
+    noClasses: false
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: static # Allows to perform modifications via pipes on files in static folder
+      target: assets
+
+privacy:
+  googleAnalytics:
+    disable: false
+    respectDoNotTrack: true
+  vimeo:
+    disabled: false
+    enableDNT: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
