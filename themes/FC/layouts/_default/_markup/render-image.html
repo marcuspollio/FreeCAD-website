@@ -1,5 +1,5 @@
 {{- $url := urls.Parse .Destination -}}
-{{- $sizes := (slice "640" "960" "1344") }}
+{{- $sizes := (slice "1312") }}
 {{- if $url.Scheme -}}
 
   {{/* third party image */}}
@@ -37,7 +37,7 @@
                 {{ end }}
               {{- end -}}
               {{$img.Permalink }} {{printf "%dw" ($img.Width)}}"
-              sizes="(min-width: 1024px) 1344px, 100vw" src="{{ $img.RelPermalink | safeURL }}"
+              sizes="(min-width: 1024px) 1312px, 100vw" src="{{ $img.RelPermalink | safeURL }}"
               width="{{ $img.Width }}" height="{{ $img.Height }}"
               type="" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . }}" {{ end }} >
     {{- end -}}
