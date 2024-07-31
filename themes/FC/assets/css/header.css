@@ -1,0 +1,233 @@
+/* This CSS stylesheet defines the style of the site header (navigation menu) */
+
+
+
+.site-header {
+    background: var(--bg);
+}
+
+.site-nav {
+    width: var(--width);
+    height: var(--header-height);
+    margin: auto;
+    padding: 0 var(--gap);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.logo,
+.menu-list,
+.language-dropdown,
+.theme-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    padding: 0;
+    list-style: none;
+}
+
+.logo a {
+    font-family: 'Evolventa';
+    font-size: var(--xl);
+    font-weight: 700;
+}
+
+.logo a:hover {
+    color: var(--link-hover-color);
+}
+
+.logo a img,
+.logo a svg {
+    float: left;
+    height: 2.5rem;
+    margin-inline-end: 1rem;
+}
+
+#theme-toggle svg {
+    height: 1.5rem;
+    color: var(--tertiary);
+}
+
+#theme-toggle svg:hover {
+    color: var(--link-hover-color);
+}
+
+body.dark #moon {
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+/* Menu in non-media mode */
+
+.menu-toggle {
+    color: var(--tertiary);
+    font-size: var(--l);
+}
+
+.menu:has(#menu-list:popover-open) .hamburger {
+    display: none;
+}
+
+.menu .cross {
+    display: none;
+}
+
+.menu:has(#menu-list:popover-open) .cross {
+    display: block;
+}
+
+.menu-list {
+    word-break: keep-all;
+    white-space: nowrap;
+    gap: var(--gap);
+}
+
+.menu-list a {
+    line-height: 1.5rem;
+    font-size: var(--m);
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.menu-list a:hover,
+.menu-list-media a:hover {
+    color: var(--link-hover-color);
+}
+
+.menu-list #menu-active:not(.border) {
+    color: var(--primary);
+    box-shadow: 0 2px 0 var(--primary);
+    border-color: var(--primary);
+}
+
+.menu-list #menu-active:hover {
+    color: var(--link-hover-color);
+    box-shadow: var(--link-hover-underline-shadow)
+}
+
+.menu-list .external-link {
+    position: relative;
+}
+
+.menu-list .external-link svg {
+    width: 1rem;
+    height: auto;
+    position: relative;
+    margin-inline: 0.5rem;
+}
+
+.menu-list .border {
+    padding: 0.5rem;
+    box-shadow: none;
+    background: var(--entry);
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+.menu-list .border:hover {
+    border: var(--border-hover);
+}
+
+.menu-list .border#menu-active  {
+    color: var(--primary);
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+.menu-list .border#menu-active:hover {
+    color: var(--link-hover-color);
+    box-shadow: none;
+    border: var(--border-hover);
+}
+
+/* Languages switcher and Menu in media mode */
+
+.menu-toggle,
+.language-dropdown {
+    position: relative;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--entry);
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+.menu-toggle:hover,
+.language-dropdown:hover {
+    border: var(--border-hover);
+}
+
+.language-dropdown svg {
+    height: 1.5rem;
+    color: var(--tertiary);
+    cursor: pointer;
+}
+
+.language-dropdown svg:hover {
+    color: var(--link-hover-color);
+}
+
+#lang-list {
+    display: none;
+    inset: 0;
+}
+
+#menu-list:popover-open,
+#lang-list:popover-open {
+    position: absolute;
+    display: flex;
+    inset: unset;
+    flex-direction: column;
+    width: 15rem;
+    top: calc(var(--header-height) + 1rem);
+    text-align: center;
+    line-height: 1rem;
+    background: var(--entry);
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    color: var(--tertiary);
+}
+
+/* TODO: after refactoring the two menu lists in HTML, cleanup the menu-list-media class, also in media.css  */
+
+.menu-list-media,
+.language-list {
+    list-style: none;
+}
+
+.menu-list-media li a,
+.language-list li a {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.menu-list-media li #menu-active-media,
+.language-list li .language-active {
+    background-color: var(--theme);
+    border-radius: var(--radius);
+    padding: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.menu-list-media li #menu-active-media:hover,
+.language-list li .language-active:hover {
+    color: var(--link-hover-color);
+}
+
+.language-list li .language-not-active {
+    color: var(--tertiary);
+}
+
+.language-list li .language-not-active:hover {
+    color: var(--link-hover-color);
+}

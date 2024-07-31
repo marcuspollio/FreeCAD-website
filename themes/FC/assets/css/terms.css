@@ -1,0 +1,27 @@
+/* This CSS stylesheet defines the style of terms (tag items) */
+
+
+.terms-tags li {
+    display: inline-block;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 10px 20px;
+    background: var(--entry);
+    border: var(--border);
+    border-radius: var(--radius);
+    transition: transform 0.3s ease;
+}
+
+.terms-tags a:hover {
+    border: var(--border-hover);
+}
+
+.terms-tags a:active {
+    background: var(--entry);
+    transform: scale(0.9);
+    transition: var(--link-transition);
+}

@@ -1,0 +1,19 @@
+{{/* get the latest article with the "hero" parameters in front matter */}}
+{{ with (index (where (site.RegularPages | lang.Merge .Sites.First.RegularPages) "Params.hero" true) 0) }}
+<header class="hero-header">
+    <h1 class="hero-title">
+        <a class="hero" href="{{ .RelPermalink | relLangURL }}">{{ .LinkTitle }}</a>
+    </h1>
+    {{- if .Description }}
+        <div class="hero-description">
+            <span>{{ .Description | $.Page.RenderString }}</span>
+        </div>
+    {{- end }}
+    {{- if .Params.link }}
+    <div class="hero-button">
+        <a href="{{ .Params.link | relLangURL }}">{{ .Params.text }}</a>
+    </div>
+    {{- end }}
+    {{- partial "cover.html" . }}
+</header>
+{{ end }}

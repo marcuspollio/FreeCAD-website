@@ -1,0 +1,23 @@
+/* This CSS stylesheet defines the style of the gallery shortcode in the content of single pages */
+
+
+.gallery {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    align-content: space-evenly;
+    gap: calc((var(--width) / 15) - (1 * var(--gap)));
+    list-style-type: none;
+}
+
+.gallery li {
+    margin: 0;
+}
+
+.gallery li img {
+    margin: 0;
+    width: calc(var(--width) / 5);
+    height: calc(var(--width) / 5);
+}

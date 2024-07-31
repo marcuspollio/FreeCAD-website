@@ -1,0 +1,195 @@
+/* This CSS stylesheet defines the style for different media devices to have a responsive and fluid layout */
+
+/* For small-screen devices such as smartphones */
+@media screen and (max-width: 750px) {
+
+    /* For fluid typography and layout */
+    html {
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+
+
+    /* Theme-vars */
+
+    :root {
+        --width: 100vw;
+        --header-height: 4rem;
+        --footer-height: 4rem;
+        --radius: 0.5rem;
+        --gap: 1rem;
+        --s: 0.8rem;
+        --m: 0.9rem;
+        --l: 1.0rem;
+        --xl: 1.2rem;
+        --xxl: 1.4rem;
+    }
+
+
+    /* Navigation header */
+
+    .site-nav {
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .menu {
+        order: 4;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .language-dropdown {
+        order: 3;
+    }
+
+    #menu-list:popover-open,
+    #lang-list:popover-open {
+        position: fixed;
+        left: 1rem;
+        width: calc(100vw - 2rem);
+    }
+
+    .theme-switch {
+        order: 2;
+        margin: auto 0;
+    }
+
+
+    /* List and Single pages */
+
+    .list-header .entry-cover img,
+    .hero-header .entry-cover img,
+    .single-header .entry-cover img {
+        height: calc(100vh - (2 * var(--gap)) - var(--header-height));
+        width: 100%;
+    }
+
+    .single-content img {
+        max-height: var(--width);
+        width: 100%;
+    }
+
+    .single-title,
+    .hero-title {
+        top: 15%;
+    }
+
+    .single-description,
+    .hero-description {
+        top: 40%;
+    }
+
+    .single-meta {
+        bottom: 3rem;
+    }
+
+    .download-header {
+        top: 60%;
+    }
+
+    .hero-button {
+        bottom: 10%;
+    }
+
+    .block {
+        padding: calc(2 * var(--gap)) var(--gap);
+        flex-wrap: nowrap;
+        gap: calc(2 * var(--gap));
+        max-height: calc(2 * var(--width));
+    }
+
+    .block p:has(+ h2) {
+        order: 3;
+    }
+
+    .block img:has(+ h2), .block img:not(:has(+ h2)), .block h2:not(:has(+ img)), .block p:has(+ h2), .block p:not(:has(+ h2)) {
+        width: 100%;
+    }
+
+    .block img {
+        margin: 0 auto;
+    }
+
+    .download-box .download svg {
+        height: calc(var(--width) / 6);
+    }
+
+
+    /* Archive */
+
+    .archive-month {
+        flex-direction: column;
+    }
+
+    .archive-year {
+        margin-top: 1rem;
+    }
+
+
+    /* Others */
+
+    ::-webkit-scrollbar {
+        width: 19px;
+        height: 11px;
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+
+    /* NOTE: horizontal navigation menu is hidden on "small-screen" desktops and tablets, vertical popover menu is displayed instead */
+    .menu-list {
+        display: none;
+    }
+}
+
+
+/* For devices with medium and high screen resolutions such as desktops and laptops */
+@media screen and (min-width: 1250px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-list-media {
+        display: none;
+    }
+
+    /* Make the Table of Content on the side margin, instead of centered in the page body */
+    .toc.side {
+        position: fixed;
+        margin: var(--gap);
+        top: var(--header-height);
+        z-index: 10;
+        max-height: calc(100vh - var(--footer-height) - var(--header-height) - 2rem);
+    }
+
+    .toc.side::-webkit-scrollbar-thumb {
+        border: var(--border);
+    }
+
+    .toc.side.left {
+        left: 0;
+        width: calc(((100vw - var(--width)) / 2) - var(--gap));
+    }
+
+    .toc.side.right {
+        right: 0;
+        width: calc(((100vw - var(--width)) / 2) - var(--gap));
+    }
+}
+
+@media (prefers-reduced-motion) {
+    /* terms; single; article-entry */
+    .terms-tags a:active,
+    .button:active,
+    .share-buttons svg:active,
+    .article-entry:active,
+    .top-link {
+        transform: none;
+    }
+}

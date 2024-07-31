@@ -1,0 +1,47 @@
+{{- $url := urls.Parse .Destination -}}
+{{- $sizes := (slice "640" "960" "1344") }}
+{{- if $url.Scheme -}}
+
+  {{/* third party image */}}
+  {{ with resources.GetRemote .Destination }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else }}
+      <img loading="lazy" src="{{ .RelPermalink | safeURL }}" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . }}" {{ end }} />
+    {{ end }}
+  {{ else }}
+    {{ errorf "Unable to get remote resource %q" .Destination }}
+  {{ end }}
+{{- else -}}
+
+  {{/* internal image */}}
+  {{- $img := .Page.Resources.GetMatch .Destination -}}
+  {{- if not $img -}}
+    {{- $img = resources.Get .Destination -}}
+  {{- end -}}
+
+  {{- if $img -}}
+    {{- if eq $img.MediaType.MainType "video" -}}
+      <figure>
+      <video class="video-shortcode" preload="metadata" controls>
+        <source src="{{ $img.RelPermalink }}">
+        There should have been a video here but your browser does not seem to support it.
+      </video>
+      </figure>
+    {{- else -}}
+
+      <img loading="lazy"
+      srcset="{{- range $size := $sizes -}}
+                {{- if (ge $img.Width $size) -}}
+                  {{ printf "%s %s" (($img.Resize (printf "%sx" $size)).RelPermalink | safeURL) (printf "%sw ," $size) -}}
+                {{ end }}
+              {{- end -}}
+              {{$img.Permalink }} {{printf "%dw" ($img.Width)}}"
+              sizes="(min-width: 1024px) 1344px, 100vw" src="{{ $img.RelPermalink | safeURL }}"
+              width="{{ $img.Width }}" height="{{ $img.Height }}"
+              type="" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . }}" {{ end }} >
+    {{- end -}}
+  {{- else -}}
+    {{- warnf "No image found for %s from %s" .Destination .Page.File }}
+  {{- end -}}
+{{- end -}}

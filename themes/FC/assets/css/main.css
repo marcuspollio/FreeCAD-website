@@ -1,0 +1,146 @@
+/* This CSS stylesheet defines the general style of the main section on pages (both list and single pages) */
+
+/* TODO: cleanup this dump */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    /* -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility; */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, 'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    line-height: 1.5rem;
+}
+
+body,
+figure {
+    margin: 0;
+}
+
+.main {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    text-wrap: balance;
+    background-color: var(--theme);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--link-transition);
+}
+
+a,
+button,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary);
+}
+
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+table {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: auto;
+    word-break: keep-all;
+}
+
+button,
+input,
+textarea {
+    padding: 0;
+    font: inherit;
+    background: 0 0;
+    border: 0;
+}
+
+input,
+textarea {
+    outline: 0;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+    cursor: pointer;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    box-shadow: 0 0 0 50px var(--theme) inset;
+}
+
+
+/* Figures, images and videos */
+
+img {
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+
+/* Effects */
+
+
+/* Shortcodes */
+
+.image-size-control {
+    margin-inline: auto;
+    margin-inline-end: auto;
+}
+
+.image-size-control > img {
+    width: inherit;
+    height: inherit;
+}
+
+
+/* Compatibility */
+
+::-webkit-scrollbar-track {
+    background: 0 0;
+}
+
+.list:not(.dark)::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--entry);
+    border: 5px solid var(--theme);
+    border-radius: var(--radius);
+}
+
+.list:not(.dark)::-webkit-scrollbar-thumb {
+    border: 5px solid var(--theme);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}

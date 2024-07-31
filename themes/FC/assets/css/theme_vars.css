@@ -1,0 +1,78 @@
+/* This CSS stylesheet defines the general variables (e.g. dimensions, colors, font) for both Light and Dark chroma. For the text in code blocks, go to highlight.css */
+
+
+:root {
+    --width: clamp(48rem, 24rem + 50vw, 84rem);
+    --header-height: 4rem;
+    --footer-height: 4rem;
+    --radius: 0.5rem;
+    --gap: 1rem;
+    --side: calc(((100vw - var(--width)) / 2) + var(--gap));
+    --monospace: "Lucida Console", Monaco, "Consolas", monospace;
+
+    --theme: rgb(240, 240, 240);
+    --entry: rgb(255, 255, 255);
+    --overlay: rgb(224, 224, 224);
+    --tone: rgb(128, 128, 128);
+    --primary: rgb(32, 32, 32);
+    --secondary: rgb(64, 64, 64);
+    --tertiary: rgb(96, 96, 96);
+
+    --link-color: #b40000;
+    --link-hover-color: #007dc5;
+    --link-underline-shadow: 0 2px 0 var(--link-color);
+    --link-hover-underline-shadow: 0 2px 0 var(--link-hover-color);
+    --link-transition: all 0.3s ease;
+
+    --border: 2px solid var(--tone);
+    --border-hover: 2px solid var(--link-hover-color);
+
+    --shadow-color: 0deg 0% 0%; /* Not used currently */
+
+/* Variables for text sizes: small (terms, footnotes, toc), medium (normal text), large (h3), extra large (h2), extra extra large (h1) */
+    --s: 0.75rem;
+    --m: 1rem;
+    --l: 1.25rem;
+    --xl: 1.5rem;
+    --xxl: 2rem;
+
+/* Variables for backgrounds */
+    --bg: var(--theme);
+    --bg-linear: linear-gradient(var(--entry), var(--theme));
+    --bg-grid-s: repeating-linear-gradient(90deg, var(--entry) 0 1px, transparent 0 8px),
+                 repeating-linear-gradient(180deg, var(--entry) 0 1px, transparent 0 8px);
+    --bg-grid-m: repeating-linear-gradient(90deg, var(--entry) 0 1px, transparent 0 16px),
+                 repeating-linear-gradient(180deg, var(--entry) 0 1px, transparent 0 16px);
+
+}
+
+
+/* If changing Dark chroma values, do not forget to update them in layouts/partials/head.html as well */
+
+.dark {
+    --theme: rgb(32, 32, 32);
+    --entry: rgb(48, 48, 48);
+    --primary: rgb(224, 224, 224);
+    --secondary: rgb(192, 192, 192);
+    --tertiary: rgb(160, 160, 160 );
+
+    --link-color: #f00000;
+    --link-underline-shadow: 0 2px 0 var(--link-color);
+
+    /* Variables for backgrounds */
+    --bg: var(--theme);
+    --bg-linear: linear-gradient(var(--entry), var(--theme));
+    --bg-grid-s: repeating-linear-gradient(90deg, var(--entry) 0 1px, transparent 0 8px),
+                 repeating-linear-gradient(180deg, var(--entry) 0 1px, transparent 0 8px);
+    --bg-grid-m: repeating-linear-gradient(90deg, var(--entry) 0 1px, transparent 0 16px),
+    repeating-linear-gradient(180deg, var(--entry) 0 1px, transparent 0 16px);
+}
+
+@font-face {
+    font-family: 'Evolventa';
+    src: url('/fonts/Evolventa-Regular.woff2') format('woff2'),
+         url('/fonts/Evolventa-Regular.woff') format('woff'),
+         url('/fonts/Evolventa-Regular.ttf') format('truetype'),
+         url('/fonts/Evolventa-Regular.svg#Evolventa-Regular') format('svg');
+    font-display: swap;
+}
