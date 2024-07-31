@@ -22,7 +22,7 @@
     --link-hover-color: #007dc5;
     --link-underline-shadow: 0 2px 0 var(--link-color);
     --link-hover-underline-shadow: 0 2px 0 var(--link-hover-color);
-    --link-transition: all 0.3s ease;
+    --link-transition: all 0.3s ease-in-out;
 
     --border: 2px solid var(--tone);
     --border-hover: 2px solid var(--link-hover-color);

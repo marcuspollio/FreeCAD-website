@@ -424,6 +424,7 @@ pre {
     height: calc(var(--width) / 2);
     border-radius: var(--radius);
     margin: var(--gap) auto;
+    transition: var(--link-transition);
 }
 
 .single-content video {
@@ -445,13 +446,9 @@ pre {
     font-size: var(--m);
 }
 
-.single-content a img {
-    border: var(--border);
-}
-
 .single-content a img:hover {
-    border: var(--border-hover);
     filter: brightness(1.1) saturate(110%);
+    transform: scale(1.02);
 }
 
 /* Single page Blocks (defined in-between +++ in Markdown files) */
@@ -606,11 +603,11 @@ pre {
 
 .download-box .download svg:hover {
     color: var(--link-hover-color);
+    transform: scale(1.05);
 }
 
 .download-box .download svg:active {
     transform: scale(0.90);
-    transition: var(--link-transition);
 }
 
 .download-release {
@@ -629,10 +626,6 @@ pre {
 }
 
 .download-release .download-box .release:hover {
-    color: var(--link-hover-color);
-}
-
-.download-release .download-box .download svg:hover {
     color: var(--link-hover-color);
 }
 
