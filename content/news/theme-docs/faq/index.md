@@ -3,7 +3,7 @@ title: FAQs
 description: Frequently Asked Questions
 date: 2021-01-20
 author: FreeCAD
-draft: true
+draft: false
 ShowToc: true
 cover:
   image: space_6.jpg
