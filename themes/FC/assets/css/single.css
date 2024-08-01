@@ -595,18 +595,18 @@ pre {
     gap: var(--gap);
 }
 
-.download-box .download svg {
+.download-box svg {
     color: var(--overlay);
     height: calc(var(--width) / 16);
     transition: var(--link-transition);
 }
 
-.download-box .download svg:hover {
+.download-box svg:hover {
     color: var(--link-hover-color);
     transform: scale(1.05);
 }
 
-.download-box .download svg:active {
+.download-box svg:active {
     transform: scale(0.90);
 }
 
@@ -616,16 +616,20 @@ pre {
     text-align: center;
 }
 
-.download-release .download-box .download svg {
-    color: var(--secondary);
-}
-
 .download-release .download-box .release {
     border: none;
     background: none;
 }
 
 .download-release .download-box .release:hover {
+    color: var(--link-hover-color);
+}
+
+.download-release svg {
+    color: var(--secondary);
+}
+
+.download-release svg:hover {
     color: var(--link-hover-color);
 }
 
