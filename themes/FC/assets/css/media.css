@@ -5,7 +5,7 @@
 
     /* For fluid typography and layout */
     html {
-        font-size: clamp(1rem, 5vw, 2rem);
+        font-size: clamp(1rem, 5vw, 2.5rem);
     }
 
 
@@ -144,6 +144,10 @@
     /* NOTE: horizontal navigation menu is hidden on "small-screen" desktops and tablets, vertical popover menu is displayed instead */
     .menu-list {
         display: none;
+    }
+
+    .articles-list {
+        justify-content: space-evenly;
     }
 }
 
