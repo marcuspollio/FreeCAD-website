@@ -734,6 +734,7 @@ pre {
     transition: visibility 0.3s ease, opacity 0.3s ease;
     font-size: var(--xl);
     color: var(--secondary);
+    padding: .5rem !important;
 }
 
 .top-link:hover {
