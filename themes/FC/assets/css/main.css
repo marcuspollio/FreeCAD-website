@@ -39,8 +39,9 @@ a {
 
 .external-link-icon {
     display: inline-block;
-    width: 0.8em; /* NOTE: use size relative to parent (instead of root html), so it also scales with headers. */
-    margin-left: 0.2rem;
+    margin-left: 0.25rem;
+    width: 0.75em; /* NOTE: use size relative to parent (instead of root html), so it also scales with headers. */
+    min-width: 0.75rem;
 }
 
 img + .external-link-icon {
