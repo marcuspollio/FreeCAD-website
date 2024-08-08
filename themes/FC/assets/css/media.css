@@ -74,25 +74,36 @@
     }
 
     .single-title,
+    .list-title,
     .hero-title {
-        top: 15%;
+        top: 10%;
     }
 
     .single-description,
+    .list-description,
     .hero-description {
-        top: 40%;
-    }
-
-    .single-meta {
-        bottom: 3rem;
+        top: 30%;
     }
 
     .download-header {
-        top: 60%;
+        top: 50%;
     }
 
     .hero-button {
         bottom: 10%;
+    }
+
+    .single-title .title,
+    .list-title .title,
+    .hero-title .hero,
+    .single-description .description,
+    .list-description .description,
+    .hero-description .description,
+    .download-header .release,
+    .download-header .date,
+    .single-meta .meta,
+    .hero-button a {
+    padding: 0.5rem 1rem;
     }
 
     .block {
@@ -115,7 +126,7 @@
     }
 
     .download-box .download svg {
-        height: calc(var(--width) / 6);
+        height: calc(1.5rem + (var(--width)/16));
     }
 
 

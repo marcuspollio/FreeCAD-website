@@ -53,8 +53,8 @@
 
 .list-title .title,
 .hero-title .hero,
-.list-description span,
-.hero-description span,
+.list-description .description,
+.hero-description .description,
 .hero-button a {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -79,8 +79,8 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.list-description span,
-.hero-description span {
+.list-description .description,
+.hero-description .description {
     font-size: var(--m);
 }
 

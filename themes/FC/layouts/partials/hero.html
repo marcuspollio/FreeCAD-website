@@ -6,7 +6,7 @@
     </h1>
     {{- if .Description }}
         <div class="hero-description">
-            <span>{{ .Description | $.Page.RenderString }}</span>
+            <span class="description">{{ .Description | $.Page.RenderString }}</span>
         </div>
     {{- end }}
     {{- if .Params.link }}

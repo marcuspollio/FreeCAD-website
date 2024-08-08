@@ -30,13 +30,12 @@
     top: 15%;
 }
 
-.single-description,
 .single-description {
     top: 30%;
 }
 
 .download-header {
-    top: 50%;
+    top: 45%;
 }
 
 .single-meta {
@@ -44,7 +43,7 @@
 }
 
 .single-title .title,
-.single-description span,
+.single-description .description,
 .download-header .release,
 .download-header .date,
 .single-meta .meta {
@@ -63,7 +62,7 @@
     text-transform: capitalize;
 }
 
-.single-description span {
+.single-description .description {
     font-size: var(--m);
 }
 
@@ -609,7 +608,7 @@ pre {
 
 .download-box svg {
     color: var(--overlay);
-    height: calc(var(--width) / 16);
+    height: calc(2rem + (var(--width)/32));
     transition: var(--link-transition);
 }
 
@@ -643,29 +642,6 @@ pre {
 
 .download-release svg:hover {
     color: var(--link-hover-color);
-}
-
-.os {
-    display: none;
-}
-
-.show-all-button {
-    display: none;
-    margin: auto;
-    padding: 0.5rem 1rem;
-    color: var(--tertiary);
-    text-align: center;
-    font-size: var(--m);
-    border: 2px solid var(--tertiary);
-    border-radius: var(--radius);
-    backdrop-filter: blur(.3rem);
-    transition: var(--link-transition);
-}
-
-.show-all-button:hover {
-    color: var(--link-hover-color);
-    border: var(--border-hover);
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 

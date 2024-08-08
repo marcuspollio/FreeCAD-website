@@ -11,7 +11,7 @@
   </h1>
   {{- if .Description }}
   <div class="single-description">
-    <span>{{- .Description | $.Page.RenderString -}}</span>
+    <span class="description">{{- .Description | $.Page.RenderString -}}</span>
   </div>
   {{- end }}
   {{/* For Download pages, call the download partial to provide download links from the latest release. */}}
