@@ -77,6 +77,18 @@
   {{- if site.Params.assets.disableFingerprinting }}integrity="{{ $imagezoom.Data.Integrity }}"{{- end }}>
 </script>
 
+{{- /* Script to detect User Agent and provide corresponding download options. */}}
+{{- if or (eq .Type "download") (eq .Type "releases") -}}
+  {{- if (.Param "EnableUA") }}
+    {{- $DownloadUA := resources.Get "js/DownloadUACheck.js" }}
+    {{- if hugo.IsProduction }}
+      {{- $DownloadUA = minify $DownloadUA }}
+    {{- end }}
+    <script type="text/javascript" src="{{ $DownloadUA.RelPermalink }}">
+    </script>
+  {{- end }}
+{{- end }}
+
 {{- if .IsPage }}
 
   {{- /* Copy Code script */}}
