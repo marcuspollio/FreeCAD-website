@@ -1,6 +1,6 @@
 **⚠ Temporary development repository : the [official repository](https://github.com/FreeCAD) will be available at a later time ⚠**
 
-[Contributing](#contributing) - [Development](#development) - [Project structure](#project-structure) - [Content guidelines](#content-guidelines) - [Theme and templates](#theme-and-templates) - [Resources](#resources)
+[Contributing](#contributing) • [Development](#development) • [Project structure](#project-structure) • [Content guidelines](#content-guidelines) • [Theme and templates](#theme-and-templates) • [Resources](#resources) • [License](#license)
 # FreeCAD Website
 
 Welcome to the source code of [FreeCAD website](https://www.freecad.org). In this repository are found all content, assets and theme used.
@@ -273,3 +273,22 @@ TODO
 - If developing with the IDE `VSCodium`, the extension `Hugo Language and Syntax Support` is recommended.
 
 NOTE: Space placeholder images are from [Euderion](https://deviantart.com/EUDERION). To replace with FreeCAD specific images.
+
+## License
+
+This repository is licensed under the [GNU Lesser General Public License Version 2.1](https://github.com/marcuspollio/FreeCAD-website/blob/testing/LICENSE "Read the license text").
+
+### Content
+
+Content of the website (folder "/content/") is licensed under [Creative Commons Attribution ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/ "Read about the license").
+By default, it is copyrighted by and attributed to "FreeCAD contributors". If they wish so, authors can specify the respective attribution for the content they produce. For Markdown files, the attribution is specified in the "author" field of the front matter.
+
+By submitting Pull Requests to this repository, please make sure you are the author of the content uploaded, or otherwise that you have right to share it here under the CC-BY-SA 4.0 license and make sure the original author is mentioned. Also note that sharing images with people is subject to obtaining appropriate consent.
+
+### FreeCAD branded resources
+
+The trademark of FreeCAD branded resources (e.g. FreeCAD logo) is registered and owned by the [FreeCAD Project Association](https://fpa.freecad.org/handbook "Read the FPA Handbook").
+
+### Theme
+
+The FC theme folder is licensed under the [MIT License](https://github.com/marcuspollio/FreeCAD-website/blob/testing/themes/FC/LICENSE "Read the license text").
