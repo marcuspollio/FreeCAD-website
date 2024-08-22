@@ -34,33 +34,8 @@
   {{- partial "toc.html" . -}}
 {{- end -}}
 
-{{/* Get the content of a Single Page. */}}
-{{- if .Content }}
-<div class="single-content">
-  {{/* If using blocks (with +++ in Markdown), loops through and assigns an incremented id for each block, useful for styling. */}}
-  {{ if in .RawContent "+++" }}
-    {{ $count := 0 }}
-    {{ $blocks := split .RawContent "+++" }}
-    {{- range $blocks }}
-      {{ $count = add $count 1 }}
-      <section class="block" id="N{{ $count }}">
-        {{ . | $.Page.RenderString }}
-      </section>
-    {{- end }}
-  {{ else if in .RawContent "||" }}
-    {{ $columns := split .RawContent "||" }}
-    {{- range $columns }}
-      <section class="column">
-        {{ . | $.Page.RenderString }}
-      </section>
-    {{- end }}
-  {{ else }}
-    <div class="content">
-      {{- .Content -}}
-    </div>
-  {{ end }}
-</div>
-{{- end }}
+{{/* Get the content of a Page. */}}
+{{- partial "content.html" . -}}
 
 {{/* For Release pages, call the download partial to provide download links from the current release page. */}}
 {{- if eq .Type "releases" -}}

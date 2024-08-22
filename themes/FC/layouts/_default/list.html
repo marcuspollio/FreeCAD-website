@@ -75,6 +75,13 @@
 {{- end }}
 </section>
 
+{{/* Get the content for the Homepage. */}}
+{{- if .IsHome -}}
+  {{- with (index (where .RegularPages "Type" "homepage") 0) -}}
+    {{- partial "content.html" . -}}
+  {{- end -}}
+{{- end -}}
+
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="list-footer">
   <nav class="list-pagination">
