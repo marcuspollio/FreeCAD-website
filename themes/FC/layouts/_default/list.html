@@ -1,6 +1,6 @@
 {{- define "main" }}
 
-{{ if and (not hugo.IsProduction) (not .IsHome) }}
+{{ if not hugo.IsProduction }}
   {{- partial "debug.html" . -}}
 {{ end }}
 
