@@ -146,7 +146,7 @@
 }
 
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1249px) {
 
     /* NOTE: horizontal navigation menu is hidden on "small-screen" desktops and tablets, vertical popover menu is displayed instead */
     .menu-list {
