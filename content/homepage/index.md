@@ -4,6 +4,7 @@ description: FreeCAD highlights on the Homepage
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
 ShowToc: false
+type: homepage
 ---
 
 [![LINK TO GITHUB](space_1.jpg)](https://github.com/freecad 'Link to GitHub')
