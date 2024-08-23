@@ -213,14 +213,14 @@
   })();
   </script>
 
-  {{- if (.Param "EnableImageZoom") }}
-    <script>
-    mediumZoom('.entry-cover img');
-    mediumZoom('.single-content img:not([no-zoom])');
-    </script>
-  {{- end }}
+  {{- end}}
 
-{{- end}}
+{{- if (.Param "EnableImageZoom") }}
+  <script>
+  mediumZoom('.entry-cover img');
+  mediumZoom('.single-content img:not([no-zoom])');
+  </script>
+{{- end }}
 
 {{- /* InstantClick.js */}}
 {{- if (.Param "EnableInstantClick") }}
