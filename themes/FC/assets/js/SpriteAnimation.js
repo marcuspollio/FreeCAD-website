@@ -22,7 +22,7 @@ function setAspectRatio(element) {
 
     if (frameWidth && frameHeight) {
         var aspectRatioPercentage = (frameHeight / frameWidth) * 100;
-        element.style.setProperty('--bs-aspect-ratio', aspectRatioPercentage + '%');
+        element.style.setProperty('--aspect-ratio', aspectRatioPercentage + '%');
     }
 }
 
