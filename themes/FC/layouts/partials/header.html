@@ -54,11 +54,9 @@
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
             <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
-            {{- if .Params.style }}
-              {{ with .Params.style }} class="{{ . }}" {{ end }}
-            {{- end }}
+            {{ with .Params.style }} class="{{ . }}" {{ end }}
             {{- if strings.HasPrefix $page_url $menu_item_url }}
-              id="menu-active"
+              id="menu-active" aria-current="page"
             {{- end }}
             {{- if .Params.External }}
               target="_blank"
@@ -78,11 +76,9 @@
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
             <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
-            {{- if .Params.style }}
-              {{ with .Params.style }} class="{{ . }}" {{ end }}
-            {{- end }}
+            {{ with .Params.style }} class="{{ . }}" {{ end }}
             {{- if strings.HasPrefix $page_url $menu_item_url }}
-              id="menu-active-media"
+              id="menu-active-media" aria-current="page"
             {{- end }}
             {{- if .Params.External }}
               target="_blank"
