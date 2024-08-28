@@ -50,7 +50,7 @@
       {{/* TODO: refactor these two lists to deduplicate and simplify. Also cleanup related CSS */}}
       <ul class="menu-list">
         {{- range site.Menus.main }}
-        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | relLangURL }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
             <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
@@ -74,7 +74,7 @@
 
       <ul popover id="menu-list" class="menu-list-media">
         {{- range site.Menus.main }}
-        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | relLangURL }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
             <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"

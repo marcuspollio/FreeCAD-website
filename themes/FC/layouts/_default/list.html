@@ -86,10 +86,10 @@
 <footer class="list-footer">
   <nav class="list-pagination">
     {{- if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL | relLangURL }}" alt="PREVIOUS" aria-label="Link to previous articles" title="Link to previous articles">« {{ i18n "prev_page" }}</a>
+    <a class="prev" href="{{ $paginator.Prev.URL }}" alt="PREVIOUS" aria-label="Link to previous articles" title="Link to previous articles">« {{ i18n "prev_page" }}</a>
     {{- end }}
     {{- if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL | relLangURL }}" alt="NEXT" aria-label="Link to next articles" title="Link to next articles">{{ i18n "next_page" }} »</a>
+    <a class="next" href="{{ $paginator.Next.URL }}" alt="NEXT" aria-label="Link to next articles" title="Link to next articles">{{ i18n "next_page" }} »</a>
     {{- end }}
   </nav>
 </footer>

@@ -1,6 +1,6 @@
 <div class="download-box">
     {{- if .Params.release }}
-    <p><a class="release" href="{{ .RelPermalink | relLangURL }}" alt="FREECAD {{ .Params.release }} RELEASE" aria-label="FreeCAD {{ .Params.release }} release notes" title="FreeCAD {{ .Params.release }} release notes">FreeCAD {{ .Params.release }} Release</a></p>
+    <p><a class="release" href="{{ .RelPermalink }}" alt="FREECAD {{ .Params.release }} RELEASE" aria-label="FreeCAD {{ .Params.release }} release notes" title="FreeCAD {{ .Params.release }} release notes">FreeCAD {{ .Params.release }} Release</a></p>
     {{ else }}
         {{ print "var is falsy" }}
     {{- end }}
