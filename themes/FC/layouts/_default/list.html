@@ -27,11 +27,11 @@
 
 <section class="articles-list">
 {{/* get the latest pages from the current section, and fill in the missing translated pages from the first site (currently English) */}}
-{{- $pages := where (.RegularPages | lang.Merge .Sites.First.RegularPages) "Section" .Section }}
+{{- $pages := where (.RegularPages | lang.Merge .Sites.Default.RegularPages) "Section" .Section }}
 
 {{- if .IsHome }}
   {{/* get the 6 latest regular pages in the main section (defined in hugo.yaml or number of pages, currently "news"), except the ones with the "hero" parameters in front matter */}}
-  {{- $pages = where (where (site.RegularPages | lang.Merge .Sites.First.RegularPages) "Section" "in" site.Params.mainSections) "Params.hero" "!=" true | first 6 }}
+  {{- $pages = where (where (site.RegularPages | lang.Merge .Sites.Default.RegularPages) "Section" "in" site.Params.mainSections) "Params.hero" "!=" true | first 6 }}
 {{- end }}
 
 {{/* related issue: https://github.com/gohugoio/hugo/issues/9003 */}}
@@ -77,7 +77,7 @@
 
 {{/* Get the content for the Homepage. */}}
 {{- if .IsHome -}}
-  {{- with (index (where (.RegularPages | lang.Merge .Sites.First.RegularPages) "Type" "homepage") 0) -}}
+  {{- with (index (where (.RegularPages | lang.Merge .Sites.Default.RegularPages) "Type" "homepage") 0) -}}
     {{- partial "content.html" . -}}
   {{- end -}}
 {{- end -}}
