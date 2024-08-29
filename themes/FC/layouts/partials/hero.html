@@ -4,14 +4,14 @@
     <h1 class="hero-title">
         <a class="hero" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </h1>
-    {{- if .Description }}
+    {{- with .Description }}
         <div class="hero-description">
-            <span class="description">{{ .Description | $.Page.RenderString }}</span>
+            <span class="description">{{ . | $.Page.RenderString }}</span>
         </div>
     {{- end }}
     {{- if .Params.link }}
     <div class="hero-button">
-        <a href="{{ .Params.link | relLangURL }}">{{ .Params.text }}</a>
+        <a href="{{ .Params.link | relLangURL }}">{{ .Params.text | $.Page.RenderString }}</a>
     </div>
     {{- end }}
     {{- partial "cover.html" . }}
