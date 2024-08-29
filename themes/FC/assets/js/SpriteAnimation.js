@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             handleScroll(animatedSpriteElement);
         });
-        handleScroll(animatedSpriteElement); // Başlangıç durumu için çağır
+        handleScroll(animatedSpriteElement);
     });
 });
 
