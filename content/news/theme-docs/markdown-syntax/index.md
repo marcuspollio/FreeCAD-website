@@ -183,4 +183,4 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-Most ==reptiles and salamanders== are nocturnal, and hunt for insects, worms, and other small creatures. Most ==reptiles== are nocturnal, and hunt for insects, worms, and other small creatures. Most ==reptiles== are nocturnal, and hunt for insects, worms, and other small creatures. Most ==reptiles== are nocturnal, and hunt for insects, worms, and other small creatures.
+Most <mark>reptiles and salamanders</mark> are nocturnal and hunt for insects, worms and other small creatures. Note that most <mark>reptiles</mark> are nocturnal and hunt for insects, worms and other small creatures. Most <mark>reptiles and salamanders</mark> are nocturnal and hunt for insects, worms and other small creatures. Note that most <mark>reptiles</mark> are nocturnal and hunt for insects, worms and other small creatures.

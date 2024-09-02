@@ -764,8 +764,8 @@ pre {
 
 mark {
     color: var(--entry);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+    padding: 0.4rem;
+    border-radius: var(--radius);
     background: var(--tertiary);
 }
 
