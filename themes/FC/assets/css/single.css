@@ -119,12 +119,12 @@
 .single-content {
     font-size: var(--m);
     color: var(--secondary);
-    text-align: justify;
 }
 
 .content {
     margin: auto;
     padding: var(--gap) var(--side);
+    text-align: justify;
 }
 
 .single-content h1 {
@@ -505,6 +505,11 @@ pre {
 .block p,
 .block h2 {
     margin: 0 auto;
+}
+
+.block p {
+    text-align: justify;
+    text-align-last: center;
 }
 
 .block img {
