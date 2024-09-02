@@ -2,7 +2,7 @@
 {{ with (index (where (site.RegularPages | lang.Merge .Sites.Default.RegularPages) "Params.hero" true) 0) }}
 <header class="hero-header">
     <h1 class="hero-title">
-        <a class="hero" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <a class="hero" href="{{ .RelPermalink }}">{{ .LinkTitle | .RenderString }}</a>
     </h1>
     {{- with .Description }}
         <div class="hero-description">
@@ -11,7 +11,7 @@
     {{- end }}
     {{- if .Params.link }}
     <div class="hero-button">
-        <a href="{{ .Params.link | relLangURL }}">{{ .Params.text | $.Page.RenderString }}</a>
+        <a href="{{ .Params.link | relLangURL }}">{{ .Params.text | .RenderString }}</a>
     </div>
     {{- end }}
     {{- partial "cover.html" . }}

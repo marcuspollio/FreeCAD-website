@@ -1,8 +1,8 @@
 <footer class="site-footer">
   {{- if site.Copyright }}
-  <span>{{ site.Copyright | $.Page.RenderString }}</span>
+  <span>{{ site.Copyright | .RenderString }}</span>
   {{- else }}
-  <span>&copy; {{ now.Year }} <a href="{{ "" | relLangURL }}">{{ site.Title }}</a></span>
+  <span>&copy; {{ now.Year }} <a href="{{ "" | relLangURL }}">{{ site.Title | .RenderString }}</a></span>
   {{- end -}}
   <span><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a></span>
   <span>Made with ♥︎ thanks to

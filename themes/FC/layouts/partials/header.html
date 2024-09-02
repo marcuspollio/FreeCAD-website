@@ -19,7 +19,7 @@
 
 <header class="site-header">
   <div class="logo">
-    {{- $logo_text := site.Title }}
+    {{- $logo_text := site.Title | .RenderString }}
     {{- if site.Title }}
     <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} homepage (Alt + H)">
       {{- if site.Params.logo }}
@@ -59,7 +59,7 @@
         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
-            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
+            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name | plainify }}"
             {{ with .Params.style }} class="{{ . }}" {{ end }}
             {{- if strings.HasPrefix $page_url $menu_item_url }}
               id="menu-active" aria-current="page"
@@ -67,7 +67,7 @@
             {{- if .Params.External }}
               target="_blank"
             {{- end }} >
-              {{- .Title -}}
+              {{- .Title | $.Page.RenderString -}}
               {{- if .Params.External }}
                 <span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>
               {{- end }}
@@ -81,7 +81,7 @@
         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
-            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
+            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name | plainify }}"
             {{ with .Params.style }} class="{{ . }}" {{ end }}
             {{- if strings.HasPrefix $page_url $menu_item_url }}
               id="menu-active-media" aria-current="page"
@@ -89,7 +89,7 @@
             {{- if .Params.External }}
               target="_blank"
             {{- end }} >
-              {{- .Title -}}
+              {{- .Title | $.Page.RenderString -}}
               {{- if .Params.External }}
                 <span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>
               {{- end }}

@@ -6,12 +6,12 @@
 
 <header class="single-header">
   <h1 class="single-title">
-    <span class="title">{{- .Title -}}
+    <span class="title">{{- .Title | .RenderString -}}
     {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}</span>
   </h1>
   {{- if .Description }}
   <div class="single-description">
-    <span class="description">{{- .Description | $.Page.RenderString -}}</span>
+    <span class="description">{{- .Description | .RenderString -}}</span>
   </div>
   {{- end }}
   {{/* For Download pages, call the download partial to provide download links from the latest release. */}}

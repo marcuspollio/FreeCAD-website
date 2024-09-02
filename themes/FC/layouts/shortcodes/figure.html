@@ -16,16 +16,16 @@
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with .Get "title" -}}
-                {{ . }}
+                {{ .RenderString}}
             {{ else }}
                 {{ errorf "Unable to get title" }}
             {{- end -}}
             {{- if or (.Get "caption") (.Get "attr") -}}<p>
-                {{- .Get "caption" | $.Page.RenderString -}}
+                {{- .Get "caption" | .RenderString -}}
                 {{- with .Get "attrlink" }}
                     <a href="{{ . }}">
                 {{- end -}}
-                {{- .Get "attr" | $.Page.RenderString -}}
+                {{- .Get "attr" | .RenderString -}}
                 {{- if .Get "attrlink" }}</a>{{ end }}</p>
             {{- end }}
         </figcaption>

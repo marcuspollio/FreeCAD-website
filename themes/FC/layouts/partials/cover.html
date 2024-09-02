@@ -30,7 +30,7 @@
     {{/*  Display Caption  */}}
     {{- if $.IsHome }}
         {{ with .Params.cover.caption }}
-            <p>{{ . | $.Page.RenderString }}</p>
+            <p>{{ .RenderString }}</p>
         {{ else }}
             {{ errorf "Unable to get %q as cover caption" .Params.cover.caption }}
         {{- end }}

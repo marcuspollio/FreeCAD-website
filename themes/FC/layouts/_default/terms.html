@@ -2,10 +2,10 @@
 
 {{- if .Title }}
 <header class="single-header">
-    <h1>{{ .Title }}</h1>
+    <h1>{{ .Title | .RenderString }}</h1>
     {{- if .Description }}
     <div class="single-description">
-        <span>{{ .Description | $.Page.RenderString }}</span>
+        <span>{{ .Description | .RenderString }}</span>
     </div>
     {{- end }}
 </header>

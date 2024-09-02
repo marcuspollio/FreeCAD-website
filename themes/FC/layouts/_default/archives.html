@@ -3,10 +3,10 @@
 <section class="archives">
 
 <header class="archives-header">
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .Title | .RenderString }}</h1>
   {{- if .Description }}
   <div class="archives-description">
-    <span>{{ .Description }}</span>
+    <span>{{ .Description | .RenderString }}</span>
   </div>
   {{- end }}
 </header>
@@ -33,7 +33,7 @@
       <div class="archive-entry">
         <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="Link to {{ .Title | plainify }} article" title="Link to {{ .Title | plainify }} article">
           <h3 class="archive-entry-title">
-          {{- .Title | $.Page.RenderString }}
+          {{- .Title | .RenderString }}
           {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
           </h3>
         </a>

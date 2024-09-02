@@ -14,11 +14,11 @@
     {{/* see: https://gohugo.io/variables/taxonomy/#taxonomy-terms-page-variables */}}
     <span class="title">
       {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
-    {{ .Title -}}</span>
+    {{ .Title | .RenderString -}}</span>
   </h1>
   {{- if .Description }}
   <div class="list-description">
-    <span class="description">{{ .Description | $.Page.RenderString }}</span>
+    <span class="description">{{ .Description | .RenderString }}</span>
   </div>
   {{- end }}
   {{- partial "cover.html" . }}
@@ -55,7 +55,7 @@
   </div>
   <header class="entry-header">
     <h2>
-      <span>{{- .Title }}</span>
+      <span>{{- .Title | .RenderString }}</span>
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Draft]</span></sup>{{- end }}
       {{- if .Weight }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Pinned]</span></sup>{{- end }}
     </h2>
@@ -63,9 +63,9 @@
   {{- if (ne (.Param "hideSummary") true) }}
     <section class="entry-content">
       {{ if .Description }}
-        <p>{{ .Description | plainify | htmlUnescape }}</p>
+        <p>{{ .Description | .RenderString }}</p>
       {{ else }}
-        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        <p>{{ .Summary | .RenderString }}{{ if .Truncated }}...{{ end }}</p>
       {{ end }}
     </section>
   {{- end }}
