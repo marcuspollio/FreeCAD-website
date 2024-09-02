@@ -59,8 +59,8 @@
 {{- end }}
 
 {{- /* Favicons */}}
-<link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="{{ .Site.Home.Permalink }}favicon.ico">
+<link rel="apple-touch-icon" href="{{ .Site.Home.Permalink }}apple-touch-icon.png">
 
 {{- range .AllTranslations -}}
     <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
