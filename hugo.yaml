@@ -196,7 +196,7 @@ module:
     - source: static # Allows to perform modifications via pipes on files in static folder
       target: assets
 
-privacy:
+privacy: # See https://gohugo.io/about/privacy/
   googleAnalytics:
     disable: false
     respectDoNotTrack: true
