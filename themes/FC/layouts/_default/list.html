@@ -34,6 +34,10 @@
   {{- $pages = where (where (site.RegularPages | lang.Merge .Sites.Default.RegularPages) "Section" "in" site.Params.mainSections) "Params.hero" "!=" true | first 6 }}
 {{- end }}
 
+{{- if eq .Kind "term" -}}
+  {{- $pages = .RegularPages -}}
+{{- end -}}
+
 {{/* related issue: https://github.com/gohugoio/hugo/issues/9003 */}}
 {{ $paginator := "" }}
 {{ if (.Param "paginate") }}
