@@ -37,14 +37,14 @@ a {
     transition: var(--link-transition);
 }
 
-.external-link-icon {
+.external-link svg {
     display: inline-block;
     margin-left: 0.25rem;
     width: 0.75em; /* NOTE: use size relative to parent (instead of root html), so it also scales with headers. */
     min-width: 0.75rem;
 }
 
-img + .external-link-icon {
+img + .external-link {
     display: none;
 }
 
