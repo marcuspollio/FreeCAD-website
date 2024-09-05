@@ -1,15 +1,21 @@
 /* This CSS stylesheet defines the style of terms (tag items) */
 
+.terms-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: var(--gap) var(--side);
+    gap: var(--gap);
+}
 
 .terms-tags li {
     display: inline-block;
-    margin: 10px;
-    font-weight: 500;
 }
 
 .terms-tags a {
     display: block;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     background: var(--entry);
     border: var(--border);
     border-radius: var(--radius);
@@ -17,6 +23,7 @@
 }
 
 .terms-tags a:hover {
+    color: var(--link-hover-color);
     border: var(--border-hover);
 }
 
