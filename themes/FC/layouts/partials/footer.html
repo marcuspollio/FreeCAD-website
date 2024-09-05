@@ -217,7 +217,7 @@
 
 {{- if (.Param "EnableImageZoom") }}
   <script>
-  mediumZoom('.single-content img:not(:is([no-zoom],:has(+ span)))');
+  mediumZoom('.single-content :not(:is(a)) > img:not(:is([no-zoom]))');
   </script>
 {{- end }}
 
