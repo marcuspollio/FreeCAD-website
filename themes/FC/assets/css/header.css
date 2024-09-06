@@ -166,7 +166,7 @@ body:not(.dark) #sun {
 }
 
 .language-dropdown svg {
-    height: 1.5rem;
+    height: 1.25rem;
     color: var(--tertiary);
     cursor: pointer;
 }

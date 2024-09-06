@@ -102,11 +102,7 @@
     {{- if .Site.IsMultiLingual }}
     <div class="language-dropdown">
       <button popovertarget="lang-list" popovertargetaction="toggle" class="lang-toggle" accesskey="l" title="Choose language (Alt + L)">
-        <svg id="lang" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 4,5 C 4.910328,7.1118575 5.933593,8.9937192 7.499999,10.5 6.046905,11.899661 3.801507,13.253114 2,14 M 11,5 C 10.089671,7.1118575 9.066403,8.9937192 7.499999,10.5 9.004975,11.949637 11.124773,13.252016 13,14 M 7.499771,2 7.500228,4.9999518 M 13,5 H 2"/>
-          <path d="m 11.5,19 h 9 M 16,10 22,22 M 16,10 10,22"/>
-        </svg>
+        {{ safeHTML (index site.Data.svg "language") }}
       </button>
 
       <ul popover id="lang-list" class="language-list">
@@ -130,22 +126,8 @@
 
     <div class="theme-switch">
       <button id="theme-toggle" accesskey="t" title="Switch theme chroma (Alt + T)">
-        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
+        {{ safeHTML (index site.Data.svg "moon") }}
+        {{ safeHTML (index site.Data.svg "sun") }}
       </button>
     </div>
   </nav>
