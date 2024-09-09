@@ -6,7 +6,7 @@
     {{- if $cover -}}{{/* i.e it is present in page bundle */}}
         {{- if $addLink }}<a href="{{ (path.Join .RelPermalink .Params.cover.image) }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
-        {{- $sizes := (slice "1312") }}
+        {{- $sizes := (slice "1920") }}
         {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
         {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
         {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
@@ -15,7 +15,7 @@
                         {{ printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw ," $size) -}}
                         {{ end }}
                     {{- end -}}{{$cover.Permalink }} {{printf "%dw" ($cover.Width)}}"
-            sizes="(min-width: 1024px) 1312px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}"
+            sizes="(min-width: 1024px) 1920px, 100vw" src="{{ $cover.Permalink }}" alt="{{ $alt }}"
             width="{{ $cover.Width }}" height="{{ $cover.Height }}">
         {{- else }}{{/* Unprocessable image or responsive images disabled */}}
         <img loading="lazy" src="{{ (path.Join .RelPermalink .Params.cover.image) }}" alt="{{ $alt }}">

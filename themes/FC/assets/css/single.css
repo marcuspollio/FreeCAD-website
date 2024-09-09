@@ -8,11 +8,9 @@
 /* Single page header and cover */
 
 .single-header {
-    background: var(--bg-grid-s);
     margin: auto;
-    padding: var(--gap) var(--side);
-    text-align: center;
     position: relative;
+    text-align: center;
 }
 
 .single-title,
@@ -108,9 +106,8 @@
 
 .single-header .entry-cover img {
     margin: 0 auto;
-    width: 100%;
+    width: 100vw;
     height: calc(var(--width) / 2);
-    border-radius: var(--radius);
 }
 
 
