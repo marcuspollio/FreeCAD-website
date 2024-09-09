@@ -10,16 +10,27 @@
 
 .list-header,
 .hero-header {
+    height: calc(var(--width) / 2);
+    width: 100vw;
     margin: auto;
-    position: relative;
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--gap);
     text-align: center;
+    position: relative;
 }
 
 .list-header .entry-cover img,
 .hero-header .entry-cover img {
-    margin: 0 auto;
-    width: 100vw;
-    height: calc(var(--width) / 2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .list-title,
@@ -27,24 +38,7 @@
 .list-description,
 .hero-description,
 .hero-button {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-.list-title,
-.hero-title {
-    top: 25%;
-}
-
-.list-description,
-.hero-description {
-    top: 40%;
-}
-
-.hero-button {
-    bottom: 20%;
+    z-index: 1;
 }
 
 .list-title .title,
