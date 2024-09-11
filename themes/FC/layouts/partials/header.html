@@ -26,16 +26,16 @@
         {{- $img := resources.Get site.Params.logo }}
         {{- if $img }}
           {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-          {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-              {{- $img = $img.Resize "x30" }}
+            {{- if (in $processableFormats $img.MediaType.SubType)}}
+              {{- $img = $img.Resize "x32" }}
+              <img src="{{ $img.RelPermalink }}" alt="LOGO" aria-label="logo">
+            {{- else if (eq $img.MediaType.SubType "svg")}}
+              {{- $img.Content | safeHTML }}
+            {{- else }}
+              {{ errorf "Unable to get logo file" }}
             {{- end }}
-          <img src="{{ $img.RelPermalink }}" alt="LOGO" aria-label="logo" height="32">
         {{- end -}}
       {{- end -}}
-      <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} homepage (Alt + H)">
-        {{- $logo_text -}}
-      </a>
     </a>
     {{- end }}
   </div>

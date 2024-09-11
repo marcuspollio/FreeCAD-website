@@ -35,15 +35,17 @@
     font-weight: 700;
 }
 
-.logo a:hover {
-    color: var(--link-hover-color);
-}
-
 .logo a img,
 .logo a svg {
     float: left;
-    height: 2.5rem;
+    height: 2rem;
     margin-inline-end: 1rem;
+    color: var(--secondary);
+}
+
+.logo a:hover img,
+.logo a:hover svg {
+    color: var(--link-hover-color);
 }
 
 #theme-toggle svg {

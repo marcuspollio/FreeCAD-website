@@ -20,7 +20,7 @@ params:
   description: Your free and open-source parametric modeler
   author: FreeCAD
   DateFormat: 2006-01-02
-  logo: /FreeCAD-symbol.svg
+  logo: /FreeCAD-wordmark.svg
   mainSections: news
   defaultTheme: auto
   ShowAuthor: true
