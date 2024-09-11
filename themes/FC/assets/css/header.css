@@ -151,9 +151,13 @@ body:not(.dark) #sun {
 
 /* Languages switcher and Menu in media mode */
 
-.menu-toggle,
+.menu,
 .language-dropdown {
     position: relative;
+}
+
+.menu-toggle,
+.lang-toggle {
     padding: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -163,7 +167,7 @@ body:not(.dark) #sun {
 }
 
 .menu-toggle:hover,
-.language-dropdown:hover {
+.lang-toggle:hover  {
     border: var(--border-hover);
 }
 
@@ -173,7 +177,8 @@ body:not(.dark) #sun {
     cursor: pointer;
 }
 
-.language-dropdown svg:hover {
+.menu-toggle:hover span,
+.lang-toggle:hover svg {
     color: var(--link-hover-color);
 }
 
