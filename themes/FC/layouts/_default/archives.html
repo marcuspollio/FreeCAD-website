@@ -34,7 +34,7 @@
         <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="Link to {{ .Title | plainify }} article" title="Link to {{ .Title | plainify }} article">
           <h3 class="archive-entry-title">
           {{- .Title | .RenderString }}
-          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
           </h3>
         </a>
         <div class="archive-meta">
