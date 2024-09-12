@@ -159,6 +159,16 @@ languages:
       subtitle: أداة النمذجة البارامترية المجانية والمفتوحة المصدر الخاصة بك
       languageFlag: 🇸🇦
 
+  tr:
+    disabled: false
+    languageName: Türkçe
+    languageCode: tr
+    languageDirection: ltr
+    weight: 12
+    params:
+      subtitle: Kendi ücretsiz ve açık kaynaklı parametrik modelleyiciniz
+      languageFlag: 🇹🇷
+
 # Others Hugo settings
 
 minify:
