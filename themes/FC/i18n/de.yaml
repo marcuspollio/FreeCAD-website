@@ -34,3 +34,6 @@
 
 - id: comments
   translation: "Kommentare"
+
+- id: draft
+  translation: "Entwurf"

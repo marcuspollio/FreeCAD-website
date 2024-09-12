@@ -25,7 +25,7 @@
 
 - id: edit_post
   translation: "Düzenle"
-  
+
 - id: code_copy
   translation: "Kopyala"
 
@@ -34,3 +34,6 @@
 
 - id: comments
   translation: "Yorumlar"
+
+- id: draft
+  translation: "Taslak"
