@@ -7,7 +7,7 @@
 <header class="single-header">
   <h1 class="single-title">
     <span class="title">{{- .Title | .RenderString -}}
-    {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}</span>
+    {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end -}}</span>
   </h1>
   {{- if .Description }}
   <div class="single-description">

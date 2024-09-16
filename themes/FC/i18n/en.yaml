@@ -37,3 +37,21 @@
 
 - id: draft
   translation: "Draft"
+
+- id: release_notes
+  translation: "Release Notes"
+
+- id: menu
+  translation: "Menu"
+
+- id: choose_language
+  translation: "Choose language"
+
+- id: switch_theme
+  translation: "Switch theme chroma"
+
+- id: go_top
+  translation: "Go to Top"
+
+- id: open_close
+  translation: "Open/close"

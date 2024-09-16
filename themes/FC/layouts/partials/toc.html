@@ -4,7 +4,7 @@
 {{- if $has_headers -}}
 <div class="toc{{- if (.Param "TocSide") -}}{{- print " side " (.Param "TocSide") -}}{{- else -}}{{- print " center" -}}{{- end -}}">
     <details {{if (.Param "TocOpen") }} open{{ end }}>
-        <summary accesskey="c" title="Open/close the table of content (Alt + C)">
+        <summary accesskey="c" title="{{- i18n "open_close" | default "Open/close" }} (Alt + C)">
             <span class="details">{{- i18n "toc" | default "Table of Contents" -}}</span>
         </summary>
 

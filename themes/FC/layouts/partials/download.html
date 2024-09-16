@@ -1,6 +1,8 @@
 <div class="download-box">
     {{- if .Params.release }}
-    <p><a class="release" href="{{ .RelPermalink }}" alt="FREECAD {{ .Params.release }} RELEASE" aria-label="FreeCAD {{ .Params.release }} release notes" title="FreeCAD {{ .Params.release }} release notes">FreeCAD {{ .Params.release }} Release</a></p>
+    <p><a class="release" href="{{ .RelPermalink }}" alt="{{ upper site.Title }} {{ .Params.release }} RELEASE"
+        aria-label="{{ site.Title }} {{ .Params.release }} {{- i18n "release_notes" | default "Release Notes" }}">
+        {{ site.Title }} {{ .Params.release }} {{ i18n "release_notes" | default "Release Notes" }}</a></p>
     {{ else }}
         {{ print "var is falsy" }}
     {{- end }}
@@ -12,7 +14,7 @@
     <div class="download">
         {{- with .Params.windows }}
         <div id="windows" style="order: 1;">
-            <a href="{{ . }}" alt="WINDOWS" aria-label="Download the Windows version" title="Download the Windows version" download>
+            <a href="{{ . }}" alt="WINDOWS" aria-label="Windows" title="Windows" download>
                 {{ safeHTML (index site.Data.svg "windows") }}
             </a>
         </div>
@@ -21,7 +23,7 @@
         {{- end }}
         {{- with .Params.macos }}
         <div id="mac" style="order: 2;">
-            <a href="{{ . }}" alt="MACOS" aria-label="Download the macOS version" title="Download the macOS version" download>
+            <a href="{{ . }}" alt="MACOS" aria-label="macOS" title="macOS" download>
                 {{ safeHTML (index site.Data.svg "macos") }}
             </a>
         </div>
@@ -30,7 +32,7 @@
         {{- end }}
         {{- with .Params.linux }}
         <div id="linux" style="order: 3;">
-            <a href="{{ . }}" alt="GNU/LINUX" aria-label="Download the GNU/Linux version" title="Download the GNU/Linux version" download>
+            <a href="{{ . }}" alt="GNU/LINUX" aria-label="GNU/Linux" title="GNU/Linux" download>
                 {{ safeHTML (index site.Data.svg "linux") }}
             </a>
         </div>

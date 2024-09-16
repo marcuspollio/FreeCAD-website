@@ -50,7 +50,7 @@
 {{- range $index, $page := $paginator.Pages }}
 
 <article class="article-entry">
-  <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="Link to {{ .Title | plainify }} article" title="Link to {{ .Title | plainify }} article">
+  <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="{{ .Title | plainify }}" title="{{ .Title | plainify }}">
     {{- partial "cover.html" . }}
   <div class="entry-date">
     {{- if not .Date.IsZero -}}
@@ -60,8 +60,7 @@
   <header class="entry-header">
     <h2 class="entry-title">
       <span>{{- .Title | .RenderString }}</span>
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Draft]</span></sup>{{- end }}
-      {{- if .Weight }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Pinned]</span></sup>{{- end }}
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
     </h2>
     {{- if (ne (.Param "hideSummary") true) }}
     <div class="entry-description">
@@ -90,10 +89,10 @@
 <footer class="list-footer">
   <nav class="list-pagination">
     {{- if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL }}" alt="PREVIOUS" aria-label="Link to previous articles" title="Link to previous articles">« {{- i18n "prev_page" | default "Prev Page" }}</a>
+    <a class="prev" href="{{ $paginator.Prev.URL }}" alt="PREVIOUS" aria-label="{{- i18n "prev_page" | default "Prev Page" }}" title="{{- i18n "prev_page" | default "Prev Page" }}">« {{ i18n "prev_page" | default "Prev Page" }}</a>
     {{- end }}
     {{- if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL }}" alt="NEXT" aria-label="Link to next articles" title="Link to next articles">{{- i18n "next_page" | default "Next Page" }} »</a>
+    <a class="next" href="{{ $paginator.Next.URL }}" alt="NEXT" aria-label="{{- i18n "next_page" | default "Next Page" }}" title="{{- i18n "next_page" | default "Next Page" }}">{{ i18n "next_page" | default "Next Page" }} »</a>
     {{- end }}
   </nav>
 </footer>

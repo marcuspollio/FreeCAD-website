@@ -21,7 +21,7 @@
   <div class="logo">
     {{- $logo_text := site.Title | .RenderString }}
     {{- if site.Title }}
-    <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} homepage (Alt + H)">
+    <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} {{ i18n "home" | default "Home" }} (Alt + H)">
       {{- if site.Params.logo }}
         {{- $img := resources.Get site.Params.logo }}
         {{- if $img }}
@@ -49,7 +49,7 @@
     {{- end -}}
 
     <div class="menu">
-      <button popovertarget="menu-list" popovertargetaction="toggle" class="menu-toggle" title="Menu"><span class="hamburger">☰</span>
+      <button popovertarget="menu-list" popovertargetaction="toggle" class="menu-toggle" title="{{- i18n "menu" | default "Menu" }}"><span class="hamburger">☰</span>
         <span class="cross">✕</span>
       </button>
 
@@ -101,7 +101,7 @@
 
     {{- if .Site.IsMultiLingual }}
     <div class="language-dropdown">
-      <button popovertarget="lang-list" popovertargetaction="toggle" class="lang-toggle" accesskey="l" title="Choose language (Alt + L)">
+      <button popovertarget="lang-list" popovertargetaction="toggle" class="lang-toggle" accesskey="l" title="{{- i18n "choose_language" | default "Choose language" }} (Alt + L)">
         {{ safeHTML (index site.Data.svg "language") }}
       </button>
 
@@ -125,7 +125,7 @@
     {{- end }}
 
     <div class="theme-switch">
-      <button id="theme-toggle" accesskey="t" title="Switch theme chroma (Alt + T)">
+      <button id="theme-toggle" accesskey="t" title="{{- i18n "switch_theme" | default "Switch theme chroma" }} (Alt + T)">
         {{ safeHTML (index site.Data.svg "moon") }}
         {{ safeHTML (index site.Data.svg "sun") }}
       </button>
