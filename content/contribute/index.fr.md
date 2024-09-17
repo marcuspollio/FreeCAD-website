@@ -3,7 +3,7 @@ title: Contributer
 description: Aider le développement de FreeCAD
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
-ShowToc: false
+ShowToc: true
 menus:
   main:
     weight: 6
@@ -17,7 +17,7 @@ cover:
 
 [![LINK TO GITHUB](space_2.jpg)](https://github.com/freecad 'Link to GitHub')
 
-## [First Contribute Block](https://github.com/freecad 'Link to GitHub')
+## First Contribute Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 

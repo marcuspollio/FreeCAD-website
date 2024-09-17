@@ -3,7 +3,7 @@ title: Documentation
 description: Get started with FreeCAD
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
-ShowToc: false
+ShowToc: true
 menus:
   main:
     weight: 5
@@ -17,7 +17,7 @@ cover:
 
 [![LINK TO GITHUB](space_8.jpg)](https://github.com/freecad 'Link to GitHub')
 
-## [First Documentation Block](https://github.com/freecad 'Link to GitHub')
+## First Documentation Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 

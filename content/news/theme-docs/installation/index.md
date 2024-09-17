@@ -138,7 +138,7 @@ params:
     ShowPaginationLinks: true
     ShowCopyCodeButton: false
     hideSummary: false
-    showtoc: false
+    ShowToc: true
     tocopen: false
 
     label:

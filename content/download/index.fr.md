@@ -3,7 +3,7 @@ title: Télécharger
 description: L'aventure FreeCAD commence !
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
-ShowToc: false
+ShowToc: true
 type: download
 menus:
   main:
@@ -18,7 +18,7 @@ cover:
 
 [![LINK TO GITHUB](space_4.jpg)](https://github.com/freecad 'Link to GitHub')
 
-## [First Download Block](https://github.com/freecad 'Link to GitHub')
+## First Download Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 

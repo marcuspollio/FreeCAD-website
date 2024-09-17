@@ -3,13 +3,13 @@ title: FreeCAD Homepage highlights
 description: FreeCAD highlights on the Homepage
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
-ShowToc: false
+ShowToc: true
 type: homepage
 ---
 
 [![LINK TO GITHUB](space_1.jpg)](https://github.com/freecad 'Link to GitHub')
 
-## [First Highlight Block](https://github.com/freecad 'Link to GitHub')
+## First Highlight Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 
