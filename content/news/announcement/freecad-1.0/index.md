@@ -4,7 +4,7 @@ description: It's finally here !
 date: 2024-06-16T15:27:48+12:00
 author: FreeCAD
 draft: false
-ShowToc: true
+
 categories: announcement
 tags:
   - release

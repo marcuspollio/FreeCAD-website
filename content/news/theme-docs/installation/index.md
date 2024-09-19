@@ -4,7 +4,7 @@ description: Read Install and Update instructions here
 date: 2021-01-20
 author: FreeCAD
 draft: false
-ShowToc: true
+
 cover:
   image: space_3.jpg
   caption: a cover caption
@@ -138,8 +138,6 @@ params:
     ShowPaginationLinks: true
     ShowCopyCodeButton: false
     hideSummary: false
-    ShowToc: true
-    tocopen: false
 
     label:
         text: Home
@@ -164,8 +162,7 @@ date: 2020-09-15T11:30:03+00:00
 tags: [first]
 author: FreeCAD
 # author: [Me, You] # multiple authors
-showToc: true
-TocOpen: false
+
 draft: false
 description: Desc Text.
 disableShare: false

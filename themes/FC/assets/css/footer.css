@@ -34,7 +34,7 @@
     background: var(--entry);
 }
 
-/* make zoom overlay and image higher than toc */
+/* make zoom overlay and image higher */
 .medium-zoom-overlay {
     z-index: 10;
 }

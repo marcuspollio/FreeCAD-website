@@ -4,7 +4,7 @@ description: List of Front Matter variables used by FC Theme.
 date: 2021-01-20
 author: FreeCAD
 draft: false
-ShowToc: true
+
 cover:
   image: space_7.jpg
   caption: a cover caption
@@ -33,8 +33,6 @@ cover:
 | `defaultTheme`                         | string        | light \| dark \| auto    | To set default theme                                                                      |
 | `disableThemeToggle`                   | boolean       | true \| false            | To disable theme toggle icon shown besides label                                          |
 | `hideSummary`                          | boolean       | true \| false            | To Hide summary being shown in list pages                                                 |
-| `showtoc`                              | boolean       | true \| false            | To show/hide Table of Contents                                                            |
-| `tocopen`                              | boolean       | true \| false            | To keep open ToC by default on page load                                                  |
 | `ShowPaginationLinks`                     | boolean       | true \| false            | Show Previous and Next Posts below a Post                                                 |
 | `analytics.google.SiteVerificationTag` | string        | XYZabc                 | Site Verification Tag for Google Analytics                                                |
 | `schema`                               | -             | -                        | [Details](#schema)                                                                        |
@@ -78,8 +76,6 @@ cover:
 
 | Name                      | Type          | Example                         | Description                                                                         |
 | ------------------------- | ------------- | ------------------------------- | ----------------------------------------------------------------------------------- |
-| `showtoc`                 | boolean       | true \| false                   | To show/hide Table of Contents                                                      |
-| `tocopen`                 | boolean       | true \| false                   | To keep open ToC by default on page load                                            |
 | `description`             | string        | 'description text'              | Show Post Description under Title                                                   |
 | `disableShare`            | boolean       | true \| false                   | To hide/show share icons under a page                                               |
 | `hideSummary`             | boolean       | true \| false                   | To Hide summary being shown in list pages                                           |

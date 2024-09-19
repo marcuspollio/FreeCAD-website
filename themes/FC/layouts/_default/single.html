@@ -30,10 +30,6 @@
   {{- partial "cover.html" . }}
 </header>
 
-{{- if (.Param "ShowToc") -}}
-  {{- partial "toc.html" . -}}
-{{- end -}}
-
 {{/* Get the content of a Page. */}}
 {{- partial "content.html" . -}}
 

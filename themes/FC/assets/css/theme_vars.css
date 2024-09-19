@@ -29,7 +29,7 @@
 
     --shadow-color: 0deg 0% 0%; /* Not used currently */
 
-/* Variables for text sizes: small (terms, footnotes, toc), medium (normal text), large (h3), extra large (h2), extra extra large (h1) */
+/* Variables for text sizes: small (terms, footnotes), medium (normal text), large (h3), extra large (h2), extra extra large (h1) */
     --s: 0.75rem;
     --m: 1rem;
     --l: 1.25rem;

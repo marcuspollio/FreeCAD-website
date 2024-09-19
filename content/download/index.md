@@ -3,7 +3,7 @@ title: Download
 description: Let the FreeCAD adventure unfolds !
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
-ShowToc: true
+
 type: download
 menus:
   main:

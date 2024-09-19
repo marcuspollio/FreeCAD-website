@@ -4,7 +4,7 @@ description: This is the first event article !
 date: 2024-05-16T15:27:48+12:00
 author: FreeCAD
 draft: false
-ShowToc: true
+
 categories: event
 tags:
   - first

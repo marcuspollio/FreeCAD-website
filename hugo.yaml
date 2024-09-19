@@ -30,9 +30,7 @@ params:
   displayFullLangName: true
   ShowPaginationLinks: true
   ShowCopyCodeButton: true
-  ShowToc: true
-  TocOpen: false
-  TocSide: left
+
   EnableInstantClick: false # NOTE: Disabled for now, as it's conflicting with other JS features.
   EnableImageZoom: true
   EnableLightbox: false # NOTE: Does not work for now if EnableInstantClick is true, because of JavaScript conflicts.

@@ -511,68 +511,6 @@ pre {
 }
 
 
-/* Single page Table Of Content */
-
-.toc {
-    background: var(--entry);
-    margin: var(--gap) var(--side);
-    padding: var(--gap);
-    border: var(--border);
-    border-radius: var(--radius);
-    overflow: auto;
-    font-size: var(--m);
-}
-
-.toc .details summary {
-    cursor: pointer;
-}
-
-.toc .details {
-    display: inline;
-    font-weight: 600;
-}
-
-.toc .inner {
-    padding: var(--gap) 0 0 var(--gap);
-}
-
-.toc ul {
-    margin: 0;
-    padding: 0;
-}
-
-.toc li ul {
-    margin-inline-start: 0.5rem;
-}
-
-.toc li a {
-    font-size: var(--s);
-    line-height: 1rem;
-    padding: 0.5rem;
-    display: block;
-}
-
-.toc li a.active {
-    font-weight: 600;
-    color: var(--primary);
-    background-color: var(--theme);
-    border-radius: var(--radius);
-}
-
-.toc li a:hover:not(.active) {
-    color: var(--link-hover-color);
-}
-
-.toc li a.active:hover {
-    color: var(--link-hover-color);
-    background-color: var(--entry);
-}
-
-.toc summary:focus {
-    outline: 0;
-}
-
-
 /* Download box */
 
 .download-box p {

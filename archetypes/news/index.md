@@ -4,7 +4,7 @@ description: Please fill the description here
 date: {{ .Date }}
 author: FreeCAD
 draft: true
-ShowToc: true
+
 categories: category
 tags:
   - news

@@ -4,7 +4,7 @@ description: This is the second announcement article !
 date: 2024-05-16T15:27:48+12:00
 author: FreeCAD
 draft: true
-ShowToc: true
+
 categories: announcement
 tags:
   - second

@@ -3,7 +3,7 @@ title: FreeCAD Homepage highlights
 description: FreeCAD highlights on the Homepage
 date: 2024-05-22T08:04:23+12:00
 author: FreeCAD
-ShowToc: true
+
 type: homepage
 ---
 
