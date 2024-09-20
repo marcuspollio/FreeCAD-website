@@ -49,8 +49,8 @@
     display: inline-block;
     padding: 0.75rem 1.5rem;
     max-width: calc(var(--width) - (4 * var(--gap)));
-    color: var(--overlay);
-    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--cover);
+    background-color: var(--overlay);
     backdrop-filter: blur(0.3rem);
     border-radius: var(--radius);
 }
@@ -60,13 +60,12 @@
     font-size: var(--xxl);
     line-height: 2rem;
     text-transform: capitalize;
-    border: 2px solid var(--overlay);
+    border: var(--line) solid var(--cover);
 }
 
 .hero-title .hero:hover {
     color: var(--link-hover-color);
     border: var(--border-hover);
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .list-description .description,
@@ -76,13 +75,12 @@
 
 .hero-button a {
     font-size: var(--m);
-    border: 2px solid var(--overlay);
+    border: var(--line) solid var(--cover);
 }
 
 .hero-button a:hover {
     color: var(--link-hover-color);
     border: var(--border-hover);
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .inline-links a {
@@ -157,11 +155,11 @@
 }
 
 .entry-date time {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--overlay);
     backdrop-filter: blur(0.3rem);
     padding: 0.5rem;
     border-radius: var(--radius);
-    color: var(--overlay);
+    color: var(--cover);
     font-size: var(--s);
 }
 

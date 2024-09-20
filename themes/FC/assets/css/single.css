@@ -41,8 +41,8 @@
     display: inline-block;
     padding: 0.75rem 1.5rem;
     max-width: calc(var(--width) - (4 * var(--gap)));
-    color: var(--overlay);
-    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--cover);
+    background-color: var(--overlay);
     backdrop-filter: blur(0.3rem);
     border-radius: var(--radius);
 }
@@ -62,7 +62,7 @@
 }
 
 .meta a {
-    color: var(--overlay);
+    color: var(--cover);
 }
 
 .meta-item {
@@ -378,7 +378,7 @@ pre {
 .single-content blockquote {
     margin: 1rem 0;
     padding: 0 1rem;
-    border-inline-start: 2px solid var(--entry);
+    border-inline-start: var(--line) solid var(--entry);
 }
 
 .single-content sup {
@@ -411,7 +411,7 @@ pre {
 }
 
 .single-content hr {
-    height: 2px;
+    height: var(--line);
     background: var(--entry);
 }
 
@@ -519,14 +519,13 @@ pre {
 
 .download-box .release {
     font-size: var(--m);
-    border: 2px solid var(--overlay);
+    border: var(--line) solid var(--cover);
     transition: var(--link-transition);
 }
 
 .download-box .release:hover {
     color: var(--link-hover-color);
     border: var(--border-hover);
-    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .download-box .date {
@@ -543,7 +542,7 @@ pre {
 }
 
 .download-box svg {
-    color: var(--overlay);
+    color: var(--cover);
     height: calc(2rem + (var(--width)/32));
     transition: var(--link-transition);
 }
@@ -630,7 +629,7 @@ pre {
 }
 
 .single-content table::-webkit-scrollbar-thumb {
-    border-width: 2px;
+    border-width: var(--line);
 }
 
 
@@ -675,7 +674,7 @@ pre {
 }
 
 .top-link {
-    z-index: 10;
+    z-index: 2;
     width: 3rem;
     height: 3rem;
     transition: visibility 0.3s ease, opacity 0.3s ease;

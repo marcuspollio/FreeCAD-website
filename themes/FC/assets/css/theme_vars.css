@@ -7,25 +7,27 @@
     --footer-height: 4rem;
     --radius: 0.5rem;
     --gap: 1rem;
+    --line: 0.125rem;
     --side: calc(((100vw - var(--width)) / 2) + var(--gap));
     --monospace: "Lucida Console", Monaco, "Consolas", monospace;
 
     --theme: rgb(240, 240, 240);
     --entry: rgb(255, 255, 255);
-    --overlay: rgb(224, 224, 224);
+    --cover: rgb(224, 224, 224);
     --tone: rgb(128, 128, 128);
     --primary: rgb(32, 32, 32);
     --secondary: rgb(64, 64, 64);
     --tertiary: rgb(96, 96, 96);
+    --overlay: rgba(0, 0, 0, 0.2);
 
     --link-color: #b40000;
     --link-hover-color: #007dc5;
-    --link-underline-shadow: 0 2px 0 var(--link-color);
-    --link-hover-underline-shadow: 0 2px 0 var(--link-hover-color);
+    --link-underline-shadow: 0 var(--line) 0 var(--link-color);
+    --link-hover-underline-shadow: 0 var(--line) 0 var(--link-hover-color);
     --link-transition: all 0.3s ease-in-out;
 
-    --border: 2px solid var(--tone);
-    --border-hover: 2px solid var(--link-hover-color);
+    --border: var(--line) solid var(--tone);
+    --border-hover: var(--line) solid var(--link-hover-color);
 
     --shadow-color: 0deg 0% 0%; /* Not used currently */
 
@@ -37,7 +39,6 @@
     --xxl: 2rem;
 
 /* Variables for backgrounds */
-    --bg: var(--theme);
     --bg-linear: linear-gradient(var(--entry), var(--theme));
     --bg-grid-s: repeating-linear-gradient(90deg, var(--entry) 0 1px, transparent 0 8px),
                  repeating-linear-gradient(180deg, var(--entry) 0 1px, transparent 0 8px);
@@ -57,10 +58,9 @@
     --tertiary: rgb(160, 160, 160 );
 
     --link-color: #f00000;
-    --link-underline-shadow: 0 2px 0 var(--link-color);
+    --link-underline-shadow: 0 var(--line) 0 var(--link-color);
 
     /* Variables for backgrounds */
-    --bg: var(--theme);
     --bg-linear: linear-gradient(var(--entry), var(--theme));
     --bg-grid-s: repeating-linear-gradient(90deg, var(--entry) 0 1px, transparent 0 8px),
                  repeating-linear-gradient(180deg, var(--entry) 0 1px, transparent 0 8px);

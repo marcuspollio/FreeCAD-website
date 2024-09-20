@@ -2,7 +2,7 @@
 
 
 .site-footer {
-    background: var(--bg);
+    background: var(--theme);
     min-height: var(--footer-height);
     margin: auto;
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
