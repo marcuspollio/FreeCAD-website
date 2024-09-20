@@ -7,6 +7,9 @@
     height: var(--header-height);
     margin: auto;
     padding: 0 var(--side);
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .site-header,
