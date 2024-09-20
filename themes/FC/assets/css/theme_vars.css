@@ -52,10 +52,10 @@
 
 .dark {
     --theme: rgb(32, 32, 32);
-    --entry: rgb(48, 48, 48);
-    --primary: rgb(224, 224, 224);
-    --secondary: rgb(192, 192, 192);
-    --tertiary: rgb(160, 160, 160 );
+    --entry: rgb(64, 64, 64);
+    --primary: rgb(240, 240, 240);
+    --secondary: rgb(224, 224, 224);
+    --tertiary: rgb(208, 208, 208);
 
     --link-color: #f00000;
     --link-underline-shadow: 0 var(--line) 0 var(--link-color);
