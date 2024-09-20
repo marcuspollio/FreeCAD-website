@@ -1,7 +1,6 @@
 /* This CSS stylesheet defines the style of the site header (navigation menu) */
 
 
-
 .site-header {
     background: var(--theme);
     height: var(--header-height);
@@ -27,8 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto 0;
-    padding: 0;
     list-style: none;
 }
 
@@ -88,20 +85,23 @@ body:not(.dark) #sun {
 }
 
 .menu-list {
+    position: sticky;
     word-break: keep-all;
     white-space: nowrap;
     gap: var(--gap);
+    border: none;
+    background: none;
+    line-height: 2rem;
 }
 
 .menu-list a {
-    line-height: 1.5rem;
+    line-height: 1rem;
     font-size: var(--m);
     font-weight: 500;
     color: var(--secondary);
 }
 
-.menu-list a:hover,
-.menu-list-media a:hover {
+.menu-list a:hover {
     color: var(--link-hover-color);
 }
 
@@ -142,6 +142,7 @@ body:not(.dark) #sun {
 
 .menu-list .border#menu-active  {
     color: var(--primary);
+    background-color: var(--theme);
     box-shadow: none;
     border-color: var(--primary);
 }
@@ -153,11 +154,6 @@ body:not(.dark) #sun {
 }
 
 /* Languages switcher and Menu in media mode */
-
-.menu,
-.language-dropdown {
-    position: relative;
-}
 
 .menu-toggle,
 .lang-toggle {
@@ -208,21 +204,16 @@ body:not(.dark) #sun {
     color: var(--tertiary);
 }
 
-/* TODO: after refactoring the two menu lists in HTML, cleanup the menu-list-media class, also in media.css  */
-
-.menu-list-media,
 .language-list {
     list-style: none;
 }
 
-.menu-list-media li a,
 .language-list li a {
     text-align: center;
     padding: 0.5rem 1rem;
     display: block;
 }
 
-.menu-list-media li #menu-active-media,
 .language-list li .language-active {
     background-color: var(--theme);
     border-radius: var(--radius);
@@ -231,7 +222,6 @@ body:not(.dark) #sun {
     font-weight: bold;
 }
 
-.menu-list-media li #menu-active-media:hover,
 .language-list li .language-active:hover {
     color: var(--link-hover-color);
 }

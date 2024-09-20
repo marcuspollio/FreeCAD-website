@@ -42,19 +42,17 @@
 
   <nav class="site-nav">
     {{- $currentPage := . }}
-
     {{- $menuMain := site.Menus.main -}}
     {{- if not $menuMain -}}
       {{- $menuMain = site.Sites.Default.Menus.main -}}
     {{- end -}}
 
     <div class="menu">
+
       <button popovertarget="menu-list" popovertargetaction="toggle" class="menu-toggle" title="{{- i18n "menu" | default "Menu" }}"><span class="hamburger">☰</span>
         <span class="cross">✕</span>
       </button>
-
-      {{/* TODO: refactor these two lists to deduplicate and simplify. Also cleanup related CSS */}}
-      <ul class="menu-list">
+      <ul popover id="menu-list" class="menu-list">
         {{- range $menuMain }}
         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
         {{- $page_url := $currentPage.RelPermalink }}
@@ -63,28 +61,6 @@
             {{ with .Params.style }} class="{{ . }}" {{ end }}
             {{- if strings.HasPrefix $page_url $menu_item_url }}
               id="menu-active" aria-current="page"
-            {{- end }}
-            {{- if .Params.External }}
-              target="_blank"
-            {{- end }} >
-              {{- .Title | $.Page.RenderString -}}
-              {{- if .Params.External }}
-                <span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>
-              {{- end }}
-            </a>
-        </li>
-        {{- end }}
-      </ul>
-
-      <ul popover id="menu-list" class="menu-list-media">
-        {{- range $menuMain }}
-        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
-        {{- $page_url := $currentPage.RelPermalink }}
-        <li>
-            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name | plainify }}"
-            {{ with .Params.style }} class="{{ . }}" {{ end }}
-            {{- if strings.HasPrefix $page_url $menu_item_url }}
-              id="menu-active-media" aria-current="page"
             {{- end }}
             {{- if .Params.External }}
               target="_blank"
