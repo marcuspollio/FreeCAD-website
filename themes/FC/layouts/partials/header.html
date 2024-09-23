@@ -17,7 +17,7 @@
   })();
 </script>
 
-<header class="site-header">
+<header class="site-header" role="banner">
   <div class="logo">
     {{- $logo_text := site.Title | .RenderString }}
     {{- if site.Title }}
@@ -40,15 +40,14 @@
     {{- end }}
   </div>
 
-  <nav class="site-nav">
+  <div class="site-nav">
     {{- $currentPage := . }}
     {{- $menuMain := site.Menus.main -}}
     {{- if not $menuMain -}}
       {{- $menuMain = site.Sites.Default.Menus.main -}}
     {{- end -}}
 
-    <div class="menu">
-
+    <nav class="menu">
       <button popovertarget="menu-list" popovertargetaction="toggle" class="menu-toggle" title="{{- i18n "menu" | default "Menu" }}"><span class="hamburger">☰</span>
         <span class="cross">✕</span>
       </button>
@@ -73,14 +72,13 @@
         </li>
         {{- end }}
       </ul>
-    </div>
+    </nav>
 
     {{- if .Site.IsMultiLingual }}
     <div class="language-dropdown">
       <button popovertarget="lang-list" popovertargetaction="toggle" class="lang-toggle" accesskey="l" title="{{- i18n "choose_language" | default "Choose language" }} (Alt + L)">
         {{ safeHTML (index site.Data.svg "language") }}
       </button>
-
       <ul popover id="lang-list" class="language-list">
         {{- $siteLanguages := site.Languages}}
         {{- $pageLang := .Page.Lang}}
@@ -106,5 +104,5 @@
         {{ safeHTML (index site.Data.svg "sun") }}
       </button>
     </div>
-  </nav>
+  </div>
 </header>
