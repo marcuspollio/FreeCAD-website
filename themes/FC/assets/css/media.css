@@ -67,14 +67,14 @@
     .single-title .title,
     .list-title .title,
     .hero-title .hero,
-    .single-description .description,
-    .list-description .description,
-    .hero-description .description,
+    .single-description,
+    .list-description,
+    .hero-description,
     .download-header .release,
     .download-header .date,
     .single-meta .meta,
     .hero-button a {
-    padding: 0.5rem 1rem;
+        padding: 0.5rem 1rem;
     }
 
     .block {

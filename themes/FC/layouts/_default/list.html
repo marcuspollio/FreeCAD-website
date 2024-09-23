@@ -17,9 +17,9 @@
     {{ .Title | .RenderString -}}</span>
   </h1>
   {{- if .Description }}
-  <div class="list-description">
-    <span class="description">{{ .Description | .RenderString }}</span>
-  </div>
+  <p class="list-description">
+    {{ .Description | .RenderString }}
+  </p>
   {{- end }}
   {{- partial "cover.html" . }}
 </header>
@@ -63,13 +63,13 @@
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
     </h2>
     {{- if (ne (.Param "hideSummary") true) }}
-    <div class="entry-description">
+    <p class="entry-description">
       {{ if .Description }}
-        <p>{{ .Description | .RenderString }}</p>
+        {{ .Description | .RenderString }}
       {{ else }}
-        <p>{{ .Summary | .RenderString }}{{ if .Truncated }}...{{ end }}</p>
+        {{ .Summary | .RenderString }}{{ if .Truncated }}...{{ end }}
       {{ end }}
-    </div>
+    </p>
     {{- end }}
   </header>
   </a>

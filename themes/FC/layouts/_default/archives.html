@@ -5,9 +5,9 @@
 <header class="archives-header">
   <h1>{{ .Title | .RenderString }}</h1>
   {{- if .Description }}
-  <div class="archives-description">
-    <span>{{ .Description | .RenderString }}</span>
-  </div>
+  <p class="archives-description">
+    {{ .Description | .RenderString }}
+  </p>
   {{- end }}
 </header>
 
@@ -30,7 +30,7 @@
     <h3 class="archive-month-header">{{- .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
     <div class="archive-month-list">
       {{- range .Pages }}
-      <div class="archive-entry">
+      <article class="archive-entry">
         <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="{{ .Title | plainify }}" title="{{ .Title | plainify }}">
           <h3 class="archive-entry-title">
           {{- .Title | .RenderString }}
@@ -40,7 +40,7 @@
         <div class="archive-meta">
           {{- partial "meta.html" . -}}
         </div>
-      </div>
+      </article>
       {{- end }}
     </div>
   </div>

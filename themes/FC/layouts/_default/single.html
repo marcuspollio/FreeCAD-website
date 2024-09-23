@@ -10,9 +10,9 @@
     {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end -}}</span>
   </h1>
   {{- if .Description }}
-  <div class="single-description">
-    <span class="description">{{- .Description | .RenderString -}}</span>
-  </div>
+  <p class="single-description">
+    {{- .Description | .RenderString -}}
+  </p>
   {{- end }}
   {{/* For Download pages, call the download partial to provide download links from the latest release. */}}
   {{- if eq .Type "download" -}}

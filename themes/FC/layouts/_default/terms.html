@@ -4,9 +4,9 @@
 <header class="single-header">
     <h1>{{ .Title | .RenderString }}</h1>
     {{- if .Description }}
-    <div class="single-description">
-        <span>{{ .Description | .RenderString }}</span>
-    </div>
+    <p class="single-description">
+        {{ .Description | .RenderString }}
+    </p>
     {{- end }}
 </header>
 {{- end }}

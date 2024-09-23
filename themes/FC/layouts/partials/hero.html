@@ -5,9 +5,9 @@
         <a class="hero" href="{{ .RelPermalink }}">{{ .LinkTitle | .RenderString }}</a>
     </h1>
     {{- with .Description }}
-        <div class="hero-description">
-            <span class="description">{{ . | $.Page.RenderString }}</span>
-        </div>
+        <p class="hero-description">
+            {{ . | $.Page.RenderString }}
+        </p>
     {{- end }}
     {{- if .Params.link }}
     <div class="hero-button">
