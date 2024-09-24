@@ -110,14 +110,6 @@
     .archive-year {
         margin-top: 1rem;
     }
-
-
-    /* Others */
-
-    ::-webkit-scrollbar {
-        width: 19px;
-        height: 11px;
-    }
 }
 
 

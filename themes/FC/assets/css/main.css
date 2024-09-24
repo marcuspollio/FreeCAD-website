@@ -9,11 +9,9 @@
 }
 
 html {
-    -webkit-tap-highlight-color: transparent;
     overflow-y: auto;
     scroll-behavior: smooth;
-    /* -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility; */
+    text-rendering: optimizeLegibility;
 }
 
 body {
@@ -101,17 +99,11 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input:-webkit-autofill,
-textarea:-webkit-autofill {
-    box-shadow: 0 0 0 50px var(--theme) inset;
-}
-
 
 /* Figures, images and videos */
 
 img {
     object-fit: cover;
-    image-rendering: -webkit-optimize-contrast;
 }
 
 
@@ -128,29 +120,4 @@ img {
 .image-size-control > img {
     width: inherit;
     height: inherit;
-}
-
-
-/* Compatibility */
-
-::-webkit-scrollbar-track {
-    background: 0 0;
-}
-
-.list:not(.dark)::-webkit-scrollbar-track {
-    background: var(--theme);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--entry);
-    border: 5px solid var(--theme);
-    border-radius: var(--radius);
-}
-
-.list:not(.dark)::-webkit-scrollbar-thumb {
-    border: 5px solid var(--theme);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary);
 }

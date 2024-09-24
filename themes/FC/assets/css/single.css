@@ -314,10 +314,6 @@ h6:hover .anchor {
     margin-bottom: 0;
 }
 
-.single-content .highlighttable td .highlight pre code::-webkit-scrollbar {
-    display: none;
-}
-
 
 /* Single page Code */
 
@@ -607,29 +603,6 @@ pre {
 .share-buttons svg:active {
     transform: scale(0.95);
     transition: var(--link-transition);
-}
-
-
-.single-content :not(table) ::-webkit-scrollbar-thumb {
-    border: var(--border);
-    background: var(--link-color);
-}
-
-.single-content :not(table) ::-webkit-scrollbar-thumb:hover {
-    background: var(--link-hover-color);
-}
-
-.gist table::-webkit-scrollbar-thumb {
-    border: var(--border);
-    background: var(--link-color);
-}
-
-.gist table::-webkit-scrollbar-thumb:hover {
-    background: var(--link-hover-color);
-}
-
-.single-content table::-webkit-scrollbar-thumb {
-    border-width: var(--line);
 }
 
 
