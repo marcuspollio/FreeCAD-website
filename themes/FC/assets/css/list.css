@@ -58,7 +58,6 @@
 .hero-title .hero {
     padding: 0.75rem 2rem 0.5rem;
     font-size: var(--xxl);
-    line-height: 2rem;
     text-transform: capitalize;
     border: var(--line) solid var(--cover);
 }
@@ -84,7 +83,6 @@
 }
 
 .inline-links a {
-    font-weight: 500;
     color: var(--link-color);
     box-shadow: var(--link-underline-shadow);
 }

@@ -125,7 +125,6 @@
 
     .menu-list {
         display: none;
-        line-height: 1rem;
     }
 
     .menu-list a {
@@ -139,7 +138,7 @@
         border-radius: var(--radius);
         padding: 1rem;
         color: var(--primary);
-        font-weight: bold;
+        font-weight: 700;
         box-shadow: none;
     }
 

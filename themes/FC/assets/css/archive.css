@@ -42,10 +42,6 @@
     padding: 0;
 }
 
-.archive-entry-title {
-    font-weight: 500;
-}
-
 .archive-entry-title:hover {
     color: var(--link-hover-color);
 }
