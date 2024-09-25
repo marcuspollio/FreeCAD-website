@@ -184,7 +184,7 @@ body:not(.dark) #sun {
 
 #menu-list:popover-open,
 #lang-list:popover-open {
-    position: absolute;
+    position: fixed;
     display: flex;
     inset: unset;
     flex-direction: column;

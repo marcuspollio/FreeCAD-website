@@ -40,7 +40,6 @@
 
     #menu-list:popover-open,
     #lang-list:popover-open {
-        position: fixed;
         right: var(--gap);
         width: calc(100vw - (2 * var(--gap)));
     }
@@ -119,7 +118,6 @@
 
     #menu-list:popover-open,
     #lang-list:popover-open {
-        position: fixed;
         right: var(--side);
     }
 
