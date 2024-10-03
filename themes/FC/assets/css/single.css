@@ -707,7 +707,7 @@ pre {
 /* Single page footer */
 
 .single-footer {
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .share-buttons {
@@ -744,6 +744,7 @@ pre {
     margin: auto;
     padding: var(--gap) var(--side);
     text-align: center;
+    gap: var(--gap);
 }
 
 .single-pagination .next, .single-pagination .prev {
