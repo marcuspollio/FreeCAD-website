@@ -1,5 +1,9 @@
 {{- define "main" }}
 
+{{ if not hugo.IsProduction }}
+  {{- partial "debug.html" . -}}
+{{ end }}
+
 {{- if .Title }}
 <header class="single-header">
     <h1>{{ .Title | .RenderString }}</h1>

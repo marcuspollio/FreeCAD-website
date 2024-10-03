@@ -1,5 +1,9 @@
 {{- define "main" }}
 
+{{ if not hugo.IsProduction }}
+  {{- partial "debug.html" . -}}
+{{ end }}
+
 <section class="archives">
 
 <header class="archives-header">
