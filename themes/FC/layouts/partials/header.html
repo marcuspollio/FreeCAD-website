@@ -19,9 +19,9 @@
 
 <header class="site-header" role="banner">
   <div class="logo">
-    {{- $logo_text := site.Title | .RenderString }}
     {{- if site.Title }}
-    <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} {{ i18n "home" | default "Home" }} (Alt + H)">
+    {{- $logoText := site.Title | .RenderString }}
+    <a href="{{ "" | relLangURL }}" {{ if .IsHome }}class="active"{{ end }} accesskey="h" title="{{ $logoText }} {{ i18n "home" | default "Home" }} (Alt + H)">
       {{- if site.Params.logo }}
         {{- $img := resources.Get site.Params.logo }}
         {{- if $img }}
@@ -32,9 +32,12 @@
             {{- else if (eq $img.MediaType.SubType "svg")}}
               {{- $img.Content | safeHTML }}
             {{- else }}
+              {{ $logoText | plainify }}
               {{ errorf "Unable to get logo file" }}
             {{- end }}
         {{- end -}}
+      {{- else }}
+        {{ $logoText | plainify  }}
       {{- end -}}
     </a>
     {{- end }}

@@ -33,18 +33,20 @@
     font-family: 'Evolventa';
     font-size: var(--xl);
     font-weight: 700;
-}
-
-.logo a img,
-.logo a svg {
-    float: left;
-    height: 2rem;
-    margin-inline-end: 1rem;
     color: var(--secondary);
 }
 
-.logo a:hover img,
-.logo a:hover svg {
+.logo :is(img, svg) {
+    float: left;
+    height: 2rem;
+    margin-inline-end: 1rem;
+}
+
+.logo .active {
+    color: var(--primary);
+}
+
+.logo:hover :is(a, img, svg) {
     color: var(--link-hover-color);
 }
 
