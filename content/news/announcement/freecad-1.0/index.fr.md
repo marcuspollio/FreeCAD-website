@@ -15,8 +15,11 @@ cover:
   alt: a cover alternative title
 params:
   hero: true
-  text: Découvre les nouveautés
-  link: releases/1-0
+  links:
+    download: true
+    custom: releases/1-0
+    customText: "Découvre les nouveautés"
+    article: false
 ---
 
 # This is the first heading

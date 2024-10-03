@@ -45,6 +45,27 @@ img + .external-link {
     display: none;
 }
 
+h1 {
+    font-size: var(--xxl);
+}
+
+h2 {
+    font-size: var(--xl);
+}
+
+h3 {
+    font-size: var(--l);
+}
+
+h4,
+h5 {
+    font-size: var(--m);
+}
+
+h6 {
+    font-size: var(--s);
+}
+
 a,
 button,
 body,

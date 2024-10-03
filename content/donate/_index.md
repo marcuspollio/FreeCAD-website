@@ -7,7 +7,7 @@ menus:
   main:
     weight: 7
     params:
-      style: border
+      style: button
   footer:
     weight: 7
 cover:

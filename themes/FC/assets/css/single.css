@@ -1,12 +1,18 @@
-/* This CSS stylesheet defines the style of single pages */
+/* This CSS stylesheet defines the style of Single pages and List pages (Homepage, sections such as News, Releases and Donate) */
 
 
-.main.page {
-}
+/*.main.page {
+} */
+
+/* .main.home,
+.main.section {
+} */
 
 
-/* Single page header and cover */
+/* List and Single page header and cover */
 
+.list-header,
+.hero-header,
 .single-header {
     height: calc(var(--width) / 2);
     width: 100vw;
@@ -21,10 +27,11 @@
     position: relative;
 }
 
-.single-title,
-.single-description,
-.download-header,
-.single-meta {
+.title,
+.description,
+.download-box,
+.single-meta,
+.hero-button {
     z-index: 1;
 }
 
@@ -33,34 +40,64 @@
     bottom: 2rem;
 }
 
-.single-title .title,
-.single-description,
-.download-header .release,
-.download-header .date,
-.single-meta .meta {
+.title,
+.description,
+.download-box .release,
+.download-box .date,
+.single-meta,
+.hero-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     max-width: calc(var(--width) - (4 * var(--gap)));
     color: var(--cover);
-    background-color: var(--overlay);
-    backdrop-filter: blur(0.3rem);
-    border-radius: var(--radius);
+    text-shadow: var(--shadow);
 }
 
-.single-title .title {
-    font-size: var(--xxl);
+.title {
     text-transform: capitalize;
 }
 
-.single-description {
-    font-size: var(--m);
+.description {
+    font-weight: 400;
 }
 
-.single-meta .meta {
+.buttons {
+    display: flex;
+    gap: var(--gap);
+    z-index: 1;
+}
+
+.hero-button {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--m);
+    background-color: var(--link-color);
+    border-radius: var(--radius);
+    transition: var(--link-transition);
+}
+
+.hero-button a {
+    color: var(--cover);
+}
+
+.hero-button:hover {
+    background-color: var(--link-hover-color);
+}
+
+.hero-button.download {
+    background-color: rgb(64, 64, 64);
+}
+
+.hero-button.download:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+.single-meta {
+    background: var(--overlay);
+    border-radius: var(--radius);
     font-size: var(--s);
 }
 
-.meta a {
+.single-meta a {
     color: var(--cover);
 }
 
@@ -96,6 +133,8 @@
     content: ",";
 }
 
+.list-header .entry-cover img,
+.hero-header .entry-cover img,
 .single-header .entry-cover img {
     position: absolute;
     left: 0;
@@ -103,6 +142,87 @@
     margin: auto;
     width: 100%;
     height: 100%;
+}
+
+
+/* List page article entries */
+
+.articles-list {
+    background: var(--bg-linear);
+    margin: auto;
+    padding: calc(2 * var(--gap)) var(--side);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+    gap: calc(var(--gap) * 2);
+}
+
+.article-entry {
+    width: clamp(18rem, 4rem + 17.5vw, 25rem);
+    text-align: center;
+    position: relative;
+}
+
+.article-entry figure {
+    height: clamp(9rem, 2rem + 8.75vw, 12.5rem);
+    background: var(--entry);
+    border-radius: var(--radius);
+    transition: var(--link-transition);
+}
+
+.article-entry:hover figure {
+    filter: brightness(1.1) saturate(110%);
+    transform: scale(1.02);
+}
+
+.article-entry:hover .entry-title,
+.article-entry:hover .entry-description {
+    color: var(--link-color);
+}
+
+.article-entry a:active figure {
+    transform: scale(0.95);
+}
+
+.article-entry .entry-cover img {
+    border-radius: var(--radius);
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.entry-date {
+    position: absolute;
+    margin-top: 1rem;
+    width: 100%;
+    top: 0%;
+}
+
+.entry-date time {
+    background-color: var(--overlay);
+    backdrop-filter: blur(0.3rem);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    color: var(--cover);
+    font-size: var(--s);
+}
+
+.entry-title {
+    margin: 1rem auto 0;
+    transition: var(--link-transition);
+}
+
+.entry-description {
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: var(--link-transition);
+}
+
+.entry-isdraft {
+    font-size: var(--s);
+    color: var(--secondary);
 }
 
 
@@ -120,32 +240,14 @@
 }
 
 .single-content h1 {
-    font-size: var(--xxl);
     margin: 2rem auto 2rem;
 }
 
-.single-content h2 {
-    font-size: var(--xl);
+.single-content :is(h2, h3) {
     margin: 1.5rem auto 1.5rem;
 }
 
-.single-content h3 {
-    font-size: var(--l);
-    margin: 1.25rem auto 1.25rem;
-}
-
-.single-content h4 {
-    font-size: var(--m);
-    margin: 1rem auto 1rem;
-}
-
-.single-content h5 {
-    font-size: var(--m);
-    margin: 1rem auto 1rem;
-}
-
-.single-content h6 {
-    font-size: var(--s);
+.single-content :is(h4, h5, h6) {
     margin: 1rem auto 1rem;
 }
 
@@ -512,13 +614,13 @@ pre {
 
 .download-box .release {
     font-size: var(--m);
-    border: var(--line) solid var(--cover);
+    background: var(--link-color);
+    border-radius: var(--radius);
     transition: var(--link-transition);
 }
 
 .download-box .release:hover {
-    color: var(--link-hover-color);
-    border: var(--border-hover);
+    background: var(--link-hover-color);
 }
 
 .download-box .date {
@@ -556,12 +658,15 @@ pre {
 }
 
 .download-release .download-box .release {
-    border: none;
-    background: none;
+    background: var(--link-color);
 }
 
 .download-release .download-box .release:hover {
-    color: var(--link-hover-color);
+    background: var(--link-hover-color);
+}
+
+.download-release .date {
+    color: var(--secondary);
 }
 
 .download-release svg {
@@ -570,6 +675,32 @@ pre {
 
 .download-release svg:hover {
     color: var(--link-hover-color);
+}
+
+
+/* List page footer */
+
+.list-pagination {
+    display: flex;
+    margin: auto;
+    padding: var(--gap) var(--side);
+    font-size: var(--s);
+}
+
+.list-pagination a {
+    padding: 0.75rem 1.5rem;
+    color: var(--cover);
+    background: var(--link-color);
+    border-radius: 2rem;
+    text-transform: capitalize;
+}
+
+.list-pagination a:hover {
+    background: var(--link-hover-color);
+}
+
+.list-pagination .next {
+    margin-inline-start: auto;
 }
 
 
@@ -610,8 +741,8 @@ pre {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: calc(var(--width) - (2 * var(--gap)));
     margin: auto;
+    padding: var(--gap) var(--side);
     text-align: center;
 }
 
@@ -630,27 +761,24 @@ pre {
 }
 
 .single-pagination a {
-    display: block;
-    padding: 0.5rem 1rem;
-    background: var(--entry);
-    border: var(--border);
+    padding: 0.75rem 1.5rem;
+    color: var(--cover);
+    background: var(--link-color);
     border-radius: 2rem;
     text-transform: capitalize;
 }
 
 .single-pagination a:hover {
-    color: var(--link-hover-color);
-    border: var(--border-hover);
+    background: var(--link-hover-color);
 }
 
 .top-link {
     z-index: 2;
-    width: 3rem;
     height: 3rem;
+    width: 3rem;
+    padding: 0.5rem 1rem !important;
     transition: visibility 0.3s ease, opacity 0.3s ease;
-    font-size: var(--xl);
-    color: var(--secondary);
-    padding: .5rem !important;
+    font-size: var(--l);
 }
 
 .top-link:hover {
@@ -669,7 +797,7 @@ pre {
 
 mark {
     color: var(--entry);
-    padding: 0.4rem;
+    padding: 0.2rem 0.4rem;
     border-radius: var(--radius);
     background: var(--tertiary);
 }

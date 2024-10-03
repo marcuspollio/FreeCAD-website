@@ -104,10 +104,9 @@ body:not(.dark) #sun {
     color: var(--link-hover-color);
 }
 
-.menu-list #menu-active:not(.border) {
+.menu-list #menu-active:not(.button) {
     color: var(--primary);
     box-shadow: 0 var(--line) 0 var(--primary);
-    border-color: var(--primary);
 }
 
 .menu-list #menu-active:hover {
@@ -126,29 +125,26 @@ body:not(.dark) #sun {
     margin-inline: 0.5rem;
 }
 
-.menu-list .border {
-    padding: 0.5rem;
+.menu-list .button {
+    padding: 0.75rem;
     line-height: 2rem;
     box-shadow: none;
-    background: var(--entry);
-    border: var(--border);
+    color: var(--cover);
+    background: var(--link-color);
     border-radius: var(--radius);
+    box-shadow: none;
     transition: none;
 }
 
-.menu-list .border:hover {
-    border: var(--border-hover);
-}
-
-.menu-list .border#menu-active  {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-.menu-list .border#menu-active:hover {
-    color: var(--link-hover-color);
+.menu-list :is(.button:hover, .button#menu-active:hover) {
+    color: var(--cover);
+    background: var(--link-hover-color);
     box-shadow: none;
-    border: var(--border-hover);
+}
+
+.menu-list .button#menu-active  {
+    color: var(--cover);
+    background-color: black;
 }
 
 /* Languages switcher and Menu in media mode */
@@ -156,27 +152,17 @@ body:not(.dark) #sun {
 .menu-toggle,
 .lang-toggle {
     padding: 0.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: var(--entry);
-    border: var(--border);
-    border-radius: var(--radius);
+    color: var(--tertiary);
 }
 
 .menu-toggle:hover,
 .lang-toggle:hover  {
-    border: var(--border-hover);
+    color: var(--link-hover-color);
 }
 
 .language-dropdown svg {
     height: 1.25rem;
-    color: var(--tertiary);
     cursor: pointer;
-}
-
-.menu-toggle:hover span,
-.lang-toggle:hover svg {
-    color: var(--link-hover-color);
 }
 
 #lang-list {
@@ -195,7 +181,7 @@ body:not(.dark) #sun {
     top: calc(var(--header-height) + var(--gap));
     text-align: center;
     background: var(--entry);
-    border: var(--border);
+    border: none;
     border-radius: var(--radius);
     padding: 1rem;
     color: var(--tertiary);

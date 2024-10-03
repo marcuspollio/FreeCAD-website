@@ -10,16 +10,14 @@
 
 {{- if not .IsHome | and .Title }}
 <header class="list-header">
-  <h1 class="list-title">
-    {{/* see: https://gohugo.io/variables/taxonomy/#taxonomy-terms-page-variables */}}
-    <span class="title">
-      {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
-    {{ .Title | .RenderString -}}</span>
+  <h1 class="title">
+    {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
+    {{ .Title | .RenderString -}}
   </h1>
   {{- if .Description }}
-  <p class="list-description">
+  <h2 class="description">
     {{ .Description | .RenderString }}
-  </p>
+  </h2>
   {{- end }}
   {{- partial "cover.html" . }}
 </header>
@@ -58,10 +56,10 @@
     {{- end }}
   </div>
   <header class="entry-header">
-    <h2 class="entry-title">
+    <h3 class="entry-title">
       <span>{{- .Title | .RenderString }}</span>
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
-    </h2>
+    </h3>
     {{- if (ne (.Param "hideSummary") true) }}
     <p class="entry-description">
       {{ if .Description }}

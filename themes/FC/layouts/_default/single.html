@@ -5,26 +5,24 @@
 {{ end }}
 
 <header class="single-header">
-  <h1 class="single-title">
-    <span class="title">{{- .Title | .RenderString -}}
-    {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end -}}</span>
+  <h1 class="title">
+    {{- .Title | .RenderString -}}
+    {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end -}}
   </h1>
   {{- if .Description }}
-  <p class="single-description">
+  <h2 class="description">
     {{- .Description | .RenderString -}}
-  </p>
+  </h2>
   {{- end }}
   {{/* For Download pages, call the download partial to provide download links from the latest release. */}}
   {{- if eq .Type "download" -}}
-    <div class="download-header">
     {{ with (index (where site.RegularPages "Type" "releases") 0) }}
       {{- partial "download.html" . -}}
     {{ end }}
-    </div>
   {{- end -}}
   {{- if eq .Type "news" -}}
   <div class="single-meta">
-    <span class="meta">{{- partial "meta.html" . -}}</span>
+    {{- partial "meta.html" . -}}
   </div>
   {{- end -}}
   {{- partial "cover.html" . }}
