@@ -9,7 +9,7 @@
 {{- end }}
 
 {{- if not .IsHome | and .Title }}
-<header class="list-header">
+<header>
   <h1 class="title">
     {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
     {{ .Title | .RenderString -}}
@@ -55,7 +55,7 @@
       <time datetime="{{ .Date }}">{{ .Date | time.Format ":date_full" }}</time>
     {{- end }}
   </div>
-  <header class="entry-header">
+  <div>
     <h3 class="entry-title">
       <span>{{- .Title | .RenderString }}</span>
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
@@ -69,7 +69,7 @@
       {{ end }}
     </p>
     {{- end }}
-  </header>
+  </div>
   </a>
 </article>
 

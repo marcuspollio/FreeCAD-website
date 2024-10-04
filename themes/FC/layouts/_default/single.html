@@ -4,7 +4,7 @@
   {{- partial "debug.html" . -}}
 {{ end }}
 
-<header class="single-header">
+<header>
   <h1 class="title">
     {{- .Title | .RenderString -}}
     {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end -}}

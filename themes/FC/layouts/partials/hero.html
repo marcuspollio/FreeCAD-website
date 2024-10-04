@@ -1,6 +1,6 @@
 {{/* get the latest article with the "hero" parameters in front matter */}}
 {{ with (index (where (site.RegularPages | lang.Merge .Sites.Default.RegularPages) "Params.hero" true) 0) }}
-<header class="hero-header">
+<header>
     <h1 class="title">
         {{ .LinkTitle | .RenderString }}
     </h1>

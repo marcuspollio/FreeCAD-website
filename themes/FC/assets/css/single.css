@@ -2,9 +2,7 @@
 
 /* List and Single page header and cover */
 
-.list-header,
-.hero-header,
-.single-header {
+main header {
     height: calc(var(--width) / 2);
     width: 100vw;
     margin: auto;
@@ -124,9 +122,7 @@
     content: ",";
 }
 
-.list-header .entry-cover img,
-.hero-header .entry-cover img,
-.single-header .entry-cover img {
+main header .entry-cover img {
     position: absolute;
     left: 0;
     top: 0;
