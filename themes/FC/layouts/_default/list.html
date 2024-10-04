@@ -23,7 +23,7 @@
 </header>
 {{- end }}
 
-<section class="articles-list">
+<section class="articles">
 {{/* get the latest pages from the current section, and fill in the missing translated pages from the first site (currently English) */}}
 {{- $pages := where (.RegularPages | lang.Merge .Sites.Default.RegularPages) "Section" .Section }}
 
@@ -47,7 +47,7 @@
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
-<article class="article-entry">
+<article>
   <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="{{ .Title | plainify }}" title="{{ .Title | plainify }}">
     {{- partial "cover.html" . }}
   <div class="entry-date">

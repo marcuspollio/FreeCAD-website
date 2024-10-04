@@ -133,7 +133,7 @@
         color: var(--link-hover-color);
     }
 
-    .articles-list {
+    .articles {
         justify-content: space-evenly;
     }
 }
@@ -148,11 +148,10 @@
 }
 
 @media (prefers-reduced-motion) {
-    /* terms; single; article-entry */
     .terms-tags a:active,
     .button:active,
     .share-buttons svg:active,
-    .article-entry:active,
+    article:active,
     .top-link {
         transform: none;
     }
