@@ -16,6 +16,7 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, Helvetica, 'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    color: var(--secondary);
 }
 
 body,
@@ -29,55 +30,6 @@ main {
     background-color: var(--theme);
 }
 
-a {
-    text-decoration: none;
-    transition: var(--link-transition);
-}
-
-.external-link svg {
-    display: inline-block;
-    margin-left: 0.25rem;
-    width: 0.75em; /* NOTE: use size relative to parent (instead of root html), so it also scales with headers. */
-    min-width: 0.75rem;
-}
-
-img + .external-link {
-    display: none;
-}
-
-h1 {
-    font-size: var(--xxl);
-}
-
-h2 {
-    font-size: var(--xl);
-}
-
-h3 {
-    font-size: var(--l);
-}
-
-h4,
-h5 {
-    font-size: var(--m);
-}
-
-h6 {
-    font-size: var(--s);
-}
-
-a,
-button,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--primary);
-}
-
 aside,
 figcaption,
 figure,
@@ -89,6 +41,54 @@ nav,
 section,
 table {
     display: block;
+}
+
+h1 {
+    font-size: var(--xxl);
+    margin: 2rem auto;
+}
+
+h2 {
+    font-size: var(--xl);
+    margin: 1.5rem auto;
+}
+
+h3 {
+    font-size: var(--l);
+    margin: 1.5rem auto;
+}
+
+h4,
+h5,
+h6,
+p {
+    font-size: var(--m);
+    margin: 1.5rem auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: var(--link-transition);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a.anchor:hover {
+    color: var(--link-hover-color);
+}
+
+.external-link svg {
+    display: inline-block;
+    margin-left: 0.25rem;
+    width: 0.75em; /* NOTE: use size relative to parent (instead of root html), so it also scales with headers. */
+    min-width: 0.75rem;
+}
+
+img + .external-link {
+    display: none;
 }
 
 table {

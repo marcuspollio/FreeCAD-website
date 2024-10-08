@@ -151,6 +151,10 @@ main header .entry-cover img {
     position: relative;
 }
 
+.articles article a {
+    color: var(--secondary);
+}
+
 .articles article figure {
     height: clamp(9rem, 2rem + 8.75vw, 12.5rem);
     background: var(--entry);
@@ -225,18 +229,6 @@ main header .entry-cover img {
     text-align: justify;
 }
 
-.content h1 {
-    margin: 2rem auto 2rem;
-}
-
-.content :is(h2, h3) {
-    margin: 1.5rem auto 1.5rem;
-}
-
-.content :is(h4, h5, h6) {
-    margin: 1rem auto 1rem;
-}
-
 .heading-anchor {
     position: absolute;
     margin-left: 0.25rem;
@@ -249,66 +241,32 @@ main header .entry-cover img {
     opacity: 1;
 }
 
-.content a {
-    color: var(--link-color);
-}
-
-.content a:hover {
-    color: var(--link-hover-color);
-}
-
-.content a.anchor:hover {
-    color: var(--link-hover-color);
-}
-
-.content a code {
-    margin: auto 0;
-    background-color: var(--entry);
-    border-radius: 0;
-}
-
-.content a:hover code {
-    color: var(--link-hover-color);
-}
-
-h1 .anchor,
-h2 .anchor,
-h3 .anchor,
-h4 .anchor,
-h5 .anchor,
-h6 .anchor {
+:is(h1, h2, h3, h4, h5, h6) .anchor {
     box-shadow: none;
     user-select: none;
     font-size: 0.5rem;
     position: relative;
 }
 
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
+:is(h1, h2, h3, h4, h5, h6):hover .anchor {
     color: var(--secondary);
     margin-inline-start: 0.5rem;
     display: inline-flex;
 }
 
-.content del {
+del {
     text-decoration: none;
     background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x;
 }
 
-.content dl,
-.content ol,
-.content p,
-.content figure,
-.content ul {
+dl,
+ol,
+ul {
     margin: 1rem auto 1rem;
 }
 
-.content li > ol,
-.content li > ul {
+li > ol,
+li > ul {
     margin-bottom: 0;
 }
 
@@ -316,87 +274,87 @@ h6:hover .anchor {
     margin-top: 0.5rem;
 }
 
-.content li p {
+li p {
     margin-bottom: 0.5rem;
 }
 
-.content dl {
+dl {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
 }
 
-.content dt {
+dt {
     width: 25%;
     font-weight: 700;
 }
 
-.content dd {
+dd {
     width: 75%;
     margin-inline-start: 0;
     padding-inline-start: 0.5rem;
 }
 
-.content dd ~ dd,
-.content dt ~ dt {
+dd ~ dd,
+dt ~ dt {
     margin-top: 1rem;
 }
 
-.content table {
+table {
     margin-bottom: 2rem;
 }
 
-.content table th,
-.content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+table th,
+table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 5rem;
     padding: 0.5rem 1rem;
     border-bottom: var(--border);
 }
 
-.content table th {
-    font-size: var(--s);
+table th {
+    font-size: var(--m);
     text-align: start;
 }
 
-.content table:not(.highlighttable) td code:only-child {
+table:not(.highlighttable) td code:only-child {
     margin: auto 0;
 }
 
-.content .highlight table {
+.highlight table {
     border-radius: var(--radius);
 }
 
-.content .highlight:not(table) {
+.highlight:not(table) {
     margin: 1rem auto;
     border-radius: var(--radius);
 }
 
-.content li > .highlight {
+li > .highlight {
     margin-inline-end: 0;
 }
 
-.content ul pre {
+ul pre {
     margin-inline-start: calc(var(--gap) * -2);
 }
 
-.content .highlight pre {
+.highlight pre {
     margin: 0;
 }
 
-.content .highlighttable {
+.highlighttable {
     table-layout: fixed;
 }
 
-.content .highlighttable td:first-child {
+.highlighttable td:first-child {
     width: 2rem;
 }
 
-.content .highlighttable td .linenodiv {
+.highlighttable td .linenodiv {
     padding-inline-end: 0 !important;
 }
 
-.content .highlighttable td .highlight,
-.content .highlighttable td .linenodiv pre {
+.highlighttable td .highlight,
+.highlighttable td .linenodiv pre {
     margin-bottom: 0;
 }
 
@@ -411,7 +369,7 @@ h6:hover .anchor {
     color: var(--entry);
     background: var(--tertiary);
     border-radius: var(--radius);
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     font-size: var(--s);
     user-select: none;
 }
@@ -426,12 +384,12 @@ pre {
     position: relative;
 }
 
-.content .chroma {
+.chroma {
     border-radius: var(--radius);
     background-color: var(--entry);
 }
 
-.content code {
+code {
     background-color: var(--entry);
     margin: 0 0.25rem;
     padding: 0.25rem 0.25rem;
@@ -441,7 +399,7 @@ pre {
     direction: ltr;
 }
 
-.content pre code {
+pre code {
     /* reset inline code */
     display: block;
     margin: auto 0;
@@ -452,50 +410,47 @@ pre {
     font-family: var(--monospace);
 }
 
-.content .chroma code {
+.chroma code {
     background-color: inherit;
     font-family: var(--monospace);
 }
 
-.content blockquote {
+blockquote {
     margin: 1rem 0;
     padding: 0 1rem;
     border-inline-start: var(--border);
 }
 
-.content sup {
-}
-
-.content sup a {
+sup a {
     box-shadow: none;
     font-family: Helvetica, Arial, sans-serif;
     color: var(--link-hover-color);
 }
 
-.content sup a:hover {
+sup a:hover {
     color: var(--link-hover-color);
 
 }
 
-.content sup a:before {
+sup a:before {
     content: " [";
 }
 
-.content sup a:after {
+sup a:after {
     content: "]";
 }
 
-.content sup:target {
+sup:target {
     padding: 0.5rem;
     background-color: var(--theme);
     border-radius: var(--radius);
 }
 
-.content hr {
+hr {
     border-top: var(--border);
 }
 
-.content iframe {
+iframe {
     max-width: 100%;
 }
 

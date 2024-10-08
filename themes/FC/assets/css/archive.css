@@ -11,10 +11,13 @@
     background: var(--entry);
 }
 
+.archives a {
+    color: var(--secondary);
+}
+
 .archive-year {
     padding: var(--gap) var(--side);
     font-size: var(--l);
-    margin-top: var(--gap);
 }
 
 .archive-year:not(:last-of-type) {
@@ -22,7 +25,6 @@
 }
 
 .archive-month {
-    padding: 0;
     display: flex;
     align-items: flex-start;
     font-size: var(--l);
@@ -43,12 +45,10 @@
 }
 
 .archive-entry {
-    position: relative;
-    margin: 0 auto var(--gap);
-    padding: 0;
+    margin: var(--gap) auto;
 }
 
-.archive-entry-title:hover {
+.archive-entry:hover .archive-entry-title {
     color: var(--link-hover-color);
 }
 
