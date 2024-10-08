@@ -3,10 +3,16 @@
 
 .archives {
     margin: auto;
-    padding: var(--gap) var(--side);
+    background: var(--bg-linear);
+}
+
+.archives header {
+    height: 10rem;
+    background: var(--entry);
 }
 
 .archive-year {
+    padding: var(--gap) var(--side);
     font-size: var(--l);
     margin-top: var(--gap);
 }
