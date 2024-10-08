@@ -215,26 +215,25 @@ main header .entry-cover img {
 
 /* Single page content */
 
-.single-content {
+.content {
     font-size: var(--m);
     color: var(--secondary);
 }
 
-.content {
-    margin: auto;
+.content > :not(.block, .column) {
     padding: var(--gap) var(--side);
     text-align: justify;
 }
 
-.single-content h1 {
+.content h1 {
     margin: 2rem auto 2rem;
 }
 
-.single-content :is(h2, h3) {
+.content :is(h2, h3) {
     margin: 1.5rem auto 1.5rem;
 }
 
-.single-content :is(h4, h5, h6) {
+.content :is(h4, h5, h6) {
     margin: 1rem auto 1rem;
 }
 
@@ -250,25 +249,25 @@ main header .entry-cover img {
     opacity: 1;
 }
 
-.single-content a {
+.content a {
     color: var(--link-color);
 }
 
-.single-content a:hover {
+.content a:hover {
     color: var(--link-hover-color);
 }
 
-.single-content a.anchor:hover {
+.content a.anchor:hover {
     color: var(--link-hover-color);
 }
 
-.single-content a code {
+.content a code {
     margin: auto 0;
     background-color: var(--entry);
     border-radius: 0;
 }
 
-.single-content a:hover code {
+.content a:hover code {
     color: var(--link-hover-color);
 }
 
@@ -295,109 +294,109 @@ h6:hover .anchor {
     display: inline-flex;
 }
 
-.single-content del {
+.content del {
     text-decoration: none;
     background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x;
 }
 
-.single-content dl,
-.single-content ol,
-.single-content p,
-.single-content figure,
-.single-content ul {
+.content dl,
+.content ol,
+.content p,
+.content figure,
+.content ul {
     margin: 1rem auto 1rem;
 }
 
-.single-content li > ol,
-.single-content li > ul {
+.content li > ol,
+.content li > ul {
     margin-bottom: 0;
 }
 
-.single-content li {
+.content li {
     margin-top: 0.5rem;
 }
 
-.single-content li p {
+.content li p {
     margin-bottom: 0.5rem;
 }
 
-.single-content dl {
+.content dl {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
 }
 
-.single-content dt {
+.content dt {
     width: 25%;
     font-weight: 700;
 }
 
-.single-content dd {
+.content dd {
     width: 75%;
     margin-inline-start: 0;
     padding-inline-start: 0.5rem;
 }
 
-.single-content dd ~ dd,
-.single-content dt ~ dt {
+.content dd ~ dd,
+.content dt ~ dt {
     margin-top: 1rem;
 }
 
-.single-content table {
+.content table {
     margin-bottom: 2rem;
 }
 
-.single-content table th,
-.single-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
+.content table th,
+.content table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 5rem;
     padding: 0.5rem 1rem;
     border-bottom: var(--border);
 }
 
-.single-content table th {
+.content table th {
     font-size: var(--s);
     text-align: start;
 }
 
-.single-content table:not(.highlighttable) td code:only-child {
+.content table:not(.highlighttable) td code:only-child {
     margin: auto 0;
 }
 
-.single-content .highlight table {
+.content .highlight table {
     border-radius: var(--radius);
 }
 
-.single-content .highlight:not(table) {
+.content .highlight:not(table) {
     margin: 1rem auto;
     border-radius: var(--radius);
 }
 
-.single-content li > .highlight {
+.content li > .highlight {
     margin-inline-end: 0;
 }
 
-.single-content ul pre {
+.content ul pre {
     margin-inline-start: calc(var(--gap) * -2);
 }
 
-.single-content .highlight pre {
+.content .highlight pre {
     margin: 0;
 }
 
-.single-content .highlighttable {
+.content .highlighttable {
     table-layout: fixed;
 }
 
-.single-content .highlighttable td:first-child {
+.content .highlighttable td:first-child {
     width: 2rem;
 }
 
-.single-content .highlighttable td .linenodiv {
+.content .highlighttable td .linenodiv {
     padding-inline-end: 0 !important;
 }
 
-.single-content .highlighttable td .highlight,
-.single-content .highlighttable td .linenodiv pre {
+.content .highlighttable td .highlight,
+.content .highlighttable td .linenodiv pre {
     margin-bottom: 0;
 }
 
@@ -427,12 +426,12 @@ pre {
     position: relative;
 }
 
-.single-content .chroma {
+.content .chroma {
     border-radius: var(--radius);
     background-color: var(--entry);
 }
 
-.single-content code {
+.content code {
     background-color: var(--entry);
     margin: 0 0.25rem;
     padding: 0.25rem 0.25rem;
@@ -442,7 +441,7 @@ pre {
     direction: ltr;
 }
 
-.single-content pre code {
+.content pre code {
     /* reset inline code */
     display: block;
     margin: auto 0;
@@ -453,58 +452,58 @@ pre {
     font-family: var(--monospace);
 }
 
-.single-content .chroma code {
+.content .chroma code {
     background-color: inherit;
     font-family: var(--monospace);
 }
 
-.single-content blockquote {
+.content blockquote {
     margin: 1rem 0;
     padding: 0 1rem;
     border-inline-start: var(--line) solid var(--entry);
 }
 
-.single-content sup {
+.content sup {
 }
 
-.single-content sup a {
+.content sup a {
     box-shadow: none;
     font-family: Helvetica, Arial, sans-serif;
     color: var(--link-hover-color);
 }
 
-.single-content sup a:hover {
+.content sup a:hover {
     color: var(--link-hover-color);
 
 }
 
-.single-content sup a:before {
+.content sup a:before {
     content: " [";
 }
 
-.single-content sup a:after {
+.content sup a:after {
     content: "]";
 }
 
-.single-content sup:target {
+.content sup:target {
     padding: 0.5rem;
     background-color: var(--theme);
     border-radius: var(--radius);
 }
 
-.single-content hr {
+.content hr {
     height: var(--line);
     background: var(--entry);
 }
 
-.single-content iframe {
+.content iframe {
     max-width: 100%;
 }
 
 
 /* Single page figures, images and videos */
 
-.single-content img {
+.content img {
     display: block;
     max-width: 100%;
     height: calc(var(--width) / 2);
@@ -513,26 +512,26 @@ pre {
     transition: var(--link-transition);
 }
 
-.single-content video {
+.content video {
     width: 100%;
 }
 
-.single-content figure.align-center {
+.content figure.align-center {
     text-align: center;
 }
 
-.single-content figure > figcaption {
+.content figure > figcaption {
     color: var(--primary);
     font-size: var(--m);
     margin: 0.5rem 0 1rem;
 }
 
-.single-content figure > figcaption > p {
+.content figure > figcaption > p {
     color: var(--secondary);
     font-size: var(--m);
 }
 
-.single-content a img:hover {
+.content a img:hover {
     filter: brightness(1.1) saturate(110%);
     transform: scale(1.02);
 }

@@ -60,7 +60,7 @@
         flex-direction: column;
     }
 
-    .single-content img {
+    .content img {
         max-height: var(--width);
         width: 100%;
     }
