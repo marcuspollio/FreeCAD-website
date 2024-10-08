@@ -460,7 +460,7 @@ pre {
 .content blockquote {
     margin: 1rem 0;
     padding: 0 1rem;
-    border-inline-start: var(--line) solid var(--entry);
+    border-inline-start: var(--border);
 }
 
 .content sup {
@@ -492,8 +492,7 @@ pre {
 }
 
 .content hr {
-    height: var(--line);
-    background: var(--entry);
+    border-top: var(--border);
 }
 
 .content iframe {
