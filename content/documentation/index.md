@@ -1,8 +1,8 @@
 ---
-title: Documentation
-description: Get started with FreeCAD
+title: "Documentation"
+description: "Get started with FreeCAD"
 date: 2024-05-22T08:04:23+12:00
-author: FreeCAD
+author: "FreeCAD"
 
 menus:
   main:
@@ -11,11 +11,11 @@ menus:
     weight: 5
 cover:
   image: space_8.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
-[![LINK TO GITHUB](space_8.jpg)](https://github.com/freecad 'Link to GitHub')
+[![LINK TO GITHUB](space_8.jpg)](https://github.com/freecad "Link to GitHub")
 
 ## First Documentation Block
 

@@ -1,8 +1,8 @@
 ---
-title: Second Highlight
-description: This is the second highlight article !
+title: "Second Highlight"
+description: "This is the second highlight article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: true
 
 categories: highlight
@@ -11,8 +11,8 @@ tags:
   - highlight
 cover:
   image: space_15.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

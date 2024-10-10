@@ -1,8 +1,8 @@
 ---
-title: Markdown Syntax Guide
-description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+title: "Markdown Syntax Guide"
+description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements"
 date: 2019-03-11
-author: FreeCAD
+author: "FreeCAD"
 draft: false
 
 tags:
@@ -11,8 +11,8 @@ tags:
   - example
 cover:
   image: space_2.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.

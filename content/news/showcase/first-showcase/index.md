@@ -1,8 +1,8 @@
 ---
-title: First Showcase
-description: This is the first showcase article !
+title: "First Showcase"
+description: "This is the first showcase article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: false
 
 categories: showcase
@@ -11,8 +11,8 @@ tags:
   - showcase
 cover:
   image: space_2.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

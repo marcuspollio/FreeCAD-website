@@ -1,5 +1,5 @@
 ---
-title: FreeCAD HomePage _Index
+title: "FreeCAD HomePage _Index"
 ---
 ## Hello world !
 

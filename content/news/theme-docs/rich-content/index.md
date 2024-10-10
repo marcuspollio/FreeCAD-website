@@ -1,8 +1,8 @@
 ---
-title: Rich Content
-description: A brief description of Hugo Shortcodes
+title: "Rich Content"
+description: "A brief description of Hugo Shortcodes"
 date: 2019-03-10
-author: FreeCAD
+author: "FreeCAD"
 draft: false
 
 tags:
@@ -11,8 +11,8 @@ tags:
   - example
 cover:
   image: space_1.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 ## Image

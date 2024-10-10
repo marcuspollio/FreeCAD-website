@@ -1,8 +1,8 @@
 ---
-title: First Event
-description: This is the first event article !
+title: "First Event"
+description: "This is the first event article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: false
 
 categories: event
@@ -11,8 +11,8 @@ tags:
   - event
 cover:
   image: space_11.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

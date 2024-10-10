@@ -193,21 +193,21 @@ hugo new -kind release releases/X-Y <-- where X is the major version number and 
 ```
 
 ```
-title: FreeCAD X.Y Release        <-- automatically generated, change if needed
-description: The description      <-- the description must be written
-date: 2024-05-18T21:22:57+12:00   <-- automatically generated, change if needed
-author: FreeCAD                   <-- automatically generated, change if needed
+title: "FreeCAD X.Y Release"        <-- automatically generated, change if needed
+description: "The description"      <-- the description must be written
+date: 2024-05-18T21:22:57+12:00     <-- automatically generated, change if needed
+author: "FreeCAD"                   <-- automatically generated, change if needed
 tags:
-  - X.Y                           <-- automatically generated, change if needed
+  - X.Y                             <-- automatically generated, change if needed
 params:
-  release: X.Y                    <-- automatically generated, change if needed
-  windows: link-to-windows-build  <-- the link must be written
-  macos: link-to-macos-build      <-- the link must be written
-  linux: link-to-linux-build      <-- the link must be written
+  release: X.Y                      <-- automatically generated, change if needed
+  windows: link-to-windows-build    <-- the link must be written
+  macos: link-to-macos-build        <-- the link must be written
+  linux: link-to-linux-build        <-- the link must be written
 cover:
-  image: splashscreen-x-y.jpg     <-- automatically generated, change if needed
-  caption: the X.Y splashscreen   <-- automatically generated, change if needed
-  alt: the X.Y splashscreen       <-- automatically generated, change if needed
+  image: splashscreen-x-y.jpg       <-- automatically generated, change if needed
+  caption: "the X.Y splashscreen"   <-- automatically generated, change if needed
+  alt: "the X.Y splashscreen"       <-- automatically generated, change if needed
 ```
 
 Make sure to always fill out the release date, version number and the builds link per platform.

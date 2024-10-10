@@ -1,8 +1,8 @@
 ---
-title: FreeCAD 1.0 is finally here !
-description: It's finally here !
+title: "FreeCAD 1.0 is finally here !"
+description: "It's finally here !"
 date: 2024-06-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: false
 
 categories: announcement
@@ -11,8 +11,8 @@ tags:
   - 1.0
 cover:
   image: space_14.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 params:
   hero: true
   links:

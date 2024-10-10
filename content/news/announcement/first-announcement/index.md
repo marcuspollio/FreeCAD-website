@@ -1,8 +1,8 @@
 ---
-title: First Announcement
-description: This is the first announcement article !
+title: "First Announcement"
+description: "This is the first announcement article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: false
 
 categories: announcement
@@ -11,8 +11,8 @@ tags:
   - announcement
 cover:
   image: space_1.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

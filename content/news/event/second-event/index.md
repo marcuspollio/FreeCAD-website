@@ -1,8 +1,8 @@
 ---
-title: Second Event
-description: This is the second event article !
+title: "Second Event"
+description: "This is the second event article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: true
 
 categories: event
@@ -11,8 +11,8 @@ tags:
   - event
 cover:
   image: space_12.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading
