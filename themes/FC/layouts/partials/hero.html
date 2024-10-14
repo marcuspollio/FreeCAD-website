@@ -12,13 +12,13 @@
     <div class="buttons">
     {{- if .Params.links.download }}
     {{ $download := .Site.GetPage "download" }}
-    <p class="hero-button download">
-        <a href="{{ $download.RelPermalink }}">{{ $download.LinkTitle | .RenderString }}</a>
+    <p>
+        <a class="hero-button download" href="{{ $download.RelPermalink }}">{{ $download.LinkTitle | .RenderString }}</a>
     </p>
     {{- end }}
     {{- if .Params.links.custom }}
-    <p class="hero-button custom">
-        <a href="{{ .Params.links.custom | relLangURL }}">
+    <p>
+        <a class="hero-button custom" href="{{ .Params.links.custom | relLangURL }}">
         {{- with .Params.links.customText }}
             {{ . | $.Page.RenderString }}
         {{- else }}
@@ -27,8 +27,8 @@
     </p>
     {{- end }}
     {{- if .Params.links.article }}
-    <p class="hero-button article">
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle | .RenderString }}</a>
+    <p>
+        <a class="hero-button article" href="{{ .RelPermalink }}">{{ .LinkTitle | .RenderString }}</a>
     </p>
     {{- end }}
     </div>

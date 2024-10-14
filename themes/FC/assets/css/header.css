@@ -144,7 +144,7 @@ body:not(.dark) #sun {
 
 .menu-list .button#menu-active  {
     color: var(--cover);
-    background-color: black;
+    background: black;
 }
 
 /* Languages switcher and Menu in media mode */
@@ -197,7 +197,7 @@ body:not(.dark) #sun {
 }
 
 .language-list li .language-active {
-    background-color: var(--theme);
+    background: var(--theme);
     border-radius: var(--radius);
     padding: 1rem;
     color: var(--primary);

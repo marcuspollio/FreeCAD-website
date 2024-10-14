@@ -22,7 +22,7 @@ body {
 main {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     white-space: normal;
-    background-color: var(--theme);
+    background: var(--theme);
     overflow-wrap: break-word;
 }
 
@@ -153,25 +153,22 @@ main header {
 .hero-button {
     padding: 0.75rem 1.5rem;
     font-size: var(--m);
-    background-color: var(--link-color);
+    background: var(--link-color);
     border-radius: var(--radius);
     transition: var(--link-transition);
 }
 
-.hero-button a {
+.hero-button:hover {
+    background: var(--link-hover-color);
     color: var(--cover);
 }
 
-.hero-button:hover {
-    background-color: var(--link-hover-color);
-}
-
 .hero-button.download {
-    background-color: rgb(64, 64, 64);
+    background: rgb(64, 64, 64);
 }
 
 .hero-button.download:hover {
-    background-color: rgb(32, 32, 32);
+    background: rgb(32, 32, 32);
 }
 
 .single-meta {
@@ -285,7 +282,7 @@ main header .entry-cover img {
 }
 
 .entry-date time {
-    background-color: var(--overlay);
+    background: var(--overlay);
     backdrop-filter: blur(0.3rem);
     padding: 0.5rem;
     border-radius: var(--radius);
@@ -476,11 +473,11 @@ pre {
 
 .chroma {
     border-radius: var(--radius);
-    background-color: var(--entry);
+    background: var(--entry);
 }
 
 code {
-    background-color: var(--entry);
+    background: var(--entry);
     margin: 0 0.25rem;
     padding: 0.25rem 0.25rem;
     border-radius: 0.25rem;
@@ -501,7 +498,7 @@ pre code {
 }
 
 .chroma code {
-    background-color: inherit;
+    background: inherit;
     font-family: var(--monospace);
 }
 
@@ -532,7 +529,7 @@ sup a:after {
 
 sup:target {
     padding: 0.5rem;
-    background-color: var(--theme);
+    background: var(--theme);
     border-radius: var(--radius);
 }
 
@@ -617,7 +614,7 @@ iframe {
 }
 
 .column {
-    background-color: crimson;
+    background: crimson;
 }
 
 .block p,
@@ -842,7 +839,7 @@ mark {
 
 .footnotes {
     padding: 1rem;
-    background-color: var(--entry);
+    background: var(--entry);
     border-radius: var(--radius);
     color: var(--tertiary);
     font-size: var(--s);
@@ -883,7 +880,7 @@ mark {
 
 .footnotes ol li:target {
     padding: 0.5rem;
-    background-color: var(--theme);
+    background: var(--theme);
     border-radius: var(--radius);
 }
 
