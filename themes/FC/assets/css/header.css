@@ -162,7 +162,6 @@ body:not(.dark) #sun {
 
 .language-dropdown svg {
     height: 1.25rem;
-    cursor: pointer;
 }
 
 #lang-list {
