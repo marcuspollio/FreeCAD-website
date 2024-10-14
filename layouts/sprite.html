@@ -1,0 +1,7 @@
+<div class="animated-sprite ratio" 
+     data-frame-count="{{ .Get "frame_count" | default "72" }}" 
+     data-frames-per-row="{{ .Get "frames_per_row" | default (.Get "frame_count") }}" 
+     data-frame-width="{{ .Get "frame_width" | default "1600" }}" 
+     data-frame-height="{{ .Get "frame_height" | default "900" }}"
+     style="background-image: url('{{ .Get "image_url" }}')">
+</div>
