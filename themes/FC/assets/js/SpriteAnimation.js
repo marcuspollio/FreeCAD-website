@@ -1,63 +1,57 @@
-/*A set of functions that make it possible to create interactive spreadsheet animations.
-The animation starts when the interaction appears on the screen, continues as it scrolls upwards, and ends at the end.*/
+document.addEventListener('DOMContentLoaded', function () {
+    const animatedSpriteElements = document.querySelectorAll('.animated-sprite');
 
-document.addEventListener('DOMContentLoaded', function() {
-    var animatedSpriteElements = document.querySelectorAll('.animated-sprite');
+    // Global variables to avoid repetition
+    let viewportHeight = window.innerHeight;
 
-    animatedSpriteElements.forEach(function(animatedSpriteElement) {
-        setAspectRatio(animatedSpriteElement);
-        setBackgroundSize(animatedSpriteElement);
+    animatedSpriteElements.forEach(function (element) {
+        setAspectRatio(element);
+        setBackgroundSize(element);
 
-        window.addEventListener('scroll', function() {
-            handleScroll(animatedSpriteElement);
+        // Handle scrolling events
+        window.addEventListener('scroll', function () {
+            handleScroll(element, viewportHeight);
         });
-        handleScroll(animatedSpriteElement);
+
+        // Initial scroll handling
+        handleScroll(element, viewportHeight);
     });
 });
 
-/*This function sets the ratio for frames with different aspect ratios if there are any.*/
 function setAspectRatio(element) {
-    var frameWidth = parseInt(element.getAttribute('data-frame-width'), 10);
-    var frameHeight = parseInt(element.getAttribute('data-frame-height'), 10);
+    const frameWidth = parseInt(element.getAttribute('data-frame-width'), 10) || 1600;
+    const frameHeight = parseInt(element.getAttribute('data-frame-height'), 10) || 900;
 
     if (frameWidth && frameHeight) {
-        var aspectRatioPercentage = (frameHeight / frameWidth) * 100;
+        const aspectRatioPercentage = (frameHeight / frameWidth) * 100;
         element.style.setProperty('--aspect-ratio', aspectRatioPercentage + '%');
     }
 }
 
-/*This function adjusts the background size according to the number of frames in the row or not according to the count of frames.*/
 function setBackgroundSize(element) {
-    var frameCount = parseInt(element.getAttribute('data-frame-count'), 10);
-    var framesPerRow = parseInt(element.getAttribute('data-frames-per-row'), 10) || frameCount;
+    const frameCount = parseInt(element.getAttribute('data-frame-count'), 10) || 72;
 
-    var backgroundSizePercentage = framesPerRow * 100;
-    element.style.backgroundSize = backgroundSizePercentage + '% auto';
+    // All frames are assumed to be in a single row for simplicity
+    const backgroundSizePercentage = frameCount * 100;
+    element.style.backgroundSize = `${backgroundSizePercentage}% auto`;
 }
 
-/*This function is the function that provides animation input. Interactivity is provided by this function.*/
-function handleScroll(element) {
-    var frameCount = parseInt(element.getAttribute('data-frame-count'), 10);
-    var elementRect = element.getBoundingClientRect();
-    var elementTopPosition = elementRect.top;
-    var viewportHeight = window.innerHeight;
+function handleScroll(element, viewportHeight) {
+    const frameCount = parseInt(element.getAttribute('data-frame-count'), 10) || 72;
+    const elementRect = element.getBoundingClientRect();
+    const elementTopPosition = elementRect.top;
 
-  /*This variable allows you to adjust the animation behavior.
-  The first ratio is related to the starting location of the animation and the second ratio is related to the ending location.*/
-    var scrollProgress = (elementTopPosition - viewportHeight * 0.2) / (viewportHeight * 0.5);
-    scrollProgress = 1 - Math.max(0, Math.min(1, scrollProgress));
-    var currentFrame = Math.floor(scrollProgress * (frameCount - 1));
+    const scrollProgress = (elementTopPosition - viewportHeight * 0.2) / (viewportHeight * 0.5);
+    const normalizedProgress = 1 - Math.max(0, Math.min(1, scrollProgress));
+    const currentFrame = Math.floor(normalizedProgress * (frameCount - 1));
 
     updateBackgroundPosition(element, currentFrame);
 }
 
-/*This function is the basic function that provides animation.*/
 function updateBackgroundPosition(element, frame) {
-    var frameCount = parseInt(element.getAttribute('data-frame-count'), 10);
-    var framesPerRow = parseInt(element.getAttribute('data-frames-per-row'), 10) || frameCount;
+    const frameCount = parseInt(element.getAttribute('data-frame-count'), 10) || 72;
 
-    var backgroundPositionX = -(frame % framesPerRow) * 100;
-    var backgroundPositionY = -Math.floor(frame / framesPerRow) * 100;
-
-    element.style.backgroundPosition = backgroundPositionX + '% ' + backgroundPositionY + '%';
+    // Single row assumed for all frames
+    const backgroundPositionX = -(frame % frameCount) * 100;
+    element.style.backgroundPosition = `${backgroundPositionX}% 0%`;
 }
