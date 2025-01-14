@@ -40,6 +40,52 @@ params:
     - name: github-simple
       url: https://github.com/FreeCAD
 
+  headless_cms:
+    engine: "sveltia"
+    site_url: "https://marcuspollio.github.io/FreeCAD-website/"
+    backend:
+      name: "github"
+      repo: "marcuspollio/FreeCAD-website"
+      branch: testing
+      base_url: https://sveltia-cms-auth.marcus-pollio.workers.dev/
+      commit_messages:
+        create: Create {{collection}} “{{slug}}”
+        update: Update {{collection}} “{{slug}}”
+        delete: Delete {{collection}} “{{slug}}”
+        uploadMedia: Upload Media “{{path}}”
+        deleteMedia: Delete Media “{{path}}”
+        openAuthoring: '{{message}}'
+    publish_mode: editorial_workflow
+    collections:
+      - name: news
+        label: News
+        description: This is the News blog collection with FreeCAD articles
+        icon: brand_awareness
+        create: true
+        folder: content/news
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Article Title", name: "title", widget: "string", hint: "Use a similar structure as existing articles for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Article Author", name: "author", widget: "string", hint: "Use a similar author name as existing ones for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true}
+          - {label: "Featured Image", name: "thumbnail", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: homepage
+        label: Homepage
+        icon: home
+        folder: content/homepage
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Content", name: "body", widget: "markdown"}
+
+
 permalinks:
   page:
     news: /news/:slugorfilename/
@@ -173,10 +219,6 @@ minify:
   disableXML: true
   # minifyOutput: true
 
-outputs:
-  home:
-    - HTML
-
 taxonomies:
   category: categories
   tag: tags
@@ -203,6 +245,14 @@ module:
       target: assets
     - source: static # Allows to perform modifications via pipes on files in static folder
       target: assets
+  imports:
+    - path: github.com/privatemaker/headless-cms
+      disable: false
+
+outputs:
+  home:
+    - HTML
+    - HeadlessCMSConfig
 
 privacy: # See https://gohugo.io/about/privacy/
   googleAnalytics:
