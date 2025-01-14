@@ -61,6 +61,7 @@ params:
         label: News
         description: This is the News blog collection with FreeCAD articles
         icon: brand_awareness
+        thumbnail: cover.image
         create: true
         folder: content/news
         media_folder: ''
@@ -72,7 +73,7 @@ params:
           - {label: "Publish Date", name: "date", widget: "datetime"}
           - {label: "Article Author", name: "author", widget: "string", hint: "Use a similar author name as existing ones for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
           - {label: "Draft", name: "draft", widget: "boolean", default: true}
-          - {label: "Featured Image", name: "thumbnail", widget: "image"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
           - {label: "Content", name: "body", widget: "markdown"}
       - name: homepage
         label: Homepage
