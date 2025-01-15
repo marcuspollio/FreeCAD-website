@@ -1,20 +1,18 @@
 ---
-title: "First Announcement"
-description: "This is the first announcement article !"
-date: 2024-05-16T15:27:48+12:00
-author: "FreeCAD"
+title: First Announcement is updated
+description: This is the first announcement article !
+date: 2024-05-16T05:27:00
+author: FreeCAD
 draft: false
-
 categories: announcement
+cover:
+  image: space_1.jpg
+  caption: a cover caption
+  alt: a cover alternative title
 tags:
   - first
   - announcement
-cover:
-  image: space_1.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
 ---
-
 # This is the first heading
 
 ## This is the second heading
@@ -23,7 +21,7 @@ cover:
 
 #### This is the fourth heading
 
-This is **bold** text, and this is *italic* text.
+This is **bold** text, and this is _italic_ text.
 
 ![Image alternative text](space_1.jpg "This is an image title")
 
