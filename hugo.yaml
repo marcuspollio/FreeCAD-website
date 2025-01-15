@@ -47,7 +47,7 @@ params:
       name: "github"
       repo: "marcuspollio/FreeCAD-website"
       branch: testing
-      base_url: https://sveltia-cms-auth.marcus-pollio.workers.dev/
+      base_url: https://sveltia-github-auth.marcus-pollio.workers.dev/
       commit_messages:
         create: Create {{collection}} “{{slug}}”
         update: Update {{collection}} “{{slug}}”
