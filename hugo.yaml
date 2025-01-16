@@ -51,12 +51,12 @@ params:
       branch: testing
       base_url: https://sveltia-github-auth.marcus-pollio.workers.dev/
       commit_messages:
-        create: Create {{collection}} "{{slug}}"
-        update: Update {{collection}} "{{slug}}"
-        delete: Delete {{collection}} "{{slug}}"
-        uploadMedia: Upload Media "{{path}}"
-        deleteMedia: Delete Media "{{path}}"
-        openAuthoring: '{{message}}'
+        create: "{{collection}}: create {{slug}}"
+        update: "{{collection}}: update {{slug}}"
+        delete: "{{collection}}: delete {{slug}}"
+        uploadMedia: "Media: upload {{path}}"
+        deleteMedia: "Media: delete {{path}}"
+        openAuthoring: "{{message}}"
     publish_mode: editorial_workflow
     collections:
       - name: news
