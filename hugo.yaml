@@ -40,6 +40,8 @@ params:
     - name: github-simple
       url: https://github.com/FreeCAD
 
+# Headless CMS parameters
+
   headless_cms:
     engine: "sveltia"
     site_url: "https://marcuspollio.github.io/FreeCAD-website/"
@@ -77,6 +79,9 @@ params:
           - {label: "Article Category", name: "categories", widget: "select", options: ["announcement", "event", "highlight", "showcase", "tutorial", "update"]}
           - {label: "Featured Image", name: "cover.image", widget: "image"}
           - {label: "Content", name: "body", widget: "markdown"}
+      - divider: true
+        name: 1
+        files: []
       - name: homepage
         label: Homepage
         icon: home
@@ -87,7 +92,105 @@ params:
         slug: "{{slug}}"
         fields:
           - {label: "Content", name: "body", widget: "markdown"}
-
+      - name: features
+        label: Features
+        icon: bolt
+        thumbnail: cover.image
+        folder: content/features
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Features Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Features Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: download
+        label: Download
+        icon: downloading
+        thumbnail: cover.image
+        folder: content/download
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Download Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Download Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: releases
+        label: Releases
+        icon: celebration
+        thumbnail: cover.image
+        create: true
+        folder: content/releases
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Release Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Release Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: community
+        label: Community
+        icon: hub
+        thumbnail: cover.image
+        folder: content/community
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Community Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Community Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: documentation
+        label: Documentation
+        icon: local_library
+        thumbnail: cover.image
+        folder: content/documentation
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Documentation Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Documentation Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: contribute
+        label: Contribute
+        icon: code_blocks
+        thumbnail: cover.image
+        folder: content/contribute
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Contribute Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Contribute Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: donate
+        label: Donate
+        icon: volunteer_activism
+        thumbnail: cover.image
+        folder: content/donate
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Donate Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Donate Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
 
 permalinks:
   page:
