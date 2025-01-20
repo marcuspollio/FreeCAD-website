@@ -371,3 +371,11 @@ privacy: # See https://gohugo.io/about/privacy/
   youtube:
     disabled: false
     privacyEnhanced: true
+
+caches:
+  getresource:
+    dir: :cacheDir/:project
+    maxAge: 24h
+  modules:
+    dir: :cacheDir/modules
+    maxAge: 24h
