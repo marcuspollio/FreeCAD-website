@@ -1,46 +1,36 @@
 ---
-title: "Documentation"
-description: "Get started with FreeCAD"
+description: Points forts de FreeCAD sur la page d'accueil
+author: FreeCAD
+type: homepage
+title: FreeCAD page d'accueil
 date: 2024-05-22T08:04:23+12:00
-author: "FreeCAD"
-
-menus:
-  main:
-    weight: 5
-  footer:
-    weight: 5
-cover:
-  image: space_8.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
 ---
+[![LINK TO GITHUB](space_1.jpg "Link to GitHub")](https://github.com/freecad)
 
-[![LINK TO GITHUB](space_8.jpg)](https://github.com/freecad "Link to GitHub")
-
-## First Documentation Block
+## First Highlight Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 
 +++
 
-## Second Documentation Block
+## Second Highlight Block
 
 This is a text in the second block to go in the left. This is a text in the second block. This is a text in the second block to go in the left. This is a text in the second block to go in the left. This is a text in the second block to go in the left. This is a text in the second block.
 
-![](space_8.jpg)
+![](space_1.jpg)
 
 +++
 
-![](space_8.jpg)
+![](space_1.jpg)
 
-## Third Documentation Block
+## Third Highlight Block
 
 This is a text in the third block to go in the right. This is a text in the third block. This is a text in the third block to go in the right. This is a text in the third block to go in the right. This is a text in the third block to go in the right. This is a text in the third block.
 
 +++
 
-## Fourth Documentation Block
+## Fourth Highlight Block
 
 This is a text in the fourth block to go in the left. This is a text in the fourth block. This is a text in the fourth block to go in the left. This is a text in the fourth block to go in the left. This is a text in the fourth block to go in the left. This is a text in the fourth block.
 
-![](space_8.jpg)
+![](space_1.jpg)

@@ -1,44 +1,36 @@
 ---
-cover:
-  alt: a cover alternative title
-  caption: a cover caption
-  image: space_8.jpg
+description: FreeCAD highlights on the Homepage
 author: FreeCAD
-description: Démarrer vos projets avec FreeCAD
-title: Documentation
+type: homepage
+title: FreeCAD Homepage highlights
 date: 2024-05-22T08:04:23+12:00
-menus:
-  main:
-    weight: 5
-  footer:
-    weight: 5
 ---
-[![LINK TO GITHUB](space_8.jpg "Link to GitHub")](https://github.com/freecad)
+[![LINK TO GITHUB](space_1.jpg "Link to GitHub")](https://github.com/freecad)
 
-## First Documentation Block
+## First Highlight Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 
 +++
 
-## Second Documentation Block
+## Second Highlight Block
 
 This is a text in the second block to go in the left. This is a text in the second block. This is a text in the second block to go in the left. This is a text in the second block to go in the left. This is a text in the second block to go in the left. This is a text in the second block.
 
-![](space_8.jpg)
+![](space_1.jpg)
 
 +++
 
-![](space_8.jpg)
+![](space_1.jpg)
 
-## Third Documentation Block
+## Third Highlight Block
 
 This is a text in the third block to go in the right. This is a text in the third block. This is a text in the third block to go in the right. This is a text in the third block to go in the right. This is a text in the third block to go in the right. This is a text in the third block.
 
 +++
 
-## Fourth Documentation Block
+## Fourth Highlight Block
 
 This is a text in the fourth block to go in the left. This is a text in the fourth block. This is a text in the fourth block to go in the left. This is a text in the fourth block to go in the left. This is a text in the fourth block to go in the left. This is a text in the fourth block.
 
-![](space_8.jpg)
+![](space_1.jpg)

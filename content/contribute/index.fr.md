@@ -1,21 +1,19 @@
 ---
-title: "Contributer"
-description: "Aider le développement de FreeCAD"
+cover:
+  alt: a cover alternative title
+  caption: a cover caption
+  image: space_2.jpg
+author: FreeCAD
+description: Aider le développement de FreeCAD
+title: Contributer
 date: 2024-05-22T08:04:23+12:00
-author: "FreeCAD"
-
 menus:
   main:
     weight: 6
   footer:
     weight: 6
-cover:
-  image: space_2.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
 ---
-
-[![LINK TO GITHUB](space_2.jpg)](https://github.com/freecad "Link to GitHub")
+[![LINK TO GITHUB](space_2.jpg "Link to GitHub")](https://github.com/freecad)
 
 ## First Contribute Block
 

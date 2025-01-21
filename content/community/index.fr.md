@@ -1,21 +1,19 @@
 ---
-title: "Communauté"
-description: "Rejoindre la communauté"
+description: Rejoindre la communauté
+author: FreeCAD
+cover:
+  image: space_1.jpg
+  caption: a cover caption
+  alt: a cover alternative title
+title: Communauté
 date: 2024-05-22T08:04:23+12:00
-author: "FreeCAD"
-
 menus:
   main:
     weight: 4
   footer:
     weight: 4
-cover:
-  image: space_1.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
 ---
-
-[![LINK TO GITHUB](space_1.jpg)](https://github.com/freecad "Link to GitHub")
+[![LINK TO GITHUB](space_1.jpg "Link to GitHub")](https://github.com/freecad)
 
 ## First Community Block
 

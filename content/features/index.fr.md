@@ -1,21 +1,19 @@
 ---
-title: "Fonctionnalités"
-description: "Découvrir les fonctionnalités de FreeCAD"
+title: Fonctionnalités
+description: Découvrir les fonctionnalités de FreeCAD
+cover:
+  image: space_5.jpg
+  caption: a cover caption
+  alt: a cover alternative title
+author: FreeCAD
 date: 2024-05-22T08:04:23+12:00
-author: "FreeCAD"
-
 menus:
   main:
     weight: 1
   footer:
     weight: 1
-cover:
-  image: space_5.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
 ---
-
-[![LINK TO GITHUB](space_5.jpg)](https://github.com/freecad "Link to GitHub")
+[![LINK TO GITHUB](space_5.jpg "Link to GitHub")](https://github.com/freecad)
 
 ## First Feature Block
 

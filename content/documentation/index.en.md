@@ -1,46 +1,44 @@
 ---
-title: "Community"
-description: "Get in touch with the community"
+cover:
+  alt: a cover alternative title
+  caption: a cover caption
+  image: space_8.jpg
+author: FreeCAD
+description: Get started with FreeCAD
+title: Documentation
 date: 2024-05-22T08:04:23+12:00
-author: "FreeCAD"
-
 menus:
   main:
-    weight: 4
+    weight: 5
   footer:
-    weight: 4
-cover:
-  image: space_1.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
+    weight: 5
 ---
+[![LINK TO GITHUB](space_8.jpg "Link to GitHub")](https://github.com/freecad)
 
-[![LINK TO GITHUB](space_1.jpg)](https://github.com/freecad "Link to GitHub")
-
-## First Community Block
+## First Documentation Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 
 +++
 
-## Second Community Block
+## Second Documentation Block
 
 This is a text in the second block to go in the left. This is a text in the second block. This is a text in the second block to go in the left. This is a text in the second block to go in the left. This is a text in the second block to go in the left. This is a text in the second block.
 
-![](space_1.jpg)
+![](space_8.jpg)
 
 +++
 
-![](space_1.jpg)
+![](space_8.jpg)
 
-## Third Community Block
+## Third Documentation Block
 
 This is a text in the third block to go in the right. This is a text in the third block. This is a text in the third block to go in the right. This is a text in the third block to go in the right. This is a text in the third block to go in the right. This is a text in the third block.
 
 +++
 
-## Fourth Community Block
+## Fourth Documentation Block
 
 This is a text in the fourth block to go in the left. This is a text in the fourth block. This is a text in the fourth block to go in the left. This is a text in the fourth block to go in the left. This is a text in the fourth block to go in the left. This is a text in the fourth block.
 
-![](space_1.jpg)
+![](space_8.jpg)

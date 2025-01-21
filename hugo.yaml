@@ -58,6 +58,10 @@ params:
         deleteMedia: "Media: delete {{path}}"
         openAuthoring: "{{message}}"
     publish_mode: editorial_workflow
+    i18n:
+      structure: multiple_files
+      locales: [en, fr]
+      default_locale: en
     collections:
       - name: news
         label: News
@@ -71,55 +75,73 @@ params:
         format: frontmatter
         slug: "{{slug}}"
         fields:
-          - {label: "Article Title", name: "title", widget: "string", hint: "Use a similar structure as existing articles for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Article Description", name: "description", widget: "string"}
-          - {label: "Publish Date", name: "date", widget: "datetime"}
-          - {label: "Article Author", name: "author", widget: "string", hint: "Use a similar author name as existing ones for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Draft", name: "draft", widget: "boolean", default: true}
-          - {label: "Article Category", name: "categories", widget: "select", options: ["announcement", "event", "highlight", "showcase", "tutorial", "update"]}
-          - {label: "Featured Image", name: "cover.image", widget: "image"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Article Title", name: "title", widget: "string", i18n: true, hint: "Use a similar structure as existing articles for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Article Description", name: "description", widget: "string", i18n: true}
+          - {label: "Publish Date", name: "date", widget: "datetime", i18n: duplicate}
+          - {label: "Article Author", name: "author", widget: "string", i18n: duplicate, hint: "Use a similar author name as existing ones for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true, i18n: duplicate}
+          - {label: "Article Category", name: "categories", widget: "select", options: ["announcement", "event", "highlight", "showcase", "tutorial", "update"], i18n: duplicate}
+          - {label: "Featured Image", name: "cover.image", widget: "image", i18n: duplicate}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - divider: true
         name: 1
         files: []
       - name: homepage
         label: Homepage
         icon: home
-        folder: content/homepage
-        media_folder: ''
-        public_folder: ''
+        media_folder: /content/homepage
+        public_folder: /homepage
         format: frontmatter
         slug: "{{slug}}"
+        i18n:
+          structure: multiple_files
+        files:
+          - name: homepage
+            label: Homepage
+            file: content/homepage/index.{{locale}}.md
+            i18n: true
         fields:
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Homepage Title", name: "title", widget: "string", i18n: true, pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Homepage Description", name: "description", widget: "string", i18n: true}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - name: features
         label: Features
         icon: bolt
-        thumbnail: cover.image
-        folder: content/features
-        media_folder: ''
-        public_folder: ''
+        media_folder: /content/features
+        public_folder: /features
         format: frontmatter
         slug: "{{slug}}"
+        i18n:
+          structure: multiple_files
+        files:
+          - name: features
+            label: Features
+            file: content/features/index.{{locale}}.md
+            i18n: true
         fields:
-          - {label: "Features Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Features Page Description", name: "description", widget: "string"}
-          - {label: "Featured Image", name: "cover.image", widget: "image"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Features Page Title", name: "title", widget: "string", i18n: true, pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Features Page Description", name: "description", widget: "string", i18n: true}
+          - {label: "Featured Image", name: "cover.image", widget: "image", i18n: duplicate}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - name: download
         label: Download
         icon: downloading
-        thumbnail: cover.image
-        folder: content/download
-        media_folder: ''
-        public_folder: ''
+        media_folder: /content/download
+        public_folder: /download
         format: frontmatter
         slug: "{{slug}}"
+        i18n:
+          structure: multiple_files
+        files:
+          - name: download
+            label: Download
+            file: content/download/index.{{locale}}.md
+            i18n: true
         fields:
-          - {label: "Download Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Download Page Description", name: "description", widget: "string"}
-          - {label: "Featured Image", name: "cover.image", widget: "image"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Download Page Title", name: "title", widget: "string", i18n: true, pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Download Page Description", name: "description", widget: "string", i18n: true}
+          - {label: "Featured Image", name: "cover.image", widget: "image", i18n: duplicate}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - name: releases
         label: Releases
         icon: celebration
@@ -138,45 +160,60 @@ params:
       - name: community
         label: Community
         icon: hub
-        thumbnail: cover.image
-        folder: content/community
-        media_folder: ''
-        public_folder: ''
+        media_folder: /content/community
+        public_folder: /community
         format: frontmatter
         slug: "{{slug}}"
+        i18n:
+          structure: multiple_files
+        files:
+          - name: community
+            label: Community
+            file: content/community/index.{{locale}}.md
+            i18n: true
         fields:
-          - {label: "Community Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Community Page Description", name: "description", widget: "string"}
-          - {label: "Featured Image", name: "cover.image", widget: "image"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Community Page Title", name: "title", widget: "string", i18n: true, pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Community Page Description", name: "description", widget: "string", i18n: true}
+          - {label: "Featured Image", name: "cover.image", widget: "image", i18n: duplicate}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - name: documentation
         label: Documentation
         icon: local_library
-        thumbnail: cover.image
-        folder: content/documentation
-        media_folder: ''
-        public_folder: ''
+        media_folder: /content/documentation
+        public_folder: /documentation
         format: frontmatter
         slug: "{{slug}}"
+        i18n:
+          structure: multiple_files
+        files:
+          - name: documentation
+            label: Documentation
+            file: content/documentation/index.{{locale}}.md
+            i18n: true
         fields:
-          - {label: "Documentation Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Documentation Page Description", name: "description", widget: "string"}
-          - {label: "Featured Image", name: "cover.image", widget: "image"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Documentation Page Title", name: "title", widget: "string", i18n: true, pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Documentation Page Description", name: "description", widget: "string", i18n: true}
+          - {label: "Featured Image", name: "cover.image", widget: "image", i18n: duplicate}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - name: contribute
         label: Contribute
         icon: code_blocks
-        thumbnail: cover.image
-        folder: content/contribute
-        media_folder: ''
-        public_folder: ''
+        media_folder: /content/contribute
+        public_folder: /contribute
         format: frontmatter
         slug: "{{slug}}"
+        i18n:
+          structure: multiple_files
+        files:
+          - name: contribute
+            label: Contribute
+            file: content/contribute/index.{{locale}}.md
+            i18n: true
         fields:
-          - {label: "Contribute Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
-          - {label: "Contribute Page Description", name: "description", widget: "string"}
-          - {label: "Featured Image", name: "cover.image", widget: "image"}
-          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Contribute Page Title", name: "title", widget: "string", i18n: true, pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Contribute Page Description", name: "description", widget: "string", i18n: true}
+          - {label: "Featured Image", name: "cover.image", widget: "image", i18n: duplicate}
+          - {label: "Content", name: "body", widget: "markdown", i18n: true}
       - name: donate
         label: Donate
         icon: volunteer_activism

@@ -1,22 +1,20 @@
 ---
-title: "Télécharger"
-description: "L'aventure FreeCAD commence !"
-date: 2024-05-22T08:04:23+12:00
-author: "FreeCAD"
-
+description: L'aventure FreeCAD commence !
+author: FreeCAD
 type: download
+cover:
+  image: space_4.jpg
+  caption: a cover caption
+  alt: a cover alternative title
+title: Télécharger
+date: 2024-05-22T08:04:23+12:00
 menus:
   main:
     weight: 2
   footer:
     weight: 2
-cover:
-  image: space_4.jpg
-  caption: "a cover caption"
-  alt: "a cover alternative title"
 ---
-
-[![LINK TO GITHUB](space_4.jpg)](https://github.com/freecad "Link to GitHub")
+[![LINK TO GITHUB](space_4.jpg "Link to GitHub")](https://github.com/freecad)
 
 ## First Download Block
 
