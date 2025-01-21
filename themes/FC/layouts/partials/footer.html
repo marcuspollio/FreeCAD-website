@@ -169,3 +169,10 @@
 <script type="text/javascript" src="{{ $Lightbox.RelPermalink }}">
 </script>
 {{- end }}
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (.Param "EnableSpriteAnimation")) -}}
+    {{- $SpriteAnimation := resources.Get "js/SpriteAnimation.js" }}
+    {{- if hugo.IsProduction }}
+        {{- $SpriteAnimation = minify $SpriteAnimation }}
+    {{- end }}
+    <script type="text/javascript" src="{{ $SpriteAnimation.RelPermalink }}"></script>
+{{- end }}
