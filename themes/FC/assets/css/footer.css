@@ -2,7 +2,7 @@
 
 
 .site-footer {
-    background: var(--bg);
+    background: var(--theme);
     min-height: var(--footer-height);
     margin: auto;
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
@@ -21,7 +21,6 @@
 }
 
 .site-footer a {
-    font-weight: 500;
     color: var(--link-color);
 }
 
@@ -34,7 +33,7 @@
     background: var(--entry);
 }
 
-/* make zoom overlay and image higher than toc */
+/* make zoom overlay and image higher */
 .medium-zoom-overlay {
     z-index: 10;
 }

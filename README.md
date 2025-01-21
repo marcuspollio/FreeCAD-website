@@ -193,24 +193,36 @@ hugo new -kind release releases/X-Y <-- where X is the major version number and 
 ```
 
 ```
-title: FreeCAD X.Y Release        <-- automatically generated, change if needed
-description: The description      <-- the description must be written
-date: 2024-05-18T21:22:57+12:00   <-- automatically generated, change if needed
-author: FreeCAD                   <-- automatically generated, change if needed
+title: "FreeCAD X.Y Release"        <-- automatically generated, change if needed
+description: "The description"      <-- the description must be written
+date: 2024-05-18T21:22:57+12:00     <-- automatically generated, change if needed
+author: "FreeCAD"                   <-- automatically generated, change if needed
 tags:
-  - X.Y                           <-- automatically generated, change if needed
+  - X.Y                             <-- automatically generated, change if needed
 params:
-  release: X.Y                    <-- automatically generated, change if needed
-  windows: link-to-windows-build  <-- the link must be written
-  macos: link-to-macos-build      <-- the link must be written
-  linux: link-to-linux-build      <-- the link must be written
+  release: X.Y                      <-- automatically generated, change if needed
+  windows: link-to-windows-build    <-- the link must be written
+  macos: link-to-macos-build        <-- the link must be written
+  linux: link-to-linux-build        <-- the link must be written
 cover:
-  image: splashscreen-x-y.jpg     <-- automatically generated, change if needed
-  caption: the X.Y splashscreen   <-- automatically generated, change if needed
-  alt: the X.Y splashscreen       <-- automatically generated, change if needed
+  image: splashscreen-x-y.jpg       <-- automatically generated, change if needed
+  caption: "the X.Y splashscreen"   <-- automatically generated, change if needed
+  alt: "the X.Y splashscreen"       <-- automatically generated, change if needed
 ```
 
 Make sure to always fill out the release date, version number and the builds link per platform.
+
+### Translations
+
+TODO
+
+Current supported languages are defined in the general site configuration `hugo.yaml`.
+
+Translations of the content are stored in the same folder as the default language file (English) using a [translation by file name](https://gohugo.io/content-management/multilingual/#translate-your-content) approach.
+
+For a language to be enabled, at least the main navigation pages must be translated (features, download, news, community, documentation, contribute and donate).
+
+Translations of the theme are handled by translations tables in `themes/FC/i18n`.
 
 ## Theme and templates
 
@@ -222,6 +234,8 @@ TODO
 
 TODO
 
+The `FC` theme is based on a standard Hugo theme structure: it uses a set of `HTML5` wrapping templates to transform content, data and resources (in `layout` folder), some `CSS3` stylesheets and `JavaScript` (in `assets` folder). Translations tables for strings in the theme are in `i18n` folder. Some SVG icons are available in `data` folder.
+
 ### Features
 
 TODO
@@ -229,6 +243,8 @@ TODO
 ### Style
 
 TODO
+
+The style of the theme is defined in `CSS3` stylesheets in `assets/CSS`. Reusable variables are found in `theme_vars.css` in both `Light` and `Dark` variants. General selectors and properties, and style for the `Main` content area for both List and Single pages are defined in `main.css`. The site Header is defined in `header.css` and the site Footer is defined is `footer.css`. The `404.css`, `archive.css` and `term.css` define the style for the Main area of these respective special pages. The `gallery.css`, `highlight.css` and `lightbox.css` (currently unused) define the style for these particular features. The `media.css` defines the style for different devices and screen sizes via media queries (flex and responsive changes).
 
 ### Layouts
 
@@ -249,10 +265,6 @@ Base default layouts are using either :
 To organize the code and avoid duplications, the default layouts may include `partials` depending on the context. A `partial` is just another piece of code that also performs template actions.
 
 ### Shortcodes
-
-TODO
-
-### Files processing
 
 TODO
 

@@ -1,13 +1,17 @@
 {{- define "main" }}
 
+{{ if not hugo.IsProduction }}
+  {{- partial "debug.html" . -}}
+{{ end }}
+
 <section class="archives">
 
-<header class="archives-header">
-  <h1>{{ .Title }}</h1>
+<header>
+  <h1>{{ .Title | .RenderString }}</h1>
   {{- if .Description }}
-  <div class="archives-description">
-    <span>{{ .Description }}</span>
-  </div>
+  <p class="archives-description">
+    {{ .Description | .RenderString }}
+  </p>
   {{- end }}
 </header>
 
@@ -30,17 +34,17 @@
     <h3 class="archive-month-header">{{- .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
     <div class="archive-month-list">
       {{- range .Pages }}
-      <div class="archive-entry">
-        <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="Link to {{ .Title | plainify }} article" title="Link to {{ .Title | plainify }} article">
+      <article class="archive-entry">
+        <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="{{ .Title | plainify }}" title="{{ .Title | plainify }}">
           <h3 class="archive-entry-title">
-          {{- .Title | $.Page.RenderString }}
-          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+          {{- .Title | .RenderString }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
           </h3>
         </a>
         <div class="archive-meta">
           {{- partial "meta.html" . -}}
         </div>
-      </div>
+      </article>
       {{- end }}
     </div>
   </div>

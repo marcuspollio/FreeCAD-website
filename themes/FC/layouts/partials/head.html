@@ -10,9 +10,9 @@
 {{- /* Title */}}
 {{- $pageTitle := site.Title }}
 {{- if (and .Title (not .IsHome)) }}
-  {{- $pageTitle = printf "%s | %s" .Title $pageTitle }}
+  {{- $pageTitle = printf "%s | %s" $pageTitle .Title }}
 {{- end }}
-<title>{{ $pageTitle }}</title>
+<title>{{ $pageTitle | plainify }}</title>
 
 {{- /* Meta */}}
 {{- if .IsHome }}
@@ -24,9 +24,9 @@
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}">
 {{- end }}
-<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
-    {{- .Summary | default (printf "%s - %s" .Title  site.Title) }}{{- else }}
-    {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+<meta name="description" content="{{- with .Description }}{{ . | plainify }}{{- else }}{{- if or .IsPage .IsSection}}
+    {{- .Summary | default (printf "%s - %s" .Title  site.Title) | plainify }}{{- else }}
+    {{- with site.Params.description }}{{ . | plainify }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ .Permalink }}">
 {{- if site.Params.analytics.googlesiteVerificationTag }}
@@ -40,8 +40,6 @@
 {{- $footer := (resources.Get "css/footer.css") }}
 {{- $header := (resources.Get "css/header.css") }}
 {{- $main := (resources.Get "css/main.css") }}
-{{- $list := (resources.Get "css/list.css") }}
-{{- $single := (resources.Get "css/single.css") }}
 {{- $gallery := (resources.Get "css/gallery.css") }}
 {{- $terms := (resources.Get "css/terms.css") }}
 {{- $lightbox := (resources.Get "css/lightbox.css") }}
@@ -49,7 +47,7 @@
 {{- $media := (resources.Get "css/media.css") }}
 
 {{- /* bundle all required css, order is important */}}
-{{- $stylesheet := (slice $theme_vars $404 $archive $footer $header $main $list $single $gallery $terms $lightbox $highlight $media) | resources.Concat "assets/css/stylesheet.css" | minify }}
+{{- $stylesheet := (slice $theme_vars $404 $archive $footer $header $main $gallery $terms $lightbox $highlight $media) | resources.Concat "assets/css/stylesheet.css" | minify }}
 
 {{- if not site.Params.assets.disableFingerprinting }}
     {{- $stylesheet := $stylesheet | fingerprint }}
@@ -59,8 +57,8 @@
 {{- end }}
 
 {{- /* Favicons */}}
-<link rel="icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="{{ site.Sites.Default.Home.Permalink }}favicon.ico">
+<link rel="apple-touch-icon" href="{{ site.Sites.Default.Home.Permalink }}apple-touch-icon.png">
 
 {{- range .AllTranslations -}}
     <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
@@ -88,22 +86,14 @@
             :root {
                 --theme: rgb(32, 32, 32);
                 --entry: rgb(64, 64, 64);
-                --primary: rgb(224, 224, 224);
-                --secondary: rgb(192, 192, 192);
-                --tertiary: rgb(160, 160, 160 );
+                --primary: rgb(240, 240, 240);
+                --secondary: rgb(224, 224, 224);
+                --tertiary: rgb(208, 208, 208);
                 --link-color: #f00000;
             }
 
-            .list {
+            main {
                 background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
             }
         }
     </style>

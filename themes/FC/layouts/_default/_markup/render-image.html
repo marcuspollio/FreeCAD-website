@@ -7,7 +7,7 @@
     {{ with .Err }}
       {{ errorf "%s" . }}
     {{ else }}
-      <img loading="lazy" src="{{ .RelPermalink | safeURL }}" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . }}" {{ end }} />
+      <img loading="lazy" src="{{ .RelPermalink | safeURL }}" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . | plainify }}" {{ end }} />
     {{ end }}
   {{ else }}
     {{ errorf "Unable to get remote resource %q" .Destination }}
@@ -39,7 +39,7 @@
               {{$img.Permalink }} {{printf "%dw" ($img.Width)}}"
               sizes="(min-width: 1024px) 1312px, 100vw" src="{{ $img.RelPermalink | safeURL }}"
               width="{{ $img.Width }}" height="{{ $img.Height }}"
-              type="" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . }}" {{ end }} >
+              type="" alt="{{ $.Text }}" {{ with $.Title}} title="{{ . | plainify }}" {{ end }} >
     {{- end -}}
   {{- else -}}
     {{- warnf "No image found for %s from %s" .Destination .Page.File }}

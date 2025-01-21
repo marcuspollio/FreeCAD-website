@@ -1,8 +1,8 @@
 ---
-title: FreeCAD 1.0 Release
-description: A new chapter for free and open-source CAD !
+title: "FreeCAD 1.0 Release"
+description: "A new chapter for free and open-source CAD !"
 date: 2024-05-18T21:22:57+12:00
-author: FreeCAD
+author: "FreeCAD"
 tags:
   - 1.0
 params:
@@ -12,8 +12,8 @@ params:
   linux: https://github.com/FreeCAD/FreeCAD/releases/download/
 cover:
   image: space_9.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 ## This is the 1.0 release notes page.

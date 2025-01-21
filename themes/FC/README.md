@@ -3,25 +3,8 @@
 FC Hugo theme is a forked version of [PaperModX](https://github.com/reorx/hugo-PaperModX) based on [PaperMod](https://github.com/adityatelange/hugo-PaperMod) based on [Paper](https://github.com/nanxiaobei/hugo-paper/), it aims at adding new features, improving code quality and make it easier to read and modify by anyone with basic knowledge of Hugo and HTML.
 
 Features and changes:
-- Table of Contents (ToC) floating on the side
 - InstantClick integration
 - Social icons from [Simple Icons](https://simpleicons.org/)
-
-
-## Table of Contents (ToC) floating on the side
-
-By adding config:
-
-```yaml
-params:
-  TocSide: 'left'  # or 'right'
-```
-
-ToC will float on the left/right side of the page.
-
-The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.
-
-This feature is enabled on this site.
 
 
 ## InstantClick integration

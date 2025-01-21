@@ -34,3 +34,6 @@
 
 - id: comments
   translation: "Comentarios"
+
+- id: draft
+  translation: "Borrador"

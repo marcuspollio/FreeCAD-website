@@ -1,14 +1,14 @@
 ---
-title: FAQs
-description: Frequently Asked Questions
+title: "FAQs"
+description: "Frequently Asked Questions"
 date: 2021-01-20
-author: FreeCAD
+author: "FreeCAD"
 draft: false
-ShowToc: true
+
 cover:
   image: space_6.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 ## Intro
@@ -53,7 +53,7 @@ or set `HUGO_ENV` as "production" in system env-vars
 
 ---
 
-## Failed to find a valid digest in the 'integrity' attribute for resource ... ?
+## Failed to find a valid digest in the "integrity" attribute for resource ... ?
 
 Read about How Subresource Integrity helps: [Subresource_Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
@@ -116,7 +116,7 @@ example:
 
 ```yml
 ---
-title: My Important post
+title: "My Important post"
 date: 2020-09-15T11:30:03+00:00
 weight: 1
 ---
@@ -125,7 +125,7 @@ weight: 1
 
 ```yml
 ---
-title: My 2nd Important post
+title: "My 2nd Important post"
 date: 2020-09-15T11:30:03+00:00
 weight: 2
 ---

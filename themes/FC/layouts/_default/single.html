@@ -4,35 +4,29 @@
   {{- partial "debug.html" . -}}
 {{ end }}
 
-<header class="single-header">
-  <h1 class="single-title">
-    <span class="title">{{- .Title -}}
-    {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}</span>
+<header>
+  <h1 class="title">
+    {{- .Title | .RenderString -}}
+    {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end -}}
   </h1>
   {{- if .Description }}
-  <div class="single-description">
-    <span class="description">{{- .Description | $.Page.RenderString -}}</span>
-  </div>
+  <h2 class="description">
+    {{- .Description | .RenderString -}}
+  </h2>
   {{- end }}
   {{/* For Download pages, call the download partial to provide download links from the latest release. */}}
   {{- if eq .Type "download" -}}
-    <div class="download-header">
     {{ with (index (where site.RegularPages "Type" "releases") 0) }}
       {{- partial "download.html" . -}}
     {{ end }}
-    </div>
   {{- end -}}
   {{- if eq .Type "news" -}}
   <div class="single-meta">
-    <span class="meta">{{- partial "meta.html" . -}}</span>
+    {{- partial "meta.html" . -}}
   </div>
   {{- end -}}
   {{- partial "cover.html" . }}
 </header>
-
-{{- if (.Param "ShowToc") -}}
-  {{- partial "toc.html" . -}}
-{{- end -}}
 
 {{/* Get the content of a Page. */}}
 {{- partial "content.html" . -}}

@@ -1,5 +1,5 @@
 {{- if .Content }}
-<div class="single-content">
+<div class="content">
   {{/* If using blocks (with +++ in Markdown), loops through and assigns an incremented id for each block, useful for styling. */}}
   {{ if in .RawContent "+++" }}
     {{ $count := 0 }}
@@ -18,9 +18,9 @@
       </section>
     {{- end }}
   {{ else }}
-    <div class="content">
+      <section>
       {{- .Content -}}
-    </div>
+      </section>
   {{ end }}
 </div>
 {{- end }}

@@ -1,18 +1,18 @@
 ---
-title: Second Announcement
-description: This is the second announcement article !
+title: "Second Announcement"
+description: "This is the second announcement article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: true
-ShowToc: true
+
 categories: announcement
 tags:
   - second
   - announcement
 cover:
   image: space_10.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

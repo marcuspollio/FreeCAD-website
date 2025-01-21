@@ -1,18 +1,18 @@
 ---
-title: Second Tutorial
-description: This is the second tutorial article !
+title: "Second Tutorial"
+description: "This is the second tutorial article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: true
-ShowToc: true
+
 categories: tutorial
 tags:
   - second
   - tutorial
 cover:
   image: space_5.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

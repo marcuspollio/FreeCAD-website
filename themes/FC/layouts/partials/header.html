@@ -17,53 +17,57 @@
   })();
 </script>
 
-<header class="site-header">
+<header class="site-header" role="banner">
   <div class="logo">
-    {{- $logo_text := site.Title }}
     {{- if site.Title }}
-    <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} homepage (Alt + H)">
+    {{- $logoText := site.Title | .RenderString }}
+    <a href="{{ "" | relLangURL }}" {{ if .IsHome }}class="active"{{ end }} accesskey="h" title="{{ $logoText }} {{ i18n "home" | default "Home" }} (Alt + H)">
       {{- if site.Params.logo }}
         {{- $img := resources.Get site.Params.logo }}
         {{- if $img }}
           {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-          {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-              {{- $img = $img.Resize "x30" }}
+            {{- if (in $processableFormats $img.MediaType.SubType)}}
+              {{- $img = $img.Resize "x32" }}
+              <img src="{{ $img.RelPermalink }}" alt="LOGO" aria-label="logo">
+            {{- else if (eq $img.MediaType.SubType "svg")}}
+              {{- $img.Content | safeHTML }}
+            {{- else }}
+              {{ $logoText | plainify }}
+              {{ errorf "Unable to get logo file" }}
             {{- end }}
-          <img src="{{ $img.RelPermalink }}" alt="LOGO" aria-label="logo" height="32">
         {{- end -}}
+      {{- else }}
+        {{ $logoText | plainify  }}
       {{- end -}}
-      <a href="{{ "" | relLangURL }}" accesskey="h" title="{{ $logo_text }} homepage (Alt + H)">
-        {{- $logo_text -}}
-      </a>
     </a>
     {{- end }}
   </div>
 
-  <nav class="site-nav">
+  <div class="site-nav">
     {{- $currentPage := . }}
-    <div class="menu">
-      <button popovertarget="menu-list" popovertargetaction="toggle" class="menu-toggle" title="Menu"><span class="hamburger">☰</span>
+    {{- $menuMain := site.Menus.main -}}
+    {{- if not $menuMain -}}
+      {{- $menuMain = site.Sites.Default.Menus.main -}}
+    {{- end -}}
+
+    <nav class="menu">
+      <button popovertarget="menu-list" popovertargetaction="toggle" class="menu-toggle" title="{{- i18n "menu" | default "Menu" }}"><span class="hamburger">☰</span>
         <span class="cross">✕</span>
       </button>
-
-      {{/* TODO: refactor these two lists to deduplicate and simplify. Also cleanup related CSS */}}
-      <ul class="menu-list">
-        {{- range site.Menus.main }}
-        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | relLangURL }}
+      <ul popover id="menu-list" class="menu-list">
+        {{- range $menuMain }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) }}
         {{- $page_url := $currentPage.RelPermalink }}
         <li>
-            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
-            {{- if .Params.style }}
-              {{ with .Params.style }} class="{{ . }}" {{ end }}
-            {{- end }}
+            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name | plainify }}"
+            {{ with .Params.style }} class="{{ . }}" {{ end }}
             {{- if strings.HasPrefix $page_url $menu_item_url }}
-              id="menu-active"
+              id="menu-active" aria-current="page"
             {{- end }}
             {{- if .Params.External }}
               target="_blank"
             {{- end }} >
-              {{- .Title -}}
+              {{- .Title | $.Page.RenderString -}}
               {{- if .Params.External }}
                 <span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>
               {{- end }}
@@ -71,42 +75,13 @@
         </li>
         {{- end }}
       </ul>
-
-      <ul popover id="menu-list" class="menu-list-media">
-        {{- range site.Menus.main }}
-        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | relLangURL }}
-        {{- $page_url := $currentPage.RelPermalink }}
-        <li>
-            <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }}"
-            {{- if .Params.style }}
-              {{ with .Params.style }} class="{{ . }}" {{ end }}
-            {{- end }}
-            {{- if strings.HasPrefix $page_url $menu_item_url }}
-              id="menu-active-media"
-            {{- end }}
-            {{- if .Params.External }}
-              target="_blank"
-            {{- end }} >
-              {{- .Title -}}
-              {{- if .Params.External }}
-                <span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>
-              {{- end }}
-            </a>
-        </li>
-        {{- end }}
-      </ul>
-    </div>
+    </nav>
 
     {{- if .Site.IsMultiLingual }}
     <div class="language-dropdown">
-      <button popovertarget="lang-list" popovertargetaction="toggle" class="lang-toggle" accesskey="l" title="Choose language (Alt + L)">
-        <svg id="lang" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 4,5 C 4.910328,7.1118575 5.933593,8.9937192 7.499999,10.5 6.046905,11.899661 3.801507,13.253114 2,14 M 11,5 C 10.089671,7.1118575 9.066403,8.9937192 7.499999,10.5 9.004975,11.949637 11.124773,13.252016 13,14 M 7.499771,2 7.500228,4.9999518 M 13,5 H 2"/>
-          <path d="m 11.5,19 h 9 M 16,10 22,22 M 16,10 10,22"/>
-        </svg>
+      <button popovertarget="lang-list" popovertargetaction="toggle" class="lang-toggle" accesskey="l" title="{{- i18n "choose_language" | default "Choose language" }} (Alt + L)">
+        {{ safeHTML (index site.Data.svg "language") }}
       </button>
-
       <ul popover id="lang-list" class="language-list">
         {{- $siteLanguages := site.Languages}}
         {{- $pageLang := .Page.Lang}}
@@ -127,24 +102,10 @@
     {{- end }}
 
     <div class="theme-switch">
-      <button id="theme-toggle" accesskey="t" title="Switch theme chroma (Alt + T)">
-        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
+      <button id="theme-toggle" accesskey="t" title="{{- i18n "switch_theme" | default "Switch theme chroma" }} (Alt + T)">
+        {{ safeHTML (index site.Data.svg "moon") }}
+        {{ safeHTML (index site.Data.svg "sun") }}
       </button>
     </div>
-  </nav>
+  </div>
 </header>

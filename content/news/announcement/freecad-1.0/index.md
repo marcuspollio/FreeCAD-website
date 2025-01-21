@@ -1,24 +1,25 @@
 ---
-title: FreeCAD 1.0 is finally here !
+title: FreeCAD 1.0 is here !
 description: It's finally here !
-date: 2024-06-16T15:27:48+12:00
+date: 2024-06-16T05:27:00
 author: FreeCAD
 draft: false
-ShowToc: true
 categories: announcement
-tags:
-  - release
-  - 1.0
 cover:
   image: space_14.jpg
   caption: a cover caption
   alt: a cover alternative title
 params:
+  links:
+    article: false
+    customText: See what's new
+    custom: releases/1-0
+    download: true
   hero: true
-  text: See what's new
-  link: releases/1-0
+tags:
+  - release
+  - 1
 ---
-
 # This is the first heading
 
 ## This is the second heading
@@ -27,7 +28,7 @@ params:
 
 #### This is the fourth heading
 
-This is **bold** text, and this is *italic* text.
+This is **bold** text, and this is _italic_ text.
 
 ![Image alternative text](space_14.jpg "This is an image title")
 

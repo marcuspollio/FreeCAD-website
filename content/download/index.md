@@ -1,9 +1,9 @@
 ---
-title: Download
-description: Let the FreeCAD adventure unfolds !
+title: "Download"
+description: "Let the FreeCAD adventure unfolds !"
 date: 2024-05-22T08:04:23+12:00
-author: FreeCAD
-ShowToc: false
+author: "FreeCAD"
+
 type: download
 menus:
   main:
@@ -12,13 +12,13 @@ menus:
     weight: 2
 cover:
   image: space_4.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
-[![LINK TO GITHUB](space_4.jpg)](https://github.com/freecad 'Link to GitHub')
+[![LINK TO GITHUB](space_4.jpg)](https://github.com/freecad "Link to GitHub")
 
-## [First Download Block](https://github.com/freecad 'Link to GitHub')
+## First Download Block
 
 This is a text in the first block to go in the right. This is a text in the first block. This is a text in the first block to go in the right. This is a text in the first block to go in the right. This is a text in the first block to go in the right.
 

@@ -6,13 +6,13 @@
 
 /* Background */
 .chroma {
-    background-color: var(--entry);
+    background: var(--entry);
 }
 
 /* Error */
 .chroma .err {
     color: #a61717;
-    background-color: var(--theme);
+    background: var(--theme);
 }
 
 /* LineTableTD */
@@ -38,7 +38,7 @@
 .chroma .hl {
     display: block;
     width: 100%;
-    background-color: #ffc;
+    background: #ffc;
 }
 
 /* LineNumbersTable */
@@ -58,43 +58,43 @@
 /* Keyword */
 .chroma .k {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* KeywordConstant */
 .chroma .kc {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* KeywordDeclaration */
 .chroma .kd {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* KeywordNamespace */
 .chroma .kn {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* KeywordPseudo */
 .chroma .kp {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* KeywordReserved */
 .chroma .kr {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* KeywordType */
 .chroma .kt {
     color: #458;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* NameAttribute */
@@ -115,7 +115,7 @@
 /* NameClass */
 .chroma .nc {
     color: #458;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* NameConstant */
@@ -126,7 +126,7 @@
 /* NameDecorator */
 .chroma .nd {
     color: #3c5d5d;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* NameEntity */
@@ -137,19 +137,19 @@
 /* NameException */
 .chroma .ne {
     color: #900;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* NameFunction */
 .chroma .nf {
     color: #900;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* NameLabel */
 .chroma .nl {
     color: #900;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* NameNamespace */
@@ -290,13 +290,13 @@
 /* Operator */
 .chroma .o {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* OperatorWord */
 .chroma .ow {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* Comment */
@@ -326,28 +326,28 @@
 /* CommentSpecial */
 .chroma .cs {
     color: #999;
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
 }
 
 /* CommentPreproc */
 .chroma .cp {
     color: #999;
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
 }
 
 /* CommentPreprocFile */
 .chroma .cpf {
     color: #999;
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
 }
 
 /* GenericDeleted */
 .chroma .gd {
     color: #000;
-    background-color: #fdd;
+    background: #fdd;
 }
 
 /* GenericEmph */
@@ -369,7 +369,7 @@
 /* GenericInserted */
 .chroma .gi {
     color: #000;
-    background-color: #dfd;
+    background: #dfd;
 }
 
 /* GenericOutput */
@@ -384,7 +384,7 @@
 
 /* GenericStrong */
 .chroma .gs {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* GenericSubheading */
@@ -414,7 +414,7 @@
 /* Background */
 .dark .chroma {
     color: #f8f8f2;
-    background-color: #282a36;
+    background: #282a36;
 }
 
 /* LineTableTD */
@@ -440,7 +440,7 @@
 .dark .chroma .hl {
     display: block;
     width: 100%;
-    background-color: #ffc;
+    background: #ffc;
 }
 
 /* LineNumbersTable */
@@ -711,13 +711,13 @@
 
 /* GenericHeading */
 .dark .chroma .gh {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* GenericInserted */
 .dark .chroma .gi {
     color: #50fa7b;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* GenericOutput */
@@ -727,7 +727,7 @@
 
 /* GenericSubheading */
 .dark .chroma .gu {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* GenericUnderline */

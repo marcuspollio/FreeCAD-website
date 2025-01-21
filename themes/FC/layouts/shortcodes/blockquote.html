@@ -50,20 +50,20 @@
 {{ end }}
 
 <blockquote>
-  <p>{{ .Inner | $.Page.RenderString }}</p>
+  <p>{{ .Inner | .RenderString }}</p>
   <footer>
-    <strong>{{ with $.Scratch.Get "bl_author" }}{{ . }}{{ end }}</strong>
+    <strong>{{ with $.Scratch.Get "bl_author" }}{{ .RenderString }}{{ end }}</strong>
     {{ with $.Scratch.Get "bl_source" }}
-      <cite>{{ . }}</cite>
+      <cite>{{ .RenderString }}</cite>
     {{ else }}
       {{ with $.Scratch.Get "bl_link" }}
         <cite>
-          <a href="{{ . }}" title="{{ . }}">{{ $.Scratch.Get "bl_title" }}</a> <!-- can't have new lines here -->
+          <a href="{{ . }}" title="{{ . | plainify }}">{{ $.Scratch.Get "bl_title" }}</a> <!-- can't have new lines here -->
         </cite>
       {{ else }}
         {{ with $.Scratch.Get "bl_title" }}
           <cite>
-            {{ $.Scratch.Get "bl_title" }}</a>
+            {{ $.Scratch.Get "bl_title" | .RenderString }}</a>
           </cite>
         {{ end }}
       {{ end }}

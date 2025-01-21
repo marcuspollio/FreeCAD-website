@@ -1,19 +1,37 @@
 {{/* get the latest article with the "hero" parameters in front matter */}}
-{{ with (index (where (site.RegularPages | lang.Merge .Sites.First.RegularPages) "Params.hero" true) 0) }}
-<header class="hero-header">
-    <h1 class="hero-title">
-        <a class="hero" href="{{ .RelPermalink | relLangURL }}">{{ .LinkTitle }}</a>
+{{ with (index (where (site.RegularPages | lang.Merge .Sites.Default.RegularPages) "Params.hero" true) 0) }}
+<header>
+    <h1 class="title">
+        {{ .LinkTitle | .RenderString }}
     </h1>
-    {{- if .Description }}
-        <div class="hero-description">
-            <span class="description">{{ .Description | $.Page.RenderString }}</span>
-        </div>
+    {{- with .Description }}
+        <h2 class="description">
+            {{ . | $.Page.RenderString }}
+        </h2>
     {{- end }}
-    {{- if .Params.link }}
-    <div class="hero-button">
-        <a href="{{ .Params.link | relLangURL }}">{{ .Params.text }}</a>
+    <div class="buttons">
+    {{- if .Params.links.download }}
+    {{ $download := .Site.GetPage "download" }}
+    <p>
+        <a class="hero-button download" href="{{ $download.RelPermalink }}">{{ $download.LinkTitle | .RenderString }}</a>
+    </p>
+    {{- end }}
+    {{- if .Params.links.custom }}
+    <p>
+        <a class="hero-button custom" href="{{ .Params.links.custom | relLangURL }}">
+        {{- with .Params.links.customText }}
+            {{ . | $.Page.RenderString }}
+        {{- else }}
+            {{ .Params.links.custom.LinkTitle | .RenderString }}
+        {{- end }}</a>
+    </p>
+    {{- end }}
+    {{- if .Params.links.article }}
+    <p>
+        <a class="hero-button article" href="{{ .RelPermalink }}">{{ .LinkTitle | .RenderString }}</a>
+    </p>
+    {{- end }}
     </div>
-    {{- end }}
     {{- partial "cover.html" . }}
 </header>
 {{ end }}

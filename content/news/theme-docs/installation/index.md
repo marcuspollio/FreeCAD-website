@@ -1,14 +1,14 @@
 ---
-title: Installation | Update
-description: Read Install and Update instructions here
+title: "Installation | Update"
+description: "Read Install and Update instructions here"
 date: 2021-01-20
-author: FreeCAD
+author: "FreeCAD"
 draft: false
-ShowToc: true
+
 cover:
   image: space_3.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 ## Intro
@@ -105,7 +105,7 @@ hugo mod get -u
 
 ```yml
 baseURL: https://examplesite.com/
-title: ExampleSite
+title: "ExampleSite"
 paginate: 6
 theme: FC
 
@@ -123,10 +123,10 @@ minify:
 
 params:
     env: production # to enable google analytics, opengraph and schema.
-    title: ExampleSite
-    description: ExampleSite description
+    title: "ExampleSite"
+    description: "ExampleSite description"
     keywords: [Blog, Portfolio]
-    author: FreeCAD
+    author: "FreeCAD"
     # author: [Me, You] # multiple authors
     images: [<link or path of image for opengraph>]
     DateFormat: January 2, 2006
@@ -138,8 +138,6 @@ params:
     ShowPaginationLinks: true
     ShowCopyCodeButton: false
     hideSummary: false
-    showtoc: false
-    tocopen: false
 
     label:
         text: Home
@@ -157,17 +155,16 @@ params:
 
 ```yml
 ---
-title: My first post
+title: "My first post"
 date: 2020-09-15T11:30:03+00:00
 # weight: 1
 # aliases: [/first]
 tags: [first]
-author: FreeCAD
+author: "FreeCAD"
 # author: [Me, You] # multiple authors
-showToc: true
-TocOpen: false
+
 draft: false
-description: Desc Text.
+description: "Desc Text."
 disableShare: false
 hideSummary: false
 ShowReadingTime: true

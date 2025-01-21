@@ -1,18 +1,18 @@
 ---
-title: First Update
-description: This is the first update article !
+title: "First Update"
+description: "This is the first update article !"
 date: 2024-05-16T15:27:48+12:00
-author: FreeCAD
+author: "FreeCAD"
 draft: false
-ShowToc: true
+
 categories: update
 tags:
   - first
   - update
 cover:
   image: space_8.jpg
-  caption: a cover caption
-  alt: a cover alternative title
+  caption: "a cover caption"
+  alt: "a cover alternative title"
 ---
 
 # This is the first heading

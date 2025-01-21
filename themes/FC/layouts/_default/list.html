@@ -9,30 +9,32 @@
 {{- end }}
 
 {{- if not .IsHome | and .Title }}
-<header class="list-header">
-  <h1 class="list-title">
-    {{/* see: https://gohugo.io/variables/taxonomy/#taxonomy-terms-page-variables */}}
-    <span class="title">
-      {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
-    {{ .Title -}}</span>
+<header>
+  <h1 class="title">
+    {{- if eq .Kind "term" -}}{{- .Data.Singular }}: {{ end -}}
+    {{ .Title | .RenderString -}}
   </h1>
   {{- if .Description }}
-  <div class="list-description">
-    <span class="description">{{ .Description | $.Page.RenderString }}</span>
-  </div>
+  <h2 class="description">
+    {{ .Description | .RenderString }}
+  </h2>
   {{- end }}
   {{- partial "cover.html" . }}
 </header>
 {{- end }}
 
-<section class="articles-list">
+<section class="articles">
 {{/* get the latest pages from the current section, and fill in the missing translated pages from the first site (currently English) */}}
-{{- $pages := where (.RegularPages | lang.Merge .Sites.First.RegularPages) "Section" .Section }}
+{{- $pages := where (.RegularPages | lang.Merge .Sites.Default.RegularPages) "Section" .Section }}
 
 {{- if .IsHome }}
   {{/* get the 6 latest regular pages in the main section (defined in hugo.yaml or number of pages, currently "news"), except the ones with the "hero" parameters in front matter */}}
-  {{- $pages = where (where (site.RegularPages | lang.Merge .Sites.First.RegularPages) "Section" "in" site.Params.mainSections) "Params.hero" "!=" true | first 6 }}
+  {{- $pages = where (where (site.RegularPages | lang.Merge .Sites.Default.RegularPages) "Section" "in" site.Params.mainSections) "Params.hero" "!=" true | first 6 }}
 {{- end }}
+
+{{- if eq .Kind "term" -}}
+  {{- $pages = .RegularPages -}}
+{{- end -}}
 
 {{/* related issue: https://github.com/gohugoio/hugo/issues/9003 */}}
 {{ $paginator := "" }}
@@ -45,30 +47,29 @@
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
-<article class="article-entry">
-  <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="Link to {{ .Title | plainify }} article" title="Link to {{ .Title | plainify }} article">
+<article>
+  <a href="{{ .Permalink }}" alt="ARTICLE" aria-label="{{ .Title | plainify }}" title="{{ .Title | plainify }}">
     {{- partial "cover.html" . }}
   <div class="entry-date">
     {{- if not .Date.IsZero -}}
       <time datetime="{{ .Date }}">{{ .Date | time.Format ":date_full" }}</time>
     {{- end }}
   </div>
-  <header class="entry-header">
-    <h2>
-      <span>{{- .Title }}</span>
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Draft]</span></sup>{{- end }}
-      {{- if .Weight }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Pinned]</span></sup>{{- end }}
-    </h2>
-  </header>
-  {{- if (ne (.Param "hideSummary") true) }}
-    <section class="entry-content">
+  <div>
+    <h3 class="entry-title">
+      <span>{{- .Title | .RenderString }}</span>
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[{{- i18n "draft" | default "Draft" }}]</span></sup>{{- end }}
+    </h3>
+    {{- if (ne (.Param "hideSummary") true) }}
+    <p class="entry-description">
       {{ if .Description }}
-        <p>{{ .Description | plainify | htmlUnescape }}</p>
+        {{ .Description | .RenderString }}
       {{ else }}
-        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        {{ .Summary | .RenderString }}{{ if .Truncated }}...{{ end }}
       {{ end }}
-    </section>
-  {{- end }}
+    </p>
+    {{- end }}
+  </div>
   </a>
 </article>
 
@@ -77,7 +78,7 @@
 
 {{/* Get the content for the Homepage. */}}
 {{- if .IsHome -}}
-  {{- with (index (where .RegularPages "Type" "homepage") 0) -}}
+  {{- with (index (where (.RegularPages | lang.Merge .Sites.Default.RegularPages) "Type" "homepage") 0) -}}
     {{- partial "content.html" . -}}
   {{- end -}}
 {{- end -}}
@@ -86,10 +87,10 @@
 <footer class="list-footer">
   <nav class="list-pagination">
     {{- if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL | relLangURL }}" alt="PREVIOUS" aria-label="Link to previous articles" title="Link to previous articles">« {{ i18n "prev_page" }}</a>
+    <a class="prev" href="{{ $paginator.Prev.URL }}" alt="PREVIOUS" aria-label="{{- i18n "prev_page" | default "Prev Page" }}" title="{{- i18n "prev_page" | default "Prev Page" }}">◀ {{ i18n "prev_page" | default "Prev Page" }}</a>
     {{- end }}
     {{- if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL | relLangURL }}" alt="NEXT" aria-label="Link to next articles" title="Link to next articles">{{ i18n "next_page" }} »</a>
+    <a class="next" href="{{ $paginator.Next.URL }}" alt="NEXT" aria-label="{{- i18n "next_page" | default "Next Page" }}" title="{{- i18n "next_page" | default "Next Page" }}">{{ i18n "next_page" | default "Next Page" }} ▶</a>
     {{- end }}
   </nav>
 </footer>

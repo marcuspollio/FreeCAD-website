@@ -1,5 +1,5 @@
 baseURL: https://www.freecad.org
-title: FreeCAD
+title: "FreeCAD"
 theme: FC
 
 defaultContentLanguage: en
@@ -17,10 +17,10 @@ googleAnalytics: # Sets Google Analytics G-MEASUREMENT_ID
 
 params:
   env: production # Enables google analytics, opengraph and schema.
-  description: Your free and open-source parametric modeler
-  author: FreeCAD
+  description: "Your free and open-source parametric modeler"
+  author: "FreeCAD"
   DateFormat: 2006-01-02
-  logo: /FreeCAD-symbol.svg
+  logo: /FreeCAD-wordmark.svg
   mainSections: news
   defaultTheme: auto
   ShowAuthor: true
@@ -30,9 +30,7 @@ params:
   displayFullLangName: true
   ShowPaginationLinks: true
   ShowCopyCodeButton: true
-  ShowToc: true
-  TocOpen: false
-  TocSide: left
+
   EnableInstantClick: false # NOTE: Disabled for now, as it's conflicting with other JS features.
   EnableImageZoom: true
   EnableLightbox: false # NOTE: Does not work for now if EnableInstantClick is true, because of JavaScript conflicts.
@@ -41,6 +39,158 @@ params:
   socialIcons:
     - name: github-simple
       url: https://github.com/FreeCAD
+
+# Headless CMS parameters
+
+  headless_cms:
+    engine: "sveltia"
+    site_url: "https://marcuspollio.github.io/FreeCAD-website/"
+    backend:
+      name: "github"
+      repo: "marcuspollio/FreeCAD-website"
+      branch: testing
+      base_url: https://sveltia-github-auth.marcus-pollio.workers.dev/
+      commit_messages:
+        create: "{{collection}}: create {{slug}}"
+        update: "{{collection}}: update {{slug}}"
+        delete: "{{collection}}: delete {{slug}}"
+        uploadMedia: "Media: upload {{path}}"
+        deleteMedia: "Media: delete {{path}}"
+        openAuthoring: "{{message}}"
+    publish_mode: editorial_workflow
+    collections:
+      - name: news
+        label: News
+        description: This is the News blog collection with FreeCAD articles
+        icon: brand_awareness
+        thumbnail: cover.image
+        create: true
+        folder: content/news
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Article Title", name: "title", widget: "string", hint: "Use a similar structure as existing articles for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Article Description", name: "description", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Article Author", name: "author", widget: "string", hint: "Use a similar author name as existing ones for coherence", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true}
+          - {label: "Article Category", name: "categories", widget: "select", options: ["announcement", "event", "highlight", "showcase", "tutorial", "update"]}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - divider: true
+        name: 1
+        files: []
+      - name: homepage
+        label: Homepage
+        icon: home
+        folder: content/homepage
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: features
+        label: Features
+        icon: bolt
+        thumbnail: cover.image
+        folder: content/features
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Features Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Features Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: download
+        label: Download
+        icon: downloading
+        thumbnail: cover.image
+        folder: content/download
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Download Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Download Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: releases
+        label: Releases
+        icon: celebration
+        thumbnail: cover.image
+        create: true
+        folder: content/releases
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Release Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Release Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: community
+        label: Community
+        icon: hub
+        thumbnail: cover.image
+        folder: content/community
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Community Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Community Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: documentation
+        label: Documentation
+        icon: local_library
+        thumbnail: cover.image
+        folder: content/documentation
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Documentation Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Documentation Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: contribute
+        label: Contribute
+        icon: code_blocks
+        thumbnail: cover.image
+        folder: content/contribute
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Contribute Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Contribute Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: donate
+        label: Donate
+        icon: volunteer_activism
+        thumbnail: cover.image
+        folder: content/donate
+        media_folder: ''
+        public_folder: ''
+        format: frontmatter
+        slug: "{{slug}}"
+        fields:
+          - {label: "Donate Page Title", name: "title", widget: "string", pattern: ['.{3,}', "Must have at least 3 characters"]}
+          - {label: "Donate Page Description", name: "description", widget: "string"}
+          - {label: "Featured Image", name: "cover.image", widget: "image"}
+          - {label: "Content", name: "body", widget: "markdown"}
 
 permalinks:
   page:
@@ -51,123 +201,129 @@ permalinks:
 languages:
   en:
     disabled: false
-    languageName: English
+    languageName: "English"
     languageCode: en-US
     languageDirection: ltr
     weight: 1
     params:
-      subtitle: Your own free and open-source parametric modeler
+      subtitle: "Your own free and open-source parametric modeler"
       languageFlag: 🇬🇧
 
   fr:
     disabled: false
-    languageName: Français
+    languageName: "Français"
     languageCode: fr-FR
     languageDirection: ltr
     weight: 2
     params:
-      subtitle: Votre modeleur paramétrique libre et open-source
+      subtitle: "Votre modeleur paramétrique libre et open-source"
       languageFlag: 🇫🇷
 
   de:
     disabled: false
-    languageName: Deutsch
+    languageName: "Deutsch"
     languageCode: de-DE
     languageDirection: ltr
     weight: 3
     params:
-      subtitle: Ihr parametrischer frei und Open-Source 3D-Modellierer
+      subtitle: "Ihr parametrischer frei und Open-Source 3D-Modellierer"
       languageFlag: 🇩🇪
 
   it:
     disabled: false
-    languageName: Italiano
+    languageName: "Italiano"
     languageCode: it-IT
     languageDirection: ltr
     weight: 4
     params:
-      subtitle: Il tuo modellatore parametrico libero e open-source
+      subtitle: "Il tuo modellatore parametrico libero e open-source"
       languageFlag: 🇮🇹
 
   es:
     disabled: false
-    languageName: Español
+    languageName: "Español"
     languageCode: es-ES
     languageDirection: ltr
     weight: 5
     params:
-      subtitle: Tu propio modelador paramétrico libre y de código abierto
+      subtitle: "Tu propio modelador paramétrico libre y de código abierto"
       languageFlag: 🇪🇸
 
   br:
     disabled: false
-    languageName: Português brasileiro
+    languageName: "Português brasileiro"
     languageCode: pt-BR
     languageDirection: ltr
     weight: 6
     params:
-      subtitle: Seu próprio modelador paramétrico livre e de código aberto
+      subtitle: "Seu próprio modelador paramétrico livre e de código aberto"
       languageFlag: 🇧🇷
 
   pl:
     disabled: false
-    languageName: Polski
+    languageName: "Polski"
     languageCode: pl-PL
     languageDirection: ltr
     weight: 7
     params:
-      subtitle: Twój własny program do parametrycznego modelowania wolne i otwarte
+      subtitle: "Twój własny program do parametrycznego modelowania wolne i otwarte"
       languageFlag: 🇵🇱
 
   nl:
     disabled: false
-    languageName: Nederlands
+    languageName: "Nederlands"
     languageCode: nl-NL
     languageDirection: ltr
     weight: 8
     params:
-      subtitle: Jouw eigen parametrische vrije en opensource tekenprogramma
+      subtitle: "Jouw eigen parametrische vrije en opensource tekenprogramma"
       languageFlag: 🇳🇱
 
   ru:
     disabled: false
-    languageName: Русский
+    languageName: "Русский"
     languageCode: ru-RU
     languageDirection: ltr
     weight: 9
     params:
-      subtitle: Ваша собственная программа для параметрического моделирования с открытым исходным кодом
+      subtitle: "Ваша собственная программа для параметрического моделирования с открытым исходным кодом"
       languageFlag: 🇷🇺
 
   zh:
     disabled: false
-    languageName: 汉语
+    languageName: "汉语"
     languageCode: zh-CN
     languageDirection: ltr
     weight: 10
     params:
-      subtitle: 你自己的免费开源参数建模器
+      subtitle: "你自己的免费开源参数建模器"
       languageFlag: 🇨🇳
 
   ar:
     disabled: false
-    languageName: عربي
+    languageName: "عربي"
     languageCode: ar
     languageDirection: rtl
     weight: 11
     params:
-      subtitle: أداة النمذجة البارامترية المجانية والمفتوحة المصدر الخاصة بك
+      subtitle: "أداة النمذجة البارامترية المجانية والمفتوحة المصدر الخاصة بك"
       languageFlag: 🇸🇦
+
+  tr:
+    disabled: false
+    languageName: "Türkçe"
+    languageCode: tr
+    languageDirection: ltr
+    weight: 12
+    params:
+      subtitle: "Kendi ücretsiz ve açık kaynaklı parametrik modelleyiciniz"
+      languageFlag: 🇹🇷
 
 # Others Hugo settings
 
 minify:
   disableXML: true
   # minifyOutput: true
-
-outputs:
-  home:
-    - HTML
 
 taxonomies:
   category: categories
@@ -195,8 +351,16 @@ module:
       target: assets
     - source: static # Allows to perform modifications via pipes on files in static folder
       target: assets
+  imports:
+    - path: github.com/privatemaker/headless-cms
+      disable: false
 
-privacy:
+outputs:
+  home:
+    - HTML
+    - HeadlessCMSConfig
+
+privacy: # See https://gohugo.io/about/privacy/
   googleAnalytics:
     disable: false
     respectDoNotTrack: true
@@ -207,3 +371,11 @@ privacy:
   youtube:
     disabled: false
     privacyEnhanced: true
+
+caches:
+  getresource:
+    dir: :cacheDir/:project
+    maxAge: 24h
+  modules:
+    dir: :cacheDir/modules
+    maxAge: 24h
