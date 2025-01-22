@@ -45,6 +45,7 @@ params:
   headless_cms:
     engine: "sveltia"
     site_url: "https://marcuspollio.github.io/FreeCAD-website/"
+    logo_url: "https://marcuspollio.github.io/FreeCAD-website/FreeCAD-symbol.svg"
     backend:
       name: "github"
       repo: "marcuspollio/FreeCAD-website"
