@@ -1,8 +1,8 @@
 ---
+title: FreeCAD page d'accueil
 description: Points forts de FreeCAD sur la page d'accueil
 author: FreeCAD
 type: homepage
-title: FreeCAD page d'accueil
 date: 2024-05-22T08:04:23+12:00
 ---
 [![LINK TO GITHUB](space_1.jpg "Link to GitHub")](https://github.com/freecad)

@@ -1,8 +1,8 @@
 ---
+title: FreeCAD Homepage highlights
 description: FreeCAD highlights on the Homepage
 author: FreeCAD
 type: homepage
-title: FreeCAD Homepage highlights
 date: 2024-05-22T08:04:23+12:00
 ---
 [![LINK TO GITHUB](space_1.jpg "Link to GitHub")](https://github.com/freecad)
