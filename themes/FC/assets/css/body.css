@@ -20,6 +20,7 @@ body {
     color: var(--secondary);
     margin: 0;
     overflow-x: clip;
+    background-color: var(--theme);
 }
 
 h1 {
