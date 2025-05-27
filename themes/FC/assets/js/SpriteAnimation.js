@@ -1,19 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     const animatedSpriteElements = document.querySelectorAll('.animated-sprite');
 
-    // Global variables to avoid repetition
     let viewportHeight = window.innerHeight;
 
     animatedSpriteElements.forEach(function (element) {
         setAspectRatio(element);
         setBackgroundSize(element);
 
-        // Handle scrolling events
         window.addEventListener('scroll', function () {
             handleScroll(element, viewportHeight);
         });
 
-        // Initial scroll handling
         handleScroll(element, viewportHeight);
     });
 });
@@ -31,7 +28,6 @@ function setAspectRatio(element) {
 function setBackgroundSize(element) {
     const frameCount = parseInt(element.getAttribute('data-frame-count'), 10) || 72;
 
-    // All frames are assumed to be in a single row for simplicity
     const backgroundSizePercentage = frameCount * 100;
     element.style.backgroundSize = `${backgroundSizePercentage}% auto`;
 }
@@ -51,7 +47,6 @@ function handleScroll(element, viewportHeight) {
 function updateBackgroundPosition(element, frame) {
     const frameCount = parseInt(element.getAttribute('data-frame-count'), 10) || 72;
 
-    // Single row assumed for all frames
     const backgroundPositionX = -(frame % frameCount) * 100;
     element.style.backgroundPosition = `${backgroundPositionX}% 0%`;
 }
