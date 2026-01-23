@@ -11,6 +11,12 @@ menus:
 
 {{< block >}}
 
+{{< card url="https://forum.freecad.org" icon="forum" >}}
+
+The FreeCAD forum.
+
+{{< /card >}}
+
 {{< card url="https://fpa.freecad.org" icon="fpa.svg" >}}
 
 The Association supporting the development of FreeCAD
