@@ -92,7 +92,9 @@ jobs:
         run: |
           hugo \
             --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ steps.action.outputs.pr }}/" \
-            --destination public
+            --destination public \
+            --relativeURLs \
+            --canonifyURLs
 
       - name: Deploy to gh-pages branch
         if: steps.action.outputs.action == 'deploy'
