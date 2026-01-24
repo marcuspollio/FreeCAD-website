@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Releases on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/download/releases/</link>
+    <description>Recent content in Releases on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/download/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeCAD 1.0 release notes</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/download/releases/1-0/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/download/releases/1-0/</guid>
+      <description>&lt;h2&#xA;  id=&#34;this-is-the-10-release-notes-page&#34;&gt;&#xA;  This is the 1.0 release notes page.&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#this-is-the-10-release-notes-page&#34;&#xA;     title=&#34;This is the 1.0 release notes page.&#34;&#xA;     aria-label=&#34;This is the 1.0 release notes page.&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;TODO&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FreeCAD 0.21 release notes</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/download/releases/0-21/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/download/releases/0-21/</guid>
+      <description>&lt;h2&#xA;  id=&#34;this-is-the-021-release-notes-page&#34;&gt;&#xA;  This is the 0.21 release notes page.&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#this-is-the-021-release-notes-page&#34;&#xA;     title=&#34;This is the 0.21 release notes page.&#34;&#xA;     aria-label=&#34;This is the 0.21 release notes page.&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical guide on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/</link>
+    <description>Recent content in Technical guide on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/dev/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application Module</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/app/</guid>
+      <description>&lt;p&gt;The functionality of FreeCAD is separated into Modules. Some Modules are built into FreeCAD and some are Extension Modules (a form of plug-in). Once installed, Extension Modules behave exactly as built-in Modules.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Testing</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/tests/</guid>
+      <description>&lt;p&gt;FreeCAD uses two different automated testing mechanisms, depending on the language being tested. The oldest, and most well-used test framework is the Python &lt;code&gt;unittest&lt;/code&gt; system, which hooks directly into the FreeCAD Test Workbench, but can only test Python code (and Python wrappers to C++ code). The second is the standalone Google Test C++ testing framework, which generates individual executables for each part of the test suite, and is used to directly test C++ code without having to wrap it in Python.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building release packages</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/packages/</guid>
+      <description>&lt;h2&#xA;  id=&#34;windows-installer&#34;&gt;&#xA;  Windows Installer&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#windows-installer&#34;&#xA;     title=&#34;Windows Installer&#34;&#xA;     aria-label=&#34;Windows Installer&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;The main entry point to build a Windows installer is within the FreeCAD sources. To build the installer:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code for Translation</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/translations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/translations/</guid>
+      <description>&lt;p&gt;In most cases, any user-visible text in FreeCAD should be made translatable. Exceptions to this general rule are:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Text that only appears as log-level messages in the Report View&lt;/li&gt;&#xA;&lt;li&gt;Names of Python commands, etc.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Some general guidelines when constructing strings for translation:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code signing</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/signing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/signing/</guid>
+      <description>&lt;h2&#xA;  id=&#34;mac-os&#34;&gt;&#xA;  Mac OS&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#mac-os&#34;&#xA;     title=&#34;Mac OS&#34;&#xA;     aria-label=&#34;Mac OS&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h3&#xA;  id=&#34;prerequisites&#34;&gt;&#xA;  Prerequisites&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#prerequisites&#34;&#xA;     title=&#34;Prerequisites&#34;&#xA;     aria-label=&#34;Prerequisites&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;p&gt;You must be a member of Apple&amp;rsquo;s Developer program to generate and use signing keys. Information can be found at &lt;a href=&#34;https://developer.apple.com&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;https://developer.apple.com&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Developer&#39;s Glossary</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/glossary/</guid>
+      <description>&lt;p&gt;Note that there may be subtle differences in how some terms are used by developers vs how they are used by users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feature checklist</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/checklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/checklist/</guid>
+      <description>&lt;p&gt;The checklist itemizes the tasks involved in adding a wholly new feature to an&#xA;existing module (workbench). It assumes that the existing workbench (myModule)&#xA;and the new feature are written in C++.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Major Releases</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/major-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/major-release/</guid>
+      <description>&lt;p&gt;Each major release goes through the following milestones and stages:&lt;/p&gt;&#xA;&lt;h2&#xA;  id=&#34;announcement-preparation&#34;&gt;&#xA;  Announcement Preparation&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#announcement-preparation&#34;&#xA;     title=&#34;Announcement Preparation&#34;&#xA;     aria-label=&#34;Announcement Preparation&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;A release may be triggered for several reasons.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Minor Releases</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/minor-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/minor-release/</guid>
+      <description>&lt;p&gt;Between major releases, bugs are occasionally found and repaired. These fixes may be urgent enough or isolated enough that applying them incrementally to the existing ‘stable’ version is both possible and desirable. A set of such changes may be grouped together and released as a ‘minor’ version.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Object deletion</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/deletion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/deletion/</guid>
+      <description>&lt;p&gt;It is possible for a user to attempt to delete a DocumentObject while a Task&#xA;Dialog is attempting to update that object.  Handling this in a Task Dialog&#xA;is not tidy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Preferences</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/preferences/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;user.cfg&lt;/code&gt; XML file contains a hierarchical list of all the preferences used by FreeCAD.&lt;/p&gt;&#xA;&lt;p&gt;Each module has its own branch of the hierarchy starting under Preferences/Mod.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Property Changes</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/properties/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/properties/</guid>
+      <description>&lt;p&gt;Recommended reading:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The Application Module&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://wiki.freecad.org/Property&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Property in the wiki&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2&#xA;  id=&#34;the-app-side&#34;&gt;&#xA;  The App side&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#the-app-side&#34;&#xA;     title=&#34;The App side&#34;&#xA;     aria-label=&#34;The App side&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;When a Property&amp;rsquo;s value changes, its PropertyContainer (eventually a DocumentObject) executes the onChanged method with the Property as a parameter.  This is where you will take appropriate action based on the new property value.&lt;/li&gt;&#xA;&lt;li&gt;Be cautious when inserting logic into onChanged and execute as it is possible to create a loop.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;codeblock&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myFeature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;MyProperty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;());&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;myFeature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;onChanged&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;App&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Property&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyProperty&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;The other interesting method involving property changes is mustExecute.   This is where you control whether or not your object participates in the next recompute cycle.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2&#xA;  id=&#34;the-gui-side&#34;&gt;&#xA;  The Gui side&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#the-gui-side&#34;&#xA;     title=&#34;The Gui side&#34;&#xA;     aria-label=&#34;The Gui side&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;On the Gui side, we must look first at your derived ViewProvider, which is attached to your DocumentObject.  The ViewProvider is notified of changed properties for both itself and the DocumentObject it belongs to.&lt;/li&gt;&#xA;&lt;li&gt;For properties belonging to the ViewProvider (those on the View tab in the PropertyEditor), the relevant method is again onChanged.&lt;/li&gt;&#xA;&lt;li&gt;Whenever a DocumentObject Property changes, the updateData method of its attached ViewProvider is called.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Python Binding</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/python-binding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/python-binding/</guid>
+      <description>&lt;h2&#xA;  id=&#34;background&#34;&gt;&#xA;  Background&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#background&#34;&#xA;     title=&#34;Background&#34;&#xA;     aria-label=&#34;Background&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;It becomes necessary at times to expand the FreeCAD API further by exposing functions that are available in the source code in c++ to the python. This process is generally referred to as creating a binding.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python stubs</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/python-stubs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/python-stubs/</guid>
+      <description>&lt;p&gt;Python is a dynamically typed language, so there is no error when compiling&#xA;(Yes, Python can compile).&#xA;Compiling/interpreting is an abstract concept, language independent.&#xA;See more on &lt;a href=&#34;https://stackoverflow.com/a/6889798&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;stackoverflow&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;).&#xA;Instead, an error is reported at runtime&#xA;which may significantly slow down developing process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reference Library</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/references/</guid>
+      <description>&lt;p&gt;The FPA maintains a small reference library that is available to contributors.&lt;/p&gt;&#xA;&lt;p&gt;Current Holdings:&#xA;- ASME Y14_3_2012_R2018 - Orthographic and pictorial views&#xA;- ISO 128-3_2022 - Technical product documentation part 3&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Release Process</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/release/</guid>
+      <description>&lt;p&gt;We recognize signficant wisdom in the philosophy to &lt;a href=&#34;https://en.wikipedia.org/wiki/Release_early,_release_often&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;&amp;ldquo;Release Early and Release Often&amp;rdquo;&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;. However, releases can require significant coordinated work within the community.  FreeCAD aspires to produce a major release every 3-6 months. In order to meet this goal, we will work to make releases more predicatable and automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Snap package</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/snap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/snap/</guid>
+      <description>&lt;p&gt;FreeCAD is provided as a Snap package in multiple versions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;stable &amp;ndash; built from the latest full release&lt;/li&gt;&#xA;&lt;li&gt;beta &amp;ndash; built weekly from master&lt;/li&gt;&#xA;&lt;li&gt;edge &amp;ndash; built daily from master&lt;/li&gt;&#xA;&lt;li&gt;freecad-realthunder &amp;ndash; a convenience build of the LinkStage3 branch&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Each of these is represented by a branch at &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD-snap&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;https://github.com/FreeCAD/FreeCAD-snap&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; &amp;ndash; to make changes,edit &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD-snap/blob/master/snap/snapcraft.yaml&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;the snapcraft.yaml file&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; on the branch you want to update.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Source Tree</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/src/</guid>
+      <description>&lt;p&gt;The full FreeCAD source tree has many other branches, but most Contributors will&#xA;only need to deal with these:&lt;/p&gt;&#xA;&lt;figure&gt;&#xA;        &lt;img src=&#34;https://marcuspollio.github.io/FreeCAD-website/dev/tech/src/sourcetreebasics.svg&#34;&#xA;          title=&#34;The FreeCAD Source Tree&#34;&#xA;          alt=&#34;The FreeCAD Source Tree&#34;&#xA;          loading=&#34;lazy&#34;&#xA;          fetchpriority=&#34;low&#34;&gt;&lt;figcaption&gt;The FreeCAD Source Tree&lt;/figcaption&gt;&lt;/figure&gt;&lt;div class=&#34;codeblock&#34;&gt;&lt;pre&gt;&lt;code&gt;graph LR&#xA;    A[src] --- B[App: Documents, DocumentObjects, EventPropagation]&#xA;    A --- C[Base: FundamentalTypes, Utilities]&#xA;    A --- D[Gui: Windows, Menus, Dialogs]&#xA;    A --- E[Mod: ApplicationLogic]&#xA;    subgraph Mod: ApplicationLogic&#xA;    E[Mod] --- F[Arch: Buildings]&#xA;    E --- G[Draft: 2DDesign]&#xA;    E --- H[Part: BasicShapes, BooleanOps]&#xA;    E --- I[&amp;#34;...&amp;#34;]&#xA;    end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Windows LibPack</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/tech/libpack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/tech/libpack/</guid>
+      <description>&lt;p&gt;To create a new LibPack for Windows, begin by creating an empty directory. The suggested naming scheme&#xA;is to name it &amp;ldquo;LibPack-XX-YY-ARCH&amp;rdquo; where XX is the release of FreeCAD the pack is intended to work with,&#xA;YY is a version number of the LibPack itself, and ARCH is the architecture the LibPack was build for&#xA;(e.g. x86_64 or arm64). The rest of this document will refer to that directory as &lt;em&gt;LIBPACK&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

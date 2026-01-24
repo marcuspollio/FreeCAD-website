@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var e=window.navigator.userAgent.toLowerCase(),t=document.getElementById("windows"),n=document.getElementById("mac"),s=document.getElementById("linux");e.includes("win")?t.style.order="3":e.includes("mac")?n.style.order="2":e.includes("lin")&&(s.style.order="1")})

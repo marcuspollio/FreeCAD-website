@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Expression on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/tags/expression/</link>
+    <description>Recent content in Expression on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/tags/expression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Expression Autocomplete Improvements</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/expression-autocomplete-improvements/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/expression-autocomplete-improvements/</guid>
+      <description>&lt;p&gt;A longstanding bug in FreeCAD was recently tackled by new contributor Adrian Popescu (&lt;a href=&#34;https://github.com/acpopescu&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;@acpopescu&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;). In &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/8228&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;PR 8228&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; and a series of follow-up commits, he has addressed some of the major shortcomings in the expression auto-complete function.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

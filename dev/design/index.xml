@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Guide on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/</link>
+    <description>Recent content in Design Guide on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/dev/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design Principles</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/principles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/principles/</guid>
+      <description>&lt;p&gt;The following guiding principles are based on various established &lt;a href=&#34;../ux&#34;&#xA;  class=&#34;internal-tooltip&#34;&gt;Laws of UX outlined here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Aesthetics - Not a replacement for good design, but helps compensate for minor flaws. Poor aesthetics can ruin an otherwise well designed functional flow.&lt;br&gt;&#xA;(&lt;a href=&#34;../ux#aesthetic-usability-effect&#34;&#xA;  class=&#34;internal-tooltip&#34;&gt;&lt;em&gt;Aesthetic-Usability Effect&lt;/em&gt;&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FreeCAD Brand guidelines</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/branding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/branding/</guid>
+      <description>&lt;p&gt;The brand guidelines describe the proper use of the FreeCAD logo and other FPA branded resources.&#xA;This is an excerpt of the official &lt;a href=&#34;https://fpa.freecad.org/handbook/process/logo.html&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FPA site for the FreeCAD brand guidelines&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Glossary of Terms</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/ui-glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/ui-glossary/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Widget:&lt;/strong&gt; Widgets are the individual components for creating user interfaces in FreeCAD. Widgets can display data and status information, receive user input, and provide a container for other widgets that should be grouped together. FreeCAD uses the QtWidget toolkit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Input Hints</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/hints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/hints/</guid>
+      <description>&lt;p&gt;Input Hints is feature that provides user with hints for available actions as part of the status bar.&lt;/p&gt;&#xA;&lt;div class=&#34;image-with-popover&#34;&gt;&#xA;      &lt;figure&gt;&#xA;        &lt;button aria-label=&#34;Zoom image&#34; popovertarget=&#34;img-001&#34;&gt;&#xA;          &lt;img srcset=&#34;https://marcuspollio.github.io/FreeCAD-website/dev/design/hints/input-hints-preview_hu_921d543ae183a45a.webp 500w, https://marcuspollio.github.io/FreeCAD-website/dev/design/hints/input-hints-preview.png 887w&#34;&#xA;            sizes=&#34;(max-width: 500px) 500px, 75vw&#34;&#xA;            src=&#34;https://marcuspollio.github.io/FreeCAD-website/dev/design/hints/input-hints-preview.png&#34;&#xA;            width=&#34;887&#34;&#xA;            height=&#34;73&#34;&#xA;            title=&#34;Input Hints Preview&#34;&#xA;            alt=&#34;Input Hints Preview&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;        &lt;/button&gt;&lt;figcaption&gt;Input Hints Preview&lt;/figcaption&gt;&lt;/figure&gt;&lt;div id=&#34;img-001&#34; popover&gt;&#xA;          &lt;img src=&#34;https://marcuspollio.github.io/FreeCAD-website/dev/design/hints/input-hints-preview.png&#34;&#xA;            title=&#34;Input Hints Preview&#34;&#xA;            alt=&#34;Input Hints Preview&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;          &lt;button class=&#34;close&#34;&#xA;            popovertarget=&#34;img-001&#34;&#xA;            popovertargetaction=&#34;hide&#34;&#xA;            aria-label=&#34;Close image viewer&#34;&gt;&lt;span class=&#34;icon-cross&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M4 20 20 4M4 4 20 20&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&#xA;        &lt;/div&gt;&lt;/div&gt;&lt;p&gt;Technically the hint consists of the displayed message with placeholders (&lt;code&gt;%1&lt;/code&gt;, &lt;code&gt;%2&lt;/code&gt;, &amp;hellip;)&#xA;corresponding to each key sequence, and key sequences. One hint can contain one sequence (&lt;code&gt;[M] change mode&lt;/code&gt;) or multiple ones (&lt;code&gt;[U]/[J] increase / decrease number of sides&lt;/code&gt;). Each sequence can&#xA;consist of one or more keys (for example &lt;code&gt;[shift][M]&lt;/code&gt;). Placeholders can be placed anywhere in the&#xA;hint message, however hints should follow &lt;code&gt;[key] action&lt;/code&gt; convention. Available keys are defined&#xA;within &lt;code&gt;Gui::InputHint::UserInput&lt;/code&gt; enum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interface Primary Elements</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/ui-elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/ui-elements/</guid>
+      <description>&lt;h2&#xA;  id=&#34;toolbars&#34;&gt;&#xA;  Toolbars&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#toolbars&#34;&#xA;     title=&#34;Toolbars&#34;&#xA;     aria-label=&#34;Toolbars&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;Toolbar management in complex technical software such as CAD poses unique challenges as there are often hundreds of potential tools, functions, or features which may require ready access within the GUI. The &lt;a href=&#34;../ux#pareto-principle&#34;&#xA;  class=&#34;internal-tooltip&#34;&gt;Pareto-Principle&lt;/a&gt; (80/20 rule) should be the basis for how toolbars are populated. The 80/20 rule states that 20% of the input results in 80% of the output. This would imply that 20% of a set of tools get 80% of the use. While this may not be a perfect correlating principle, it should help guide a critical thought process about which tools go onto a toolbar and also how they are organized.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Naming Convention</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/naming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/naming/</guid>
+      <description>&lt;p&gt;Due to the technical nature associated with CAD and advanced programming, it is easy to fall into the trap of using terminology that is either overly descriptive or seems obvious as a developer but is obscure to the layman. Additionally, with so many functions at a user&amp;rsquo;s disposal within FreeCAD, screen space comes at a high premium, and text strings can quickly change a UI/UX from being concise and efficient to awkwark and unpleasant. The following guidelines should be considered when naming/labeling functions, features and other various addons.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Principles and Laws of UI/UX</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/ux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/ux/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Understand that UI/UX is closely linked to human psychology and tendencies&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2&#xA;  id=&#34;aesthetic-usability-effect&#34;&gt;&#xA;  Aesthetic-Usability Effect&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#aesthetic-usability-effect&#34;&#xA;     title=&#34;Aesthetic-Usability Effect&#34;&#xA;     aria-label=&#34;Aesthetic-Usability Effect&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;An aesthetically pleasing design nets a positive response about usability and makes the UI design appear better even in the absence of any other differences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zones</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/design/zones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/design/zones/</guid>
+      <description>&lt;p&gt;The circle shown in the image below can be considered a &amp;lsquo;hot zone&amp;rsquo; where a user should be able to focus attention on the work/task being performed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

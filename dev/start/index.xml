@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/dev/start/</link>
+    <description>Recent content in Getting Started on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/dev/start/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CLion guide</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/start/clion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/start/clion/</guid>
+      <description>&lt;p&gt;If you don&amp;rsquo;t already have CLion installed, download it, license it, install it per JetBrains instructions.&lt;/p&gt;&#xA;&lt;h3&#xA;  id=&#34;checking-out-freecad&#34;&gt;&#xA;  Checking out FreeCAD&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#checking-out-freecad&#34;&#xA;     title=&#34;Checking out FreeCAD&#34;&#xA;     aria-label=&#34;Checking out FreeCAD&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Command line:&lt;/strong&gt;   &lt;code&gt;git clone --recurse-submodules https://github.com/FreeCAD/FreeCAD&lt;/code&gt; and then File -&amp;gt; Open or New Project on that directory.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dependencies</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/start/dependencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/start/dependencies/</guid>
+      <description>&lt;h2&#xA;  id=&#34;overview&#34;&gt;&#xA;  Overview&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#overview&#34;&#xA;     title=&#34;Overview&#34;&#xA;     aria-label=&#34;Overview&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;Like most software projects, FreeCAD depends on many other packages. Most critical among these is &lt;a href=&#34;https://www.opencascade.com/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;OpenCASCADE&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;,&#xA;the actual CAD kernel that FreeCAD is built upon. Of course, OpenCASCADE itself has its own dependencies. Many of which have &lt;em&gt;their&lt;/em&gt; own&#xA;dependencies, etc. The dependency graph quickly become overwhelming if you have to manually install each one. This is where package managers come&#xA;in. Depending on what platform you are developing on, you have a variety of tools at your disposal to resolve these dependencies. A brief overview&#xA;of the most common ones is included below. The main purpose of this document is to highlight the primary dependencies and describe what they do and&#xA;why FreeCAD needs them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VSCode</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/start/vscode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/start/vscode/</guid>
+      <description>&lt;p&gt;A convenient way of working with the FreeCAD source code is to use an IDE or Integrated Development Environment. The FreeCAD repository contains a VSCode configuration which makes it particularly easy to get started with.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

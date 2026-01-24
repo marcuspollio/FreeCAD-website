@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0.21.2 on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/versions/0.21.2/</link>
+    <description>Recent content in 0.21.2 on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/versions/0.21.2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeCAD 0.21.2 Released</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/freecad-0-21-2-released/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/freecad-0-21-2-released/</guid>
+      <description>&lt;p&gt;The FreeCAD team is happy to announce the release of &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/releases/tag/0.21.2&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD 0.21.2&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;! This is a bug fix release for the 0.21 release cycle. A detailed list of back ported fixes can be found &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/compare/0.21.1...0.21.2&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;on GitHub&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FreeCAD 0.21 release notes</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/download/releases/0-21/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/download/releases/0-21/</guid>
+      <description>&lt;h2&#xA;  id=&#34;this-is-the-021-release-notes-page&#34;&gt;&#xA;  This is the 0.21 release notes page.&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#this-is-the-021-release-notes-page&#34;&#xA;     title=&#34;This is the 0.21 release notes page.&#34;&#xA;     aria-label=&#34;This is the 0.21 release notes page.&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development Roadmap on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/dev/roadmap/</link>
+    <description>Recent content in Development Roadmap on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/dev/roadmap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next Release</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/roadmap/next/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/roadmap/next/</guid>
+      <description>&lt;p&gt;Releasing an official 1.0 release is a major milestone as well as a psychologically important event for the project. It is a signal to the world that FreeCAD is ready for production use, and that it is a mature, stable, and reliable tool for the job.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Roadmap Rationale</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/dev/roadmap/rationale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/dev/roadmap/rationale/</guid>
+      <description>&lt;p&gt;People may, &lt;em&gt;and probably will&lt;/em&gt; argue about &lt;em&gt;which&lt;/em&gt; future state FreeCAD should pursue.  For the purposes of this document we assume the following:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sketcher on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/tags/sketcher/</link>
+    <description>Recent content in Sketcher on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/tags/sketcher/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial: Sketcher Offset Geometry Tool</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-sketcher-offset-geometry-tool/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-sketcher-offset-geometry-tool/</guid>
+      <description>&lt;p&gt;In the version 1.0 release candidates and the upcoming version 1.0 a new &amp;ldquo;&lt;a href=&#34;https://wiki.freecad.org/Sketcher_Offset&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Offset Geometry&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&amp;rdquo; tool can be spotted on the sketcher workbench. Let&amp;rsquo;s have a look at how this tool can be used to help create sketch geometry more efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: On View Parameters</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-on-view-parameters/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-on-view-parameters/</guid>
+      <description>&lt;p&gt;One of the excellent new features in the upcoming version 1.0 release is the addition of &amp;ldquo;On View Parameters&amp;rdquo; for many of the tools in the sketcher workbench. These are parameter inputs boxes that appear automatically when you use sketcher tools mean to add dimensions and more as you create the geometry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: multiple operations from a single Sketch</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-multiple-operations-from-a-single-sketch/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-multiple-operations-from-a-single-sketch/</guid>
+      <description>&lt;p&gt;With the &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD-Bundle/releases/tag/1.0rc1&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;release candidates for version 1 appearing&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; it&amp;rsquo;s a nice time to explore some of the new features and functionality that FreeCAD now offers. You can read a long detailed list of new features here, and it&amp;rsquo;s fair to note that many areas and workbenches of FreeCAD have received improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sketcher Grid Auto-Spacing</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/sketcher-grid-auto-spacing/</link>
+      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/sketcher-grid-auto-spacing/</guid>
+      <description>&lt;p&gt;This week saw the merge of a long-awaited Sketcher feature that has been in progress by a team of developers for several months: the Sketcher Workbench now features a massively-refactored grid view that includes automatic-resizing when you zoom in and out, with a refined user interface for turning it on and off and changing the scaling parameters.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New constraint: Point-on-Spline</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/new-constraint-point-on-spline/</link>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/new-constraint-point-on-spline/</guid>
+      <description>&lt;p&gt;In very exciting Sketcher news, Ajinkya Dahale&amp;rsquo;s (@jnxd) work on a the new &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/7782&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;point-on-spline constraint&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; was merged late last week and is now available the main development trunk: it will be available in the next weekly development builds as they become available over the next several days.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tangent constraint at B-spline knots</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tangent-constraint-at-b-spline-knots/</link>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tangent-constraint-at-b-spline-knots/</guid>
+      <description>&lt;p&gt;This past week marked the merge of a feature that&amp;rsquo;s been in development since October: the ability to apply a tangency constraint to a line segment at B-spline knot points. In addition, the B-Spline knots themselves can now be constrained as any other point in Sketcher.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coming Soon: Sketcher Elements UI Refinement</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/coming-soon-sketcher-elements-ui-refinement/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/coming-soon-sketcher-elements-ui-refinement/</guid>
+      <description>&lt;p&gt;FreeCAD is constantly under development, with people across the world contributing code, documentation, ideas, and more. Recently developer &amp;ldquo;paddle&amp;rdquo; has been working closely with Sketcher lead developer abdullah to refine a &lt;a href=&#34;https://forum.freecadweb.org/viewtopic.php?f=8&amp;amp;t=72239&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;new feature in the Sketcher UI&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, and it was merged into the main branch of development this past week. In the new interface, an additional mechanism for selecting and deselecting the points defining geometry elements was created, making it easier to select specific points on a busy sketch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New in 0.20: Sketcher Enhancements</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/new-in-0-20-sketcher-enhancements/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/new-in-0-20-sketcher-enhancements/</guid>
+      <description>&lt;p&gt;Of all the &lt;a href=&#34;https://wiki.freecad.org/Release_notes_0.20&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;new features&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; in the recently-released &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/releases/tag/0.20&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD 0.20&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, it&amp;rsquo;s likely that the ones that will affect the most users are the improved tools in the &lt;a href=&#34;https://wiki.freecadweb.org/Sketcher_Workbench&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Sketcher workbench&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

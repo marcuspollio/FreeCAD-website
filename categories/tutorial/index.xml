@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/categories/tutorial/</link>
+    <description>Recent content in Tutorial on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design for 3D Printing, an Excellent Article</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/design-for-3d-printing-an-excellent-article/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/design-for-3d-printing-an-excellent-article/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s wonderful when people take the time to share the expertise they&amp;rsquo;ve developed. Even more so when the resulting article is filled with FreeCAD screenshots.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/</guid>
+      <description>&lt;p&gt;FreeCAD does many amazing things, allows us to create all kinds of geometries and assemblies, but we can also use FreeCAD for analysis of the things we make. One fascinating approach is Computational Fluid Dynamics or CFD.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Getting started with Spreadsheets and Parametric Design</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorialgetting-started-with-spreadsheets-and-parametric-design/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorialgetting-started-with-spreadsheets-and-parametric-design/</guid>
+      <description>&lt;p&gt;Amongst the built in collection of FreeCAD workbenches, you may have noticed one for creating and working with spreadsheets. Whilst you could use this to track your expenses, let&amp;rsquo;s look at an example project where a spreadsheet is really useful! As a quick reminder, when we write tutorials we call tools by the tool tip names that appear when you rollover tools and show them as italic text in the article.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Custom Toolbars</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-custom-toolbars/</link>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-custom-toolbars/</guid>
+      <description>&lt;div class=&#34;image-with-popover&#34;&gt;&#xA;      &lt;figure&gt;&#xA;        &lt;button aria-label=&#34;Zoom image&#34; popovertarget=&#34;img-001&#34;&gt;&#xA;          &lt;img srcset=&#34;https://marcuspollio.github.io/FreeCAD-website/news/tutorial-custom-toolbars/custom_tb_header_hu_bdcfa39d3fd19640.webp 500w, https://marcuspollio.github.io/FreeCAD-website/news/tutorial-custom-toolbars/custom_tb_header.png 801w&#34;&#xA;            sizes=&#34;(max-width: 500px) 500px, 75vw&#34;&#xA;            src=&#34;https://marcuspollio.github.io/FreeCAD-website/news/tutorial-custom-toolbars/custom_tb_header.png&#34;&#xA;            width=&#34;801&#34;&#xA;            height=&#34;504&#34;&#xA;            title=&#34;Custom tb header&#34;&#xA;            alt=&#34;Custom tb header&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;        &lt;/button&gt;&lt;figcaption&gt;Custom tb header&lt;/figcaption&gt;&lt;/figure&gt;&lt;div id=&#34;img-001&#34; popover&gt;&#xA;          &lt;img src=&#34;https://marcuspollio.github.io/FreeCAD-website/news/tutorial-custom-toolbars/custom_tb_header.png&#34;&#xA;            title=&#34;Custom tb header&#34;&#xA;            alt=&#34;Custom tb header&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;          &lt;button class=&#34;close&#34;&#xA;            popovertarget=&#34;img-001&#34;&#xA;            popovertargetaction=&#34;hide&#34;&#xA;            aria-label=&#34;Close image viewer&#34;&gt;&lt;span class=&#34;icon-cross&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M4 20 20 4M4 4 20 20&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&#xA;        &lt;/div&gt;&lt;/div&gt;&lt;p&gt;When you use any tool for a while you often build a more personal connection to it. Perhaps you have that old screwdriver in a drawer that&amp;rsquo;s become polished with years of use and fits your hand perfectly. We&amp;rsquo;ve looked previously at &lt;a href=&#34;https://blog.freecad.org/2024/12/03/tutorial-themes-and-workbench-layout/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;changing the appearance of FreeCAD using themes and also different workbench listing options&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; as a method of personalising our FreeCAD, in this tutorial though we&amp;rsquo;ll look at toolbars and tool icons.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Using the Measure Tool in Version 1.0</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-using-the-measure-tool-in-version-1-0/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-using-the-measure-tool-in-version-1-0/</guid>
+      <description>&lt;p&gt;Amongst the many changes you may have noticed in version 1, the Standard Measure tool icon has changed from an image of a tape measure to a set of Vernier Calipers. It&amp;rsquo;s not just the icon that&amp;rsquo;s changed though, the underlying measuring tools have been improved and expanded.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Using the Turntable Function</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-using-the-turntable-function/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-using-the-turntable-function/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s fair to say FreeCAD has a lot of tools and features and it&amp;rsquo;s common to focus on learning the tools that help you realise your designs. As such it&amp;rsquo;s also common to miss features that have been available in FreeCAD for quite some time. It&amp;rsquo;s noticeable online sometimes that people often post small video screen captures of their projects with the project preview revolving. Often you then see questions or comments on &amp;ldquo;how do you animate/revolve your part like that?&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Festive tree decoration, using the Revolution Tool!</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-festive-tree-decoration-using-the-revolution-tool/</link>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-festive-tree-decoration-using-the-revolution-tool/</guid>
+      <description>&lt;p&gt;The FreeCAD community is a wonderful diverse place and certainly not everyone in the community will be involved in traditions of bringing trees into their homes and then decorating them! However a festive tree decoration, in the shape of a tree, can be a good mini project for playing with the Revolution tool.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Themes and Workbench layout</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-themes-and-workbench-layout/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-themes-and-workbench-layout/</guid>
+      <description>&lt;p&gt;With the arrival of version 1.0 it&amp;rsquo;s a good time to take a look at some of the basic appearance options available to adjust to our preferences. So let&amp;rsquo;s look at the basics of switching themes and changing the listing and appearance of workbenches in FreeCAD.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Sketcher Offset Geometry Tool</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-sketcher-offset-geometry-tool/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-sketcher-offset-geometry-tool/</guid>
+      <description>&lt;p&gt;In the version 1.0 release candidates and the upcoming version 1.0 a new &amp;ldquo;&lt;a href=&#34;https://wiki.freecad.org/Sketcher_Offset&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Offset Geometry&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&amp;rdquo; tool can be spotted on the sketcher workbench. Let&amp;rsquo;s have a look at how this tool can be used to help create sketch geometry more efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Editing the Light Source</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-editing-the-light-source/</link>
+      <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-editing-the-light-source/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;ve written numerous tutorials recently looking at some of the larger changes and developments in the upcoming FreeCAD version 1.0 which can already be found in the current release candidate and the weekly developer versions of FreeCAD. The recent tutorials include the &lt;a href=&#34;https://blog.freecad.org/2024/10/20/tutorial-on-view-parameters/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;On View Parameter&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; features in the Sketcher workbench and the new &lt;a href=&#34;https://blog.freecad.org/2024/09/30/tutorial-getting-started-with-the-assembly-workbench/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Assembly workbench&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: On View Parameters</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-on-view-parameters/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-on-view-parameters/</guid>
+      <description>&lt;p&gt;One of the excellent new features in the upcoming version 1.0 release is the addition of &amp;ldquo;On View Parameters&amp;rdquo; for many of the tools in the sketcher workbench. These are parameter inputs boxes that appear automatically when you use sketcher tools mean to add dimensions and more as you create the geometry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Getting started with the Assembly Workbench</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-getting-started-with-the-assembly-workbench/</link>
+      <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-getting-started-with-the-assembly-workbench/</guid>
+      <description>&lt;p&gt;With the &lt;a href=&#34;https://blog.freecad.org/2024/09/24/the-second-release-candidate-of-freecad-1-0-is-out/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Version 1.0 release candidates coming thick and fast&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; it&amp;rsquo;s a good time to explore some of the new features that Version 1.0 will have to offer. One of the most eagerly anticipated new features is the Assembly workbench. Documentation and a great tutorial can be found for the Assembly workbench&lt;a href=&#34;https://wiki.freecad.org/Assembly_Workbench&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt; here&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; but it can be fun to just quickly work through the most minimal viable example to get a quick idea of a basic workflow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: multiple operations from a single Sketch</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-multiple-operations-from-a-single-sketch/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-multiple-operations-from-a-single-sketch/</guid>
+      <description>&lt;p&gt;With the &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD-Bundle/releases/tag/1.0rc1&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;release candidates for version 1 appearing&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; it&amp;rsquo;s a nice time to explore some of the new features and functionality that FreeCAD now offers. You can read a long detailed list of new features here, and it&amp;rsquo;s fair to note that many areas and workbenches of FreeCAD have received improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MangoJelly Solutions latest playlist explores Version 1.0 Features</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/mango-jelly-solutions-latest-playlist-helps-explore-version-1-features/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/mango-jelly-solutions-latest-playlist-helps-explore-version-1-features/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube-nocookie.com/embed/g-olVnKbdvU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;With version 1 of FreeCAD approaching it&amp;rsquo;s excellent to see people picking up on the new and improved features and workflows via the weekly developmental 0.22 versions. It&amp;rsquo;s also particularly excellent to see those who produce tutorial content beginning to use version 0.22 so that those who pick up FreeCAD version 1 will have some support.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Helping translate FreeCAD using Crowdin</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-helping-translate-freecad-using-crowdin/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-helping-translate-freecad-using-crowdin/</guid>
+      <description>&lt;p&gt;In case you didn&amp;rsquo;t know FreeCAD is available in lots of different languages. If you want to check out the list, launch FreeCAD and click &amp;ldquo;edit - preferences&amp;rdquo; and you&amp;rsquo;ll see a language dropdown at the top of the window and you can scroll to see lots of different language packs that FreeCAD contains. So how do these translations happen?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Approaching the “How do I get started in FreeCAD” question!</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-approaching-the-how-do-i-get-started-in-freecad-question/</link>
+      <pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-approaching-the-how-do-i-get-started-in-freecad-question/</guid>
+      <description>&lt;div class=&#34;image-with-popover&#34;&gt;&#xA;      &lt;figure&gt;&#xA;        &lt;button aria-label=&#34;Zoom image&#34; popovertarget=&#34;img-001&#34;&gt;&#xA;          &lt;img srcset=&#34;https://marcuspollio.github.io/FreeCAD-website/news/tutorial-approaching-the-how-do-i-get-started-in-freecad-question/freecad_header_hu_5b241a772c89bdcd.webp 500w, https://marcuspollio.github.io/FreeCAD-website/news/tutorial-approaching-the-how-do-i-get-started-in-freecad-question/freecad_header.png 577w&#34;&#xA;            sizes=&#34;(max-width: 500px) 500px, 75vw&#34;&#xA;            src=&#34;https://marcuspollio.github.io/FreeCAD-website/news/tutorial-approaching-the-how-do-i-get-started-in-freecad-question/freecad_header.png&#34;&#xA;            width=&#34;577&#34;&#xA;            height=&#34;441&#34;&#xA;            title=&#34;Freecad header&#34;&#xA;            alt=&#34;Freecad header&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;        &lt;/button&gt;&lt;figcaption&gt;Freecad header&lt;/figcaption&gt;&lt;/figure&gt;&lt;div id=&#34;img-001&#34; popover&gt;&#xA;          &lt;img src=&#34;https://marcuspollio.github.io/FreeCAD-website/news/tutorial-approaching-the-how-do-i-get-started-in-freecad-question/freecad_header.png&#34;&#xA;            title=&#34;Freecad header&#34;&#xA;            alt=&#34;Freecad header&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;          &lt;button class=&#34;close&#34;&#xA;            popovertarget=&#34;img-001&#34;&#xA;            popovertargetaction=&#34;hide&#34;&#xA;            aria-label=&#34;Close image viewer&#34;&gt;&lt;span class=&#34;icon-cross&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M4 20 20 4M4 4 20 20&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&#xA;        &lt;/div&gt;&lt;/div&gt;&lt;p&gt;There are so many community areas around FreeCAD. Apart from the excellent official &lt;a href=&#34;https://forum.freecad.org/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD forum&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; almost every conceivable messaging platform or social media camp has a FreeCAD presence. From Facebook and X, through Discord, Matrix and Fosstodon there are lots of places with FreeCAD discussion. Whilst we all might have our favoured places to chat FreeCAD it&amp;rsquo;s interesting to look across a few of these community areas and see what unites them. On a daily basis looking across a few of these sites will reveal that &amp;ldquo;How do I get started in FreeCAD?&amp;rdquo; is possibly the most common enquiry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Create custom TechDraw Templates.</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-create-custom-techdraw-templates/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-create-custom-techdraw-templates/</guid>
+      <description>&lt;p&gt;The Technical Drawing or &lt;a href=&#34;https://wiki.freecad.org/TechDraw_Workbench&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;TechDraw workbench&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; is an integral part of FreeCAD allowing us to create beautiful technical drawings of our parts or assemblies. In a world of CNC milling and 3D printing it&amp;rsquo;s still essential at times to be able to supply someone with a technical drawing to help plan the making of a part. A technical drawing can also be extremely useful as part of documentation and could form part of a technical standard for a project or product, so it&amp;rsquo;s important to be able to create technical drawings that meet our needs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Getting started with the Path Workbench. Part Two.</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-getting-started-with-the-path-workbench-part-two/</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-getting-started-with-the-path-workbench-part-two/</guid>
+      <description>&lt;p&gt;In the &lt;a href=&#34;https://blog.freecad.org/2023/11/24/tutorial-getting-started-with-the-path-workbench-part-one/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;first part of this tutorial&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; we looked at setting up the Tool Bit Library when running the Path WB for the first time and creating a custom 3mm endmill tool. As a reminder in these tutorials we will describe tool icons by the text description that is displayed when you rollover an icon. This means you&amp;rsquo;ll have to explore the rollover texts which is a great way to explore the basics of what tools are on each workbench. Also, as a reminder, this tutorial was written using FreeCAD version 0.21.1.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial: Getting started with the Path Workbench. Part One.</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-getting-started-with-the-path-workbench-part-one/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/news/tutorial-getting-started-with-the-path-workbench-part-one/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://wiki.freecad.org/Path_Workbench&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Path workbench&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; in FreeCAD can help you create tool paths for CAM for a wide variety of CNC machines and G-code families. Let&amp;rsquo;s walk through how to begin using this workbench in this first part creating and curating custom tool bits. In part two we&amp;rsquo;ll continue setting up cutting operations and look at exporting G-codes for our machines.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

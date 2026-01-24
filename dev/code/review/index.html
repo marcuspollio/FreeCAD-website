@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+
+  <title>FreeCAD | Code Review Guide</title>
+  <meta name="description" content="Code review practices.">
+  <meta name="keywords" content="CAD, parametric, model, 3D, BIM, CAM, FEM, free, open-source">
+  <link rel="canonical" href="https://marcuspollio.github.io/FreeCAD-website/dev/code/review/"><link rel="alternate" hreflang="en" href="https://marcuspollio.github.io/FreeCAD-website/dev/code/review/"><link rel="alternate" hreflang="x-default" href="https://marcuspollio.github.io/FreeCAD-website/"><script>
+    const pref = localStorage.getItem("pref-theme");
+    if (pref === "dark") {
+      document.documentElement.classList.add('dark');
+    } else if (pref === "light") {
+      document.documentElement.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script><noscript>
+  <style>
+    #chroma-toggle {
+      display: none;
+    }
+  </style><style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --header: rgb(16, 16, 16);
+          --theme: rgb(32, 32, 32);
+          --entry: rgb(48, 48, 48);
+          --tone: rgb(64, 64, 64);
+          --footer: rgb(80, 80, 80);
+          --primary: rgb(240, 240, 240);
+          --secondary: rgb(224, 224, 224);
+          --tertiary: rgb(208, 208, 208);
+          --backdrop: rgba(0, 0, 0, 0.8);
+          --backdrop: rgba(0, 0, 0, 0.75);
+          --link-color: rgb(102, 177, 255);
+          --link-hover-color: rgb(65, 143, 222);
+          --underline: underline solid currentColor var(--line);
+          --border: var(--line) solid var(--tone);
+        }
+      }
+    </style></noscript><link href="/FreeCAD-website/assets/css/stylesheet.min.202c22b0b1bc1e83d02ab645bfc2559c1f357a18060fd3aefbc1cf581834cc89.css"
+  rel="stylesheet"
+  integrity="sha256-ICwisLG8HoPQKrZFv8JVnB81ehgGD9Ou&#43;8HPWBg0zIk=" crossorigin="anonymous"><link rel="icon" type="image/svg+xml" href="/FreeCAD-website/favicon.svg"><link rel="shortcut icon" type="image/x-icon" href="/FreeCAD-website/favicon.ico"><link rel="apple-touch-icon" href="/FreeCAD-website/apple-touch-icon.png"><meta property="og:url" content="https://marcuspollio.github.io/FreeCAD-website/dev/code/review/">
+  <meta property="og:site_name" content="FreeCAD">
+  <meta property="og:title" content="Code Review Guide">
+  <meta property="og:description" content="Code review practices.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+</head><body class="single type-docs kind-page "
+    id="top">
+
+<div class="unsupported-browser">
+  <h3>Hi there! Internet Explorer is no longer supported.</h3>
+  <p>Please use a modern web browser such as Firefox, Chromium or Edge. Thank you!</p>
+</div>
+<header class="site-header">
+
+  <div class="logo">
+    <a href="/FreeCAD-website/"accesskey="h"
+      title="FreeCAD Home (Alt + H)"
+      aria-label="FreeCAD Home"><?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" viewBox="0 0 180 48" fill="none" version="1.1">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:date>2024-06-01</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sebastian Tabares Amaya (sytabaresa), Max Wilfinger (maxwxyz)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>The FreeCAD project association AISBL (FPA)</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" style="stroke:none" d="M 50.3 35.3 V 12.7 H 61.8 V 14.7 H 52.6 V 22.9 H 61.5 V 25 H 52.6 V 35.3 H 50.3 Z M 64.5 35.3 V 18.6 H 66.7 V 21 C 67.6 19.1 69 18.3 71.5 18.2 V 20.4 C 68.3 20.7 66.7 22.4 66.7 25.5 V 35.3 H 64.5 Z M 89.6 27.7 H 74.4 C 74.6 31 77.5 33.6 80.9 33.6 C 83.5 33.6 85.8 32.1 86.8 29.8 H 89.1 C 87.9 33.3 84.6 35.7 81 35.7 C 76 35.7 72.2 31.8 72.2 26.9 C 72.2 22 76 18.2 80.8 18.2 C 84.1 18.2 87.1 19.9 88.6 22.7 C 89.3 24.1 89.6 25.5 89.6 27.7 Z M 74.5 25.6 H 87.3 C 86.5 22.3 84.1 20.2 80.8 20.2 C 77.6 20.2 75.1 22.4 74.5 25.6 Z M 109.5 27.7 H 94.3 C 94.5 31 97.4 33.6 100.8 33.6 C 103.4 33.6 105.7 32.1 106.7 29.8 H 109 C 107.8 33.3 104.5 35.7 100.9 35.7 C 95.9 35.7 92.1 31.8 92.1 26.9 C 92.1 22 95.9 18.2 100.7 18.2 C 104 18.2 107 19.9 108.5 22.7 C 109.2 24.1 109.5 25.5 109.5 27.7 Z M 94.4 25.6 H 107.2 C 106.4 22.3 104 20.2 100.7 20.2 C 97.5 20.2 95 22.4 94.4 25.6 Z M 129.2 29 H 134.1 C 132.3 33.1 128.3 35.7 123.7 35.7 C 117.1 35.7 111.8 30.5 111.8 23.9 C 111.8 17.5 117 12.3 123.4 12.3 C 126.2 12.3 129 13.3 131.1 15 C 132.5 16.3 133.2 17.3 134.1 19.2 H 129.4 C 127.9 17.2 126.1 16.3 123.5 16.3 C 121.2 16.3 119.2 17.2 117.9 18.8 C 116.7 20.2 116 22.1 116 24 C 116 28.2 119.4 31.7 123.6 31.7 C 125.8 31.7 127.3 30.9 129.2 29 Z M 134.6 35.3 L 144 12.7 H 147.3 L 156.8 35.3 H 152.2 L 149.8 29.5 H 141.7 L 139.2 35.3 H 134.6 Z M 143.2 25.5 H 148.1 L 145.7 18.6 L 143.2 25.5 Z M 159.2 35.3 V 12.7 H 164.4 C 168.1 12.7 170.8 13.3 172.6 14.5 C 175.6 16.4 177.3 19.9 177.3 24 C 177.3 28.7 175.2 32.5 171.6 34.1 C 169.8 35 167.8 35.3 164.5 35.3 H 159.2 Z M 163.4 31.3 H 164.3 C 166.8 31.3 168.6 31 169.8 30.3 C 171.8 29.2 173.1 26.8 173.1 24 C 173.1 21.1 171.7 18.6 169.5 17.5 C 168.2 16.9 166.8 16.7 164.2 16.7 H 163.4 V 31.3 Z" />
+  <g style="stroke:none">
+    <path style="fill:#418fde;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 40,8 -8,8 H 16 v 6 h 8 v 8 h -8 v 10 l -8,8 h 8.1 c 0.6,0 1.1,-0.4 1.3,-1 l 1.5,-4.5 c 0.1,-0.4 0.5,-0.8 0.9,-0.9 l 1.1,-0.4 c 0.4,-0.1 0.9,-0.1 1.3,0.2 l 3.8,2.8 c 0.5,0.4 1.2,0.4 1.7,0 l 3.4,-2.5 c 0.5,-0.4 0.7,-1 0.5,-1.6 l -1.5,-4.5 c -0.1,-0.4 -0.1,-0.9 0.2,-1.3 l 0.7,-1 c 0.3,-0.4 0.7,-0.6 1.1,-0.6 l 4.7,0 c 0.6,0 1.1,-0.4 1.3,-1 l 1.3,-4 c 0.2,-0.6 0,-1.2 -0.5,-1.6 L 35.1,23.7 c -0.4,-0.3 -0.6,-0.7 -0.6,-1.1 V 21.4 c 0,-0.5 0.2,-0.9 0.6,-1.1 l 4.4,-3.2 C 39.8,16.9 40,16.4 40,16 Z" />
+    <path style="display:inline;fill:#ff585d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 32,0 -8,8 h 8 v 8 L 40,8 V 0 Z M 8,32 0,40 v 8 h 8 l 8,-8 H 8 Z" />
+    <path style="fill:#cb333b;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="M 8,0 0,8 V 40 L 8,32 V 8 H 24 L 32,0 Z" />
+    <path style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 8,40 h 8 V 30 h 8 V 22 H 16 V 16 H 32 V 8 H 8 Z" />
+  </g>
+</svg></a>
+  </div>
+
+  <div class="site-nav">
+    <nav class="menu">
+      <button popovertarget="menu-list"
+        popovertargetaction="toggle"
+        class="menu-toggle"
+        title="Menu"
+        aria-label="Menu"><span class="icon-hamburger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20H20M4 4H20M4 12h16"/></svg></span><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+
+      <ul popover id="menu-list" class="menu-list"><li>
+            <a href="/FreeCAD-website/features/"
+              class=""
+              title="Features"
+              aria-label="Features"
+              >
+              <span>Features</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/download/"
+              class=""
+              title="Download"
+              aria-label="Download"
+              >
+              <span>Download</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/news/"
+              class=""
+              title="News"
+              aria-label="News"
+              >
+              <span>News</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/community/"
+              class=""
+              title="Community"
+              aria-label="Community"
+              >
+              <span>Community</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/docs/"
+              class="menu-active"
+              title="Documentation"
+              aria-label="Documentation"
+              aria-current="page">
+              <span>Documentation</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/donate/"
+              class="button"
+              title="♥︎ Donate"
+              aria-label="♥︎ Donate"
+              >
+              <span>♥︎ Donate</span>
+            </a>
+          </li></ul>
+    </nav><div class="language-dropdown">
+        <button popovertarget="lang-list"
+          popovertargetaction="toggle"
+          class="lang-toggle"
+          accesskey="l"
+          title="Choose language (Alt + L)"
+          aria-label="Choose language (Alt + L)"><span class="icon-language"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c.9 2.1 1.9 4 3.5 5.5C6 11.9 3.8 13.2 2 14m9-9c-.9 2.1-1.9 4-3.5 5.5C9 11.9 11.1 13.2 13 14M7.5 2V5M13 5H2"/><path d="m11.5 19h9M16 10l6 12M16 10 10 22"/></svg></span></button>
+
+        <ul popover id="lang-list" class="language-list"><li>
+                    <a class="language-active" href="/FreeCAD-website/dev/code/review/">
+                      English 🇬🇧
+                    </a>
+                  </li></ul>
+      </div><div class="chroma-toggle">
+      <button id="chroma-toggle"
+        accesskey="t"
+        title="Switch theme chroma (Alt + T)"
+        aria-label="Switch theme chroma"><span class="icon-dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></span><span class="icon-light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg></span></button>
+    </div>
+
+  </div>
+</header><main><section class="hero">
+
+    <h2 class="title">
+      Code Review Guide</h1><h3 class="description">Code review practices.</h3><div class="metadata"><span class="meta"><span class="icon-words"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>1898 words</span><span class="meta"><span class="icon-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></span>9 min</span></div></section><nav aria-label="breadcrumb" class="breadcrumb">
+  <ol><li>
+        <a href="/FreeCAD-website/docs/">Documentation</a>
+      </li><li>
+        <a href="/FreeCAD-website/dev/">Developer Handbook</a>
+      </li><li>
+        <a href="/FreeCAD-website/dev/code/">Code guidelines</a>
+      </li><li class="active">
+      <a  href="/FreeCAD-website/dev/code/review/">Code Review Guide</a>
+    </li>
+  </ol>
+</nav><div class="content">
+    <p>This document aims to provide set of good practices that should be helpful for both developers and code reviewers. They should be treated like food recipes - you can play with them, alter them - but every change should be thoughtful and intentional.</p>
+<p>Just like the C++ practices - this document is <strong>very</strong> much inspired by the <a href="https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">C++ Core Guidelines<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>.
+You can always consult it to learn more useful stuff.</p>
+<p>While points of this guide might not be consistently followed throughout all of the existing codebase, checking if new code follows them is possible and in long term should help us immensely.</p>
+<figure>
+  <blockquote class="note"
+    ><span class="icon-note"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.7 4.2H5.6c-1.2.0-1.9.0-2.3.2-.5.3-.8.6-1.1 1C2 5.9 2 6.5 2 7.8V18.4c0 1.2.0 1.9.2 2.3.2.4.6.8 1 1 .5.2 1.1.2 2.3.2H16.2c1.2.0 1.9.0 2.3-.2.4-.2.8-.6 1-1 .2-.5.2-1.1.2-2.3V15.3m-4.4-10L8.7 12v3.3H12l6.7-6.6M15.3 5.3 18.7 2 22 5.3 18.7 8.7M15.3 5.3l3.4 3.4"/></svg></span>Note<p>Remember that code review is a collaborative discussion. Don’t hesitate to ask for clarification or help when needed. Reviewers can also make mistakes, the goal is to work together to refine the code to a point where everyone is satisfied.</p></blockquote></figure>
+<figure>
+  <blockquote class="tip"
+    ><span class="icon-tip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12H2.2M12 1V2.2M21.8 12H23M4.2 4.2 5 5m14.8-.8L19 5"/><path d="m8.3 16.9a6.1 6.1.0 117.3.0 4.3 4.3.0 00-1.2 3.7 2.4 2.4.0 01-4.9.0 4.3 4.3.0 00-1.2-3.7"/><path d="M9.2 18.1h5.6"/></svg></span>Tip<p>This is a tip alert blockquote.</p></blockquote></figure>
+<figure>
+  <blockquote class="important"
+    ><span class="icon-important"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 7v0"/><path d="m12 11v7"/><circle cx="12" cy="12" r="11"/></svg></span>Important<p>This is an important alert blockquote.</p></blockquote></figure>
+<figure>
+  <blockquote class="warning"
+    ><span class="icon-warning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 8v5"/><path d="m12 16v0"/><path d="M10.2 3 1.3 18c-.8 1.4.2 3 1.8 3H20.9c1.6.0 2.6-1.6 1.8-3L13.8 3C13 1.6 11 1.6 10.2 3z"/></svg></span>Warning<p>This is a warning alert blockquote.</p></blockquote></figure>
+<figure>
+  <blockquote class="caution"
+    ><span class="icon-caution"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.8 16.2l3.7 6.3A11 11 0 0023 13h-7.3a3.7 3.7.0 01-1.8 3.2"/><path d="M13.8 9.8l3.7-6.3a11 11 0 00-11 0l3.7 6.3a3.7 3.7.0 013.7.0"/><path d="M10.2 16.2 6.5 22.5A11 11 0 011 13h7.3a3.7 3.7.0 001.8 3.2"/></svg></span>Caution<p>This is a caution alert blockquote.</p></blockquote></figure>
+<p>In this document the <strong>bolded</strong> text will indicate how important each suggestion is.</p>
+<ul>
+<li><strong>must</strong> will be used for fundamental things that should be non-controversial and which you really should follow</li>
+<li><strong>should</strong> will be used for important details that will apply for vast majority of cases, there could however be valid reasons to ignore them depending on context</li>
+<li><strong>could</strong>/<strong>can</strong> will be used for best practices, things that you should try to follow but not following them is not an error per se</li>
+</ul>
+<h2
+  id="common-rules">
+  Common Rules
+  <a class="heading-anchor"
+     href="#common-rules"
+     title="Common Rules"
+     aria-label="Common Rules"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><ol>
+<li>Consistency <strong>must</strong> be preferred over strict rule following. If, for example, in a given context code uses different naming scheme - it should be followed instead of one described in that document.</li>
+<li>The aim of Code Review <strong>is not</strong> to find errors in code but to ensure code quality.</li>
+<li>There are no dedicated reviewers, everyone <strong>can</strong> help with the effort!</li>
+<li>Reviewers <strong>should</strong> comment mostly on added code and discuss existing one only if making change to existing code would help the new fragment.</li>
+<li>Comments <strong>could</strong> be made to existing comments just to note that other (potentially better) soluyions are available and should be used instead when writing new code.</li>
+<li>Reviewer <strong>can</strong> hint to make more changes to the existing code in order to improve the proposed solution (for example, refactor another class so it can be used).</li>
+<li>Code <strong>must</strong> follow the Scout Rule - <a href="https://biratkirat.medium.com/step-8-the-boy-scout-rule-robert-c-martin-uncle-bob-9ac839778385"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://biratkirat.medium.com/step-8-the-boy-scout-rule-robert-c-martin-uncle-bob-9ac839778385<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> - i.e. leave code in better shape than you found it.</li>
+<li>If possible, code cleanup done while working on the feature should be split into separate commits or even better PR.</li>
+<li>PRs <strong>must not</strong> contain any remains of development code, like debug statements other than actual logs.</li>
+<li>New code <strong>must not</strong> introduce any new linter warnings</li>
+<li>Developer <strong>should</strong> have <code>pre-commit</code> installed and working. <code>pre-commit-ci</code> commits should be avoided.</li>
+</ol>
+<h2
+  id="prs-and-commits">
+  PRs and Commits
+  <a class="heading-anchor"
+     href="#prs-and-commits"
+     title="PRs and Commits"
+     aria-label="PRs and Commits"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><ol>
+<li>Commit message <strong>should</strong> include prefix with module name, e.g. <code>Part: </code></li>
+<li>Commit message <strong>should</strong> use imperative mode - just like git does, e.g. <code>Part: Add fillet feature</code></li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Git commit message</summary><p>A properly formed Git commit subject line should always be able to complete the following sentence:</p>
+<p>If applied, this commit will <strong>your commit message</strong>,</p>
+<p>e.g. If applied, this commit will add fillet feature.</p>
+</details>
+<ol start="3">
+<li>If changeset is big and spans across multiple modules it <strong>should</strong> be split into one commit per module.</li>
+<li>Every commit in the PR <strong>must</strong> compile and run properly. <code>git bisect</code> workflow does not work if some commits are not possible to compile.</li>
+<li>Commit message <strong>can</strong> contain additional information after one blank line.</li>
+<li>Every PR <strong>should</strong> have description, even if it seems obvious.</li>
+</ol>
+<h2
+  id="basic-code-rules">
+  Basic Code Rules
+  <a class="heading-anchor"
+     href="#basic-code-rules"
+     title="Basic Code Rules"
+     aria-label="Basic Code Rules"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><ol>
+<li>(C++ only) New code <strong>must</strong> be formatted with clang-format tool or in a way that is compatible with clang-format result if file is excluded from auto formatting.</li>
+<li>(Python only) Code <strong>must</strong> follow the PEP 8 standard and formatted with Black.</li>
+<li>Main execution path <strong>should</strong> be the least indented one, i.e. conditions should cover specific cases.</li>
+<li>Early-Exit <strong>should</strong> be preferred to prune unwanted execution branches fast.</li>
+<li>Global state (global variables, static fields, singletons) <strong>should be</strong> avoided.</li>
+<li>(C++ only) <code>enum class</code> <strong>should</strong> be preferred over normal enum whenever possible.</li>
+<li>(C++ only) C++ libraries/structures <strong>should</strong> be preferred over C ones. i.e. <code>std::array/vector</code> should be used instead of C array.</li>
+<li>(C++ only) C++ standard library <strong>should</strong> be utilized if possible, especially the <code>&lt;algorithms&gt;</code> one.</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Example 1</summary><p>Consider following code:</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vertices</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vertexSet</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">s</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">getSubShapes</span><span class="p">(</span><span class="n">TopAbs_VERTEX</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">shape</span><span class="p">.</span><span class="n">findShape</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">idx</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">vertexSet</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">idx</span><span class="p">).</span><span class="n">second</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vertices</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">idx</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></div><p>You can rewrite it in a following way:</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vertices</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vertexSet</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">vertex</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">getSubShapes</span><span class="p">(</span><span class="n">TopAbs_VERTEX</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">vertexId</span> <span class="o">=</span> <span class="n">shape</span><span class="p">.</span><span class="n">findShape</span><span class="p">(</span><span class="n">vertex</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">vertexId</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vertexSet</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">vertexId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">vertexSet</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vertexSet</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">std</span><span class="o">::</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">vertices</span><span class="p">));</span></span></span></code></pre></div></div><p>This way you split the responsibility of computing unique set with result preparation.</p>
+</details>
+<ol start="9">
+<li>(C++ only) Return values <strong>should</strong> be preferred over out arguments.
+a. For methods that can fail <code>std::optional</code> should be used
+b. For methods that return multiple values it may be better to either provide dedicated struct for result or use <code>std::tuple</code> with expression binding.</li>
+<li>(C++ only) If dealing with pointers <code>auto</code> <strong>must</strong> be suffixed with <code>*</code>: <code>auto*</code>.</li>
+<li>(C++ only) If dealing with references <code>auto</code> <strong>must</strong> be suffixed with <code>&amp;</code>: <code>auto&amp;</code></li>
+<li>(C++ only) <code>auto</code> <strong>should</strong> be used if:
+a. the right-hand side makes clear which type it is, e.g. with <code>static_cast</code>, or <code>new</code>
+b. the type is long or verbose (iterators, ranges, &hellip;)
+c. it reduces redundancy in code (repeated type)</li>
+<li>(C++ only) <code>auto</code> <strong>should not</strong> be used if:
+a. dealing with primitives (the type is not always clear, int vs unsigned etc)
+b. the type is not clear from context, method name or template arguments</li>
+<li>If expression is not obvious - it <strong>should</strong> be given a name by using variable.</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Example 1</summary><p>TODO: Find some good example</p>
+</details>
+<ol start="15">
+<li>(C++ only) Code <strong>should not</strong> be put in anonymous namespace.</li>
+<li>All members <strong>must</strong> be initialized.</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Rationale</summary><p>Not initialized members can easily cause undefined behaviors that are really hard to find.</p>
+</details>
+<ol start="17">
+<li>If possible, functions / methods <strong>should</strong> not use more than 3 indentation levels.</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Rationale</summary><p>Main path of code should be the least indented, exceptional cases should be handled as early-exit if statements.
+Code that is highly indented is harder to process and often has large cognitive load -
+if something is not possible to write within 3 indentation levels it is a good signal that it might require splitting into smaller methods.</p>
+</details>
+<ol start="18">
+<li>(C++ only) dedicated casts should be preferred over <code>dynamic_cast</code> due to performance
+a. QObjects should use <code>qobject_cast</code>
+b. FreeCAD types (deriving from <code>BaseClass</code>) should use <code>freecad_cast</code></li>
+</ol>
+<h2
+  id="design--architecture">
+  Design / Architecture
+  <a class="heading-anchor"
+     href="#design--architecture"
+     title="Design / Architecture"
+     aria-label="Design / Architecture"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><ol>
+<li>Each class / method / function <strong>should</strong> be doing only one thing and should do it well.</li>
+<li>Classes that do provide business logic <strong>should</strong> be stateless. This helps with reusability.</li>
+<li>Functions / Methods <strong>should</strong> be pure i.e. their result should only depend on arguments (and object state in case of method). This helps with reusability, predictability and testing.</li>
+<li>Immutable data <strong>should</strong> be used whenever possible, (For C++ use <code>const</code>)</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Rationale</summary><p>It is much easier to reason about code that deals with data that does not change.
+Using const modifier ensures that the object will stay unmodified and compiler will make sure that it is the case.</p>
+</details>
+<ol start="5">
+<li>(C++ only) If possible <code>constexpr</code> <strong>should</strong> be used for storing constant data.</li>
+<li>Long methods <strong>should</strong> be split into smaller, better described ones.</li>
+<li>(C++ only) Defining new macros <strong>must</strong> be avoided, unless absolutely necessary.</li>
+<li>Integers <strong>must not</strong> be used to express anything other than numbers. For enumerations enums <strong>must</strong> be used.</li>
+<li>Code <strong>should</strong> be written in a way that it expresses intent, i.e. what should be done, rather than just how it is done.</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Rationale</summary><p>Consider this code:</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setOverlayMode</span><span class="p">(</span><span class="n">OverlayMode</span> <span class="n">mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// ... some code ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">QDockWidget</span> <span class="o">*</span><span class="n">dock</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">w</span> <span class="o">=</span> <span class="n">qApp</span><span class="o">-&gt;</span><span class="n">widgetAt</span><span class="p">(</span><span class="n">QCursor</span><span class="o">::</span><span class="n">pos</span><span class="p">());</span> <span class="n">w</span><span class="p">;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">-&gt;</span><span class="n">parentWidget</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dock</span> <span class="o">=</span> <span class="n">qobject_cast</span><span class="o">&lt;</span><span class="n">QDockWidget</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">dock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">auto</span> <span class="n">tabWidget</span> <span class="o">=</span> <span class="n">qobject_cast</span><span class="o">&lt;</span><span class="n">OverlayTabWidget</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">tabWidget</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dock</span> <span class="o">=</span> <span class="n">tabWidget</span><span class="o">-&gt;</span><span class="n">currentDockWidget</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">dock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">dock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">w</span> <span class="o">=</span> <span class="n">qApp</span><span class="o">-&gt;</span><span class="n">focusWidget</span><span class="p">();</span> <span class="n">w</span><span class="p">;</span> <span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">-&gt;</span><span class="n">parentWidget</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dock</span> <span class="o">=</span> <span class="n">qobject_cast</span><span class="o">&lt;</span><span class="n">QDockWidget</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">dock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// some more code ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">toggleOverlay</span><span class="p">(</span><span class="n">dock</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></div><p>It is hard to understand what is the job of the for loop inside <code>if (!dock)</code> statement.
+We can refactor it to a new <code>QWidget* findClosestDockWidget()</code> method for it to look like this:</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setOverlayMode</span><span class="p">(</span><span class="n">OverlayMode</span> <span class="n">mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// ... some code ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">QDockWidget</span> <span class="o">*</span><span class="n">dock</span> <span class="o">=</span> <span class="n">findClosestDockWidget</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ... some more code ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">toggleOverlay</span><span class="p">(</span><span class="n">dock</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></div><p>The findClosestDockWidget() could either be implemented as private method or an inner function using lambdas.</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">findClosestDockWidget</span> <span class="o">=</span> <span class="p">[]()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span></span></span></code></pre></div></div><p>That way reading through code of <code>setOverlayMode</code> we don&rsquo;t need to care about the details of finding the closest dock widget.</p>
+</details>
+<ol start="10">
+<li>Boolean arguments <strong>must</strong> be avoided. Use enumerations instead - enum with 2 values is absolutely fine.
+For python boolean arguments are ok, but they <strong>must</strong> forced to be keyword ones.</li>
+</ol>
+<details
+  
+  
+  
+  open
+  >
+  <summary>Example 1 (C++)</summary><p>consider following example:</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">mapper</span><span class="p">.</span><span class="n">populate</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">it</span><span class="p">.</span><span class="n">key</span><span class="p">(),</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">());</span></span></span></code></pre></div></div><p>it is impossible to understand what false means without consulting the documentation or at least the method signature.
+instead the enum should be used:</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">mapper</span><span class="p">.</span><span class="n">populate</span><span class="p">(</span><span class="n">mappingstatus</span><span class="o">::</span><span class="n">modified</span><span class="p">,</span> <span class="n">it</span><span class="p">.</span><span class="n">key</span><span class="p">(),</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">());</span></span></span></code></pre></div></div><p>now the intent is clear</p>
+</details>
+<ol start="11">
+<li>(C++ only) Code <strong>should</strong> prefer uniform initialization <code>{ }</code> (also called brace initialization). Prevents narrowing.</li>
+<li>(C++ only) Class member variables <strong>should</strong> be initialized at declaration, not in constructors</li>
+<li>Magic numbers or other literals <strong>must</strong> be avoided.</li>
+</ol>
+<h2
+  id="naming-things">
+  Naming Things
+  <a class="heading-anchor"
+     href="#naming-things"
+     title="Naming Things"
+     aria-label="Naming Things"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><p>Naming described in that section of the document refers mostly to newer parts of code. Some modules use different naming conventions,
+while checking the code Reviewer should take into account surrounding code and first of all ensure consistency within the closest scope.</p>
+<ol>
+<li>Code symbols (classes, structs, methods, functions, variables&hellip;) <strong>must</strong> have names that are meaningful and grammatically correct.</li>
+<li>Variables <strong>should not</strong> be named using abbreviations and/or 1 letter names. Iterator variables or math related ones like <code>i</code> or <code>u</code> are obviously not covered by this rule.</li>
+<li>Names <strong>must not</strong> use the hungarian notation.</li>
+<li>(C++ only) Classes/Structs/Enums <strong>must</strong> be written in <code>PascalCase</code>, underscores are allowed but should be avoided.</li>
+<li>(C++ only) Class/Struct members <strong>should</strong> be written in <code>camelCase</code>, underscores are allowed but should be avoided.</li>
+<li>(C++ only) Global functions <strong>should</strong> be written in <code>camelCase</code>, underscores are allowed but should be avoided.</li>
+<li>(C++ only) Enum cases <strong>should</strong> use <code>PascalCase</code></li>
+<li>(C++ only) Enums should use singular form (i.e. <code>enum ObjectState</code> instead of <code>enum ObjectStates</code>)</li>
+<li>(C++ only) Local variables <strong>should</strong> use <code>camelCase</code></li>
+</ol>
+<h3
+  id="naming-conventions">
+  Naming Conventions
+  <a class="heading-anchor"
+     href="#naming-conventions"
+     title="Naming Conventions"
+     aria-label="Naming Conventions"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h3><ol>
+<li>Coin nodes <strong>should</strong> be prefixed with <code>So</code>, e.g. <code>SoTransformDragger</code>. Reimplementation of existing Coin nodes <strong>should</strong> use <code>SoFC</code> prefix, e.g. <code>SoFCTransform</code>.</li>
+<li>Features in Part and Part Design workbenches <strong>should</strong> be prefixed with <code>Feature</code>, e.g. <code>FeatureHole</code>.</li>
+<li>View Providers corresponding to features / other objects <strong>should</strong> be prefixed <code>ViewProvider</code>, e.g. <code>ViewProviderHole</code></li>
+<li>Task Views (content for task panels) <strong>should</strong> be prefixed with <code>Task</code>, e.g. <code>TaskTransform</code></li>
+<li>Task Dialog for Task View <strong>should</strong> be additionally suffixed with <code>Dialog</code>, e.g. <code>TaskTransformDialog</code></li>
+<li>Preference Pages <strong>should</strong> be prefixed with <code>DlgSettings</code>, e.g. <code>DlgSettingsLights</code>.</li>
+<li>Commands <strong>should</strong> be prefixed with <code>Cmd</code> and Workbench name e.g. <code>CmdPartDesignCreateSketch</code></li>
+</ol>
+<h2
+  id="commenting-the-code">
+  Commenting the code
+  <a class="heading-anchor"
+     href="#commenting-the-code"
+     title="Commenting the code"
+     aria-label="Commenting the code"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><ol>
+<li>Good naming <strong>must</strong> be preferred over commenting the code.</li>
+<li>Comments that describe what code does <strong>should</strong> be avoided, instead comments <strong>should</strong> explain intended result.</li>
+<li>All edge-cases in code <strong>must</strong> be described with comment describing when such edge-case can occur and why it is handled in certain way.</li>
+<li>All &ldquo;Hacks&rdquo; <strong>must</strong> be described with how the hack works, why it is applied and when it no longer will be needed.</li>
+<li>Commented code <strong>must</strong> be contain additional information on why it was commented out and when it is safe to remove it.</li>
+</ol>
+
+  </div><footer class="single-footer">
+    <nav class="pagination"><a class="prev"
+          href="/FreeCAD-website/dev/code/formatting/#top"
+          alt="PREVIOUS ARTICLE"
+          title="Previous article"><span class="icon-tri-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 4 12l16 8z"/></svg></span>Code Formatting Guidelines</a><p class="page-number">2 / 4</p><a class="next"
+          href="/FreeCAD-website/dev/code/python/#top"
+          alt="NEXT ARTICLE"
+          title="Next article">Python practices<span class="icon-tri-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l16-8L4 4z"/></svg></span></a></nav>
+  </footer></main><footer class="site-footer">
+  <a id="top-link"
+    href="#top"
+    accesskey="g"
+    aria-label="Go to Top"
+    title="Go to Top (Alt + G)" >
+    ▲
+  </a><div class="footer-menu"><div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/"
+      class="menu-active"
+      title="FreeCAD"
+      aria-current="page"
+      >
+      FreeCAD</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/features/"
+      class=""
+      title="Features"
+      
+      >
+      Features</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/download/"
+      class=""
+      title="Download"
+      
+      >
+      Download</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/download/addons/"
+                title="Addons"
+                class="">
+                <span>
+                  Addons
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/download/builds/"
+                title="Development builds"
+                class="">
+                <span>
+                  Development builds
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/download/lts/"
+                title="Long-term support"
+                class="">
+                <span>
+                  Long-term support
+                </span>
+              </a>
+            </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/news/"
+      class=""
+      title="News"
+      
+      >
+      News</a>
+  </h4><ul><li>
+          <a href="/FreeCAD-website/categories/announcement/"
+            title="Announcement"
+            class="">
+            <span>
+              Announcement (77)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/categories/event/"
+            title="Event"
+            class="">
+            <span>
+              Event (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/categories/feature/"
+            title="Feature"
+            class="">
+            <span>
+              Feature (17)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/categories/showcase/"
+            title="Showcase"
+            class="">
+            <span>
+              Showcase (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/categories/tutorial/"
+            title="Tutorial"
+            class="">
+            <span>
+              Tutorial (19)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/categories/update/"
+            title="Update"
+            class="">
+            <span>
+              Update (112)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/news/archives"
+            title="Archives"
+            class=""
+            >
+            <span>
+              Archives
+            </span></a>
+        </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/community/"
+      class=""
+      title="Community"
+      
+      >
+      Community</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/community/fpn/"
+                title="FreeCAD Professional Network"
+                class="">
+                <span>
+                  FreeCAD Professional Network
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/community/telemetry/"
+                title="Telemetry"
+                class="">
+                <span>
+                  Telemetry
+                </span>
+              </a>
+            </li><li>
+          <a href="https://github.com/FreeCAD/FreeCAD/issues"
+            title="Report bugs"
+            class=""
+            target="_blank" rel="external noreferrer">
+            <span>
+              Report bugs
+            </span><span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>
+        </li><li>
+          <a href="https://github.com/FreeCAD/FreeCAD/pulls"
+            title="Test feature and fixes"
+            class=""
+            target="_blank" rel="external noreferrer">
+            <span>
+              Test feature and fixes
+            </span><span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>
+        </li><li>
+          <a href="https://wiki.freecad.org"
+            title="Translations"
+            class=""
+            target="_blank" rel="external noreferrer">
+            <span>
+              Translations
+            </span><span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>
+        </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/docs/"
+      class=""
+      title="Documentation"
+      
+      >
+      Documentation</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/donate/"
+      class=""
+      title="♥︎ Donate"
+      
+      >
+      ♥︎ Donate</a>
+  </h4><ul></ul>
+</div>
+</div><div class="share-links"><a href="https://forum.freecad.org"
+          title="Forum"
+          target="_blank" rel="noopener"><span class="icon-forum"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m8 12c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h6v10a.8.8 22.5 001.4.6L26 52h6c4.4.0 8-3.6 8-8H20C13.4 44 8 38.6 8 32z"/><path d="m20 0c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h0H42L52.6 50.6A.8.8.0 0054 50V40h2c4.4.0 8-3.6 8-8V8c0-4.4-3.6-8-8-8zm4 8h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h16c1.1.0 2 .9 2 2s-.9 2-2 2H24c-1.1.0-2-.9-2-2s.9-2 2-2z"/></svg></span></a><a href="https://github.com/FreeCAD"
+          title="Github"
+          target="_blank" rel="noopener"><span class="icon-github"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3C5.4.3.0 5.7.0 12.3c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6s0-1 0-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9.0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2.0.0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2.0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2.0 1.6.0 2.9.0 3.3.0.3.2.7.8.6C20.6 22.1 24 17.6 24 12.3c0-6.6-5.4-12-12-12"/></svg></span></a><a href="https://fosstodon.org/@FreeCAD"
+          title="Mastodon"
+          target="_blank" rel="noopener"><span class="icon-mastodon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m31.4.0c-10.5.0-12.8.7-14 .8-6.9 1-13.2 5.9-14.8 12.8-.7 3.4-.8 7.2-.7 10.7.2 5 .2 10 .7 15 .3 3.3.9 6.6 1.6 9.8 1.4 6 7.3 10.9 13.1 12.9 6.2 2.1 12.8 2.5 19.2 1 .7-.2 1.4-.3 2.1-.6 1.6-.5 3.4-1 4.7-2v-.1s0 0 0-.1V55.6s0 0 0-.1v-.1s0 0-.1.0h-.1c-4.1 1-8.3 1.5-12.4 1.5-7.2.0-9.2-3.4-9.7-4.8-.5-1.2-.7-2.5-.8-3.8v-.1s0 0 0-.1h.1s0 0 .1.0c4 1 8.1 1.5 12.2 1.5 1 0 2 0 3 0 4.2-.1 8.5-.3 12.6-1.1.1.0.2.0.3-.1 6.4-1.2 12.6-5.1 13.2-14.9.0-.4.1-4 .1-4.5.0-1.4.4-9.7-.1-14.8-.9-6.9-6.9-12.3-14-13.3-1.2-.2-5.7-.8-16.3-.8zm-8.8 10.5c3.5.0 6.1 1.3 7.8 4l1.7 2.8 1.7-2.8c1.8-2.7 4.4-4 7.8-4 3 0 5.4 1.1 7.2 3.1 1.8 2 2.7 4.8 2.7 8.3V39h-6.8V22.4c0-3.5-1.4-5.3-4.4-5.3-3.2.0-4.9 2.1-4.9 6.3v9.1h-6.7V23.4c0-4.2-1.6-6.3-4.9-6.3-2.9.0-4.4 1.8-4.4 5.3V39h-6.8V21.9c0-3.5.9-6.3 2.7-8.3 1.8-2 4.2-3.1 7.2-3.1z"/></svg></span></a><a href="https://www.reddit.com/r/FreeCAD"
+          title="Reddit"
+          target="_blank" rel="noopener"><span class="icon-reddit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M24 11.8c0-1.5-1.2-2.6-2.7-2.6-.7.0-1.4.3-1.8.7-1.8-1.2-4.3-1.9-7-2L14 3.2l4 .9v.1c0 1.2 1 2.2 2.2 2.2s2.2-1 2.2-2.2-1-2.2-2.2-2.2c-.9.0-1.7.6-2 1.4l-4.3-1c-.2.0-.4.1-.4.2l-1.7 5.2c-2.8.0-5.4.8-7.3 2-.5-.4-1.1-.7-1.8-.7-1.5.0-2.7 1.2-2.7 2.6.0 1 .5 1.8 1.3 2.3-.1.3-.1.6-.1.9C1.2 18.8 6 22 11.9 22s10.7-3.2 10.7-7.1c0-.3.0-.5-.1-.8.8-.4 1.4-1.3 1.4-2.3zM6.8 13.6c0-.9.7-1.6 1.6-1.6s1.6.7 1.6 1.6-.7 1.6-1.6 1.6-1.6-.7-1.6-1.6zm9.1 4.7c-.8.8-2 1.2-3.8 1.2-1.8.0-3-.4-3.8-1.2-.1-.1-.1-.4.0-.5s.4-.1.5.0c.7.6 1.7 1 3.3 1 1.6.0 2.6-.3 3.3-1 .1-.1.4-.1.5.0.1.1.1.4.0.5zm-.2-3.1c-.9.0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6z"/></svg></span></a><a href="https://matrix.to/#/#FreeCAD_FreeCAD:gitter.im"
+          title="Matrix"
+          target="_blank" rel="noopener"><span class="icon-matrix"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 22V2H20V0h4v24h-4v-2z"/><path d="m7 7.2v1.3h0c.4-.4.8-.8 1.3-1.1C8.8 7.1 9.4 7 10.1 7c.6.0 1.2.1 1.7.4.5.2.9.7 1.2 1.3.3-.4.7-.8 1.2-1.1s1.1-.5 1.8-.5c.5.0 1 .1 1.4.2.4.1.8.3 1.1.6s.6.6.7 1.1c.2.5.3 1 .3 1.6v6.6h-2.7v-5.6c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.5s-.5-.2-.9-.2-.7.1-.9.2c-.2.1-.4.3-.6.6-.1.2-.2.5-.3.8.0.3-.1.6-.1.9v5.5h-2.7v-5.5c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.6-.2-.1-.6-.2-1-.2-.2.0-.3.0-.5.1s-.4.2-.6.3c-.2.2-.4.4-.5.7-.1.3-.2.7-.2 1.2v5.6H4.5V7.2z"/><path d="m2 2v20h1 1v2H0V0h4v2z"/></svg></span></a><a href="https://discord.gg/w2cTKGzccC"
+          title="Discord"
+          target="_blank" rel="noopener"><span class="icon-discord"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m54.2 11.4C50.1 9.5 45.6 8 41 7.2c-.6 1-1.2 2.4-1.7 3.5-4.9-.7-9.8-.7-14.6.0-.5-1.1-1.1-2.5-1.7-3.5-4.6.8-9.1 2.2-13.2 4.2-8.4 12.6-10.6 24.9-9.5 37.1 5.5 4.1 10.9 6.7 16.2 8.3 1.3-1.8 2.5-3.7 3.5-5.7-1.9-.7-3.7-1.6-5.5-2.7.5-.3.9-.7 1.3-1.1 10.5 4.9 22 4.9 32.4.0.4.4.9.7 1.3 1.1-1.7 1-3.6 1.9-5.5 2.7 1 2 2.2 3.9 3.5 5.7 5.3-1.6 10.7-4.2 16.2-8.3 1.3-14.1-2.3-26.3-9.5-37.1zM21.3 41c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5zm21.3.0c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5z"/></svg></span></a><a href="https://www.facebook.com/FreeCAD"
+          title="Facebook"
+          target="_blank" rel="noopener"><span class="icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M64 32C64 14.3 49.7.0 32 0 14.3.0.0 14.3.0 32 0 47 10.3 59.6 24.3 63.1V41.8h-6.6V32h6.6v-4.2c0-10.9 4.9-15.9 15.6-15.9 2 0 5.5.4 7 .8v8.9c-.8-.1-2.1-.1-3.7-.1-5.2.0-7.3 2-7.3 7.2V32h10.4l-1.8 9.8H35.9v22C51.7 61.9 64 48.4 64 32z"/></svg></span></a><a href="https://www.linkedin.com/groups/4295230"
+          title="Linkedin"
+          target="_blank" rel="noopener"><span class="icon-linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M7.1.0C3.2.0.0 3.2.0 7.1V56.9C0 60.8 3.2 64 7.1 64H56.9c3.9.0 7.1-3.2 7.1-7.1V7.1C64 3.2 60.8.0 56.9.0zm7.4 8.9c3.1.0 5.6 2.5 5.6 5.7.0 3.1-2.5 5.7-5.6 5.7s-5.6-2.5-5.6-5.7c0-3.1 2.5-5.7 5.6-5.7zm29.4 14.5c6.5.0 11.2 4 11.2 12.2V55.1H45.6V38.9c0-4.4-1.7-6.9-5.2-6.9-3.8.0-5.8 2.6-5.8 6.9V55.1H25.4V24.3h9.2v4.2s2.8-5.1 9.3-5.1zM9.8 24.3h9.5V55.1H9.8z"/></svg></span></a><a href="/FreeCAD-website/fedishare.html#title=Code&#43;Review&#43;Guide&amp;description=Code%20review%20practices.&amp;url=https://marcuspollio.github.io/FreeCAD-website/dev/code/review/"
+      title="Share on Fediverse"
+      target="_blank" rel="noopener"><span class="icon-fediverse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m28.4 7.2L11 16c1 1 1.6 2.3 1.8 3.6l17.3-8.8c-.9-1-1.6-2.3-1.8-3.6zm12.7 2.1c-.6 1.2-1.6 2.2-2.9 2.9L51.9 26c.7-1.2 1.7-2.2 2.9-2.9zm-10.8 1.6-10.1 19.9 3 3 10.7-21c-1.4-.2-2.6-.9-3.6-1.9zm7.9 1.3c-1.6.8-3.2.8-4.1.7l1.6 9.8 4.2.7zm-25.3 7.5c.1.9.2 2.4-.6 4l9.9 1.6 2-3.8zm16.9 2.7-2 3.8 23.4 3.7c-.1-.9-.1-2.4.7-4zm-17.6 1.4c-.7 1.2-1.7 2.2-2.9 2.9l15.8 15.8 3.8-1.9zm-3 2.9c-1.6.8-3.1.8-4 .6l3 19.2c.8-.4 2.2-.9 4-.6zm27.4 1.6 3.6 23.4c.8-.4 2.2-.9 4.1-.6L40.8 29zM51.3 30l-8.8 4.5.6 4.2 10.1-5.1c-1-1-1.6-2.3-1.8-3.6zm1.9 3.8-8.9 17.3c1.4.2 2.6.8 3.6 1.8l8.9-17.3c-1.4-.2-2.6-.9-3.6-1.8zm-35.7 2.1-5.1 10c1.4.2 2.6.9 3.6 1.9l4.5-8.9zm19.7 1.3-21.1 10.7c.9 1 1.6 2.3 1.8 3.6l19.9-10.1zm-4.1 7.5-3.8 1.9 8 8.1c.7-1.2 1.7-2.2 2.9-2.9zM18 51.6c.1.9.1 2.4-.7 4l19.3 3.1c-.1-.9-.1-2.4.7-4z"/><circle cx="6.2" cy="20.7" r="6.2"/><circle cx="35" cy="6.2" r="6.2"/><circle cx="57.9" cy="29.1" r="6.2"/><circle cx="11.2" cy="52.6" r="6.2"/><circle cx="43.1" cy="57.9" r="6.2"/></svg></span></a></div>
+<div class="copyright"><span>
+      &copy; 2026 <a href="/FreeCAD-website/">FreeCAD</a>
+    </span><span>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span>
+    Made with ♥︎ thanks to <a href="https://gohugo.io/" rel="external noreferrer" target="_blank">Hugo</a>
+  </span>
+</div>
+</footer><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("chroma-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      const dark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("pref-theme", dark ? "dark" : "light");
+    });
+  });
+</script><script src="/FreeCAD-website/js/code.min.74f68c0bc6f383a8dc173622a37b85399e34e55bbf1479eb1a642530f6bff2b2.js"
+      type="text/javascript"
+      integrity="sha256-dPaMC8bzg6jcFzYio3uFOZ405Vu/FHnrGmQlMPa/8rI=" crossorigin="anonymous"
+      defer>
+    </script><script src="/FreeCAD-website/js/details.min.e00ff1129a545c7a907bb3a841bc723b2b2f99f08a1645d6bfe28433b7007989.js"
+      type="text/javascript"
+      integrity="sha256-4A/xEppUXHqQe7OoQbxyOysvmfCKFkXWv&#43;KEM7cAeYk=" crossorigin="anonymous"
+      defer>
+    </script></body>
+
+</html>
