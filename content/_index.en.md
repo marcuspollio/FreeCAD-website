@@ -1,6 +1,6 @@
 ---
 title: FreeCAD
-description: Your own free and open-source 3D parametric modeler!
+description: Hello there!
 paginate: 6
 menus:
   footer:
