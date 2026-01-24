@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contributor on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/tags/contributor/</link>
+    <description>Recent content in Contributor on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/pr-69/tags/contributor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meet Dave Carter, Rocketry Workbench and Materials Editor contributor</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/</guid>
+      <description>&lt;div class=&#34;image-with-popover&#34;&gt;&#xA;      &lt;figure&gt;&#xA;        &lt;button aria-label=&#34;Zoom image&#34; popovertarget=&#34;img-001&#34;&gt;&#xA;          &lt;img srcset=&#34;https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/dave_saturn_hu_73bd681498a714a6.webp 500w, https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/dave_saturn_hu_4b1246ac4d582d5f.webp 1000w, https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/dave_saturn.jpg 1536w&#34;&#xA;            sizes=&#34;(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw&#34;&#xA;            src=&#34;https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/dave_saturn.jpg&#34;&#xA;            width=&#34;1536&#34;&#xA;            height=&#34;2048&#34;&#xA;            title=&#34;Dave saturn&#34;&#xA;            alt=&#34;Dave saturn&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;        &lt;/button&gt;&lt;figcaption&gt;Dave saturn&lt;/figcaption&gt;&lt;/figure&gt;&lt;div id=&#34;img-001&#34; popover&gt;&#xA;          &lt;img src=&#34;https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-dave-carter-rocketry-workbench-and-materials-editor-contributor/dave_saturn.jpg&#34;&#xA;            title=&#34;Dave saturn&#34;&#xA;            alt=&#34;Dave saturn&#34;&#xA;            loading=&#34;lazy&#34;&#xA;            fetchpriority=&#34;low&#34;&gt;&#xA;          &lt;button class=&#34;close&#34;&#xA;            popovertarget=&#34;img-001&#34;&#xA;            popovertargetaction=&#34;hide&#34;&#xA;            aria-label=&#34;Close image viewer&#34;&gt;&lt;span class=&#34;icon-cross&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M4 20 20 4M4 4 20 20&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;&#xA;        &lt;/div&gt;&lt;/div&gt;&lt;p&gt;Dave is a rocketeer!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meet Max: Working on Bug Triage</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-max-working-on-bug-triage/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/meet-max-working-on-bug-triage/</guid>
+      <description>&lt;p&gt;Based in Germany, Max is a mechanical engineer in the automotive industry working on electric drive systems for vehicles. In his work life Catia seats are more the norm but Max was interested in alternatives he could use at home to fuel his passion for 3D printing. Of course this led Max to FreeCAD. Max has some lovely personal projects he has created using FreeCAD which you can check out over on &lt;a href=&#34;https://www.printables.com/@maxwxyz/models&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Max&amp;rsquo;s Printables Page&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

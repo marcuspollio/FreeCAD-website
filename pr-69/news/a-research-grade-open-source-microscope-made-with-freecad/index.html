@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+
+  <title>FreeCAD | A Research Grade Open Source Microscope</title>
+  <meta name="description" content="The PUMA microscope is a low cost, modular, 3D printed, open source microscope designed in FreeCAD. Its modular nature allows re-use of many components to reconfigure the scope into a multitude of possible forms, from a basic mirror-illuminated simple microscope (middle) to a complex scope for serious research applications (right) - while still being fully portable!
+">
+  <meta name="keywords" content="user story, 3D printing, research, microscope">
+  <link rel="canonical" href="https://marcuspollio.github.io/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/"><link rel="alternate" hreflang="en" href="https://marcuspollio.github.io/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/"><link rel="alternate" hreflang="x-default" href="https://marcuspollio.github.io/FreeCAD-website/pr-69/"><script>
+    const pref = localStorage.getItem("pref-theme");
+    if (pref === "dark") {
+      document.documentElement.classList.add('dark');
+    } else if (pref === "light") {
+      document.documentElement.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script><noscript>
+  <style>
+    #chroma-toggle {
+      display: none;
+    }
+  </style><style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --header: rgb(16, 16, 16);
+          --theme: rgb(32, 32, 32);
+          --entry: rgb(48, 48, 48);
+          --tone: rgb(64, 64, 64);
+          --footer: rgb(80, 80, 80);
+          --primary: rgb(240, 240, 240);
+          --secondary: rgb(224, 224, 224);
+          --tertiary: rgb(208, 208, 208);
+          --backdrop: rgba(0, 0, 0, 0.8);
+          --backdrop: rgba(0, 0, 0, 0.75);
+          --link-color: rgb(102, 177, 255);
+          --link-hover-color: rgb(65, 143, 222);
+          --underline: underline solid currentColor var(--line);
+          --border: var(--line) solid var(--tone);
+        }
+      }
+    </style></noscript><link href="/FreeCAD-website/pr-69/assets/css/stylesheet.min.202c22b0b1bc1e83d02ab645bfc2559c1f357a18060fd3aefbc1cf581834cc89.css"
+  rel="stylesheet"
+  integrity="sha256-ICwisLG8HoPQKrZFv8JVnB81ehgGD9Ou&#43;8HPWBg0zIk=" crossorigin="anonymous"><link rel="icon" type="image/svg+xml" href="/FreeCAD-website/pr-69/favicon.svg"><link rel="shortcut icon" type="image/x-icon" href="/FreeCAD-website/pr-69/favicon.ico"><link rel="apple-touch-icon" href="/FreeCAD-website/pr-69/apple-touch-icon.png"><meta property="og:url" content="https://marcuspollio.github.io/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/">
+  <meta property="og:site_name" content="FreeCAD">
+  <meta property="og:title" content="A Research Grade Open Source Microscope">
+  <meta property="og:description" content="The PUMA microscope is a low cost, modular, 3D printed, open source microscope designed in FreeCAD. Its modular nature allows re-use of many components to reconfigure the scope into a multitude of possible forms, from a basic mirror-illuminated simple microscope (middle) to a complex scope for serious research applications (right) - while still being fully portable!">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="news">
+    <meta property="article:published_time" content="2023-02-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-02-13T00:00:00+00:00">
+    <meta property="article:tag" content="User Story">
+    <meta property="article:tag" content="3D Printing">
+    <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Microscope">
+</head><body class="single type-news kind-page "
+    id="top">
+
+<div class="unsupported-browser">
+  <h3>Hi there! Internet Explorer is no longer supported.</h3>
+  <p>Please use a modern web browser such as Firefox, Chromium or Edge. Thank you!</p>
+</div>
+<header class="site-header">
+
+  <div class="logo">
+    <a href="/FreeCAD-website/pr-69/"accesskey="h"
+      title="FreeCAD Home (Alt + H)"
+      aria-label="FreeCAD Home"><?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" viewBox="0 0 180 48" fill="none" version="1.1">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:date>2024-06-01</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sebastian Tabares Amaya (sytabaresa), Max Wilfinger (maxwxyz)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>The FreeCAD project association AISBL (FPA)</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" style="stroke:none" d="M 50.3 35.3 V 12.7 H 61.8 V 14.7 H 52.6 V 22.9 H 61.5 V 25 H 52.6 V 35.3 H 50.3 Z M 64.5 35.3 V 18.6 H 66.7 V 21 C 67.6 19.1 69 18.3 71.5 18.2 V 20.4 C 68.3 20.7 66.7 22.4 66.7 25.5 V 35.3 H 64.5 Z M 89.6 27.7 H 74.4 C 74.6 31 77.5 33.6 80.9 33.6 C 83.5 33.6 85.8 32.1 86.8 29.8 H 89.1 C 87.9 33.3 84.6 35.7 81 35.7 C 76 35.7 72.2 31.8 72.2 26.9 C 72.2 22 76 18.2 80.8 18.2 C 84.1 18.2 87.1 19.9 88.6 22.7 C 89.3 24.1 89.6 25.5 89.6 27.7 Z M 74.5 25.6 H 87.3 C 86.5 22.3 84.1 20.2 80.8 20.2 C 77.6 20.2 75.1 22.4 74.5 25.6 Z M 109.5 27.7 H 94.3 C 94.5 31 97.4 33.6 100.8 33.6 C 103.4 33.6 105.7 32.1 106.7 29.8 H 109 C 107.8 33.3 104.5 35.7 100.9 35.7 C 95.9 35.7 92.1 31.8 92.1 26.9 C 92.1 22 95.9 18.2 100.7 18.2 C 104 18.2 107 19.9 108.5 22.7 C 109.2 24.1 109.5 25.5 109.5 27.7 Z M 94.4 25.6 H 107.2 C 106.4 22.3 104 20.2 100.7 20.2 C 97.5 20.2 95 22.4 94.4 25.6 Z M 129.2 29 H 134.1 C 132.3 33.1 128.3 35.7 123.7 35.7 C 117.1 35.7 111.8 30.5 111.8 23.9 C 111.8 17.5 117 12.3 123.4 12.3 C 126.2 12.3 129 13.3 131.1 15 C 132.5 16.3 133.2 17.3 134.1 19.2 H 129.4 C 127.9 17.2 126.1 16.3 123.5 16.3 C 121.2 16.3 119.2 17.2 117.9 18.8 C 116.7 20.2 116 22.1 116 24 C 116 28.2 119.4 31.7 123.6 31.7 C 125.8 31.7 127.3 30.9 129.2 29 Z M 134.6 35.3 L 144 12.7 H 147.3 L 156.8 35.3 H 152.2 L 149.8 29.5 H 141.7 L 139.2 35.3 H 134.6 Z M 143.2 25.5 H 148.1 L 145.7 18.6 L 143.2 25.5 Z M 159.2 35.3 V 12.7 H 164.4 C 168.1 12.7 170.8 13.3 172.6 14.5 C 175.6 16.4 177.3 19.9 177.3 24 C 177.3 28.7 175.2 32.5 171.6 34.1 C 169.8 35 167.8 35.3 164.5 35.3 H 159.2 Z M 163.4 31.3 H 164.3 C 166.8 31.3 168.6 31 169.8 30.3 C 171.8 29.2 173.1 26.8 173.1 24 C 173.1 21.1 171.7 18.6 169.5 17.5 C 168.2 16.9 166.8 16.7 164.2 16.7 H 163.4 V 31.3 Z" />
+  <g style="stroke:none">
+    <path style="fill:#418fde;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 40,8 -8,8 H 16 v 6 h 8 v 8 h -8 v 10 l -8,8 h 8.1 c 0.6,0 1.1,-0.4 1.3,-1 l 1.5,-4.5 c 0.1,-0.4 0.5,-0.8 0.9,-0.9 l 1.1,-0.4 c 0.4,-0.1 0.9,-0.1 1.3,0.2 l 3.8,2.8 c 0.5,0.4 1.2,0.4 1.7,0 l 3.4,-2.5 c 0.5,-0.4 0.7,-1 0.5,-1.6 l -1.5,-4.5 c -0.1,-0.4 -0.1,-0.9 0.2,-1.3 l 0.7,-1 c 0.3,-0.4 0.7,-0.6 1.1,-0.6 l 4.7,0 c 0.6,0 1.1,-0.4 1.3,-1 l 1.3,-4 c 0.2,-0.6 0,-1.2 -0.5,-1.6 L 35.1,23.7 c -0.4,-0.3 -0.6,-0.7 -0.6,-1.1 V 21.4 c 0,-0.5 0.2,-0.9 0.6,-1.1 l 4.4,-3.2 C 39.8,16.9 40,16.4 40,16 Z" />
+    <path style="display:inline;fill:#ff585d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 32,0 -8,8 h 8 v 8 L 40,8 V 0 Z M 8,32 0,40 v 8 h 8 l 8,-8 H 8 Z" />
+    <path style="fill:#cb333b;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="M 8,0 0,8 V 40 L 8,32 V 8 H 24 L 32,0 Z" />
+    <path style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 8,40 h 8 V 30 h 8 V 22 H 16 V 16 H 32 V 8 H 8 Z" />
+  </g>
+</svg></a>
+  </div>
+
+  <div class="site-nav">
+    <nav class="menu">
+      <button popovertarget="menu-list"
+        popovertargetaction="toggle"
+        class="menu-toggle"
+        title="Menu"
+        aria-label="Menu"><span class="icon-hamburger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20H20M4 4H20M4 12h16"/></svg></span><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+
+      <ul popover id="menu-list" class="menu-list"><li>
+            <a href="/FreeCAD-website/pr-69/features/"
+              class=""
+              title="Features"
+              aria-label="Features"
+              >
+              <span>Features</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-69/download/"
+              class=""
+              title="Download"
+              aria-label="Download"
+              >
+              <span>Download</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-69/news/"
+              class="menu-active"
+              title="News"
+              aria-label="News"
+              aria-current="page">
+              <span>News</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-69/community/"
+              class=""
+              title="Community"
+              aria-label="Community"
+              >
+              <span>Community</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-69/docs/"
+              class=""
+              title="Documentation"
+              aria-label="Documentation"
+              >
+              <span>Documentation</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-69/donate/"
+              class="button"
+              title="♥︎ Donate"
+              aria-label="♥︎ Donate"
+              >
+              <span>♥︎ Donate</span>
+            </a>
+          </li></ul>
+    </nav><div class="language-dropdown">
+        <button popovertarget="lang-list"
+          popovertargetaction="toggle"
+          class="lang-toggle"
+          accesskey="l"
+          title="Choose language (Alt + L)"
+          aria-label="Choose language (Alt + L)"><span class="icon-language"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c.9 2.1 1.9 4 3.5 5.5C6 11.9 3.8 13.2 2 14m9-9c-.9 2.1-1.9 4-3.5 5.5C9 11.9 11.1 13.2 13 14M7.5 2V5M13 5H2"/><path d="m11.5 19h9M16 10l6 12M16 10 10 22"/></svg></span></button>
+
+        <ul popover id="lang-list" class="language-list"><li>
+                    <a class="language-active" href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/">
+                      English 🇬🇧
+                    </a>
+                  </li></ul>
+      </div><div class="chroma-toggle">
+      <button id="chroma-toggle"
+        accesskey="t"
+        title="Switch theme chroma (Alt + T)"
+        aria-label="Switch theme chroma"><span class="icon-dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></span><span class="icon-light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg></span></button>
+    </div>
+
+  </div>
+</header><main><section class="hero">
+
+    <h2 class="title">
+      A Research Grade Open Source Microscope</h1><div class="metadata"><span class="meta"><span class="icon-date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2V4"/><path d="M8 2V4"/><path d="M3 8H21"/><path d="m8 12v1H7v-1h1m4.5.0v1h-1v-1h1m4.5.0v1h-1v-1h1m-9 5v1H7v-1h1m4.5.0v1h-1v-1h1m4.5.0v1h-1v-1z"/></svg></span><time datetime="2023-02-13T00:00:00Z">February 13, 2023</time>
+    </span><span class="meta authors"><span class="icon-authors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></span><a href="/FreeCAD-website/pr-69/authors/chris-hennes/">Chris Hennes (79)</a></span><span class="meta categories"><span class="icon-categories"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 2 4 8H2z"/><path d="m14 2h8v8h-8z"/><path d="m2 14h8v8H2z"/><path d="m18 18m-4 0a4 4 0 108 0 4 4 0 10-8 0"/></svg></span><a href="/FreeCAD-website/pr-69/categories/showcase/">Showcase (14)</a></span><span class="meta tags"><span class="icon-tags"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8.0L2 12V2h10l8.6 8.6a2 2 0 010 2.8z"/><line x1="7" y1="7" x2="7" y2="7"/></svg></span><a href="/FreeCAD-website/pr-69/tags/user-story/">User Story (11)</a><a href="/FreeCAD-website/pr-69/tags/3d-printing/">3D Printing (10)</a><a href="/FreeCAD-website/pr-69/tags/research/">Research (3)</a><a href="/FreeCAD-website/pr-69/tags/microscope/">Microscope (1)</a></span><span class="meta"><span class="icon-words"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>3736 words</span><span class="meta"><span class="icon-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></span>18 min</span></div><figure class="article-cover"><img srcset="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Frontice_hu_c2b35f99e177bff9.webp 500w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Frontice_hu_d402dd666fc1cc8e.webp 1000w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Frontice.png 1920w"
+        sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+        src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Frontice.png"
+        title="Puma Microscope"
+        alt="Puma Microscope"
+        width="1920"
+        height="1080"
+        loading="eager"
+        fetchpriority="high"><figcaption>
+        <div class="internal-tooltip"><span class="icon-important"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 7v0"/><path d="m12 11v7"/><circle cx="12" cy="12" r="11"/></svg></span><span class="tooltip">Puma Microscope</span>
+        </div>
+      </figcaption></figure></section><div class="content">
+    <p>The PUMA microscope is a low cost, modular, 3D printed, open source microscope designed in FreeCAD. Its modular nature allows re-use of many components to reconfigure the scope into a multitude of possible forms, from a basic mirror-illuminated simple microscope (middle) to a complex scope for serious research applications (right) - while still being fully portable!</p>
+<p>_This guest article is by Dr Paul J. Tadrous, MB, BS, MSc, PhD. Dr Tadrous is a retired clinical pathologist in the UK. Although retired from clinical practice he continues to be active in research into microscopy, image processing, analysis and machine vision at TadPath Diagnostics, London, UK. <strong>Contact</strong>: <a href="ptadrous@tadpath.co.uk"
+  class="internal-tooltip">email</a>, <a href="https://youtube.com/@PUMAMicroscope"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">YouTube<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>, and <a href="https://twitter.com/Paul_Tadrous"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">Twitter<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>. _</p>
+<p><em>If you are interested in writing an article for FreeCAD News, contact Chris Hennes at <a href="mailto:chennes@freecad.org"
+  class="internal-tooltip">chennes@freecad.org</a>.</em></p>
+<h2
+  id="introduction">
+  Introduction
+  <a class="heading-anchor"
+     href="#introduction"
+     title="Introduction"
+     aria-label="Introduction"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-001">
+          <img srcset="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_1_hu_fefe7904add24efc.webp 500w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_1_hu_572ce147f4969e71.webp 1000w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_1.png 2048w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_1.png"
+            width="2048"
+            height="3788"
+            title="Puma Figure 1"
+            alt="Puma Figure 1"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Puma Figure 1</figcaption></figure><div id="img-001" popover>
+          <img src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_1.png"
+            title="Puma Figure 1"
+            alt="Puma Figure 1"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-001"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Figure 1. Sample images taken with PUMA configured to various optical modalities. A) Standard transillumination of stained plant cells in mitosis showing chromosomes. B) Unstained human buccal (inner cheek) cells with full aperture transillumination. C) Same specimen but with optical Schlieren phase contrast using a normal (i.e. non-phase) microscope objective. D) Same specimen but showing full phase contrast calculated from 4 Schlieren images. E) Dark ground microscopy of an unstained section of oak leaf. F) and G) Epi-illumination of a silicon chip die showing individual transistors (F) and a set of logic gates (G). H) Human striated muscle seen with crossed polarisation illumination, I) Thin section of a flower bud containing pollen grains, stained with fluorescein and imaged with epi-fluorescence.</p>
+<p>The <strong>P</strong>ortable, <strong>U</strong>pgradeable, <strong>M</strong>odular, <strong>A</strong>ffordable (<strong>PUMA</strong>) microscope is an advanced open source (GPL v3) microscopy system designed to be built as a DIY project by anyone with access to low cost 3D printing and some basic hand tools [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#1"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>1</a>], [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#2"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>2</a>], [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#3"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>3</a>].</p>
+<p>The scope has interchangeable modules that allow multiple imaging modalities including phase contrast, dark field, epi-illumination, polarisation and fluorescence microscopy (figure 1).</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-002">
+          <img srcset="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_2_hu_b87381a769de41de.webp 500w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_2_hu_e941a27d9b83cce4.webp 1000w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_2.png 2254w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_2.png"
+            width="2254"
+            height="1080"
+            title="Puma Figure 2"
+            alt="Puma Figure 2"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Puma Figure 2</figcaption></figure><div id="img-002" popover>
+          <img src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_2.png"
+            title="Puma Figure 2"
+            alt="Puma Figure 2"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-002"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Figure 2. The PUMA Abbe condenser (left and centre) allows for high numerical aperture (NA) imaging with a maximum NA of about 1.14 when oiled (about 0.92 dry) for high resolution, high magnification microscopy. An even higher NA illuminator is under development. One of the advantages of this condenser is the easy access it provides to the Fourier aperture of the scope by means of a simple filter slot (the &lsquo;Illuminating Aperture Diaphragm&rsquo; or IAD slot). However, unlike most standard microscopes, PUMA does not restrict its users to simple round &lsquo;diaphragm&rsquo; filters. The filters may be static, 3D printed, filters of custom aperture shape. The filter holders can also accept a 24 mm round glass coverslip on which more complex patterns of colour and shades of grey may be printed (not shown here). However, this &lsquo;filter&rsquo; may instead be an active matrix translucent TFT-screen-based spatial light modulator (SLM) device bringing the advantage of computer control of the Fourier aperture with complex algorithmically calculated patterns of colour, shape and shades of grey (right - see also video 1).</p>
+<p><a href="https://videos.files.wordpress.com/VTsFcVJ8/video_1.mp4"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://videos.files.wordpress.com/VTsFcVJ8/video_1.mp4<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>Video 1. Demonstration of the PUMA Spatial Light Modulator (SLM). The first part of the video shows the SLM in front of a diffuse lamp and demonstrates a few of the simple apertures in black and white and colour that can be generated with the stock &lsquo;PUMA Control&rsquo; software. These are only a small selection of the possible aperture functions that can be generated because the TFT - which only costs a few dollars - is capable of generating 65536 colours and shades of grey transparency (not just black, while and solid primary colours) and it can produce these in any pattern of over 45200 individually addressable pixel positions in its round field of view. The second part of the video gives a live demonstration showing how the SLM can be electronically switched between open aperture, Schlieren phase contrast and dark ground microscopy while viewing a live specimen under the microscope. Many more complex aperture functions and effects are possible. For more detailed information see this video:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/yW9H66BlUjU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="How to build the Spatial Light Modulator for the PUMA 3D printed microscope"></iframe>
+    </div>
+
+<p>It also has some features not usually seen on even high end commercial lab microscopes such as a TFT-screen based spatial light modular (SLM) for Fourier optics effects (figure 2, video 1) and a user-programmable digital heads-up-display (HUD) that is superimposed onto the live optical image seen down the scope (not a digital overlay on a digital image stream) and multi-header capabilities. This HUD may be selectively optically erased in real time using polarisation to allow advanced augmented reality microscopy research, teaching and diagnostic assist applications (video 2).</p>
+<p><a href="https://videos.files.wordpress.com/l9lvNuQ1/video_2.mp4"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://videos.files.wordpress.com/l9lvNuQ1/video_2.mp4<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>Video 2. The PUMA Heads-Up Display or HUD is based on the same inexpensive TFT module that is used for the SLM. The first part of the video shows the view down the eyepiece with the HUD in action and the user controlling a cursor overlaid on the optical image to make some digital measurements while a timer ticks by in the right of the field of view. The integer number top right is an indication of the lamp current in mA. The second part of the video demonstrates how, using the rotatable polariser in the trinocular port of the PUMA microscope, the HUD overlay can be optically erased (because the HUD image itself is linearly polarised) whilst maintaining visibility of the HUD to a viewer using the top ocular port. This provides a clean (HUD-free) image at the trinocular outlet for image capture and analysis for augmented reality feedback applications. For more detailed information see this video:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/Scaw8fW-bQM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="Augmented Reality Microscopy and the Trinocular Camera Port"></iframe>
+    </div>
+
+<p>All the 3D printable parts of the PUMA system were designed in FreeCAD and all the editable parametric FreeCAD models are freely available to download on the project GitHub site [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#3"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>3</a>] so anyone can customise the scope to meet their specific project needs.</p>
+<h2
+  id="why-freecad">
+  Why FreeCAD?
+  <a class="heading-anchor"
+     href="#why-freecad"
+     title="Why FreeCAD?"
+     aria-label="Why FreeCAD?"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><p>One important enabling factor for ground-breaking science is the ability of the user to understand their apparatus to the point where they can customise it to do their own innovative experiments as well as interpret the results correctly (e.g. they are aware of its limits and potential artefacts in the results). Commercial microscopes are difficult and expensive to customise (let alone to buy and maintain) and the more high tech ones seem to be incorporating more and more &lsquo;black box&rsquo; features full of trade secrets, proprietary mechanisms and closed source software that are not feasible to customise without official company support (that may be quite expensive and the customisations may have corporate restrictions placed on their use or publication to protect intellectual property). Furthermore the researcher only has official company information about how (for example) a software algorithm works so may not be aware of certain factors in their results that might be due to specific coding implementation choices rather than natural responses of the experimental system under study. These are some of the arguments in favour of the use of fully open source software and hardware in scientific research.</p>
+<p>Low cost 3D printing makes custom part manufacture affordable for anyone these days. The PUMA microscope project provides fully open source design specs for a high quality standard format microscope and for this to be most useful those designs must be available freely without such corporate restrictions and in a format that is easily (and freely) editable by the user into 3D printable models - not just static STL mesh files.</p>
+<p>FreeCAD is free software that can produce such files for free distribution. But there are other well known commercial CAD packages that also have versions available currently free of monetary cost for some restricted uses, so why not use those instead? Well, to me, &lsquo;currently free of monetary cost for some restricted uses&rsquo; is not a sufficient criterion on which to base an open science hardware project because one needs also to consider the future development of the project and the freedom of users to do what they need or want to do with the files and models without undue restrictions being placed on them. A common restriction for the free versions of some commercial CAD packages is that they may only be used for non-commercial purposes, but many researchers in universities work under grants that have tech-transfer clauses that seek to commercialise successful work. This means that either they can&rsquo;t use those restricted CAD packages or they must upgrade to a paid subscription version before they make any money (which they may never do if the commercialisation effort fails) or they must re-do all their models in a truly libre free CAD product if they want to progress to commercialisation.</p>
+<p>The lack of open source code and the use of proprietary formats also may limit the use of CAD files generated by such &lsquo;free&rsquo; commercial software either now or, perhaps more importantly, in the future should company policy change. For example, if I chose a &lsquo;free&rsquo; commercial CAD package to make the designs of PUMA parts, the PUMA project could grind to a halt if an existing or new CEO or board of the CAD company decides to change their terms for use of their free versions or if they decide to revoke free use of their product or file formats at some stage in the future or prohibit the porting of their CAD files into other CAD packages without obtaining a paid license from them, and so forth.</p>
+<p>With FreeCAD there is no risk of this because not only is it free of monetary cost but it is also libre and open source (including the file formats). Some people have commented that they tried FreeCAD some time ago and found it to be buggy or crashed often so they moved over to this or that other package. I started off with FreeCAD v0.17 a few years ago and, yes, it was a bit &lsquo;crashy&rsquo; back then but I have seen the software make great improvements in stability over the last few years and it has not even reached v.0.3 yet (let alone v.1.0)! So I chose FreeCAD because it fits in with the open source customisable and libre-free nature of the PUMA project and ensures it will stay that way into the future.</p>
+<h2
+  id="what-makes-puma-different-to-other-microscopes">
+  What makes PUMA different to other microscopes?
+  <a class="heading-anchor"
+     href="#what-makes-puma-different-to-other-microscopes"
+     title="What makes PUMA different to other microscopes?"
+     aria-label="What makes PUMA different to other microscopes?"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><p>Compared to other open source microscopes there is no overall &lsquo;winner&rsquo; because they each have their strengths and weaknesses.</p>
+<p>PUMA is very well documented with a whole series of detailed &lsquo;How To&rsquo; videos explaining its construction, theory and specs in addition to the documents on the project GitHub page and all editable parametric FreeCAD design files are provided - not fixed STL meshes - with video tutorials on how to edit them:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/CPHyLTHID6g?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="Customising PUMA - part 1: Design and FreeCAD file editing"></iframe>
+    </div>
+
+<p>PUMA is closer to conventional desktop microscope design compared to the other DIY microscopes and is particularly suited to ergonomical <strong><em>direct vision</em></strong> as opposed to being a &lsquo;camera-only&rsquo; scope or smartphone-attachment scope.</p>
+<p>Compared to their commercial counterparts, PUMA systems are ultra low cost , easy to customise, open source (no trade secrets) and highly portable. All the custom parts are designed in FreeCAD and 3D printable with a low cost printer such as the Ender 3 and all the other parts are generic fixtures and optics that can be bought from accessible online stores like AliExpress, eBay and Amazon. For example, to build a complete epifluorescence PUMA system, including 3D printing, fixtures, fittings, electronics and optics, the cost is typically around $100 USD if full DIY is used. Although commercial fluorescence microscopes would have a sturdier metal construction with more precise mechanical mechanisms and more convenient adjustments compared to the PUMA equivalent, if you are short of the $5000 (and sometimes considerably more) such a scope would cost you brand new then PUMA provides a functional alternative at a fraction of the price - great for home users or labs on a tight budget, esp. if you need multiple scopes for a practical teaching class or special research project.</p>
+<p>In addition to diverse functionality and cost savings, PUMA boasts complete portability weighing just a few hundred grams e.g. 875 g (31 oz) for the fluorescence scope (including battery power supply and lamp), and even lighter - about 540 g (19 oz) for the basic transmitted light mirror-illuminated version of the scope (which can be seen in the middle of the frontice picture at the top of this article).</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-003">
+          <img srcset="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_3_hu_2b9f9c21c0472b0f.webp 500w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_3_hu_bb8271e230c462b5.webp 1000w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_3.png 1558w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_3.png"
+            width="1558"
+            height="1080"
+            title="Puma Figure 3"
+            alt="Puma Figure 3"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Puma Figure 3</figcaption></figure><div id="img-003" popover>
+          <img src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_3.png"
+            title="Puma Figure 3"
+            alt="Puma Figure 3"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-003"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Figure 3. Simultaneous multi-camera recording is possible with PUMA. The figure shows, from two different angles, the same PUMA microscope with its full Köhler illuminator fitted with 3 C-mount cameras for simultaneous recording of the same specimen (e.g. with different filters, magnifications, frame rates, etc.). The cameras are arbitrarily numbered 1 to 3. They do not all need to be of the same type or mounting. For example, video 4 shows an example recording from three different cameras. Although multi-camera adapters are available for commercial microscopes they are expensive.</p>
+<p><a href="https://videos.files.wordpress.com/rhHjPGzy/video_3.mp4"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://videos.files.wordpress.com/rhHjPGzy/video_3.mp4<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>Video 3. Deployment of a fully functional (observation-ready) PUMA system in the field. The video shows the PUMA microscope with its full Köhler illuminator, Abbe condenser and LED lamp, PUMA Lite controller (including a 9V battery inside) which fits neatly under the scope for transport, advanced filter block and some microscope sampling accessories. The scope also has a focusing stepper motor attached although the slightly larger PUMA Control Console (illustrated in the frontice picture at the top of this article, on the right) would be necessary to operate that rather than the PUMA Lite. To see how easily and quickly a PUMA system can be &lsquo;field stripped&rsquo; for transport:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/6Yvc9X9xrKo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="How to Field Strip a PUMA Microscope"></iframe>
+    </div>
+
+<p>Portability of PUMA is further enhanced by the fact that it is designed as a primary vision microscope - i.e. one where the user looks down an eyepiece. This allows the user to get the full optical resolution and a complete wide field of view of their observations without the need for a smartphone or other computer-camera-monitor-power-supply combo (or &lsquo;camera-scopes&rsquo; for short). Other 3D printed open source camera-scopes may look small and &lsquo;portable&rsquo; until you take all these necessary accessories into full consideration at which point &rsquo;luggable&rsquo; might be a more apt description. One of the biggest issues when using those camera-scopes for making <strong><em>observations</em></strong> out in the field (as opposed to <strong><em>recordings</em></strong> - we&rsquo;ll come back to that later) is that what the user can see at the time is restricted to a small field of view on a small portable screen such as a smartphone (if you want to boast portability) that is further limited by available power supply issues. If camera-scopes want to boast great resolution and wide field of view then they need large high resolution display monitors and wide field of view optics - which counters any claim to affordability let alone portability. Remember - for now I am only talking about making real-time observations out in the field - not stitching together many pictures recorded on a portable computer for study later, back at base, with a large desktop monitor. Hence PUMA was designed as a direct vision scope with the ability to use daylight or any suitable external light source so it can give high quality wide field of view real time optical microvision via an eyepiece in a truly portable way. Even the optional LED lamp and on-board microprocessor (an Arduino Nano) for the optional advanced TFT screen functions like the HUD are powered from one or two small domestic 9V batteries or solar rechargeable battery packs. Video 3 shows the deployment in the field of a fully functional complete PUMA system ready to make observations.</p>
+<p><a href="https://videos.files.wordpress.com/03Ac7Gxc/video_4.mp4"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://videos.files.wordpress.com/03Ac7Gxc/video_4.mp4<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>Video 4. Demonstration of a multi-camera recording of a live single cell organism with different modalities and magnifications, using PUMA.</p>
+<p>All this &lsquo;direct vision&rsquo; emphasis doesn&rsquo;t mean that PUMA can&rsquo;t do image recordings - on the contrary, the &lsquo;M&rsquo; in PUMA stands for &lsquo;Modular&rsquo; and there are several modules designed to allow high quality camera recordings - actually with up to three separate cameras recoding in different modalities simultaneously (figure 3, video 4). This is something that, to the best of my knowledge, has not been demonstrated to date with other 3D printed open source microscopes. PUMA can accept standard C-mount and CS-mount cameras as well as eyepiece cameras (including smart phone cameras if suitable adapters are used).</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-004">
+          <img srcset="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_4_hu_ba0822385f064072.webp 500w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_4_hu_aef4203dfd3ecd66.webp 1000w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_4.png 2400w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_4.png"
+            width="2400"
+            height="2221"
+            title="Puma Figure 4"
+            alt="Puma Figure 4"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Puma Figure 4</figcaption></figure><div id="img-004" popover>
+          <img src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_4.png"
+            title="Puma Figure 4"
+            alt="Puma Figure 4"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-004"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Figure 4. The PUMA Köhler illuminator. Left: Design in FreeCAD exploded to show the various 3D printed components. The illuminator gives easy access to the Köhler field stop which, in many modern microscopes, is called the &lsquo;illuminated field diaphragm&rsquo; or IFD but, as with the PUMA Abbe condenser, this is not restricted to a simple round shape diaphragm with PUMA. Right: From top to bottom we have part of Köhler&rsquo;s original publication highlighting his new IFD &lsquo;field stop&rsquo; invention which, in German, he called the &lsquo;Sehfeldblende&rsquo;; an example picture of a stained human skin biopsy taken with PUMA using this illuminator to show the crisp contrast and uniform illumination it affords - comparable to a modern professional microscope; and a photo of the illuminator fixed to a PUMA microscope with the small &lsquo;PUMA Lite&rsquo; battery power supply. Details of the design, construction and use of this system are provided in this video:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/XEE-el7vC5k?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="How to build, collimate and use the Köhler Illuminator for the PUMA microscope"></iframe>
+    </div>
+
+<p>Another feature that sets PUMA apart from some other attempts at open source microscopes is its high quality illumination system. Mention has already been made of the Abbe condenser (figure 2). In addition PUMA has it&rsquo;s own portable full Köhler illuminator (figure 4) for even illumination and access to the Köhler field stop for more advanced photomicrography. Furthermore PUMA has a co-axial epi-illuminator module with several options for epi-polarisation and epi-fluorescence microscopy (see results shown in figure 1 and this video for details:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/cAEB10K8PqI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="Epi-Illumination"></iframe>
+    </div>
+
+<p>Unlike some commercial portable microscopes that use their own special mini objectives that can only be used with their scopes, PUMA uses Royal Microscopical Society (RMS) standard optics and mechanical specifications so can accept a wide range of standard objectives and eyepieces either generic or from major microscope manufacturer brands.</p>
+<h2
+  id="so-is-puma-the-perfect-microscope-for-all">
+  So is PUMA the perfect microscope for all?
+  <a class="heading-anchor"
+     href="#so-is-puma-the-perfect-microscope-for-all"
+     title="So is PUMA the perfect microscope for all?"
+     aria-label="So is PUMA the perfect microscope for all?"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><p>Of course not! It does have its own limitations and peculiarities. These include that it can only accept one objective at a time - there is no rotatable objective turret. It also suffers from some &lsquo;wobble&rsquo; and focus mechanism hysteresis which makes autofocus impractically slow. These limitations are partly matters of current design and also due to it being constructed of 3D printed plastic instead of precision machine-milled metal mechanisms. The current stage of the PUMA has limited space - it can handle a full standard microscope slide but nothing much bigger than that. It is also currently only of conventional &lsquo;upright&rsquo; design. However, the modular, open source and fully customisable nature of PUMA mean that these obstacles can be addressed by future improvements in the designs and by the development of new modules - something which I am actively working on.</p>
+<h2
+  id="what-does-the-future-hold-for-puma">
+  What does the future hold for PUMA?
+  <a class="heading-anchor"
+     href="#what-does-the-future-hold-for-puma"
+     title="What does the future hold for PUMA?"
+     aria-label="What does the future hold for PUMA?"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-005">
+          <img srcset="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_5_hu_8191aeab69291612.webp 500w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_5_hu_d70df3ab87840ce5.webp 1000w, /FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_5.png 2400w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_5.png"
+            width="2400"
+            height="2680"
+            title="Puma Figure 5"
+            alt="Puma Figure 5"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Puma Figure 5</figcaption></figure><div id="img-005" popover>
+          <img src="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/PUMA_Figure_5.png"
+            title="Puma Figure 5"
+            alt="Puma Figure 5"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-005"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Figure 5. Some prototype new modules in development. The final product may look quite different! A) A stabiliser bracket to minimise image vibrations, useful for high magnification image recordings. B) An adapter to allow the standard PUMA mirror illuminator module to direct daylight (or any other suitable plane wavefront illumination source) as input to the full Köhler illuminator.</p>
+<h3
+  id="new-hardware">
+  New Hardware
+  <a class="heading-anchor"
+     href="#new-hardware"
+     title="New Hardware"
+     aria-label="New Hardware"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h3><p>I am currently working on a stability bracket to reduce vibrations (figure 5a) and I used this with some success to take the oil immersion pictures of plant chromosomes seen in figure 1. Another recent development is the &lsquo;Daylight Köhler adapter&rsquo; (figure 5b) which allows the full Köhler system to be used with natural daylight for enhanced portable power-saving use. I am also in the early stages of developing a precision motorised XYZ stage for automated tracking and scanning microscopy. All of these are not yet ready for release until thoroughly tested and documented. Further possibilities for the future include a Michelson interferometer module, new illumination modules (such as structured illumination, light sheet, etc.) and an inverted stage system to make PUMA useful for cell culture studies - but work on those modules has not begun at the time of writing this article.</p>
+<h3
+  id="new-software">
+  New Software
+  <a class="heading-anchor"
+     href="#new-software"
+     title="New Software"
+     aria-label="New Software"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h3><p>One of my aims is to help people do advanced microscopy with PUMA. I already started the PARDUS microscope control system for automated microscopy [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#4"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>4</a>] and hope to develop that in in conjunction with PUMA once the PUMA robotic XYZ stage is finalised. I also would like to create more dedicated software for Fourier aperture manipulation with the SLM of the scope but have not started work on that yet. Further software development will occur in conjunction with the educational outreach discussed next.</p>
+<h3
+  id="microscopy-and-image-processing-education">
+  Microscopy and image processing education
+  <a class="heading-anchor"
+     href="#microscopy-and-image-processing-education"
+     title="Microscopy and image processing education"
+     aria-label="Microscopy and image processing education"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h3><p>I would like to make a series of tutorials on the YouTube channel about image processing in microscopy using my free BiaQIm Image Processing Suite [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#5"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>5</a>] as a basis for work-along examples and the first video in the series has already been published [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#6"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>6</a>].</p>
+<p>Most of the basics of microscopy theory have been covered already as &rsquo;theory sections&rsquo; in the PUMA YouTube &lsquo;How To&rsquo; videos published to date. In addition I would like to make a series of more advanced microscopy theory tutorials on topics such as Fourier optics, super-resolution, live cell imaging and deconvolution microscopy using PUMA as the hardware platform to exemplify these subjects.</p>
+<h3
+  id="funding-for-puma">
+  Funding for PUMA
+  <a class="heading-anchor"
+     href="#funding-for-puma"
+     title="Funding for PUMA"
+     aria-label="Funding for PUMA"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h3><p>All the above future development plans remain aspirational. If and when they can be delivered depends partly on the interest shown by people in the project and a lot on securing the necessary funding. To date (up to January 2023) PUMA has been a totally self-funded project. I intend to keep the PUMA resources free and open source for all but, of course, they are not free to develop and maintain. Buying components for prototyping, making documentation, videos and maintaining websites get more expensive all the time so I have recently set up a Patreon page [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#7"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>7</a>] and PayPal links [<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#8"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>8</a>] to help make the project viable and sustainable into the future and complete all the aspirational developments mentioned above.</p>
+<h2
+  id="references">
+  References
+  <a class="heading-anchor"
+     href="#references"
+     title="References"
+     aria-label="References"><span class="icon-anchor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span></a>
+</h2><p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-1-2-3-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>1</a>] Tadrous, P. J. (2021). PUMA-An open‐source 3D‐printed direct vision microscope with augmented reality and spatial light modulator functions. Journal of Microscopy, 283(3), 259-280. <a href="https://onlinelibrary.wiley.com/doi/10.1111/jmi.13043"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://onlinelibrary.wiley.com/doi/10.1111/jmi.13043<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-1-2-3-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>2</a>] The PUMA Microscope YouTube Channel <a href="https://youtube.com/@PUMAMicroscope"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://youtube.com/@PUMAMicroscope<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-1-2-3-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>3</a>] The PUMA Microscope GitHub page <a href="https://github.com/TadPath/PUMA"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://github.com/TadPath/PUMA<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-4-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>4</a>] The PARDUS motor control GitHub page <a href="https://github.com/TadPath/PARDUS"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://github.com/TadPath/PARDUS<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-5-6-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>5</a>] My BiaQim Image Processing suite website <a href="https://www.optarc.co.uk/bialith/"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://www.optarc.co.uk/bialith/<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-5-6-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>6</a>] First PUMA image processing tutorial video <a href="https://youtu.be/MZOCSkbz3ko"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://youtu.be/MZOCSkbz3ko<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-7-8-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>7</a>] PUMA Microscope Patreon page: <a href="https://www.patreon.com/PUMAMicroscope"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://www.patreon.com/PUMAMicroscope<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>[<a href="/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/#ref-7-8-return"
+  class="internal-tooltip hash-link"><span class="icon-hash"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 2-4 20"/><path d="m18 2-4 20"/><path d="M4 8H21"/><path d="m20 16H3"/></svg></span>8</a>] PUMA PayPal donation: <a href="https://www.paypal.com/donate/?hosted_button_id=NPMYJKJATDLQ4"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://www.paypal.com/donate/?hosted_button_id=NPMYJKJATDLQ4<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+
+  </div><footer class="single-footer">
+    <nav class="pagination"><a class="prev"
+          href="/FreeCAD-website/pr-69/news/wip-wednesday-8-feb-2023/#top"
+          alt="PREVIOUS ARTICLE"
+          title="Previous article"><span class="icon-tri-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 4 12l16 8z"/></svg></span>WIP Wednesday: 8 Feb 2023</a><p class="page-number">223 / 254</p><a class="next"
+          href="/FreeCAD-website/pr-69/news/wip-wednesday-15-feb-2023/#top"
+          alt="NEXT ARTICLE"
+          title="Next article">WIP Wednesday: 15 Feb 2023<span class="icon-tri-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l16-8L4 4z"/></svg></span></a></nav>
+  </footer></main><footer class="site-footer">
+  <a id="top-link"
+    href="#top"
+    accesskey="g"
+    aria-label="Go to Top"
+    title="Go to Top (Alt + G)" >
+    ▲
+  </a><div class="footer-menu"><div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/"
+      class="menu-active"
+      title="FreeCAD"
+      aria-current="page"
+      >
+      FreeCAD</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/features/"
+      class=""
+      title="Features"
+      
+      >
+      Features</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/download/"
+      class=""
+      title="Download"
+      
+      >
+      Download</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/pr-69/download/addons/"
+                title="Addons"
+                class="">
+                <span>
+                  Addons
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-69/download/builds/"
+                title="Development builds"
+                class="">
+                <span>
+                  Development builds
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-69/download/lts/"
+                title="Long-term support"
+                class="">
+                <span>
+                  Long-term support
+                </span>
+              </a>
+            </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/news/"
+      class="menu-active"
+      title="News"
+      aria-current="page"
+      >
+      News</a>
+  </h4><ul><li>
+          <a href="/FreeCAD-website/pr-69/categories/announcement/"
+            title="Announcement"
+            class="">
+            <span>
+              Announcement (77)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-69/categories/event/"
+            title="Event"
+            class="">
+            <span>
+              Event (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-69/categories/feature/"
+            title="Feature"
+            class="">
+            <span>
+              Feature (17)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-69/categories/showcase/"
+            title="Showcase"
+            class="menu-active">
+            <span>
+              Showcase (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-69/categories/tutorial/"
+            title="Tutorial"
+            class="">
+            <span>
+              Tutorial (19)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-69/categories/update/"
+            title="Update"
+            class="">
+            <span>
+              Update (112)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-69/news/archives"
+            title="Archives"
+            class=""
+            >
+            <span>
+              Archives
+            </span></a>
+        </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/community/"
+      class=""
+      title="Community"
+      
+      >
+      Community</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/pr-69/community/fpn/"
+                title="FreeCAD Professional Network"
+                class="">
+                <span>
+                  FreeCAD Professional Network
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-69/community/telemetry/"
+                title="Telemetry"
+                class="">
+                <span>
+                  Telemetry
+                </span>
+              </a>
+            </li><li>
+          <a href="https://github.com/FreeCAD/FreeCAD/issues"
+            title="Report bugs"
+            class=""
+            target="_blank" rel="external noreferrer">
+            <span>
+              Report bugs
+            </span><span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>
+        </li><li>
+          <a href="https://github.com/FreeCAD/FreeCAD/pulls"
+            title="Test feature and fixes"
+            class=""
+            target="_blank" rel="external noreferrer">
+            <span>
+              Test feature and fixes
+            </span><span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>
+        </li><li>
+          <a href="https://wiki.freecad.org"
+            title="Translations"
+            class=""
+            target="_blank" rel="external noreferrer">
+            <span>
+              Translations
+            </span><span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>
+        </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/docs/"
+      class=""
+      title="Documentation"
+      
+      >
+      Documentation</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-69/donate/"
+      class=""
+      title="♥︎ Donate"
+      
+      >
+      ♥︎ Donate</a>
+  </h4><ul></ul>
+</div>
+</div><div class="share-links"><a href="https://forum.freecad.org"
+          title="Forum"
+          target="_blank" rel="noopener"><span class="icon-forum"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m8 12c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h6v10a.8.8 22.5 001.4.6L26 52h6c4.4.0 8-3.6 8-8H20C13.4 44 8 38.6 8 32z"/><path d="m20 0c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h0H42L52.6 50.6A.8.8.0 0054 50V40h2c4.4.0 8-3.6 8-8V8c0-4.4-3.6-8-8-8zm4 8h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h16c1.1.0 2 .9 2 2s-.9 2-2 2H24c-1.1.0-2-.9-2-2s.9-2 2-2z"/></svg></span></a><a href="https://github.com/FreeCAD"
+          title="Github"
+          target="_blank" rel="noopener"><span class="icon-github"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3C5.4.3.0 5.7.0 12.3c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6s0-1 0-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9.0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2.0.0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2.0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2.0 1.6.0 2.9.0 3.3.0.3.2.7.8.6C20.6 22.1 24 17.6 24 12.3c0-6.6-5.4-12-12-12"/></svg></span></a><a href="https://fosstodon.org/@FreeCAD"
+          title="Mastodon"
+          target="_blank" rel="noopener"><span class="icon-mastodon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m31.4.0c-10.5.0-12.8.7-14 .8-6.9 1-13.2 5.9-14.8 12.8-.7 3.4-.8 7.2-.7 10.7.2 5 .2 10 .7 15 .3 3.3.9 6.6 1.6 9.8 1.4 6 7.3 10.9 13.1 12.9 6.2 2.1 12.8 2.5 19.2 1 .7-.2 1.4-.3 2.1-.6 1.6-.5 3.4-1 4.7-2v-.1s0 0 0-.1V55.6s0 0 0-.1v-.1s0 0-.1.0h-.1c-4.1 1-8.3 1.5-12.4 1.5-7.2.0-9.2-3.4-9.7-4.8-.5-1.2-.7-2.5-.8-3.8v-.1s0 0 0-.1h.1s0 0 .1.0c4 1 8.1 1.5 12.2 1.5 1 0 2 0 3 0 4.2-.1 8.5-.3 12.6-1.1.1.0.2.0.3-.1 6.4-1.2 12.6-5.1 13.2-14.9.0-.4.1-4 .1-4.5.0-1.4.4-9.7-.1-14.8-.9-6.9-6.9-12.3-14-13.3-1.2-.2-5.7-.8-16.3-.8zm-8.8 10.5c3.5.0 6.1 1.3 7.8 4l1.7 2.8 1.7-2.8c1.8-2.7 4.4-4 7.8-4 3 0 5.4 1.1 7.2 3.1 1.8 2 2.7 4.8 2.7 8.3V39h-6.8V22.4c0-3.5-1.4-5.3-4.4-5.3-3.2.0-4.9 2.1-4.9 6.3v9.1h-6.7V23.4c0-4.2-1.6-6.3-4.9-6.3-2.9.0-4.4 1.8-4.4 5.3V39h-6.8V21.9c0-3.5.9-6.3 2.7-8.3 1.8-2 4.2-3.1 7.2-3.1z"/></svg></span></a><a href="https://www.reddit.com/r/FreeCAD"
+          title="Reddit"
+          target="_blank" rel="noopener"><span class="icon-reddit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M24 11.8c0-1.5-1.2-2.6-2.7-2.6-.7.0-1.4.3-1.8.7-1.8-1.2-4.3-1.9-7-2L14 3.2l4 .9v.1c0 1.2 1 2.2 2.2 2.2s2.2-1 2.2-2.2-1-2.2-2.2-2.2c-.9.0-1.7.6-2 1.4l-4.3-1c-.2.0-.4.1-.4.2l-1.7 5.2c-2.8.0-5.4.8-7.3 2-.5-.4-1.1-.7-1.8-.7-1.5.0-2.7 1.2-2.7 2.6.0 1 .5 1.8 1.3 2.3-.1.3-.1.6-.1.9C1.2 18.8 6 22 11.9 22s10.7-3.2 10.7-7.1c0-.3.0-.5-.1-.8.8-.4 1.4-1.3 1.4-2.3zM6.8 13.6c0-.9.7-1.6 1.6-1.6s1.6.7 1.6 1.6-.7 1.6-1.6 1.6-1.6-.7-1.6-1.6zm9.1 4.7c-.8.8-2 1.2-3.8 1.2-1.8.0-3-.4-3.8-1.2-.1-.1-.1-.4.0-.5s.4-.1.5.0c.7.6 1.7 1 3.3 1 1.6.0 2.6-.3 3.3-1 .1-.1.4-.1.5.0.1.1.1.4.0.5zm-.2-3.1c-.9.0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6z"/></svg></span></a><a href="https://matrix.to/#/#FreeCAD_FreeCAD:gitter.im"
+          title="Matrix"
+          target="_blank" rel="noopener"><span class="icon-matrix"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 22V2H20V0h4v24h-4v-2z"/><path d="m7 7.2v1.3h0c.4-.4.8-.8 1.3-1.1C8.8 7.1 9.4 7 10.1 7c.6.0 1.2.1 1.7.4.5.2.9.7 1.2 1.3.3-.4.7-.8 1.2-1.1s1.1-.5 1.8-.5c.5.0 1 .1 1.4.2.4.1.8.3 1.1.6s.6.6.7 1.1c.2.5.3 1 .3 1.6v6.6h-2.7v-5.6c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.5s-.5-.2-.9-.2-.7.1-.9.2c-.2.1-.4.3-.6.6-.1.2-.2.5-.3.8.0.3-.1.6-.1.9v5.5h-2.7v-5.5c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.6-.2-.1-.6-.2-1-.2-.2.0-.3.0-.5.1s-.4.2-.6.3c-.2.2-.4.4-.5.7-.1.3-.2.7-.2 1.2v5.6H4.5V7.2z"/><path d="m2 2v20h1 1v2H0V0h4v2z"/></svg></span></a><a href="https://discord.gg/w2cTKGzccC"
+          title="Discord"
+          target="_blank" rel="noopener"><span class="icon-discord"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m54.2 11.4C50.1 9.5 45.6 8 41 7.2c-.6 1-1.2 2.4-1.7 3.5-4.9-.7-9.8-.7-14.6.0-.5-1.1-1.1-2.5-1.7-3.5-4.6.8-9.1 2.2-13.2 4.2-8.4 12.6-10.6 24.9-9.5 37.1 5.5 4.1 10.9 6.7 16.2 8.3 1.3-1.8 2.5-3.7 3.5-5.7-1.9-.7-3.7-1.6-5.5-2.7.5-.3.9-.7 1.3-1.1 10.5 4.9 22 4.9 32.4.0.4.4.9.7 1.3 1.1-1.7 1-3.6 1.9-5.5 2.7 1 2 2.2 3.9 3.5 5.7 5.3-1.6 10.7-4.2 16.2-8.3 1.3-14.1-2.3-26.3-9.5-37.1zM21.3 41c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5zm21.3.0c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5z"/></svg></span></a><a href="https://www.facebook.com/FreeCAD"
+          title="Facebook"
+          target="_blank" rel="noopener"><span class="icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M64 32C64 14.3 49.7.0 32 0 14.3.0.0 14.3.0 32 0 47 10.3 59.6 24.3 63.1V41.8h-6.6V32h6.6v-4.2c0-10.9 4.9-15.9 15.6-15.9 2 0 5.5.4 7 .8v8.9c-.8-.1-2.1-.1-3.7-.1-5.2.0-7.3 2-7.3 7.2V32h10.4l-1.8 9.8H35.9v22C51.7 61.9 64 48.4 64 32z"/></svg></span></a><a href="https://www.linkedin.com/groups/4295230"
+          title="Linkedin"
+          target="_blank" rel="noopener"><span class="icon-linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M7.1.0C3.2.0.0 3.2.0 7.1V56.9C0 60.8 3.2 64 7.1 64H56.9c3.9.0 7.1-3.2 7.1-7.1V7.1C64 3.2 60.8.0 56.9.0zm7.4 8.9c3.1.0 5.6 2.5 5.6 5.7.0 3.1-2.5 5.7-5.6 5.7s-5.6-2.5-5.6-5.7c0-3.1 2.5-5.7 5.6-5.7zm29.4 14.5c6.5.0 11.2 4 11.2 12.2V55.1H45.6V38.9c0-4.4-1.7-6.9-5.2-6.9-3.8.0-5.8 2.6-5.8 6.9V55.1H25.4V24.3h9.2v4.2s2.8-5.1 9.3-5.1zM9.8 24.3h9.5V55.1H9.8z"/></svg></span></a><a href="/FreeCAD-website/pr-69/fedishare.html#title=A&#43;Research&#43;Grade&#43;Open&#43;Source&#43;Microscope&amp;description=The&#43;PUMA&#43;microscope&#43;is&#43;a&#43;low&#43;cost%2C&#43;modular%2C&#43;3D&#43;printed%2C&#43;open&#43;source&#43;microscope&#43;designed&#43;in&#43;FreeCAD.&#43;Its&#43;modular&#43;nature&#43;allows&#43;re-use&#43;of&#43;many&#43;components&#43;to&#43;reconfigure&#43;the&#43;scope&#43;into&#43;a&#43;multitude&#43;of&#43;%E2%80%A6%0A%23user-story&#43;%233d-printing&#43;%23research&#43;%23microscope&amp;url=https://marcuspollio.github.io/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/"
+      title="Share on Fediverse"
+      target="_blank" rel="noopener"><span class="icon-fediverse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m28.4 7.2L11 16c1 1 1.6 2.3 1.8 3.6l17.3-8.8c-.9-1-1.6-2.3-1.8-3.6zm12.7 2.1c-.6 1.2-1.6 2.2-2.9 2.9L51.9 26c.7-1.2 1.7-2.2 2.9-2.9zm-10.8 1.6-10.1 19.9 3 3 10.7-21c-1.4-.2-2.6-.9-3.6-1.9zm7.9 1.3c-1.6.8-3.2.8-4.1.7l1.6 9.8 4.2.7zm-25.3 7.5c.1.9.2 2.4-.6 4l9.9 1.6 2-3.8zm16.9 2.7-2 3.8 23.4 3.7c-.1-.9-.1-2.4.7-4zm-17.6 1.4c-.7 1.2-1.7 2.2-2.9 2.9l15.8 15.8 3.8-1.9zm-3 2.9c-1.6.8-3.1.8-4 .6l3 19.2c.8-.4 2.2-.9 4-.6zm27.4 1.6 3.6 23.4c.8-.4 2.2-.9 4.1-.6L40.8 29zM51.3 30l-8.8 4.5.6 4.2 10.1-5.1c-1-1-1.6-2.3-1.8-3.6zm1.9 3.8-8.9 17.3c1.4.2 2.6.8 3.6 1.8l8.9-17.3c-1.4-.2-2.6-.9-3.6-1.8zm-35.7 2.1-5.1 10c1.4.2 2.6.9 3.6 1.9l4.5-8.9zm19.7 1.3-21.1 10.7c.9 1 1.6 2.3 1.8 3.6l19.9-10.1zm-4.1 7.5-3.8 1.9 8 8.1c.7-1.2 1.7-2.2 2.9-2.9zM18 51.6c.1.9.1 2.4-.7 4l19.3 3.1c-.1-.9-.1-2.4.7-4z"/><circle cx="6.2" cy="20.7" r="6.2"/><circle cx="35" cy="6.2" r="6.2"/><circle cx="57.9" cy="29.1" r="6.2"/><circle cx="11.2" cy="52.6" r="6.2"/><circle cx="43.1" cy="57.9" r="6.2"/></svg></span></a></div>
+<div class="copyright"><span>
+      &copy; 2026 <a href="/FreeCAD-website/pr-69/">FreeCAD</a>
+    </span><span>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span>
+    Made with ♥︎ thanks to <a href="https://gohugo.io/" rel="external noreferrer" target="_blank">Hugo</a>
+  </span>
+</div>
+</footer><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("chroma-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      const dark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("pref-theme", dark ? "dark" : "light");
+    });
+  });
+</script><script src="/FreeCAD-website/pr-69/js/code.min.74f68c0bc6f383a8dc173622a37b85399e34e55bbf1479eb1a642530f6bff2b2.js"
+      type="text/javascript"
+      integrity="sha256-dPaMC8bzg6jcFzYio3uFOZ405Vu/FHnrGmQlMPa/8rI=" crossorigin="anonymous"
+      defer>
+    </script></body>
+
+</html>

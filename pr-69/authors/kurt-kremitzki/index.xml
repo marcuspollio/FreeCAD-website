@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kurt Kremitzki on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/authors/kurt-kremitzki/</link>
+    <description>Recent content in Kurt Kremitzki on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 14 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/pr-69/authors/kurt-kremitzki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Announcing the FreeCAD 2024 North American Meetup</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/announcing-the-freecad-2024-north-american-meetup/</link>
+      <pubDate>Fri, 14 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/announcing-the-freecad-2024-north-american-meetup/</guid>
+      <description>&lt;p&gt;In case you don&amp;rsquo;t read &lt;a href=&#34;https://forum.freecad.org/viewtopic.php?t=85180&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;the forum&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, I&amp;rsquo;d like to announce FreeCAD&amp;rsquo;s 2024 North American Meetup!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recap: GSoC 2023 Mentor Summit</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/recap-gsoc-2023-mentor-summit/</link>
+      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/recap-gsoc-2023-mentor-summit/</guid>
+      <description>&lt;p&gt;On the weekend of October 13, for the first time since 2019, participants gathered in person for the 2023 Google Summer of Code Mentors Summit in Sunnyvale, California. I was fortunate enough to be able to attend as a mentor and org admin for the FreeCAD project, so thanks to those involved, of course including Google, as well as the FPA.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

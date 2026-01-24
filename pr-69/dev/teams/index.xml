@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teams on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/dev/teams/</link>
+    <description>Recent content in Teams on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/pr-69/dev/teams/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git and Github</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/dev/teams/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/dev/teams/git/</guid>
+      <description>&lt;h2&#xA;  id=&#34;checking-out-prs-locally-for-review&#34;&gt;&#xA;  Checking out PRs locally for review&#xA;  &lt;a class=&#34;heading-anchor&#34;&#xA;     href=&#34;#checking-out-prs-locally-for-review&#34;&#xA;     title=&#34;Checking out PRs locally for review&#34;&#xA;     aria-label=&#34;Checking out PRs locally for review&#34;&gt;&lt;span class=&#34;icon-anchor&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3&#34;/&gt;&lt;line x1=&#34;8&#34; y1=&#34;12&#34; x2=&#34;16&#34; y2=&#34;12&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;Git can &lt;a href=&#34;https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;checkout pull requests from a remote repository&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;. This makes it easier to review pull requests locally, and to run tests against them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Maintainers guide</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/dev/teams/maintainers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/dev/teams/maintainers/</guid>
+      <description>&lt;p&gt;Guidelines for Maintainers regarding code review and merge procedures. &lt;a href=&#34;../git&#34;&#xA;  class=&#34;internal-tooltip&#34;&gt;Git can be configured&lt;/a&gt; to make checking out and reviewing PRs easier.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

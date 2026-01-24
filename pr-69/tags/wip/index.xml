@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WIP on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/tags/wip/</link>
+    <description>Recent content in WIP on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 21 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/pr-69/tags/wip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WIP Wednesday: 21 May 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-may-2025/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-may-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;: refactoring by AjinkyaDahale, fixes by chennes and ElementW.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;PartDesign&lt;/strong&gt;: alfrix moved the selector for Hole base profiles to the top of the Task panel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 14 May 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-14-may-2025/</link>
+      <pubDate>Wed, 14 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-14-may-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;tetektoza patched the Polygon tool to show a real shape preview rather than a generic circle when adding a polygon to the draft.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 7 May 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-may-2025/</link>
+      <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-may-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: Roy_043 simplified using an actual font file from the OS as the default for ShapeString objects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 30 April 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-30-april-2025/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-30-april-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: Roy_043 added a global mode to the ShapeString task panel so that coordinates could be relative to the global coordinate system.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 23 April 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-23-april-2025/</link>
+      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-23-april-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Roy_043 added some initial code to track documents so that the task panel could be closed when a document is closed. Expect further work to get this to work in BIM as well.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 16 April 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-16-april-2025/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-16-april-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;: PaddleStroke and AjinkyaDahale refactored some parts of the code. Additionally, Ajinkya fixed half a dozen trimming issues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 9 April 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-9-april-2025/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-9-april-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;CAM&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;phaseloop migrated the Array operation to a dressup operation and changed the design of the origin axis to be in line with the LCS indicator.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 2 April 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-2-april-2025/</link>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-2-april-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: paullee0 and Roy_043 fixed several issues. Additionally, Roy_043 added a font name dropdown list to Preferences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 26 March 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-march-2025/</link>
+      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-march-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: Roy_043 contributed several improvements and bugfixes including one for the bug where Near Snap would not obey the Always Snap setting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 19 March 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-19-march-2025/</link>
+      <pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-19-march-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;PaddleStroke added an option to combine line and polyline tools and fixed a couple of bugs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 12 March 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-march-2025/</link>
+      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-march-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: Roy_043 fixed several bugs, including Draft&amp;rsquo;s fillet not working the first time you try it, as well as incorrect snapping behavior. He also implemented a new Dim Auto Flip Text option to disable automatic text orientation based on where you click first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 5 March 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-march-2025/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-march-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: Roy_043 fixed numerous issues and regressions, including ones where the Trimex command would change the visibility of an object or extend to the wrong face.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 26 February 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-february-2025/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-february-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;: Shkolik fixed a bug in Sketcher where it wouldn&amp;rsquo;t be able to project a BSpline from another sketch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 19 February 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-19-february-2025/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-19-february-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part Design&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ziad-ashraf7 patched Part Design&amp;rsquo;s &lt;a href=&#34;https://wiki.freecad.org/PartDesign_Draft&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Draft tool&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; to allow negative angles.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 12 February 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-february-2025/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-february-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AjinkyaDahale contributed round 3 of the refactoring project.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;mosfet80 cleaned up another part of Sketcher&amp;rsquo;s code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 5 February 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-february-2025/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-february-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;redonwhite added several new path array features: a setting to reverse path, an align mode that uses rotations instead of tangent vectors, a &amp;ldquo;Fixed spacing&amp;rdquo; mode, and an ability to use spacing patterns.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 29 January 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-29-january-2025/</link>
+      <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-29-january-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Draft&lt;/strong&gt;: Roy-043 fixed several bugs and changed the Draft_Layer icon to look different from the LayerContainer one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 22 January 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-22-january-2025/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-22-january-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Beep6581 patched the workbench to automatically scroll to the constraint in the list view when you click on that constraint in the 3D view.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 15 January 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-january-2025/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-january-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;A major user-visible change is the introduction of the Transform task panel that simplifies precise translation and rotation of objects in 3D space:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 8 January 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-january-2025/</link>
+      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-january-2025/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;: wwmayer introduced a new option to to always add external geometry as a reference so that the old workflow was still possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 1 January 2025</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-january-2025/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-january-2025/</guid>
+      <description>&lt;p&gt;This week not much has been happening in FreeCAD development due to the winter holiday season. Nevertheless:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Core&lt;/strong&gt;: PaddleStroke improved the new LCS style to address &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/issues/18337&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;concerns&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; raised by users who rely on the weekly builds.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 25 December 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-december-2024/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-december-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Assembly&lt;/strong&gt;: PaddleStroke fixed a bug where an existing part would shift when inserting a new one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 18 December 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-december-2024/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-december-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;FEM&lt;/strong&gt;: marioalexis84 added an electrostatic constraint symbol to the 3D view. He also made it possible to run CalculiX on one core and added an optional Laplacian smoothing filter to the contour filter to get a smoother result when the generated isosurfaces are too coarse.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 11 December 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-december-2024/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-december-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;PadleStroke implemented group dragging of geometries.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;FlachyJoe improved the look of arc length for when the arc length is higher than half diameter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 4 December 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-4-december-2024/</link>
+      <pubDate>Wed, 04 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-4-december-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AjinkyaDahale&amp;rsquo;s work on refactoring the workbench code to make it more manageable started landing on the main branch. This work is being on on FPA&amp;rsquo;s grant issued earlier this year.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 27 November 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-november-2024/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-november-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;FlachyJoe made axes scale dependent on the viewport size so that they always appear infinite.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 20 November 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-november-2024/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-november-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;BIM&lt;/strong&gt;: yorikvanhavre fixed several issues and added a new ArchDetail example file compatible with modern FreeCAD and tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 13 November 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-november-2024/</link>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-november-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Assembly&lt;/strong&gt;: PaddleStroke fixed a handful of Exploded View bugs, improved the offset UI for joints, and fixed a few more bugs. Another fix to the workbench was contributed by wwmayer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 6 November 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-6-november-2024/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-6-november-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;: mwganson defractalized the workbench by disallowing a sketch to be attached to itself.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Assembly&lt;/strong&gt;: paddlestroke fixed two bugs including one release blocker. He also fixed the task panel to allow using expressions for joints.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 30 October 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-30-october-2024/</link>
+      <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-30-october-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;: PaddleStroke fixed several bugs, including one release blocker, all related to constraints and transformations / arrays.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 23 October 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-23-october-2024/</link>
+      <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-23-october-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part and PartDesign&lt;/strong&gt;: the unsung hero this week was AIRCAP who single-handedly wrestled with a huge amount of bugs and came out on top:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 16 October 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-16-october-2024/</link>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-16-october-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;PartDesign&lt;/strong&gt;: wwmayer and FlachyJoe fixed 4 issues including two release blockers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part&lt;/strong&gt;: wwmayer fixed the PropertyGeometryList::Save output to save XML attributes into one line.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 9 October 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-9-october-2024/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-9-october-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;PaddleStroke fixed the bug where double-clicking to select connected wires wouldn&amp;rsquo;t work.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Benj5378 fixed the automatic constraint tool to do distance to origin when origin is selected.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 2 October 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-2-october-2024/</link>
+      <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-2-october-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Part and PartDesign&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AIRCAP fixed another Loft issue and then a blocker where Pocket&amp;rsquo;s up-to-face option would work differently (and incorrectly at that) from v0.21.2.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 25 September 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-september-2024/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-september-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Measurement&lt;/strong&gt;: hlorus and AIRCAP fixed several issues including one release blocker, and PaddleStroke fixed Quick Measure to work on bodies in assemblies correctly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 18 September 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-september-2024/</link>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-september-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;FEM&lt;/strong&gt;: marioalexis84 rewrote meshing with Netgen to use Netgen&amp;rsquo;s Python bindings rather than a broken plugin in salomemesh. He also rewrote the way meshing with Gmsh is executed, so it&amp;rsquo;s now possible to cancel the entire process thanks to running it in a separate thread.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 11 September 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-september-2024/</link>
+      <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-september-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;BIM&lt;/strong&gt;: furgo16 and Roy_043 fixed several bugs including incorrect profile creation, color issues in ArchFence, and incorrect transparency of glass panels in windows and doors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 4 September 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-4-september-2024/</link>
+      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-4-september-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;PaddleStroke fixed a bug with geometry copy-pasting and another bug where on-view parameters would use numeric input for the wrong constraint in certain scenarios.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 28 August 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-28-august-2024/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-28-august-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Sketcher&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AjinkyaDahale fixed a few bugs related to auto-constraining concentric circles.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;kadet1090 fixed a bug where the Sketcher constraints toolbar icons would sometimes disappear.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 21 August 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-august-2024/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-august-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;CAM&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;shaise updated the new CAM simulator: there&amp;rsquo;s code refactoring, bug fixes, and a couple of minor new features (not expected at this stage, but bugfixes outweighed the danger of new features).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 14 August 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-14-august-2024/</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-14-august-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: mostly bugfixing and code refactoring. 8 pull requests from bgbsww and chennes fixed 9 reported issues including 3 release blockers. The toponaming PRs queue has been largely cleaned up. Currently, there are just 3 PRs from bgbsww and CalligaroV left in draft, that could be completed before v1.0 is out.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 7 August 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-august-2024/</link>
+      <pubDate>Wed, 07 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-august-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: bgbsww added more missing TNP code and fixed several bugs including one blocker.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Assembly&lt;/strong&gt;: PaddleStroke fixed the migration script to correctly load older files with assemblies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 31 July 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-31-july-2024/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-31-july-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: bgbsww finished transferring the code to solve the save/restore errors with objects with element maps, this did away with 3 release blockers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 24 July 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-24-july-2024/</link>
+      <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-24-july-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: bgbsww fixed a blocker bug in the toponaming code, refactored all element name pairs into clearer struct names, and contributed several patches transferring RealThunder&amp;rsquo;s code to solve the save/restore errors with objects with element maps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 17 July 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-july-2024/</link>
+      <pubDate>Wed, 17 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-july-2024/</guid>
+      <description>&lt;p&gt;Last week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: bgbsww added more missing TNP code (this time, to PartDesign::Body) and fixed a couple of issues, shaise contributed a partial fix for long TNP names still visible in the &amp;lsquo;Subelement&amp;rsquo; column of the Properties panel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 10 July 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-july-2024/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-july-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development there has been more bugfixing in preparation for FreeCAD v1.0 release later this summer. Disclaimer: this report&amp;rsquo;s data is offset by 1 day due to traveling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 3 July 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-july-2024/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-july-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Assembly&lt;/strong&gt; got support for the new toponaming routines and per-limit checkboxes when setting joints. Moreover, when a checkbox for a limit is disabled, the value is still updated as you drag or rotate a part. This makes it easy to visually set limits: drag a part to a position where the min value should be, enable the checkbox, repeat for the max value. Both patches were contributed by PaddleStroke. He also fixed a crash that was occurring when using Gear, Belt, and Rack/Pinion joints.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 26 June 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-june-2024/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-june-2024/</guid>
+      <description>&lt;p&gt;The development of new features is pretty much done. Some larger changes, such as the BOM tool in Assembly last week, are still landing to the main development branch. But they are simply patches that were submitted prior to feature freeze a few weeks back and finally passed review.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 12 June 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-june-2024/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-june-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;BIM&lt;/strong&gt;: @paullee0 made small improvements in ArchWall, @Roy-043 fixed image plane imports and updated the BIM WP commands to use the new Draft code, @Syres916 added fallback IfcOpenShell installation fix for Python 3.10, 3.11, and 3.12 systems, @furgo16 fixed the Cut Plane command, and @DeniseBryson fixed incorrect computed dimensions in ArchSpace (floor area and perimeter length).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 5 June 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-june-2024/</link>
+      <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-june-2024/</guid>
+      <description>&lt;p&gt;This week, FreeCAD has entered feature freeze for upcoming v1.0. This means no new patches adding features will be merged until the new version is released.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 29 May 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-29-may-2024/</link>
+      <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-29-may-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development, major changes have been in Assembly, CAM, and TechDraw workbenches, as well as in the new materials system.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 22 May 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-22-may-2024/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-22-may-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: the main phases of the project have now been officially completed. The patchset was enabled in the main development branch by default this Monday, weekly builds now ship with the fixes. For more information, please see &lt;a href=&#34;https://forum.freecad.org/viewtopic.php?t=87791&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;this forum post&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;. Kudos to everyone involved: RealThunder, chennes, Pesc0, bgbsww, CalligaroV, JohnAD.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 15 May 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-may-2024/</link>
+      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-may-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming&lt;/strong&gt;: bgsbww added missing bits of toponaming code to core, Part Design, and Sketcher.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Measure tools&lt;/strong&gt; got some really useful updates. hlorus made some improvements to the new unified measurement facility and added measurement values to labels in the project tree. Meanwhile wwmayer rewrote parts of the new Quick Measure feature and fixed errors typically popping up when selecting geometry in Sketcher.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 8 May 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-may-2024/</link>
+      <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-may-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming:&lt;/strong&gt; bgbsww added some missing code (there will be more to add, it seems) and started performance testing. So far, things don&amp;rsquo;t look bad at all performance-wise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 1 May 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-may-2024/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-may-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toponaming:&lt;/strong&gt; most work porting RT&amp;rsquo;s patches is now done except just one piece of code that was mysteriously overlooked. Both CalligaroV, chennes, and bgbsww contributed to the TNP effort last week. bgbsww also started looking into performance regressions due to toponaming changes and found surprisingly few issues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 24 April 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-24-april-2024/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-24-april-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;p&gt;TechDraw:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;PaddleStroke&lt;/strong&gt; unified Insert View tools (View, ProjGroup, Sheet, Arch, SVG, Image). He also made App::Links of views work in TechDraw, this also removes &amp;lsquo;Share Views&amp;rsquo; from the toolbar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 17 April 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-april-2024/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-april-2024/</guid>
+      <description>&lt;p&gt;In the &lt;strong&gt;toponaming project&lt;/strong&gt;, bgbsww and chennes are getting really close to finalizing the port of RealThunder&amp;rsquo;s patches to upstream FreeCAD. There is probably a week more of work, then the planned performance evaluation and improvements can begin.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 10 April 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-april-2024/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-april-2024/</guid>
+      <description>&lt;p&gt;In the &lt;em&gt;toponaming project&lt;/em&gt;, &lt;strong&gt;bgbsww&lt;/strong&gt; added more tests and updated existing ones, and &lt;strong&gt;CalligaroV&lt;/strong&gt; fixed two bugs.&lt;/p&gt;&#xA;&lt;p&gt;In &lt;em&gt;Arch&lt;/em&gt;, &lt;strong&gt;yorikvanhavre&lt;/strong&gt; upgraded the reference tool, so that it could work with DXF and IFC files (&lt;a href=&#34;https://github.com/yorikvanhavre/FreeCAD-NativeIFC&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;NativeIFC&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; is required for the latter), and &lt;strong&gt;paullee0&lt;/strong&gt; fixed a regression that occured when making a block from a DraftWire.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 3 April 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-april-2024/</link>
+      <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-april-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development, the most actively worked-on parts of FreeCAD have been the toponaming project, Sketcher, FEM, and UI/UX.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 27 March 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-march-2024/</link>
+      <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-march-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development, the four most actively worked-on parts of FreeCAD have been the toponaming project, TechDraw, Sketcher, and FEM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 20 March 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-march-2024/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-march-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt; and &lt;strong&gt;chennes&lt;/strong&gt; made further progress towards mitigating the toponaming issue. More RealThunder&amp;rsquo;s code has been ported and improved. A C++ testing framework was added for PartDesign and ShapeBinder.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 13 March 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-march-2024/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-march-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt; and &lt;strong&gt;chennes&lt;/strong&gt; made further progress towards mitigating the toponaming issue.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;wwmayer&lt;/strong&gt; fixed MinGW builds, added a class for reading metadata from project files and a test function to write to file stream, and fixed the context menu for the expression editing input box.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 6 March 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-6-march-2024/</link>
+      <pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-6-march-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt;, &lt;strong&gt;CalligaroV&lt;/strong&gt;, and &lt;strong&gt;chennes&lt;/strong&gt; made further progress towards mitigating the toponaming issue.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;WandererFan&lt;/strong&gt; fixes several bugs in TechDraw.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 28 February 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-28-february-2024/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-28-february-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt;, &lt;strong&gt;CalligaroV&lt;/strong&gt;, and &lt;strong&gt;chennes&lt;/strong&gt; made a lot more progress towards mitigating the toponaming issue.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;chennes&lt;/strong&gt; contributed more changes to the addon manager: fixes and support for sorting addons by several criteria (alphabetical, last update time, creation date, GitHub stars), as well as support for custom scores for addons.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 21 February 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-february-2024/</link>
+      <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-february-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt;, &lt;strong&gt;CalligaroV&lt;/strong&gt;, and &lt;strong&gt;chennes&lt;/strong&gt; made further progress towards mitigating the toponaming issue.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;pieterhijma&lt;/strong&gt; contributed the first code towards a new custom data elements (custom properties) system, &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/12135&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;see here&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; for technical details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 14 February 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-14-february-2024/</link>
+      <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-14-february-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt;, &lt;strong&gt;CalligaroV&lt;/strong&gt;, and &lt;strong&gt;chennes&lt;/strong&gt; made more progress with mitigating the toponaming issue.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The latest work by &lt;strong&gt;paddle&lt;/strong&gt; on integrated assembly workbench has been merged: linking and grounding parts, functional joints (Fixed, Revolute, Cylindrical, Slider, Ball, Distance), dragging support for Slider and Revolute joints.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 7 February 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-february-2024/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-february-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;CalligaroV&lt;/strong&gt;, &lt;strong&gt;bgbsww&lt;/strong&gt;, and &lt;strong&gt;chennes&lt;/strong&gt; made further changes towards mitigating the toponaming issue.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;marioalexis84&lt;/strong&gt; submitted a quick fix to the new materials system, and &lt;strong&gt;daverocketshop&lt;/strong&gt; made further improvements: better compatibility when using the legacy material editor, fixes, reduced verbosity of console messages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 31 January 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-31-january-2024/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-31-january-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;bgbsww&lt;/strong&gt;, &lt;strong&gt;chennes&lt;/strong&gt;, and &lt;strong&gt;CalligaroV&lt;/strong&gt; ported and further improved various changes from &lt;strong&gt;RealThunder&lt;/strong&gt;&amp;rsquo;s branch towards mitigating the toponaming problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 24 January 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-24-january-2024/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-24-january-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Roy-043&lt;/strong&gt; fixed a few bugs in the Arch workbench, improved layer functions and made further improvements in Draft.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 17 Jan 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-jan-2024/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-jan-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;WandererFan&lt;/strong&gt; committed several fixes and improvements to TechDraw, and &lt;strong&gt;edi271&lt;/strong&gt; contributed API extensions to the same workbench and fixed a bug in VertexAtIntersection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 10 Jan 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-jan-2024/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-jan-2024/</guid>
+      <description>&lt;p&gt;The team accelerated after the winter holidays and did a serious PR queue cleanup:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@Roy-043&lt;/strong&gt; merged some improvements to Draft and fixed several bugs in Arch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 3 Jan 2024</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-jan-2024/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-jan-2024/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development wasn&amp;rsquo;t very active due to holidays, and yet:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@chennes&lt;/strong&gt; added a TopoShapeCache class based on RealThunder&amp;rsquo;s implementation. This is an important step towards the end of Phase 3 of the toponaming project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 27 Dec 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-dec-2023/</link>
+      <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-dec-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@abdullahtahiriyo&lt;/strong&gt; activated new icon for optional unified coincident constraint.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@FlachyJoe&lt;/strong&gt; fixed a display error with the point-to-line distance constraint.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 20 Dec 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-dec-2023/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-dec-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@Roy-043&lt;/strong&gt; continued his work on the new &amp;lsquo;get_param&amp;rsquo; function to help having all defaults in one place to avoid inconsistencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 13 Dec 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-dec-2023/</link>
+      <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-dec-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@davesrocketshop&lt;/strong&gt; pushed an update to the new materials system adding new data types (in particular, for the Render workbench), a new appearance preview UI based on the Coin library, and changes in the array data types.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 15 Nov 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-nov-2023/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-nov-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The new Assembly solver, &lt;a href=&#34;https://github.com/Ondsel-Development/OndselSolver/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;OndselSolver&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, was added as a git submodule. This is a major step towards having a working version of an integrated assembly workbench.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 1 Nov 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-nov-2023/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-nov-2023/</guid>
+      <description>&lt;p&gt;&lt;em&gt;REMINDER&lt;/em&gt;: The first-Sunday-of-the-month FreeCAD Developer&amp;rsquo;s Meeting is this Sunday. Check out &lt;a href=&#34;https://www.freecad.org/events.php&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;the calendar in your timezone here&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;. It&amp;rsquo;s open to anyone interested in FreeCAD development.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 25 Oct 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-oct-2023/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-oct-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@adrianinsaval&lt;/strong&gt; improved the layout of &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/11066&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;several task boxes in FEM&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 18 Oct 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-oct-2023/</link>
+      <pubDate>Thu, 19 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-oct-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@yorik&lt;/strong&gt; merged the Help Module into main so that an external mod is no longer required to view the new Help system.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 11 Oct 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-oct-2023/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-oct-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;We merged the **@realthunder **PR that adds a transparency to the sidebars. There is still some work to do with the themes to smooth things out, but the basic feature is present now.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 4 Oct 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-4-oct-2023/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-4-oct-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@obelisk79&lt;/strong&gt; is spearheading the formation of a UI/UX working group &amp;ndash; more details coming soon! If you are interested in participating, consider joining the &lt;a href=&#34;https://discord.gg/w2cTKGzccC&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD Discord&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; and checking out the #ui-ux-themes channel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 27 Sept 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-sept-2023/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-27-sept-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;@yorik continues to work on the NativeIFC new document system (one FreeCAD document = one IFC document), which is almost ready.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 20 Sept 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-sept-2023/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-20-sept-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@wandererfan&lt;/strong&gt; is wrapping up the cosmetic circle command, doing more GSOC Unified Measurement Facility review &amp;amp; testing, and preparing for the grand TechDraw code reformat event.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 13 Sept 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-sept-2023/</link>
+      <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-13-sept-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;@PaddleStroke&lt;/strong&gt; is working on an assembly constraining system. He posted a draft PR to share advancement if anyone wants to follow along: &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/10611&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;https://github.com/FreeCAD/FreeCAD/pull/10611&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 6 Sept 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-6-sept-2023/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-6-sept-2023/</guid>
+      <description>&lt;p&gt;This week in FreeCAD development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/10427&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;first PR of the new Assembly workbench&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; was merged &amp;ndash; kudos to &lt;strong&gt;@PaddleStroke&lt;/strong&gt; and the team at &lt;a href=&#34;https://ondsel.com&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Ondsel&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; for beginning that process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 30 August 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-30-august-2023/</link>
+      <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-30-august-2023/</guid>
+      <description>&lt;p&gt;As the new development cycle begins in earnest, there are &lt;em&gt;many&lt;/em&gt; projects going on in the FreeCAD world that will soon be making their way into the development builds:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 23 August 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-23-august-2023/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-23-august-2023/</guid>
+      <description>&lt;p&gt;The UI and code cleanup continued this week, but the real excitement is that work has begun on an integrated Assembly workbench.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 16 August 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-16-august-2023/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-16-august-2023/</guid>
+      <description>&lt;p&gt;The past week saw developers working on a large number of UI improvement projects, as well as quite a bit of behind-the-scenes code updating and cleanup.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 9 August 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-9-august-2023/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-9-august-2023/</guid>
+      <description>&lt;p&gt;Welcome back to WIP Wednesday! After a short hiatus while we prepared for the &lt;a href=&#34;https://blog.freecad.org/2023/08/02/freecad-0-21-released/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;0.21.0 release&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, we&amp;rsquo;re back out of the feature freeze, and FreeCAD development continues apace. Actually, it&amp;rsquo;s accelerating, and fast! We&amp;rsquo;re still working through the PR backlog that built up over the freeze, but expect to make major progress during the &lt;a href=&#34;https://blog.freecad.org/2023/07/27/freecad-hackathon-discord/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD Hackathon this Friday-Sunday&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 7 June 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-june-2023/</link>
+      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-7-june-2023/</guid>
+      <description>&lt;p&gt;FreeCAD is in a &amp;ldquo;feature freeze&amp;rdquo; as developers prepare for the 0.21 release. For those of you running development versions of FreeCAD, please help us test! If you think you&amp;rsquo;ve got a bug, please search the &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/issues&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;GitHub Issues&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; to see if it&amp;rsquo;s a new one, and if so, help us out by writing it up.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 17 May 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-may-2023/</link>
+      <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-17-may-2023/</guid>
+      <description>&lt;p&gt;FreeCAD is now in a &amp;ldquo;feature freeze&amp;rdquo; as developers prepare for the 0.21 release. Everyone&amp;rsquo;s focused on finding and squashing bugs for the next couple of weeks. Any pull requests that don&amp;rsquo;t address bugs will be held until after the release has been completed. For those of you running development versions of FreeCAD, please help us test! If you think you&amp;rsquo;ve got a bug, please search the &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/issues&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;GitHub Issues&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; to see if it&amp;rsquo;s a new one, and if so, help us out by writing it up. Thanks!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 10 May 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-may-2023/</link>
+      <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-10-may-2023/</guid>
+      <description>&lt;p&gt;Our first-ever full-developer-community meetup was this past Sunday, and we had excellent attendance. Thanks to everyone who joined us, and thanks to the folks at &lt;a href=&#34;https://developer.blender.org/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Blender&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, whose own meetups inspired the launch of ours. Over the past week we&amp;rsquo;ve squashed dozens of translation-related bugs, as well a several other things causing crashes or bad geometry. We are approaching a feature freeze in anticipation of our 0.21 release, which is coming soon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 3 May 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-may-2023/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-3-may-2023/</guid>
+      <description>&lt;p&gt;It was a relatively quiet week for FreeCAD developers, with only 32 merged pull requests, mostly related to small translation problems and minor bugfixes (though one of the fixed bugs prevented Windows builds from starting if the splashscreen was disabled, so I&amp;rsquo;m sure there are going to be some happy Windows users out there!). We also finally removed the Raytracing workbench from the repository: it has long since been superseded by the Render addon and had not been maintained for many years.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 26 April 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-april-2023/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-26-april-2023/</guid>
+      <description>&lt;p&gt;In the past week we continued merging translation fixes, plus a significant visual cleanup of the Navigation Cube.&lt;/p&gt;&#xA;&lt;p&gt;In this upcoming week:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 19 April 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-19-april-2023/</link>
+      <pubDate>Wed, 19 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-19-april-2023/</guid>
+      <description>&lt;p&gt;In the past week we merged quite a few minor translation fixes, as well as a new layout for several Preferences pages, and we feel like we&amp;rsquo;ve finally squashed a five-year-old &amp;ldquo;massive&amp;rdquo; memory leak report in Draft.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 12 April 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-april-2023/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-april-2023/</guid>
+      <description>&lt;p&gt;The past week saw a lot of refactoring and developer-oriented work (including the activation of pre-commit hooks that we expect will begin the process of unifying our disparate code formatting styles, and a new CI workflow running on Windows 11).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 5 April 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-april-2023/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-5-april-2023/</guid>
+      <description>&lt;p&gt;Last week a number of exciting things happened: first, @wwmayer finished porting TechDraw to Qt6, so we are almost ready to have end-users testing Qt6 builds of FreeCAD. Second, @xtemp09 implemented a radial gradient background that is sure so make some users very happy. In addition, @PaddleStroke has been working to refine several different preferences pages to improve their usability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 29 Mar 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-29-mar-2023/</link>
+      <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-29-mar-2023/</guid>
+      <description>&lt;p&gt;This past week saw the removal of the old Image workbench and the&lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/8955&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt; integration of its functionality into the core of FreeCAD&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, the merge of a significant &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/8990&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;usability improvement to fillets and chamfers&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; in the Part Design workbench, the merge of the &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/8974&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;last of the Topological Naming Problem mitigation Stage 1 PRs&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, and the consolidation of some &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/9026&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Workbench-related options into the Workbenches preference pane&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 21 Mar 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-mar-2023/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-21-mar-2023/</guid>
+      <description>&lt;p&gt;There have been a number of exciting changes to FreeCAD in the past week, most notably the merge of a new notification system from Sketcher developer @abdullah. It&amp;rsquo;s still a work-in-progress, so expect to see significant refinement of this feature in the coming weeks. The FreeCAD Project Association also released its first &lt;a href=&#34;https://fpa.freecad.org/reports/2022&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Annual Report&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;, so big kudos to the team that worked on that document (especially @wandererfan and @yorik), and to the whole FPA for an amazing inaugural year.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 15 Mar 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-mar-2023/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-mar-2023/</guid>
+      <description>&lt;p&gt;I am hopelessly biased, but as far as I am concerned the big news this week is the merge of the first piece of the puzzle to mitigating the Topological Naming Problem, with the merge of &lt;a href=&#34;https://github.com/FreeCAD/FreeCAD/pull/8776&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;PR 8776&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;. It&amp;rsquo;s not a large or complicated piece of code, but it forms the very innermost core of the TNP solution created by FreeCAD developer @&lt;strong&gt;realthunder&lt;/strong&gt;, and it&amp;rsquo;s now in the main FreeCAD codebase 🎉. No user-visible changes yet, but you eat an elephant one bite at a time!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 8 Mar 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-mar-2023/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-mar-2023/</guid>
+      <description>&lt;p&gt;During this past week work continued on getting FreeCAD ready for Qt6, plus some bug fixes to OpenSCAD file import, UI tweaks to the Workbenches preferences page, and the File and Clipboard toolbars were split to improve customization. In the upcoming week:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 1 Mar 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-mar-2023/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-mar-2023/</guid>
+      <description>&lt;p&gt;This past week saw the epic grid system merge in Sketcher, plus many other smaller projects (by my count this was the largest number of FreeCAD pull requests &lt;em&gt;ever&lt;/em&gt; merged in a single week!). In the coming week:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 12 Feb 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-feb-2023/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-12-feb-2023/</guid>
+      <description>&lt;p&gt;Lots of small pull requests merged in this past week (which is as it should be!). Nothing Earth-shattering, just continued incremental improvement. In the next week:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 15 Feb 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-feb-2023/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-15-feb-2023/</guid>
+      <description>&lt;p&gt;This past week was a very busy one for code merges, with almost 80 pull requests completed. Developers plan on continuing the high pace this next week:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 8 Feb 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-feb-2023/</link>
+      <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-8-feb-2023/</guid>
+      <description>&lt;p&gt;As everyone makes their way back home from FreeCAD Day 2023, we still have a few things going on in the FreeCAD development world:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 1 Feb 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-feb-2023/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-1-feb-2023/</guid>
+      <description>&lt;p&gt;This week&amp;rsquo;s edition of WIP Wednesday is coming to you live from Brussels, Belgium &amp;ndash; home of the world&amp;rsquo;s best waffles, beer, and open-source software developers! It&amp;rsquo;s &lt;a href=&#34;https://fosdem.org/2023/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FOSDEM&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; week, so many developers from around the world are gathering in Brussels to join various hackathons, conference sessions, and of course, &lt;a href=&#34;https://blog.freecad.org/2023/01/04/freecad-meeting-day-2023/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD Day 2023&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 25 Jan 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-jan-2023/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-25-jan-2023/</guid>
+      <description>&lt;p&gt;Lots of interesting development happening this week as everyone gets ready for &lt;a href=&#34;https://blog.freecad.org/2023/01/04/freecad-meeting-day-2023/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD Day 2023&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; in Brussels next week.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 18 Jan 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-jan-2023/</link>
+      <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-18-jan-2023/</guid>
+      <description>&lt;p&gt;Things are relatively quiet in the FreeCAD development world this week. There&amp;rsquo;s a lot of bug-hunting going on, of course, and many developers are preparing to meet at FOSDEM 2023 in a couple of weeks for the FreeCAD Day meetup. There&amp;rsquo;s still time to &lt;a href=&#34;https://fpa.freecad.org/programs/fosdem-travel-grants&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;apply for a grant&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; to join us if you are interested!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WIP Wednesday: 11 Jan 2023</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-jan-2022/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/wip-wednesday-11-jan-2022/</guid>
+      <description>&lt;p&gt;This week we&amp;rsquo;re introducing a new blog feature: &amp;ldquo;WIP Wednesday&amp;rdquo;. I&amp;rsquo;m collecting input from anyone currently working on any kind of FreeCAD development, and letting all of you know what they are working on &lt;em&gt;right now&lt;/em&gt;, so you can stay abreast of the very latest developments in the FreeCAD world. Of course, a lot of this is pretty mundane (I&amp;rsquo;ve been working on unit tests for the Addon Manager, for example), but sometimes it&amp;rsquo;s pretty exciting stuff (for example @wmayer has been working on getting FreeCAD working with Qt6). Developers: if you are working on anything you&amp;rsquo;d like featured here, drop me a line at &lt;a href=&#34;mailto:chennes@freecad.org&#34;&#xA;  class=&#34;internal-tooltip&#34;&gt;chennes@freecad.org&lt;/a&gt;, or on the &lt;a href=&#34;https://forum.freecadweb.org/viewtopic.php?f=10&amp;amp;t=75141&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD Forum&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

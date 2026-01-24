@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/tags/research/</link>
+    <description>Recent content in Research on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/pr-69/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forged in FreeCAD: Avian Hang Gliders</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/forged-in-freecad-avian-hang-gliders/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/forged-in-freecad-avian-hang-gliders/</guid>
+      <description>&lt;p&gt;Hang gliders are mesmerising when you see them in the sky. Silently cutting through the sky smoothly, often spotted in fine weather and in beautiful locations there&amp;rsquo;s a lot to be said for them. Over on fosstodon we&amp;rsquo;ve seen a UK based hang glide company &lt;a href=&#34;https://www.avianonline.co.uk/index.php?osCsid=1c2e1500a740b436df943e614dd407de&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;Avian Hang Gliders &lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;mentioning how they use &lt;a href=&#34;https://www.freecad.org/&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt;FreeCAD&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; to develop their newest generation of gliders using clever simulation and advanced manufacturing techniques. We caught up with the owner of Avian, Tim Swait to chat about their process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Forged in FreeCAD: Boat hull hydrostatic and stability analysis</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/forged-in-freecad-boat-hull-hydrostatic-and-stability-analysis/</link>
+      <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/forged-in-freecad-boat-hull-hydrostatic-and-stability-analysis/</guid>
+      <description>&lt;p&gt;Pretty much everyday someone somewhere is doing something spectacular with FreeCAD!&lt;/p&gt;&#xA;&lt;p&gt;Spotted last week over on the&lt;a href=&#34;https://forum.freecad.org/viewtopic.php?t=88520&amp;amp;sid=b2d6cf127e3d87e02417b63d3cb8b845&#34;&#xA;  class=&#34;external-link&#34;title=&#34;Open link&#34;&#xA;    target=&#34;_blank&#34;&#xA;    rel=&#34;external noreferrer noopener&#34;&gt; FreeCAD forum&lt;span class=&#34;icon-external&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5&#34;/&gt;&lt;line x1=&#34;10&#34; y1=&#34;14&#34; x2=&#34;20&#34; y2=&#34;4&#34;/&gt;&lt;polyline points=&#34;15 4 20 4 20 9&#34;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt; BlueHorizon posted about a proof of concept project to model a boat hull and then perform a hydrostatic and stability analysis to work out how well the design performs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Research Grade Open Source Microscope</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/news/a-research-grade-open-source-microscope-made-with-freecad/</guid>
+      <description>&lt;p&gt;The PUMA microscope is a low cost, modular, 3D printed, open source microscope designed in FreeCAD. Its modular nature allows re-use of many components to reconfigure the scope into a multitude of possible forms, from a basic mirror-illuminated simple microscope (middle) to a complex scope for serious research applications (right) - while still being fully portable!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

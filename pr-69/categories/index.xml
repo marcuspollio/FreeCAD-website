@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on FreeCAD</title>
+    <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/</link>
+    <description>Recent content in Categories on FreeCAD</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Showcase</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/showcase/</link>
+      <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/showcase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Update</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/update/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/update/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Announcement</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/announcement/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/announcement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/event/</link>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/event/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/tutorial/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Feature</title>
+      <link>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/feature/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://marcuspollio.github.io/FreeCAD-website/pr-69/categories/feature/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
