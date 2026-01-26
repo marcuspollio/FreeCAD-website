@@ -14,15 +14,15 @@
 
 {{- $processableFormats := site.Params.processableFormats | default (slice "jpeg" "jpg" "png" "webp" "gif") -}}
 {{- $format := site.Params.resizeFormat | default "webp" -}}
-{{- $resizeDimensions := site.Params.resizeDimensions.single | default (slice "500x250" "1000x500") -}}
+{{- $resizeDimensions := site.Params.resizeDimensions.cover | default (slice "500x250" "1000x500") -}}
 {{- $zoom := i18n "zoom" | default "Zoom image" -}}
 {{- $close := i18n "close" | default "Close image viewer" -}}
 {{- $video_fallback := i18n "video_fallback" | default "Your browser does not support the video tag." -}}
 
 {{- .Page.Store.Add "imageCounter" 1 -}}
 {{- $id := printf "img-%03d" (.Page.Store.Get "imageCounter") -}}
-{{- $alt := or .PlainText .Text .Title (i18n "image_fallback" | default "Image") | plainify -}}
-{{- $title := or .Title .PlainText | plainify -}}
+{{- $alt := i18n "image_fallback" | default "Image" -}}
+{{- $title := or .Title .PlainText .Text | plainify -}}
 {{- $url := urls.Parse .Destination -}}
 
 {{- if $url.Scheme -}}
