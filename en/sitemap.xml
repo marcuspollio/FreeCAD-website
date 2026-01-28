@@ -220,11 +220,87 @@
                 href="https://marcuspollio.github.io/FreeCAD-website/categories/"
                 />
   </url><url>
+    <loc>https://marcuspollio.github.io/FreeCAD-website/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://marcuspollio.github.io/FreeCAD-website/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://marcuspollio.github.io/FreeCAD-website/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it-IT"
+                href="https://marcuspollio.github.io/FreeCAD-website/it/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://marcuspollio.github.io/FreeCAD-website/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="https://marcuspollio.github.io/FreeCAD-website/br/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl-PL"
+                href="https://marcuspollio.github.io/FreeCAD-website/pl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl-NL"
+                href="https://marcuspollio.github.io/FreeCAD-website/nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="https://marcuspollio.github.io/FreeCAD-website/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://marcuspollio.github.io/FreeCAD-website/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://marcuspollio.github.io/FreeCAD-website/ar/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://marcuspollio.github.io/FreeCAD-website/tr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://marcuspollio.github.io/FreeCAD-website/"
+                />
+  </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/news/fused-filament-design-addon/</loc>
     <lastmod>2025-05-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/authors/jo-hinchliffe/</loc>
     <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://marcuspollio.github.io/FreeCAD-website/news/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://marcuspollio.github.io/FreeCAD-website/fr/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://marcuspollio.github.io/FreeCAD-website/news/"
+                />
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/categories/showcase/</loc>
     <lastmod>2025-05-23T00:00:00+00:00</lastmod>
@@ -507,6 +583,19 @@
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/versions/1.0.2/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://marcuspollio.github.io/FreeCAD-website/download/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://marcuspollio.github.io/FreeCAD-website/fr/download/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://marcuspollio.github.io/FreeCAD-website/download/"
+                />
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/authors/freecad/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
@@ -796,19 +885,6 @@
     <loc>https://marcuspollio.github.io/FreeCAD-website/news/wip-wednesday-22-may-2024/</loc>
     <lastmod>2024-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://marcuspollio.github.io/FreeCAD-website/donate/</loc>
-    <lastmod>2024-05-22T08:04:23+12:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://marcuspollio.github.io/FreeCAD-website/fr/donate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://marcuspollio.github.io/FreeCAD-website/donate/"
-                />
-  </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/download/addons/</loc>
     <lastmod>2024-05-22T08:04:23+12:00</lastmod>
   </url><url>
@@ -841,113 +917,11 @@
                 href="https://marcuspollio.github.io/FreeCAD-website/docs/"
                 />
   </url><url>
-    <loc>https://marcuspollio.github.io/FreeCAD-website/download/</loc>
-    <lastmod>2024-05-22T08:04:23+12:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://marcuspollio.github.io/FreeCAD-website/fr/download/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://marcuspollio.github.io/FreeCAD-website/download/"
-                />
-  </url><url>
-    <loc>https://marcuspollio.github.io/FreeCAD-website/features/</loc>
-    <lastmod>2024-05-22T08:04:23+12:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://marcuspollio.github.io/FreeCAD-website/fr/features/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://marcuspollio.github.io/FreeCAD-website/features/"
-                />
-  </url><url>
-    <loc>https://marcuspollio.github.io/FreeCAD-website/</loc>
-    <lastmod>2024-05-22T08:04:23+12:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://marcuspollio.github.io/FreeCAD-website/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de-DE"
-                href="https://marcuspollio.github.io/FreeCAD-website/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it-IT"
-                href="https://marcuspollio.github.io/FreeCAD-website/it/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="https://marcuspollio.github.io/FreeCAD-website/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://marcuspollio.github.io/FreeCAD-website/br/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl-PL"
-                href="https://marcuspollio.github.io/FreeCAD-website/pl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl-NL"
-                href="https://marcuspollio.github.io/FreeCAD-website/nl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru-RU"
-                href="https://marcuspollio.github.io/FreeCAD-website/ru/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="https://marcuspollio.github.io/FreeCAD-website/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://marcuspollio.github.io/FreeCAD-website/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://marcuspollio.github.io/FreeCAD-website/tr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://marcuspollio.github.io/FreeCAD-website/"
-                />
-  </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/community/fpn/</loc>
     <lastmod>2024-05-22T08:04:23+12:00</lastmod>
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/download/lts/</loc>
     <lastmod>2024-05-22T08:04:23+12:00</lastmod>
-  </url><url>
-    <loc>https://marcuspollio.github.io/FreeCAD-website/news/</loc>
-    <lastmod>2024-05-22T08:04:23+12:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="https://marcuspollio.github.io/FreeCAD-website/fr/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://marcuspollio.github.io/FreeCAD-website/news/"
-                />
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/download/releases/</loc>
     <lastmod>2024-05-22T08:04:23+12:00</lastmod>
@@ -1469,6 +1443,18 @@
     <loc>https://marcuspollio.github.io/FreeCAD-website/tags/theme/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://marcuspollio.github.io/FreeCAD-website/donate/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://marcuspollio.github.io/FreeCAD-website/fr/donate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://marcuspollio.github.io/FreeCAD-website/donate/"
+                />
+  </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/dev/tech/app/</loc>
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/news/archives/</loc>
@@ -1496,6 +1482,18 @@
     <loc>https://marcuspollio.github.io/FreeCAD-website/dev/tech/glossary/</loc>
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/dev/tech/checklist/</loc>
+  </url><url>
+    <loc>https://marcuspollio.github.io/FreeCAD-website/features/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://marcuspollio.github.io/FreeCAD-website/fr/features/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://marcuspollio.github.io/FreeCAD-website/features/"
+                />
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/admin/</loc>
   </url><url>
