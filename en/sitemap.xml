@@ -1538,16 +1538,16 @@
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/dev/tech/src/</loc>
   </url><url>
-    <loc>https://marcuspollio.github.io/FreeCAD-website/thanks/</loc>
+    <loc>https://marcuspollio.github.io/FreeCAD-website/donate/thanks/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="https://marcuspollio.github.io/FreeCAD-website/fr/thanks/"
+                href="https://marcuspollio.github.io/FreeCAD-website/fr/donate/thanks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="https://marcuspollio.github.io/FreeCAD-website/thanks/"
+                href="https://marcuspollio.github.io/FreeCAD-website/donate/thanks/"
                 />
   </url><url>
     <loc>https://marcuspollio.github.io/FreeCAD-website/dev/start/vscode/</loc>
