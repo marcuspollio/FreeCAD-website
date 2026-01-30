@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+
+  <title>FreeCAD | Tutorial: Getting started with the Path Workbench. Part Two.</title>
+  <meta name="description" content="In the first part of this tutorial we looked at setting up the Tool Bit Library when running the Path WB for the first time and creating a custom 3mm endmill tool. As a reminder in these tutorials we will describe tool icons by the text description that is displayed when you rollover an icon. This means you&rsquo;ll have to explore the rollover texts which is a great way to explore the basics of what tools are on each workbench. Also, as a reminder, this tutorial was written using FreeCAD version 0.21.1.
+">
+  <meta name="keywords" content="CAD, parametric, model, 3D, BIM, CAM, FEM, free, open-source">
+  <link rel="canonical" href="https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/"><link rel="alternate" hreflang="en" href="https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/"><link rel="alternate" hreflang="x-default" href="https://marcuspollio.github.io/FreeCAD-website/pr-70/"><script>
+    const pref = localStorage.getItem("pref-theme");
+    if (pref === "dark") {
+      document.documentElement.classList.add('dark');
+    } else if (pref === "light") {
+      document.documentElement.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script><noscript>
+  <style>
+    #chroma-toggle {
+      display: none;
+    }
+  </style><style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --header: rgb(16, 16, 16);
+          --theme: rgb(32, 32, 32);
+          --entry: rgb(48, 48, 48);
+          --tone: rgb(64, 64, 64);
+          --footer: rgb(80, 80, 80);
+          --primary: rgb(240, 240, 240);
+          --secondary: rgb(224, 224, 224);
+          --tertiary: rgb(208, 208, 208);
+          --backdrop: rgba(0, 0, 0, 0.8);
+          --backdrop: rgba(0, 0, 0, 0.75);
+          --link-color: rgb(102, 177, 255);
+          --link-hover-color: rgb(65, 143, 222);
+          --underline: underline solid currentColor var(--line);
+          --border: var(--line) solid var(--tone);
+        }
+      }
+    </style></noscript><link href="/FreeCAD-website/pr-70/assets/css/stylesheet.min.c329ea063d4e495c88e3e9ff05e42887e239902aca76c1775f63ba16cf898e56.css"
+  rel="stylesheet"
+  integrity="sha256-wynqBj1OSVyI4&#43;n/BeQoh&#43;I5kCrKdsF3X2O6Fs&#43;JjlY=" crossorigin="anonymous"><link rel="icon" type="image/svg+xml" href="/FreeCAD-website/pr-70/favicon.svg"><link rel="shortcut icon" type="image/x-icon" href="/FreeCAD-website/pr-70/favicon.ico"><link rel="apple-touch-icon" href="/FreeCAD-website/pr-70/apple-touch-icon.png"><meta property="og:url" content="https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/">
+  <meta property="og:site_name" content="FreeCAD">
+  <meta property="og:title" content="Tutorial: Getting started with the Path Workbench. Part Two.">
+  <meta property="og:description" content="In the first part of this tutorial we looked at setting up the Tool Bit Library when running the Path WB for the first time and creating a custom 3mm endmill tool. As a reminder in these tutorials we will describe tool icons by the text description that is displayed when you rollover an icon. This means you’ll have to explore the rollover texts which is a great way to explore the basics of what tools are on each workbench. Also, as a reminder, this tutorial was written using FreeCAD version 0.21.1.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="news">
+    <meta property="article:published_time" content="2023-12-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-07T00:00:00+00:00">
+</head><body class="single type-news kind-page "
+    id="top">
+
+<div class="unsupported-browser">
+  <h3>Hi there! Internet Explorer is no longer supported.</h3>
+  <p>Please use a modern web browser such as Firefox, Chromium or Edge. Thank you!</p>
+</div>
+<header class="site-header">
+
+  <div class="logo">
+    <a href="/FreeCAD-website/pr-70/"accesskey="h"
+      title="FreeCAD Home (Alt + H)"
+      aria-label="FreeCAD Home"><?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" viewBox="0 0 180 48" fill="none" version="1.1">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:date>2024-06-01</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sebastian Tabares Amaya (sytabaresa), Max Wilfinger (maxwxyz)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>The FreeCAD project association AISBL (FPA)</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" style="stroke:none" d="M 50.3 35.3 V 12.7 H 61.8 V 14.7 H 52.6 V 22.9 H 61.5 V 25 H 52.6 V 35.3 H 50.3 Z M 64.5 35.3 V 18.6 H 66.7 V 21 C 67.6 19.1 69 18.3 71.5 18.2 V 20.4 C 68.3 20.7 66.7 22.4 66.7 25.5 V 35.3 H 64.5 Z M 89.6 27.7 H 74.4 C 74.6 31 77.5 33.6 80.9 33.6 C 83.5 33.6 85.8 32.1 86.8 29.8 H 89.1 C 87.9 33.3 84.6 35.7 81 35.7 C 76 35.7 72.2 31.8 72.2 26.9 C 72.2 22 76 18.2 80.8 18.2 C 84.1 18.2 87.1 19.9 88.6 22.7 C 89.3 24.1 89.6 25.5 89.6 27.7 Z M 74.5 25.6 H 87.3 C 86.5 22.3 84.1 20.2 80.8 20.2 C 77.6 20.2 75.1 22.4 74.5 25.6 Z M 109.5 27.7 H 94.3 C 94.5 31 97.4 33.6 100.8 33.6 C 103.4 33.6 105.7 32.1 106.7 29.8 H 109 C 107.8 33.3 104.5 35.7 100.9 35.7 C 95.9 35.7 92.1 31.8 92.1 26.9 C 92.1 22 95.9 18.2 100.7 18.2 C 104 18.2 107 19.9 108.5 22.7 C 109.2 24.1 109.5 25.5 109.5 27.7 Z M 94.4 25.6 H 107.2 C 106.4 22.3 104 20.2 100.7 20.2 C 97.5 20.2 95 22.4 94.4 25.6 Z M 129.2 29 H 134.1 C 132.3 33.1 128.3 35.7 123.7 35.7 C 117.1 35.7 111.8 30.5 111.8 23.9 C 111.8 17.5 117 12.3 123.4 12.3 C 126.2 12.3 129 13.3 131.1 15 C 132.5 16.3 133.2 17.3 134.1 19.2 H 129.4 C 127.9 17.2 126.1 16.3 123.5 16.3 C 121.2 16.3 119.2 17.2 117.9 18.8 C 116.7 20.2 116 22.1 116 24 C 116 28.2 119.4 31.7 123.6 31.7 C 125.8 31.7 127.3 30.9 129.2 29 Z M 134.6 35.3 L 144 12.7 H 147.3 L 156.8 35.3 H 152.2 L 149.8 29.5 H 141.7 L 139.2 35.3 H 134.6 Z M 143.2 25.5 H 148.1 L 145.7 18.6 L 143.2 25.5 Z M 159.2 35.3 V 12.7 H 164.4 C 168.1 12.7 170.8 13.3 172.6 14.5 C 175.6 16.4 177.3 19.9 177.3 24 C 177.3 28.7 175.2 32.5 171.6 34.1 C 169.8 35 167.8 35.3 164.5 35.3 H 159.2 Z M 163.4 31.3 H 164.3 C 166.8 31.3 168.6 31 169.8 30.3 C 171.8 29.2 173.1 26.8 173.1 24 C 173.1 21.1 171.7 18.6 169.5 17.5 C 168.2 16.9 166.8 16.7 164.2 16.7 H 163.4 V 31.3 Z" />
+  <g style="stroke:none">
+    <path style="fill:#418fde;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 40,8 -8,8 H 16 v 6 h 8 v 8 h -8 v 10 l -8,8 h 8.1 c 0.6,0 1.1,-0.4 1.3,-1 l 1.5,-4.5 c 0.1,-0.4 0.5,-0.8 0.9,-0.9 l 1.1,-0.4 c 0.4,-0.1 0.9,-0.1 1.3,0.2 l 3.8,2.8 c 0.5,0.4 1.2,0.4 1.7,0 l 3.4,-2.5 c 0.5,-0.4 0.7,-1 0.5,-1.6 l -1.5,-4.5 c -0.1,-0.4 -0.1,-0.9 0.2,-1.3 l 0.7,-1 c 0.3,-0.4 0.7,-0.6 1.1,-0.6 l 4.7,0 c 0.6,0 1.1,-0.4 1.3,-1 l 1.3,-4 c 0.2,-0.6 0,-1.2 -0.5,-1.6 L 35.1,23.7 c -0.4,-0.3 -0.6,-0.7 -0.6,-1.1 V 21.4 c 0,-0.5 0.2,-0.9 0.6,-1.1 l 4.4,-3.2 C 39.8,16.9 40,16.4 40,16 Z" />
+    <path style="display:inline;fill:#ff585d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 32,0 -8,8 h 8 v 8 L 40,8 V 0 Z M 8,32 0,40 v 8 h 8 l 8,-8 H 8 Z" />
+    <path style="fill:#cb333b;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="M 8,0 0,8 V 40 L 8,32 V 8 H 24 L 32,0 Z" />
+    <path style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 8,40 h 8 V 30 h 8 V 22 H 16 V 16 H 32 V 8 H 8 Z" />
+  </g>
+</svg></a>
+  </div>
+
+  <div class="site-nav">
+    <nav class="menu">
+      <button popovertarget="menu-list"
+        popovertargetaction="toggle"
+        class="menu-toggle"
+        title="Menu"
+        aria-label="Menu"><span class="icon-hamburger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20H20M4 4H20M4 12h16"/></svg></span><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+
+      <ul popover id="menu-list" class="menu-list"><li>
+            <a href="/FreeCAD-website/pr-70/features/"
+              class=""
+              title="Features"
+              aria-label="Features"
+              >
+              <span>Features</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/download/"
+              class=""
+              title="Download"
+              aria-label="Download"
+              >
+              <span>Download</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/news/"
+              class="menu-active"
+              title="News"
+              aria-label="News"
+              aria-current="page">
+              <span>News</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/community/"
+              class=""
+              title="Community"
+              aria-label="Community"
+              >
+              <span>Community</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/docs/"
+              class=""
+              title="Documentation"
+              aria-label="Documentation"
+              >
+              <span>Documentation</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/donate/"
+              class="button"
+              title="♥︎ Donate"
+              aria-label="♥︎ Donate"
+              >
+              <span>♥︎ Donate</span>
+            </a>
+          </li></ul>
+    </nav><div class="language-dropdown">
+        <button popovertarget="lang-list"
+          popovertargetaction="toggle"
+          class="lang-toggle"
+          accesskey="l"
+          title="Choose language (Alt + L)"
+          aria-label="Choose language (Alt + L)"><span class="icon-language"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c.9 2.1 1.9 4 3.5 5.5C6 11.9 3.8 13.2 2 14m9-9c-.9 2.1-1.9 4-3.5 5.5C9 11.9 11.1 13.2 13 14M7.5 2V5M13 5H2"/><path d="m11.5 19h9M16 10l6 12M16 10 10 22"/></svg></span></button>
+
+        <ul popover id="lang-list" class="language-list"><li>
+                    <a class="language-active" href="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/">
+                      English 🇬🇧
+                    </a>
+                  </li></ul>
+      </div><div class="chroma-toggle">
+      <button id="chroma-toggle"
+        accesskey="t"
+        title="Switch theme chroma (Alt + T)"
+        aria-label="Switch theme chroma"><span class="icon-dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></span><span class="icon-light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg></span></button>
+    </div>
+
+  </div>
+</header><main><section class="hero">
+
+    <h2 class="title">
+      Tutorial: Getting started with the Path Workbench. Part Two.</h1><div class="metadata"><span class="meta"><span class="icon-date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2V4"/><path d="M8 2V4"/><path d="M3 8H21"/><path d="m8 12v1H7v-1h1m4.5.0v1h-1v-1h1m4.5.0v1h-1v-1h1m-9 5v1H7v-1h1m4.5.0v1h-1v-1h1m4.5.0v1h-1v-1z"/></svg></span><time datetime="2023-12-07T00:00:00Z">December 7, 2023</time>
+    </span><span class="meta authors"><span class="icon-authors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></span><a href="/FreeCAD-website/pr-70/authors/jo-hinchliffe/">Jo Hinchliffe (47)</a></span><span class="meta categories"><span class="icon-categories"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 2 4 8H2z"/><path d="m14 2h8v8h-8z"/><path d="m2 14h8v8H2z"/><path d="m18 18m-4 0a4 4 0 108 0 4 4 0 10-8 0"/></svg></span><a href="/FreeCAD-website/pr-70/categories/tutorial/">Tutorial (19)</a></span><span class="meta"><span class="icon-words"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>1805 words</span><span class="meta"><span class="icon-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></span>9 min</span></div><figure class="article-cover"><img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/main_hu_8c4bba54cd4fd0ba.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/main_hu_8cff1785652ae033.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/main.png 1917w"
+        sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+        src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/main.png"
+        title="Path Workbench"
+        alt="Image"
+        width="1917"
+        height="1003"
+        loading="eager"
+        fetchpriority="high"><figcaption>
+        <div class="internal-tooltip"><span class="icon-important"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 7v0"/><path d="m12 11v7"/><circle cx="12" cy="12" r="11"/></svg></span><span class="tooltip">Path Workbench</span>
+        </div>
+      </figcaption></figure></section><div class="content">
+    <p>In the <a href="https://blog.freecad.org/2023/11/24/tutorial-getting-started-with-the-path-workbench-part-one/"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">first part of this tutorial<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> we looked at setting up the Tool Bit Library when running the Path WB for the first time and creating a custom 3mm endmill tool. As a reminder in these tutorials we will describe tool icons by the text description that is displayed when you rollover an icon. This means you&rsquo;ll have to explore the rollover texts which is a great way to explore the basics of what tools are on each workbench. Also, as a reminder, this tutorial was written using FreeCAD version 0.21.1.</p>
+<p>Continuing from where we were at the end of the first section, in the combo view you can now see the TC:3mmEndmill object. In the TC:3mmEndmill dropdown you can see the 3mm_Endmill object. If you double click on this you will see the shape and attributes dialogue where you can make changes, although its probably more common practice to change shape and attributes in a new tool in the tool library editor. You&rsquo;ll see in the preview window that you have a basic model representation of your 3mm_Endmill tool bit. You can toggle the visibility of this in the preview window in the usual way by highlighting the 3mm_Endmill object in the combo view and clicking the space bar.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-001">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tool_controller_editor_hu_9b17963b9ac7e230.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tool_controller_editor_hu_89a3b8d04a21b642.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tool_controller_editor.png 1920w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tool_controller_editor.png"
+            width="1920"
+            height="1002"
+            title="Tool controller editor"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Tool controller editor</figcaption></figure><div id="img-001" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tool_controller_editor.png"
+            title="Tool controller editor"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-001"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Back in the combo view if you double left click the TC:3mmEndmill object, where &ldquo;TC&rdquo; stands for &ldquo;Tool Controller&rdquo;, you can see the &ldquo;Tool Controller Editor&rdquo; window and it&rsquo;s in here that we can set the feed and speed rates for our tool. Obviously we can&rsquo;t state what these should be as it&rsquo;s dependant on your cutter geometry, the material you are cutting and the machine you are using. The Path WB is really useful in that it separates the tool library object and the tool controller. This means that, sensibly, you can use any tool multiple times in either the same job or across numerous projects setting the feed rates in each instance rather than having a library full of tools that have the same geometry but wildly different feed rates for different materials. A good example of this is you can use the same tool with two different tool controllers to create a &ldquo;roughing&rdquo; pass where the tool moves faster and removes material quickly and a second &ldquo;finishing&rdquo; pass where the tool makes a high quality light cut travelling slowly and removing less material.</p>
+<p>With our tool, tool controller and feed rates set we can begin to create operations and toolpaths. There are lots of different operation types and they are described well over on the<a href="https://wiki.freecad.org/Path_Workbench"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener"> Path WB documentation page<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>. For our simple object we can create a &ldquo;Pocket&rdquo; operation to mill out the central area and we can create a &ldquo;Profile&rdquo; operation to cut the outside geometry of our object. We&rsquo;ll also finally look at adding tags, small modified areas the toolpath avoids cutting fully through, to keep the object connected to the stock rather than becoming loose on our machine.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-002">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/set_origin_hu_a8139a014ab9170a.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/set_origin_hu_7c45fc8a70bddeb5.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/set_origin.png 1920w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/set_origin.png"
+            width="1920"
+            height="1000"
+            title="Set origin"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Set origin</figcaption></figure><div id="img-002" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/set_origin.png"
+            title="Set origin"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-002"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>When we created the job in the first section it created the &ldquo;Job&rdquo; object in the combo view. If we double click the Job object we can then move to the &ldquo;Setup&rdquo; tab in the &ldquo;Job Edit&rdquo; dialogue which appears. One thing we need to consider is the origin point for our operations, this will be the point from which our tool begins its operations. Usually by default we will see that the origin point is at the 0,0,0 co-ordinate of the XY and Z axis. You should see the &ldquo;axis cross&rdquo;, the object made from blue, red and green arrows aligned with each axis. The axis cross will be sat right in the centre of the base of our object. We probably, for this job, want the origin point to be in a known position on the top surface of our stock so that on our machine we can zero the tip of the tool to this point. To do this highlight a corner of the job bounding box and on the &ldquo;setup&rdquo; tab then click the &ldquo;Set Origin&rdquo; button in the alignment section.</p>
+<p>On the &ldquo;Model&rdquo; drop down is the &ldquo;Model-Cut&rdquo; item which is a copy of our object which was created when we made the Job item. For next section where we create operations we are going to use this Model-Cut copy rather than the original &ldquo;Cut&rdquo; item which should be greyed out and not visible. Double check this is the case, the original cut object should be toggled to non visible and the &ldquo;Model-Cut&rdquo; object should be visible.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-003">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_setup_hu_405da14a5c3e6be3.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_setup_hu_239d5fc8ab2458d4.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_setup.png 1920w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_setup.png"
+            width="1920"
+            height="1003"
+            title="Pocket setup"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Pocket setup</figcaption></figure><div id="img-003" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_setup.png"
+            title="Pocket setup"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-003"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>To create the pocket first lets select the face that is the base of the cutout section on the Model-Cut object. Then click the &ldquo;Pocket Shape&rdquo; tool icon. Once pressed a small dialogue with a drop down menu will ask you to select the tool controller you want to assign to the operation, select the TC:3mm_Endmill option. You should now see a &ldquo;Pocket Shape&rdquo; dialogue in the combo view. The Pocket Shape dialogue has numerous tabs and should automatically be open on the lowest tab &ldquo;Operation&rdquo;. Within this tab are the fundamental options for the operation. Of course this differs on what type of operation you are creating. For a pocket operation one of the common options to play with is the &ldquo;Pattern&rdquo; by default this is set to &ldquo;ZigZag&rdquo; but for creating a cylindrical pocket you might opt for an &ldquo;offset&rdquo; path instead. Select the offset option in the &ldquo;Pattern&rdquo; drop down and set the step over percentage to perhaps 40%. You may well want to adjust other aspects of the operation before applying it. Moving to the &ldquo;Depths&rdquo; tab we can adjust the final depth of the pocket cut if needed but it will default to pocket clearing to the face geometry we selected, in our case -4mm. Also on this tab is the &ldquo;Step Down&rdquo; value which is the depth of cut on each pass, this defaults to a step down value equal to the tools diameter, so in our case 3mm. This may be far too deep a cut dependant on your machine or the material so may need adjusting. Click the small icon in the corner of the input box and clear the &ldquo;OpToolDiameter&rdquo; value and then you can set the step down to whatever you chose, we went with 1mm to make the pocket operation complete in 4 passes. You can now hit Apply, or OK and you&rsquo;ll see the green lines of the toolpath appear. Notice that the tool travels to a safe height over the work before beginning it&rsquo;s cuts. Back in the &ldquo;Pocket Shape&rdquo; dialogue you can click on the &ldquo;Heights&rdquo; tab to set the safe and clearance heights to suit your work setup.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-004">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_simulated_hu_e0e7d201cba9f679.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_simulated_hu_9b0a9d93643a8f31.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_simulated.png 1920w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_simulated.png"
+            width="1920"
+            height="1001"
+            title="Pocket simulated"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Pocket simulated</figcaption></figure><div id="img-004" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/pocket_simulated.png"
+            title="Pocket simulated"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-004"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>With the pocket tool path created you can now click the &ldquo;CAM Simulator&rdquo; tool icon to simulate the pass. Once clicked you will see the bounding box is now filled with stock material in the preview window and you have a set of controls in the combo view. You can reduce or increase the speed of the simulation and also the quality. Reducing the quality of simulation is a good idea on slower performing systems. Clicking play you should see the pocket operation take place. If you click OK after the simulation you create a new object which is the cut stock, you can toggle the visibility of this item or delete it as needed.</p>
+<p>Setting up a profile operation is a similar process. If we click the outer edge on the top of our object we can then click the &ldquo;Profile&rdquo; tool icon. A familiar looking dialogue appears called &ldquo;Profile-Profile&rdquo; we can see the same heights, depths and other familiar tabs from the Pocket operation. This dialogue opens on the &ldquo;Operation&rdquo; tab and we can set which side of the geometry we are going to cut on, so in this case &ldquo;Outside&rdquo; we can set the tool controller, and we can set other options such as direction and offset. Offset is useful for if we want to do a profile cut slightly larger than the desired object size we can offset the operation, then we could add a finishing operation separately to bring the object to size.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-005">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_depths_hu_67f40998ca19cc0d.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_depths.png 598w"
+            sizes="(max-width: 500px) 500px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_depths.png"
+            width="598"
+            height="552"
+            title="Profile depths"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Profile depths</figcaption></figure><div id="img-005" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_depths.png"
+            title="Profile depths"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-005"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>As we have selected a single edge we need to give the profile operation a target depth to cut too. On the &ldquo;depths&rdquo; tab we can click the formula editor icon in each input box to clear the default values of the start depth, final depth and step down. We can then set the depths to what we require, so we have a start depth of 0mm, a final depth of -10mm and a step down of 1mm. Click apply to see the paths in preview and OK to close the dialogue.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-006">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_setup_hu_65f9422012eceef2.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_setup_hu_f5d4eb89a4efebb.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_setup.png 1560w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_setup.png"
+            width="1560"
+            height="963"
+            title="Profile setup"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Profile setup</figcaption></figure><div id="img-006" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/profile_setup.png"
+            title="Profile setup"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-006"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Depending on the work holding methods we use on our target machine, it&rsquo;s worth quickly looking at adding tabs to a profile toolpath. Tabs are where material is left uncut to keep the part connected to the stock material so it isn&rsquo;t thrown out of the machine. In the combo view we can highlight the &ldquo;Profile&rdquo; operation object we just created under the &ldquo;Operations&rdquo; dropdown. Next click &ldquo;Path - Path Dressup -Tag&rdquo;. This should automatically create 4 triangular tabs in profile toolpaths. You can adjust the dimensions and geometries of tabs and increase and decrease the number of them and the placement of them in the &ldquo;Holding Tags&rdquo; dialogue. When you are happy with the tags click the apply or OK button. Notice that a &ldquo;Dressup Tag&rdquo; object is created and the profile object is now nested in it&rsquo;s drop down. You can now use the simulator again to view all the toolpaths and check your tag geometry and placement.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-007">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tag_dressup_hu_bc89bc632e962625.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tag_dressup_hu_46cd236b2b28b826.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tag_dressup.png 1920w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tag_dressup.png"
+            width="1920"
+            height="1009"
+            title="Tag dressup"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Tag dressup</figcaption></figure><div id="img-007" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/tag_dressup.png"
+            title="Tag dressup"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-007"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Finally to create G-Codes to send to our machine we need to look at the output options. In the combo view double click the main &ldquo;Job&rdquo; object and in the &ldquo;Job Edit&rdquo; dialogue move to the &ldquo;Output&rdquo; tab. In this we can set up which post processor to use to create G-codes compatible with our machine. There are lots of post processors available, our target machine runs on GRBL so we selected GRBL from the list. Finally we use the &ldquo;Output File&rdquo; input box to set up a filename and location. We then click OK. To create the G-code using the selected post processing and save it to the specified file we highlight the &ldquo;Job&rdquo; item and then click the &ldquo;Post Process&rdquo; tool icon and save our file.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-008">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/output_postprocessor_hu_a5894a5421fd8897.webp 500w, /FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/output_postprocessor.png 589w"
+            sizes="(max-width: 500px) 500px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/output_postprocessor.png"
+            width="589"
+            height="575"
+            title="Output postprocessor"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Output postprocessor</figcaption></figure><div id="img-008" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/output_postprocessor.png"
+            title="Output postprocessor"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-008"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>We&rsquo;ve covered the basics in this two part tutorial. As with many workbenches there are lots and lots more tools and features available and it&rsquo;s definitely worth looking around both the <a href="https://wiki.freecad.org/Path_Workbench"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">official documentation <span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>and also the dedicated <a href="https://forum.freecad.org/viewforum.php?f=15"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">Path/CAM forum<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> area.</p>
+
+  </div><footer class="single-footer">
+    <nav class="pagination"><a class="prev"
+          href="/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-one/#top"
+          title="Previous article"><span class="icon-tri-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 4 12l16 8z"/></svg></span>Tutorial: Getting started with the Path Workbench. Part One.</a><p class="page-number">162 / 253</p><a class="next"
+          href="/FreeCAD-website/pr-70/news/wip-wednesday-13-dec-2023/#top"
+          title="Next article">WIP Wednesday: 13 Dec 2023<span class="icon-tri-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l16-8L4 4z"/></svg></span></a></nav>
+  </footer></main><footer class="site-footer">
+  <a id="top-link"
+    href="#top"
+    accesskey="g"
+    aria-label="Go to Top"
+    title="Go to Top (Alt + G)" >
+    ▲
+  </a><div class="footer-menu"><div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/"
+      class="menu-active"
+      title="FreeCAD"
+      aria-current="page"
+      >
+      FreeCAD</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/features/"
+      class=""
+      title="Features"
+      
+      >
+      Features</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/download/"
+      class=""
+      title="Download"
+      
+      >
+      Download</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/pr-70/download/addons/"
+                title="Addons"
+                class="">
+                <span>
+                  Addons
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-70/download/builds/"
+                title="Development builds"
+                class="">
+                <span>
+                  Development builds
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-70/download/lts/"
+                title="Long-term support"
+                class="">
+                <span>
+                  Long-term support
+                </span>
+              </a>
+            </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/news/"
+      class="menu-active"
+      title="News"
+      aria-current="page"
+      >
+      News</a>
+  </h4><ul><li>
+          <a href="/FreeCAD-website/pr-70/categories/announcement/"
+            title="Announcement"
+            class="">
+            <span>
+              Announcement (76)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/event/"
+            title="Event"
+            class="">
+            <span>
+              Event (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/feature/"
+            title="Feature"
+            class="">
+            <span>
+              Feature (17)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/showcase/"
+            title="Showcase"
+            class="">
+            <span>
+              Showcase (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/tutorial/"
+            title="Tutorial"
+            class="menu-active">
+            <span>
+              Tutorial (19)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/update/"
+            title="Update"
+            class="">
+            <span>
+              Update (112)
+            </span>
+          </a>
+        </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/community/"
+      class=""
+      title="Community"
+      
+      >
+      Community</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/pr-70/community/fpn/"
+                title="FreeCAD Professional Network"
+                class="">
+                <span>
+                  FreeCAD Professional Network
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-70/community/telemetry/"
+                title="Telemetry"
+                class="">
+                <span>
+                  Telemetry
+                </span>
+              </a>
+            </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/docs/"
+      class=""
+      title="Documentation"
+      
+      >
+      Documentation</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/donate/"
+      class=""
+      title="♥︎ Donate"
+      
+      >
+      ♥︎ Donate</a>
+  </h4><ul></ul>
+</div>
+</div><div class="share-links"><a href="https://forum.freecad.org"
+          title="Forum"
+          target="_blank" rel="noopener"><span class="icon-forum"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m8 12c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h6v10a.8.8 22.5 001.4.6L26 52h6c4.4.0 8-3.6 8-8H20C13.4 44 8 38.6 8 32z"/><path d="m20 0c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h0H42L52.6 50.6A.8.8.0 0054 50V40h2c4.4.0 8-3.6 8-8V8c0-4.4-3.6-8-8-8zm4 8h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h16c1.1.0 2 .9 2 2s-.9 2-2 2H24c-1.1.0-2-.9-2-2s.9-2 2-2z"/></svg></span></a><a href="https://github.com/FreeCAD"
+          title="Github"
+          target="_blank" rel="noopener"><span class="icon-github"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3C5.4.3.0 5.7.0 12.3c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6s0-1 0-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9.0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2.0.0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2.0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2.0 1.6.0 2.9.0 3.3.0.3.2.7.8.6C20.6 22.1 24 17.6 24 12.3c0-6.6-5.4-12-12-12"/></svg></span></a><a href="https://fosstodon.org/@FreeCAD"
+          title="Mastodon"
+          target="_blank" rel="noopener"><span class="icon-mastodon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m31.4.0c-10.5.0-12.8.7-14 .8-6.9 1-13.2 5.9-14.8 12.8-.7 3.4-.8 7.2-.7 10.7.2 5 .2 10 .7 15 .3 3.3.9 6.6 1.6 9.8 1.4 6 7.3 10.9 13.1 12.9 6.2 2.1 12.8 2.5 19.2 1 .7-.2 1.4-.3 2.1-.6 1.6-.5 3.4-1 4.7-2v-.1s0 0 0-.1V55.6s0 0 0-.1v-.1s0 0-.1.0h-.1c-4.1 1-8.3 1.5-12.4 1.5-7.2.0-9.2-3.4-9.7-4.8-.5-1.2-.7-2.5-.8-3.8v-.1s0 0 0-.1h.1s0 0 .1.0c4 1 8.1 1.5 12.2 1.5 1 0 2 0 3 0 4.2-.1 8.5-.3 12.6-1.1.1.0.2.0.3-.1 6.4-1.2 12.6-5.1 13.2-14.9.0-.4.1-4 .1-4.5.0-1.4.4-9.7-.1-14.8-.9-6.9-6.9-12.3-14-13.3-1.2-.2-5.7-.8-16.3-.8zm-8.8 10.5c3.5.0 6.1 1.3 7.8 4l1.7 2.8 1.7-2.8c1.8-2.7 4.4-4 7.8-4 3 0 5.4 1.1 7.2 3.1 1.8 2 2.7 4.8 2.7 8.3V39h-6.8V22.4c0-3.5-1.4-5.3-4.4-5.3-3.2.0-4.9 2.1-4.9 6.3v9.1h-6.7V23.4c0-4.2-1.6-6.3-4.9-6.3-2.9.0-4.4 1.8-4.4 5.3V39h-6.8V21.9c0-3.5.9-6.3 2.7-8.3 1.8-2 4.2-3.1 7.2-3.1z"/></svg></span></a><a href="https://www.reddit.com/r/FreeCAD"
+          title="Reddit"
+          target="_blank" rel="noopener"><span class="icon-reddit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M24 11.8c0-1.5-1.2-2.6-2.7-2.6-.7.0-1.4.3-1.8.7-1.8-1.2-4.3-1.9-7-2L14 3.2l4 .9v.1c0 1.2 1 2.2 2.2 2.2s2.2-1 2.2-2.2-1-2.2-2.2-2.2c-.9.0-1.7.6-2 1.4l-4.3-1c-.2.0-.4.1-.4.2l-1.7 5.2c-2.8.0-5.4.8-7.3 2-.5-.4-1.1-.7-1.8-.7-1.5.0-2.7 1.2-2.7 2.6.0 1 .5 1.8 1.3 2.3-.1.3-.1.6-.1.9C1.2 18.8 6 22 11.9 22s10.7-3.2 10.7-7.1c0-.3.0-.5-.1-.8.8-.4 1.4-1.3 1.4-2.3zM6.8 13.6c0-.9.7-1.6 1.6-1.6s1.6.7 1.6 1.6-.7 1.6-1.6 1.6-1.6-.7-1.6-1.6zm9.1 4.7c-.8.8-2 1.2-3.8 1.2-1.8.0-3-.4-3.8-1.2-.1-.1-.1-.4.0-.5s.4-.1.5.0c.7.6 1.7 1 3.3 1 1.6.0 2.6-.3 3.3-1 .1-.1.4-.1.5.0.1.1.1.4.0.5zm-.2-3.1c-.9.0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6z"/></svg></span></a><a href="https://matrix.to/#/#FreeCAD_FreeCAD:gitter.im"
+          title="Matrix"
+          target="_blank" rel="noopener"><span class="icon-matrix"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 22V2H20V0h4v24h-4v-2z"/><path d="m7 7.2v1.3h0c.4-.4.8-.8 1.3-1.1C8.8 7.1 9.4 7 10.1 7c.6.0 1.2.1 1.7.4.5.2.9.7 1.2 1.3.3-.4.7-.8 1.2-1.1s1.1-.5 1.8-.5c.5.0 1 .1 1.4.2.4.1.8.3 1.1.6s.6.6.7 1.1c.2.5.3 1 .3 1.6v6.6h-2.7v-5.6c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.5s-.5-.2-.9-.2-.7.1-.9.2c-.2.1-.4.3-.6.6-.1.2-.2.5-.3.8.0.3-.1.6-.1.9v5.5h-2.7v-5.5c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.6-.2-.1-.6-.2-1-.2-.2.0-.3.0-.5.1s-.4.2-.6.3c-.2.2-.4.4-.5.7-.1.3-.2.7-.2 1.2v5.6H4.5V7.2z"/><path d="m2 2v20h1 1v2H0V0h4v2z"/></svg></span></a><a href="https://discord.gg/w2cTKGzccC"
+          title="Discord"
+          target="_blank" rel="noopener"><span class="icon-discord"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m54.2 11.4C50.1 9.5 45.6 8 41 7.2c-.6 1-1.2 2.4-1.7 3.5-4.9-.7-9.8-.7-14.6.0-.5-1.1-1.1-2.5-1.7-3.5-4.6.8-9.1 2.2-13.2 4.2-8.4 12.6-10.6 24.9-9.5 37.1 5.5 4.1 10.9 6.7 16.2 8.3 1.3-1.8 2.5-3.7 3.5-5.7-1.9-.7-3.7-1.6-5.5-2.7.5-.3.9-.7 1.3-1.1 10.5 4.9 22 4.9 32.4.0.4.4.9.7 1.3 1.1-1.7 1-3.6 1.9-5.5 2.7 1 2 2.2 3.9 3.5 5.7 5.3-1.6 10.7-4.2 16.2-8.3 1.3-14.1-2.3-26.3-9.5-37.1zM21.3 41c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5zm21.3.0c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5z"/></svg></span></a><a href="https://www.facebook.com/FreeCAD"
+          title="Facebook"
+          target="_blank" rel="noopener"><span class="icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M64 32C64 14.3 49.7.0 32 0 14.3.0.0 14.3.0 32 0 47 10.3 59.6 24.3 63.1V41.8h-6.6V32h6.6v-4.2c0-10.9 4.9-15.9 15.6-15.9 2 0 5.5.4 7 .8v8.9c-.8-.1-2.1-.1-3.7-.1-5.2.0-7.3 2-7.3 7.2V32h10.4l-1.8 9.8H35.9v22C51.7 61.9 64 48.4 64 32z"/></svg></span></a><a href="https://www.linkedin.com/groups/4295230"
+          title="Linkedin"
+          target="_blank" rel="noopener"><span class="icon-linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M7.1.0C3.2.0.0 3.2.0 7.1V56.9C0 60.8 3.2 64 7.1 64H56.9c3.9.0 7.1-3.2 7.1-7.1V7.1C64 3.2 60.8.0 56.9.0zm7.4 8.9c3.1.0 5.6 2.5 5.6 5.7.0 3.1-2.5 5.7-5.6 5.7s-5.6-2.5-5.6-5.7c0-3.1 2.5-5.7 5.6-5.7zm29.4 14.5c6.5.0 11.2 4 11.2 12.2V55.1H45.6V38.9c0-4.4-1.7-6.9-5.2-6.9-3.8.0-5.8 2.6-5.8 6.9V55.1H25.4V24.3h9.2v4.2s2.8-5.1 9.3-5.1zM9.8 24.3h9.5V55.1H9.8z"/></svg></span></a><a href="/FreeCAD-website/pr-70/fedishare.html#title=Tutorial%3A&#43;Getting&#43;started&#43;with&#43;the&#43;Path&#43;Workbench.&#43;Part&#43;Two.&amp;description=In%20the%20first%20part%20of%20this%20tutorial%20we%20looked%20at%20setting%20up%20the%20Tool%20Bit%20Library%20when%20running%20the%20Path%20WB%20for%20the%20first%20time%20and%20creating%20a%20custom%203mm%20endmill%20tool.%20As%20a%20reminder%20in%20these%20tutorials%20we%20%e2%80%a6&amp;url=https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-getting-started-with-the-path-workbench-part-two/"
+      title="Share on Fediverse"
+      target="_blank" rel="noopener"><span class="icon-fediverse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m28.4 7.2L11 16c1 1 1.6 2.3 1.8 3.6l17.3-8.8c-.9-1-1.6-2.3-1.8-3.6zm12.7 2.1c-.6 1.2-1.6 2.2-2.9 2.9L51.9 26c.7-1.2 1.7-2.2 2.9-2.9zm-10.8 1.6-10.1 19.9 3 3 10.7-21c-1.4-.2-2.6-.9-3.6-1.9zm7.9 1.3c-1.6.8-3.2.8-4.1.7l1.6 9.8 4.2.7zm-25.3 7.5c.1.9.2 2.4-.6 4l9.9 1.6 2-3.8zm16.9 2.7-2 3.8 23.4 3.7c-.1-.9-.1-2.4.7-4zm-17.6 1.4c-.7 1.2-1.7 2.2-2.9 2.9l15.8 15.8 3.8-1.9zm-3 2.9c-1.6.8-3.1.8-4 .6l3 19.2c.8-.4 2.2-.9 4-.6zm27.4 1.6 3.6 23.4c.8-.4 2.2-.9 4.1-.6L40.8 29zM51.3 30l-8.8 4.5.6 4.2 10.1-5.1c-1-1-1.6-2.3-1.8-3.6zm1.9 3.8-8.9 17.3c1.4.2 2.6.8 3.6 1.8l8.9-17.3c-1.4-.2-2.6-.9-3.6-1.8zm-35.7 2.1-5.1 10c1.4.2 2.6.9 3.6 1.9l4.5-8.9zm19.7 1.3-21.1 10.7c.9 1 1.6 2.3 1.8 3.6l19.9-10.1zm-4.1 7.5-3.8 1.9 8 8.1c.7-1.2 1.7-2.2 2.9-2.9zM18 51.6c.1.9.1 2.4-.7 4l19.3 3.1c-.1-.9-.1-2.4.7-4z"/><circle cx="6.2" cy="20.7" r="6.2"/><circle cx="35" cy="6.2" r="6.2"/><circle cx="57.9" cy="29.1" r="6.2"/><circle cx="11.2" cy="52.6" r="6.2"/><circle cx="43.1" cy="57.9" r="6.2"/></svg></span></a></div>
+<div class="copyright"><span>
+      &copy; 2026 <a href="/FreeCAD-website/pr-70/">FreeCAD</a>
+    </span><span>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span>
+    Made with ♥︎ thanks to <a href="https://gohugo.io/" rel="external noreferrer" target="_blank">Hugo</a>
+  </span>
+</div>
+</footer><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("chroma-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      const dark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("pref-theme", dark ? "dark" : "light");
+    });
+  });
+</script><script src="/FreeCAD-website/pr-70/js/code.min.74f68c0bc6f383a8dc173622a37b85399e34e55bbf1479eb1a642530f6bff2b2.js"
+      type="text/javascript"
+      integrity="sha256-dPaMC8bzg6jcFzYio3uFOZ405Vu/FHnrGmQlMPa/8rI=" crossorigin="anonymous"
+      defer>
+    </script></body>
+
+</html>

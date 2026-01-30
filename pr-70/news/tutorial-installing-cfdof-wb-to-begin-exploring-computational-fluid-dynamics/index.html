@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+
+  <title>FreeCAD | Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics</title>
+  <meta name="description" content="FreeCAD does many amazing things, allows us to create all kinds of geometries and assemblies, but we can also use FreeCAD for analysis of the things we make. One fascinating approach is Computational Fluid Dynamics or CFD.
+">
+  <meta name="keywords" content="CAD, parametric, model, 3D, BIM, CAM, FEM, free, open-source">
+  <link rel="canonical" href="https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/"><link rel="alternate" hreflang="en" href="https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/"><link rel="alternate" hreflang="x-default" href="https://marcuspollio.github.io/FreeCAD-website/pr-70/"><script>
+    const pref = localStorage.getItem("pref-theme");
+    if (pref === "dark") {
+      document.documentElement.classList.add('dark');
+    } else if (pref === "light") {
+      document.documentElement.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script><noscript>
+  <style>
+    #chroma-toggle {
+      display: none;
+    }
+  </style><style>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --header: rgb(16, 16, 16);
+          --theme: rgb(32, 32, 32);
+          --entry: rgb(48, 48, 48);
+          --tone: rgb(64, 64, 64);
+          --footer: rgb(80, 80, 80);
+          --primary: rgb(240, 240, 240);
+          --secondary: rgb(224, 224, 224);
+          --tertiary: rgb(208, 208, 208);
+          --backdrop: rgba(0, 0, 0, 0.8);
+          --backdrop: rgba(0, 0, 0, 0.75);
+          --link-color: rgb(102, 177, 255);
+          --link-hover-color: rgb(65, 143, 222);
+          --underline: underline solid currentColor var(--line);
+          --border: var(--line) solid var(--tone);
+        }
+      }
+    </style></noscript><link href="/FreeCAD-website/pr-70/assets/css/stylesheet.min.c329ea063d4e495c88e3e9ff05e42887e239902aca76c1775f63ba16cf898e56.css"
+  rel="stylesheet"
+  integrity="sha256-wynqBj1OSVyI4&#43;n/BeQoh&#43;I5kCrKdsF3X2O6Fs&#43;JjlY=" crossorigin="anonymous"><link rel="icon" type="image/svg+xml" href="/FreeCAD-website/pr-70/favicon.svg"><link rel="shortcut icon" type="image/x-icon" href="/FreeCAD-website/pr-70/favicon.ico"><link rel="apple-touch-icon" href="/FreeCAD-website/pr-70/apple-touch-icon.png"><meta property="og:url" content="https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/">
+  <meta property="og:site_name" content="FreeCAD">
+  <meta property="og:title" content="Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics">
+  <meta property="og:description" content="FreeCAD does many amazing things, allows us to create all kinds of geometries and assemblies, but we can also use FreeCAD for analysis of the things we make. One fascinating approach is Computational Fluid Dynamics or CFD.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="news">
+    <meta property="article:published_time" content="2025-04-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-24T00:00:00+00:00">
+</head><body class="single type-news kind-page "
+    id="top">
+
+<div class="unsupported-browser">
+  <h3>Hi there! Internet Explorer is no longer supported.</h3>
+  <p>Please use a modern web browser such as Firefox, Chromium or Edge. Thank you!</p>
+</div>
+<header class="site-header">
+
+  <div class="logo">
+    <a href="/FreeCAD-website/pr-70/"accesskey="h"
+      title="FreeCAD Home (Alt + H)"
+      aria-label="FreeCAD Home"><?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" viewBox="0 0 180 48" fill="none" version="1.1">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:date>2024-06-01</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sebastian Tabares Amaya (sytabaresa), Max Wilfinger (maxwxyz)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>The FreeCAD project association AISBL (FPA)</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" style="stroke:none" d="M 50.3 35.3 V 12.7 H 61.8 V 14.7 H 52.6 V 22.9 H 61.5 V 25 H 52.6 V 35.3 H 50.3 Z M 64.5 35.3 V 18.6 H 66.7 V 21 C 67.6 19.1 69 18.3 71.5 18.2 V 20.4 C 68.3 20.7 66.7 22.4 66.7 25.5 V 35.3 H 64.5 Z M 89.6 27.7 H 74.4 C 74.6 31 77.5 33.6 80.9 33.6 C 83.5 33.6 85.8 32.1 86.8 29.8 H 89.1 C 87.9 33.3 84.6 35.7 81 35.7 C 76 35.7 72.2 31.8 72.2 26.9 C 72.2 22 76 18.2 80.8 18.2 C 84.1 18.2 87.1 19.9 88.6 22.7 C 89.3 24.1 89.6 25.5 89.6 27.7 Z M 74.5 25.6 H 87.3 C 86.5 22.3 84.1 20.2 80.8 20.2 C 77.6 20.2 75.1 22.4 74.5 25.6 Z M 109.5 27.7 H 94.3 C 94.5 31 97.4 33.6 100.8 33.6 C 103.4 33.6 105.7 32.1 106.7 29.8 H 109 C 107.8 33.3 104.5 35.7 100.9 35.7 C 95.9 35.7 92.1 31.8 92.1 26.9 C 92.1 22 95.9 18.2 100.7 18.2 C 104 18.2 107 19.9 108.5 22.7 C 109.2 24.1 109.5 25.5 109.5 27.7 Z M 94.4 25.6 H 107.2 C 106.4 22.3 104 20.2 100.7 20.2 C 97.5 20.2 95 22.4 94.4 25.6 Z M 129.2 29 H 134.1 C 132.3 33.1 128.3 35.7 123.7 35.7 C 117.1 35.7 111.8 30.5 111.8 23.9 C 111.8 17.5 117 12.3 123.4 12.3 C 126.2 12.3 129 13.3 131.1 15 C 132.5 16.3 133.2 17.3 134.1 19.2 H 129.4 C 127.9 17.2 126.1 16.3 123.5 16.3 C 121.2 16.3 119.2 17.2 117.9 18.8 C 116.7 20.2 116 22.1 116 24 C 116 28.2 119.4 31.7 123.6 31.7 C 125.8 31.7 127.3 30.9 129.2 29 Z M 134.6 35.3 L 144 12.7 H 147.3 L 156.8 35.3 H 152.2 L 149.8 29.5 H 141.7 L 139.2 35.3 H 134.6 Z M 143.2 25.5 H 148.1 L 145.7 18.6 L 143.2 25.5 Z M 159.2 35.3 V 12.7 H 164.4 C 168.1 12.7 170.8 13.3 172.6 14.5 C 175.6 16.4 177.3 19.9 177.3 24 C 177.3 28.7 175.2 32.5 171.6 34.1 C 169.8 35 167.8 35.3 164.5 35.3 H 159.2 Z M 163.4 31.3 H 164.3 C 166.8 31.3 168.6 31 169.8 30.3 C 171.8 29.2 173.1 26.8 173.1 24 C 173.1 21.1 171.7 18.6 169.5 17.5 C 168.2 16.9 166.8 16.7 164.2 16.7 H 163.4 V 31.3 Z" />
+  <g style="stroke:none">
+    <path style="fill:#418fde;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 40,8 -8,8 H 16 v 6 h 8 v 8 h -8 v 10 l -8,8 h 8.1 c 0.6,0 1.1,-0.4 1.3,-1 l 1.5,-4.5 c 0.1,-0.4 0.5,-0.8 0.9,-0.9 l 1.1,-0.4 c 0.4,-0.1 0.9,-0.1 1.3,0.2 l 3.8,2.8 c 0.5,0.4 1.2,0.4 1.7,0 l 3.4,-2.5 c 0.5,-0.4 0.7,-1 0.5,-1.6 l -1.5,-4.5 c -0.1,-0.4 -0.1,-0.9 0.2,-1.3 l 0.7,-1 c 0.3,-0.4 0.7,-0.6 1.1,-0.6 l 4.7,0 c 0.6,0 1.1,-0.4 1.3,-1 l 1.3,-4 c 0.2,-0.6 0,-1.2 -0.5,-1.6 L 35.1,23.7 c -0.4,-0.3 -0.6,-0.7 -0.6,-1.1 V 21.4 c 0,-0.5 0.2,-0.9 0.6,-1.1 l 4.4,-3.2 C 39.8,16.9 40,16.4 40,16 Z" />
+    <path style="display:inline;fill:#ff585d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 32,0 -8,8 h 8 v 8 L 40,8 V 0 Z M 8,32 0,40 v 8 h 8 l 8,-8 H 8 Z" />
+    <path style="fill:#cb333b;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="M 8,0 0,8 V 40 L 8,32 V 8 H 24 L 32,0 Z" />
+    <path style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.6;stroke-linecap:square" d="m 8,40 h 8 V 30 h 8 V 22 H 16 V 16 H 32 V 8 H 8 Z" />
+  </g>
+</svg></a>
+  </div>
+
+  <div class="site-nav">
+    <nav class="menu">
+      <button popovertarget="menu-list"
+        popovertargetaction="toggle"
+        class="menu-toggle"
+        title="Menu"
+        aria-label="Menu"><span class="icon-hamburger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20H20M4 4H20M4 12h16"/></svg></span><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+
+      <ul popover id="menu-list" class="menu-list"><li>
+            <a href="/FreeCAD-website/pr-70/features/"
+              class=""
+              title="Features"
+              aria-label="Features"
+              >
+              <span>Features</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/download/"
+              class=""
+              title="Download"
+              aria-label="Download"
+              >
+              <span>Download</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/news/"
+              class="menu-active"
+              title="News"
+              aria-label="News"
+              aria-current="page">
+              <span>News</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/community/"
+              class=""
+              title="Community"
+              aria-label="Community"
+              >
+              <span>Community</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/docs/"
+              class=""
+              title="Documentation"
+              aria-label="Documentation"
+              >
+              <span>Documentation</span>
+            </a>
+          </li><li>
+            <a href="/FreeCAD-website/pr-70/donate/"
+              class="button"
+              title="♥︎ Donate"
+              aria-label="♥︎ Donate"
+              >
+              <span>♥︎ Donate</span>
+            </a>
+          </li></ul>
+    </nav><div class="language-dropdown">
+        <button popovertarget="lang-list"
+          popovertargetaction="toggle"
+          class="lang-toggle"
+          accesskey="l"
+          title="Choose language (Alt + L)"
+          aria-label="Choose language (Alt + L)"><span class="icon-language"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c.9 2.1 1.9 4 3.5 5.5C6 11.9 3.8 13.2 2 14m9-9c-.9 2.1-1.9 4-3.5 5.5C9 11.9 11.1 13.2 13 14M7.5 2V5M13 5H2"/><path d="m11.5 19h9M16 10l6 12M16 10 10 22"/></svg></span></button>
+
+        <ul popover id="lang-list" class="language-list"><li>
+                    <a class="language-active" href="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/">
+                      English 🇬🇧
+                    </a>
+                  </li></ul>
+      </div><div class="chroma-toggle">
+      <button id="chroma-toggle"
+        accesskey="t"
+        title="Switch theme chroma (Alt + T)"
+        aria-label="Switch theme chroma"><span class="icon-dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></span><span class="icon-light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg></span></button>
+    </div>
+
+  </div>
+</header><main><section class="hero">
+
+    <h2 class="title">
+      Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics</h1><div class="metadata"><span class="meta"><span class="icon-date"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2V4"/><path d="M8 2V4"/><path d="M3 8H21"/><path d="m8 12v1H7v-1h1m4.5.0v1h-1v-1h1m4.5.0v1h-1v-1h1m-9 5v1H7v-1h1m4.5.0v1h-1v-1h1m4.5.0v1h-1v-1z"/></svg></span><time datetime="2025-04-24T00:00:00Z">April 24, 2025</time>
+    </span><span class="meta authors"><span class="icon-authors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></span><a href="/FreeCAD-website/pr-70/authors/jo-hinchliffe/">Jo Hinchliffe (47)</a></span><span class="meta categories"><span class="icon-categories"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 2 4 8H2z"/><path d="m14 2h8v8h-8z"/><path d="m2 14h8v8H2z"/><path d="m18 18m-4 0a4 4 0 108 0 4 4 0 10-8 0"/></svg></span><a href="/FreeCAD-website/pr-70/categories/tutorial/">Tutorial (19)</a></span><span class="meta"><span class="icon-words"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>1259 words</span><span class="meta"><span class="icon-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></span>6 min</span></div><figure class="article-cover"><img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_header_hu_d7dfda714ae5387b.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_header_hu_7ea8387ff2bf0f03.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_header.png 1181w"
+        sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+        src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_header.png"
+        title="CfdOF WB"
+        alt="Image"
+        width="1181"
+        height="820"
+        loading="eager"
+        fetchpriority="high"><figcaption>
+        <div class="internal-tooltip"><span class="icon-important"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 7v0"/><path d="m12 11v7"/><circle cx="12" cy="12" r="11"/></svg></span><span class="tooltip">CfdOF WB</span>
+        </div>
+      </figcaption></figure></section><div class="content">
+    <p>FreeCAD does many amazing things, allows us to create all kinds of geometries and assemblies, but we can also use FreeCAD for analysis of the things we make. One fascinating approach is Computational Fluid Dynamics or CFD.</p>
+<p>CFD is essentially a tool to show how fluids interact with objects. You could model and assess water flowing through a pipe, or a boat in the sea, or for flying objects, airflow over a part and much more. Of course CFD can also help analyse and perform complex calculations on data so it&rsquo;s not uncommon to use CFD to work out the drag coefficient of an object or it&rsquo;s centre of pressure and much more.</p>
+<p>It&rsquo;s fair to say CFD is a complex area and one that the author is only just beginning to scratch the surface of. Therefore this article isn&rsquo;t a tutorial on CFD directly, rather we&rsquo;ll look at installing the<a href="https://github.com/jaheyns/CfdOF"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener"> CfdOF workbench<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> which requires the installation of some other tools on your system, and then point at some useful tutorials online for you to begin your CFD learning.</p>
+<p>The CfdOF workbench provides an interface for numerous other opensource software&rsquo;s which combine to complete the CFD process. These include some meshing tools. CFD is commonly performed on meshed objects with the target object placed in a containing geometric space, a large cuboid or cylinder perhaps. A good analogy is the containing space is like a virtual wind tunnel, although you aren&rsquo;t limited to just air! The whole environment gets turned into a mesh and often within the mesh various different mesh settings are used (called mesh refinements) so that ultimately you get more detail around the surface of the test object. Therefore meshing is important and there are numerous mesh packages for differing meshing approaches built in to a successful CfdOF workbench install.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-001">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/openfoam_header_hu_55ec14d59b58fa8f.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/openfoam_header_hu_57c6bad40ced8228.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/openfoam_header.png 1488w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/openfoam_header.png"
+            width="1488"
+            height="851"
+            title="Openfoam header"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Openfoam header</figcaption></figure><div id="img-001" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/openfoam_header.png"
+            title="Openfoam header"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-001"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Another component piece of opensource software used by the CfdOF workbench is <a href="https://www.openfoam.com/"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">OpenFOAM<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>. OpenFOAM is the very heart of CFD operations and is a complex piece of software that can perform a wide range of complex fluid flows. It&rsquo;s not just capable in terms of things we might obviously think of as computational fluid dynamics, such as water/gases/air but can also solve problems involving chemical reactions, heat, magnetic fields and more. It&rsquo;s an incredibly versatile and complex bit of kit that gets used, often stand alone, in all manner of scientific and academic environments.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-002">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_header_hu_cfebb69867f0e373.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_header_hu_6b5acef9f2aa015b.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_header.png 1337w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_header.png"
+            width="1337"
+            height="787"
+            title="Paraview header"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Paraview header</figcaption></figure><div id="img-002" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_header.png"
+            title="Paraview header"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-002"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Finally there is also a piece of software called <a href="https://www.paraview.org/"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">Paraview<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>. Paraview is a post processor that, in the case of the CdfOF workbench, can allow you to visualise and analyse case data created with OpenFOAM. It has huge depth and complexity and can perform and create all manner of visualisation as well as performing calculations to aid further analysis of your models.</p>
+<p>So we need to get all these components installed and configured. One advantage of the CdfOF is that it automates some of the setup for us using docker and a docker image. In the FreeCAD documentation there&rsquo;s <a href="https://wiki.freecad.org/CfdOF_Install"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">instructions for installing CdfOF<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> on Windows and Linux (also Mac but support there is variable), also it&rsquo;s worth reading the notes on the <a href="https://github.com/jaheyns/CfdOF"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">CfdOF workbench repository<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> which are also included in the Addon manager listing. We opted to install CdfOF on a machine running stock Debian 12, running the X11 windowing system, and we installed it with the FreeCAD version 1.0 app image.</p>
+<p>To begin, open the FreeCAD app image (if it&rsquo;s the first time you might need to right click on the app image file, select <em>properties</em> and then under the <em>permissions</em> tab you might need to tick the <em>is executable</em> box).</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-003">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_preferences_hu_5444cd4ac309c488.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_preferences.png 915w"
+            sizes="(max-width: 500px) 500px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_preferences.png"
+            width="915"
+            height="935"
+            title="Cfdof preferences"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Cfdof preferences</figcaption></figure><div id="img-003" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/cfdof_preferences.png"
+            title="Cfdof preferences"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-003"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Once FreeCAD has opened, install the CfdOF workbench in the usual way. Click <em>tools-addon manager</em> and then select and install the CfdOF workbench. Once the CfdOF workbench is installed and you&rsquo;ve restarted FreeCAD, you can then click _edit - preferences _and you should see a CfdOF tab appear in the preferences dialogue. Select the CfdOF tab. You will see that it has numerous input boxes into which you can set paths to the directories where the various other pieces of software are installed. If you leave these blank then CfdOF workbench will use the default most common locations for the install locations which worked perfectly for us. So on our Debian 12 machine we used a the terminal application to first run an update to update all packages with</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span></span></span></code></pre></div></div><p>we then ran;</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">openfoam</span></span></span></code></pre></div></div><p>and after OpenFOAM had installed we ran;</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">paraview</span></span></span></code></pre></div></div><p>to install Paraview.</p>
+<p>For the rest of the setup we needed to install docker. In the CfdOF FreeCAD documentation page there is a link supplied to a guide to installing up to date docker on Debian so we simply followed these steps. <a href="https://www.linuxtechi.com/install-docker-engine-on-debian/"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">https://www.linuxtechi.com/install-docker-engine-on-debian/<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a></p>
+<p>One thing that slightly tripped us up was that not only do we need to add our username to the dialout group, but we also need to log out and log back in to our computer having done so! Again in a terminal we used;</p>
+<div class="codeblock"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">usermod</span> <span class="o">-</span><span class="n">aG</span> <span class="n">dialout</span> <span class="s2">&#34;YOURUSERNAMEHERE&#34;</span></span></span></code></pre></div></div><p>and then (after having some problems we eventually remembered to) re login to the computer. Now with docker installed and OpenFOAM and Paraview installed we can fire up the FreeCAD app image, move back to the CfdOF preferences tab and then click the _Install Docker Image _button. Another quick tip is that it can be useful to have the report view panel open in FreeCAD at this point so you can see messages relating to the docker container and any potential problems . To open that panel you can click _view - panels _and then check the <em>Report view</em> box. There is also a small report window if you scroll to the bottom of the CfdOF preferences tab which yields useful information about the install process. Eventually you should be rewarded with a completion message indicating the docker image download has been successful.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-004">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/docker_image_done_hu_a4b05c6330124e80.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/docker_image_done.png 861w"
+            sizes="(max-width: 500px) 500px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/docker_image_done.png"
+            width="861"
+            height="355"
+            title="Docker image done"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Docker image done</figcaption></figure><div id="img-004" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/docker_image_done.png"
+            title="Docker image done"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-004"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Finally before diving headlong into your CFD career it&rsquo;s worth clicking the_ Run dependency checker_ button in the CfdOF preferences dialogue. This should hopefully report that everything is installed correctly.</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-005">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview__hu_4f4bc63ff684d30c.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview__hu_bf70c6dca0d41a4d.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_.png 1920w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_.png"
+            width="1920"
+            height="1080"
+            title="Paraview"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Paraview</figcaption></figure><div id="img-005" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/paraview_.png"
+            title="Paraview"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-005"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>If you are new at CFD then be prepared for quite a lot of learning to even get any tangible output! However, there are heaps of guides and tutorials out there to help you along the way. Whilst we&rsquo;d urge you to look around, the first tutorial we worked through was this <a href="https://www.youtube.com/watch?v=OS4sbbBtZUw&amp;list=PL9H9jQE7y0a5jhlyACRzsdfnx-42AYCCX&amp;index=2&amp;ab_channel=TechBernd"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener">Youtube tutorial<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a> walking through setting up an analysis of water in a broadly L shaped square sided tube. It definitely introduced the general process and order of different operations. This is the first video in a long series of tutorials compiled into a playlist. Jumping to episode 6 in the same series the tutorial covers flowing air over a car design which was very useful for the authors particular areas of interest. After a couple of evening from zero knowledge of CFD the author got to the point of creating a crude analysis of a Ballute parachute design with 6 m/s airflow over it. Whilst the author is continuously discovering errors in approach and discovering better ways to mesh and simulate, it does show that you can begin this journey with very little underlying knowledge!</p>
+<div class="image-with-popover">
+      <figure>
+        <button aria-label="Zoom image" popovertarget="img-006">
+          <img srcset="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/ballute_6ms_U_Magnitude_1744835954345_0_hu_ea2888c60f12dc.webp 500w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/ballute_6ms_U_Magnitude_1744835954345_0_hu_85744535c5f5e7c0.webp 1000w, /FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/ballute_6ms_U_Magnitude_1744835954345_0.png 1367w"
+            sizes="(max-width: 500px) 500px, (max-width: 1000px) 1000px, 75vw"
+            src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/ballute_6ms_U_Magnitude_1744835954345_0.png"
+            width="1367"
+            height="670"
+            title="Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics 7"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+        </button><figcaption>Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics 7</figcaption></figure><div id="img-006" popover>
+          <img src="/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/ballute_6ms_U_Magnitude_1744835954345_0.png"
+            title="Tutorial: Installing CfdOF WB to begin exploring Computational Fluid Dynamics 7"
+            alt="Image"
+            loading="lazy"
+            fetchpriority="low">
+          <button class="close"
+            popovertarget="img-006"
+            popovertargetaction="hide"
+            aria-label="Close image viewer"><span class="icon-cross"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M4 4 20 20"/></svg></span></button>
+        </div></div><p>Finally, the CfdOF workbench has an excellent devoted section on the<a href="https://forum.freecad.org/viewforum.php?f=37"
+  class="external-link"title="Open link"
+    target="_blank"
+    rel="external noreferrer noopener"> FreeCAD forum<span class="icon-external"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7H6A2 2 0 004 9v9a2 2 0 002 2h9a2 2 0 002-2v-5"/><line x1="10" y1="14" x2="20" y2="4"/><polyline points="15 4 20 4 20 9"/></svg></span></a>. It&rsquo;s definitely worth reading through as many posts there as you can as it&rsquo;s a great source of valuable information by other people on the CFD path!</p>
+
+  </div><footer class="single-footer">
+    <nav class="pagination"><a class="prev"
+          href="/FreeCAD-website/pr-70/news/wip-wednesday-23-april-2025/#top"
+          title="Previous article"><span class="icon-tri-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 4 12l16 8z"/></svg></span>WIP Wednesday: 23 April 2025</a><p class="page-number">14 / 253</p><a class="next"
+          href="/FreeCAD-website/pr-70/news/new-grant-fixes-and-improvements-in-techdraw-and-partdesign/#top"
+          title="Next article">New Grant: fixes and improvements in TechDraw and PartDesign<span class="icon-tri-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l16-8L4 4z"/></svg></span></a></nav>
+  </footer></main><footer class="site-footer">
+  <a id="top-link"
+    href="#top"
+    accesskey="g"
+    aria-label="Go to Top"
+    title="Go to Top (Alt + G)" >
+    ▲
+  </a><div class="footer-menu"><div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/"
+      class="menu-active"
+      title="FreeCAD"
+      aria-current="page"
+      >
+      FreeCAD</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/features/"
+      class=""
+      title="Features"
+      
+      >
+      Features</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/download/"
+      class=""
+      title="Download"
+      
+      >
+      Download</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/pr-70/download/addons/"
+                title="Addons"
+                class="">
+                <span>
+                  Addons
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-70/download/builds/"
+                title="Development builds"
+                class="">
+                <span>
+                  Development builds
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-70/download/lts/"
+                title="Long-term support"
+                class="">
+                <span>
+                  Long-term support
+                </span>
+              </a>
+            </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/news/"
+      class="menu-active"
+      title="News"
+      aria-current="page"
+      >
+      News</a>
+  </h4><ul><li>
+          <a href="/FreeCAD-website/pr-70/categories/announcement/"
+            title="Announcement"
+            class="">
+            <span>
+              Announcement (76)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/event/"
+            title="Event"
+            class="">
+            <span>
+              Event (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/feature/"
+            title="Feature"
+            class="">
+            <span>
+              Feature (17)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/showcase/"
+            title="Showcase"
+            class="">
+            <span>
+              Showcase (14)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/tutorial/"
+            title="Tutorial"
+            class="menu-active">
+            <span>
+              Tutorial (19)
+            </span>
+          </a>
+        </li><li>
+          <a href="/FreeCAD-website/pr-70/categories/update/"
+            title="Update"
+            class="">
+            <span>
+              Update (112)
+            </span>
+          </a>
+        </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/community/"
+      class=""
+      title="Community"
+      
+      >
+      Community</a>
+  </h4><ul><li>
+              <a href="/FreeCAD-website/pr-70/community/fpn/"
+                title="FreeCAD Professional Network"
+                class="">
+                <span>
+                  FreeCAD Professional Network
+                </span>
+              </a>
+            </li><li>
+              <a href="/FreeCAD-website/pr-70/community/telemetry/"
+                title="Telemetry"
+                class="">
+                <span>
+                  Telemetry
+                </span>
+              </a>
+            </li></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/docs/"
+      class=""
+      title="Documentation"
+      
+      >
+      Documentation</a>
+  </h4><ul></ul>
+</div>
+<div class="footer-section">
+  <h4>
+    <a href="/FreeCAD-website/pr-70/donate/"
+      class=""
+      title="♥︎ Donate"
+      
+      >
+      ♥︎ Donate</a>
+  </h4><ul></ul>
+</div>
+</div><div class="share-links"><a href="https://forum.freecad.org"
+          title="Forum"
+          target="_blank" rel="noopener"><span class="icon-forum"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m8 12c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h6v10a.8.8 22.5 001.4.6L26 52h6c4.4.0 8-3.6 8-8H20C13.4 44 8 38.6 8 32z"/><path d="m20 0c-4.4.0-8 3.6-8 8v24c0 4.4 3.6 8 8 8h0H42L52.6 50.6A.8.8.0 0054 50V40h2c4.4.0 8-3.6 8-8V8c0-4.4-3.6-8-8-8zm4 8h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h28a2 2 0 012 2 2 2 0 01-2 2H24a2 2 0 01-2-2 2 2 0 012-2zm0 10h16c1.1.0 2 .9 2 2s-.9 2-2 2H24c-1.1.0-2-.9-2-2s.9-2 2-2z"/></svg></span></a><a href="https://github.com/FreeCAD"
+          title="Github"
+          target="_blank" rel="noopener"><span class="icon-github"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3C5.4.3.0 5.7.0 12.3c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6s0-1 0-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9.0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2.0.0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.6 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2.0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2.0 1.6.0 2.9.0 3.3.0.3.2.7.8.6C20.6 22.1 24 17.6 24 12.3c0-6.6-5.4-12-12-12"/></svg></span></a><a href="https://fosstodon.org/@FreeCAD"
+          title="Mastodon"
+          target="_blank" rel="noopener"><span class="icon-mastodon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m31.4.0c-10.5.0-12.8.7-14 .8-6.9 1-13.2 5.9-14.8 12.8-.7 3.4-.8 7.2-.7 10.7.2 5 .2 10 .7 15 .3 3.3.9 6.6 1.6 9.8 1.4 6 7.3 10.9 13.1 12.9 6.2 2.1 12.8 2.5 19.2 1 .7-.2 1.4-.3 2.1-.6 1.6-.5 3.4-1 4.7-2v-.1s0 0 0-.1V55.6s0 0 0-.1v-.1s0 0-.1.0h-.1c-4.1 1-8.3 1.5-12.4 1.5-7.2.0-9.2-3.4-9.7-4.8-.5-1.2-.7-2.5-.8-3.8v-.1s0 0 0-.1h.1s0 0 .1.0c4 1 8.1 1.5 12.2 1.5 1 0 2 0 3 0 4.2-.1 8.5-.3 12.6-1.1.1.0.2.0.3-.1 6.4-1.2 12.6-5.1 13.2-14.9.0-.4.1-4 .1-4.5.0-1.4.4-9.7-.1-14.8-.9-6.9-6.9-12.3-14-13.3-1.2-.2-5.7-.8-16.3-.8zm-8.8 10.5c3.5.0 6.1 1.3 7.8 4l1.7 2.8 1.7-2.8c1.8-2.7 4.4-4 7.8-4 3 0 5.4 1.1 7.2 3.1 1.8 2 2.7 4.8 2.7 8.3V39h-6.8V22.4c0-3.5-1.4-5.3-4.4-5.3-3.2.0-4.9 2.1-4.9 6.3v9.1h-6.7V23.4c0-4.2-1.6-6.3-4.9-6.3-2.9.0-4.4 1.8-4.4 5.3V39h-6.8V21.9c0-3.5.9-6.3 2.7-8.3 1.8-2 4.2-3.1 7.2-3.1z"/></svg></span></a><a href="https://www.reddit.com/r/FreeCAD"
+          title="Reddit"
+          target="_blank" rel="noopener"><span class="icon-reddit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M24 11.8c0-1.5-1.2-2.6-2.7-2.6-.7.0-1.4.3-1.8.7-1.8-1.2-4.3-1.9-7-2L14 3.2l4 .9v.1c0 1.2 1 2.2 2.2 2.2s2.2-1 2.2-2.2-1-2.2-2.2-2.2c-.9.0-1.7.6-2 1.4l-4.3-1c-.2.0-.4.1-.4.2l-1.7 5.2c-2.8.0-5.4.8-7.3 2-.5-.4-1.1-.7-1.8-.7-1.5.0-2.7 1.2-2.7 2.6.0 1 .5 1.8 1.3 2.3-.1.3-.1.6-.1.9C1.2 18.8 6 22 11.9 22s10.7-3.2 10.7-7.1c0-.3.0-.5-.1-.8.8-.4 1.4-1.3 1.4-2.3zM6.8 13.6c0-.9.7-1.6 1.6-1.6s1.6.7 1.6 1.6-.7 1.6-1.6 1.6-1.6-.7-1.6-1.6zm9.1 4.7c-.8.8-2 1.2-3.8 1.2-1.8.0-3-.4-3.8-1.2-.1-.1-.1-.4.0-.5s.4-.1.5.0c.7.6 1.7 1 3.3 1 1.6.0 2.6-.3 3.3-1 .1-.1.4-.1.5.0.1.1.1.4.0.5zm-.2-3.1c-.9.0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6z"/></svg></span></a><a href="https://matrix.to/#/#FreeCAD_FreeCAD:gitter.im"
+          title="Matrix"
+          target="_blank" rel="noopener"><span class="icon-matrix"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M22 22V2H20V0h4v24h-4v-2z"/><path d="m7 7.2v1.3h0c.4-.4.8-.8 1.3-1.1C8.8 7.1 9.4 7 10.1 7c.6.0 1.2.1 1.7.4.5.2.9.7 1.2 1.3.3-.4.7-.8 1.2-1.1s1.1-.5 1.8-.5c.5.0 1 .1 1.4.2.4.1.8.3 1.1.6s.6.6.7 1.1c.2.5.3 1 .3 1.6v6.6h-2.7v-5.6c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.5s-.5-.2-.9-.2-.7.1-.9.2c-.2.1-.4.3-.6.6-.1.2-.2.5-.3.8.0.3-.1.6-.1.9v5.5h-2.7v-5.5c0-.3.0-.6.0-.9s-.1-.5-.2-.8c-.1-.2-.3-.4-.5-.6-.2-.1-.6-.2-1-.2-.2.0-.3.0-.5.1s-.4.2-.6.3c-.2.2-.4.4-.5.7-.1.3-.2.7-.2 1.2v5.6H4.5V7.2z"/><path d="m2 2v20h1 1v2H0V0h4v2z"/></svg></span></a><a href="https://discord.gg/w2cTKGzccC"
+          title="Discord"
+          target="_blank" rel="noopener"><span class="icon-discord"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m54.2 11.4C50.1 9.5 45.6 8 41 7.2c-.6 1-1.2 2.4-1.7 3.5-4.9-.7-9.8-.7-14.6.0-.5-1.1-1.1-2.5-1.7-3.5-4.6.8-9.1 2.2-13.2 4.2-8.4 12.6-10.6 24.9-9.5 37.1 5.5 4.1 10.9 6.7 16.2 8.3 1.3-1.8 2.5-3.7 3.5-5.7-1.9-.7-3.7-1.6-5.5-2.7.5-.3.9-.7 1.3-1.1 10.5 4.9 22 4.9 32.4.0.4.4.9.7 1.3 1.1-1.7 1-3.6 1.9-5.5 2.7 1 2 2.2 3.9 3.5 5.7 5.3-1.6 10.7-4.2 16.2-8.3 1.3-14.1-2.3-26.3-9.5-37.1zM21.3 41c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5zm21.3.0c-3.2.0-5.8-3-5.8-6.5.0-3.6 2.5-6.5 5.8-6.5 3.2.0 5.8 3 5.8 6.5.0 3.6-2.5 6.5-5.8 6.5z"/></svg></span></a><a href="https://www.facebook.com/FreeCAD"
+          title="Facebook"
+          target="_blank" rel="noopener"><span class="icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M64 32C64 14.3 49.7.0 32 0 14.3.0.0 14.3.0 32 0 47 10.3 59.6 24.3 63.1V41.8h-6.6V32h6.6v-4.2c0-10.9 4.9-15.9 15.6-15.9 2 0 5.5.4 7 .8v8.9c-.8-.1-2.1-.1-3.7-.1-5.2.0-7.3 2-7.3 7.2V32h10.4l-1.8 9.8H35.9v22C51.7 61.9 64 48.4 64 32z"/></svg></span></a><a href="https://www.linkedin.com/groups/4295230"
+          title="Linkedin"
+          target="_blank" rel="noopener"><span class="icon-linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="M7.1.0C3.2.0.0 3.2.0 7.1V56.9C0 60.8 3.2 64 7.1 64H56.9c3.9.0 7.1-3.2 7.1-7.1V7.1C64 3.2 60.8.0 56.9.0zm7.4 8.9c3.1.0 5.6 2.5 5.6 5.7.0 3.1-2.5 5.7-5.6 5.7s-5.6-2.5-5.6-5.7c0-3.1 2.5-5.7 5.6-5.7zm29.4 14.5c6.5.0 11.2 4 11.2 12.2V55.1H45.6V38.9c0-4.4-1.7-6.9-5.2-6.9-3.8.0-5.8 2.6-5.8 6.9V55.1H25.4V24.3h9.2v4.2s2.8-5.1 9.3-5.1zM9.8 24.3h9.5V55.1H9.8z"/></svg></span></a><a href="/FreeCAD-website/pr-70/fedishare.html#title=Tutorial%3A&#43;Installing&#43;CfdOF&#43;WB&#43;to&#43;begin&#43;exploring&#43;Computational&#43;Fluid&#43;Dynamics&amp;description=FreeCAD%20does%20many%20amazing%20things,%20allows%20us%20to%20create%20all%20kinds%20of%20geometries%20and%20assemblies,%20but%20we%20can%20also%20use%20FreeCAD%20for%20analysis%20of%20the%20things%20we%20make.%20One%20fascinating%20approach%20is%20Computational%20%e2%80%a6&amp;url=https://marcuspollio.github.io/FreeCAD-website/pr-70/news/tutorial-installing-cfdof-wb-to-begin-exploring-computational-fluid-dynamics/"
+      title="Share on Fediverse"
+      target="_blank" rel="noopener"><span class="icon-fediverse"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" stroke="none"><path d="m28.4 7.2L11 16c1 1 1.6 2.3 1.8 3.6l17.3-8.8c-.9-1-1.6-2.3-1.8-3.6zm12.7 2.1c-.6 1.2-1.6 2.2-2.9 2.9L51.9 26c.7-1.2 1.7-2.2 2.9-2.9zm-10.8 1.6-10.1 19.9 3 3 10.7-21c-1.4-.2-2.6-.9-3.6-1.9zm7.9 1.3c-1.6.8-3.2.8-4.1.7l1.6 9.8 4.2.7zm-25.3 7.5c.1.9.2 2.4-.6 4l9.9 1.6 2-3.8zm16.9 2.7-2 3.8 23.4 3.7c-.1-.9-.1-2.4.7-4zm-17.6 1.4c-.7 1.2-1.7 2.2-2.9 2.9l15.8 15.8 3.8-1.9zm-3 2.9c-1.6.8-3.1.8-4 .6l3 19.2c.8-.4 2.2-.9 4-.6zm27.4 1.6 3.6 23.4c.8-.4 2.2-.9 4.1-.6L40.8 29zM51.3 30l-8.8 4.5.6 4.2 10.1-5.1c-1-1-1.6-2.3-1.8-3.6zm1.9 3.8-8.9 17.3c1.4.2 2.6.8 3.6 1.8l8.9-17.3c-1.4-.2-2.6-.9-3.6-1.8zm-35.7 2.1-5.1 10c1.4.2 2.6.9 3.6 1.9l4.5-8.9zm19.7 1.3-21.1 10.7c.9 1 1.6 2.3 1.8 3.6l19.9-10.1zm-4.1 7.5-3.8 1.9 8 8.1c.7-1.2 1.7-2.2 2.9-2.9zM18 51.6c.1.9.1 2.4-.7 4l19.3 3.1c-.1-.9-.1-2.4.7-4z"/><circle cx="6.2" cy="20.7" r="6.2"/><circle cx="35" cy="6.2" r="6.2"/><circle cx="57.9" cy="29.1" r="6.2"/><circle cx="11.2" cy="52.6" r="6.2"/><circle cx="43.1" cy="57.9" r="6.2"/></svg></span></a></div>
+<div class="copyright"><span>
+      &copy; 2026 <a href="/FreeCAD-website/pr-70/">FreeCAD</a>
+    </span><span>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span>
+    Made with ♥︎ thanks to <a href="https://gohugo.io/" rel="external noreferrer" target="_blank">Hugo</a>
+  </span>
+</div>
+</footer><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("chroma-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      const dark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("pref-theme", dark ? "dark" : "light");
+    });
+  });
+</script><script src="/FreeCAD-website/pr-70/js/code.min.74f68c0bc6f383a8dc173622a37b85399e34e55bbf1479eb1a642530f6bff2b2.js"
+      type="text/javascript"
+      integrity="sha256-dPaMC8bzg6jcFzYio3uFOZ405Vu/FHnrGmQlMPa/8rI=" crossorigin="anonymous"
+      defer>
+    </script></body>
+
+</html>
