@@ -1,16 +1,18 @@
 ---
 title: FreeCAD
 description: Votre propre modeleur 3D paramétrique libre et open source !
+buttons:
+  - link: download
+    style: 'background: var(--secondary); color: var(--theme);'
+  - link: download/releases/1-0
+    label: Découvre les nouveautés
+    style: ''
+cover:
+  image: assembly2.webp
 menus:
   footer:
     weight: 1
-buttons:
-  - link: download
-    style: "background: var(--secondary); color: var(--theme);"
-  - link: download/releases/1-0
-    label: "Découvre les nouveautés"
 ---
-
 
 {{< collection "news" 6 >}}
 

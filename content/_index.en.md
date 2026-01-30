@@ -1,25 +1,27 @@
 ---
 title: FreeCAD
 description: Your own free and open-source 3D parametric modeler!
+buttons:
+  - link: download
+    label: ''
+    style: 'background: var(--secondary); color: var(--theme);'
+  - link: download/releases/1-0
+    label: See what's new
+    style: ''
+cover:
+  image: assembly2.webp
+  caption: a cover caption
 menus:
   footer:
     weight: 1
-buttons:
-  - link: download
-    style: "background: var(--secondary); color: var(--theme);"
-  - link: download/releases/1-0
-    label: "See what's new"
 hero:
-  link: "news/2024/11/freecad-version-1-0-released"
-  title: ""
-cover:
-  image: "assembly2.webp"
-  caption: "a cover caption"
+  link: news/2024/11/freecad-version-1-0-released
+  title: ''
 ---
 
+# FreeCAD is awesome! {style="background: linear-gradient(45deg, #ff9900, #f30246); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration-line: none; padding: 3rem;"}
 
 {{< collection "news" 6 >}}
-
 
 {{< block >}}
 
@@ -52,7 +54,6 @@ Multilingual, peer-reviewed and a rich open ecosystem make FreeCAD the safe choi
 
 {{< /block >}}
 
-
 {{< block >}}
 
 {{< card content="![An image text](assembly2.webp 'An image caption')" />}}
@@ -66,7 +67,6 @@ This is a text.
 {{< /card >}}
 
 {{< /block >}}
-
 
 {{< block >}}
 
@@ -82,7 +82,6 @@ This is another text.
 
 {{< /block >}}
 
-
 {{< block >}}
 
 {{< card content="![An image text](assembly1.webp 'An image caption')" />}}
@@ -96,7 +95,6 @@ This is a text.
 {{< /card >}}
 
 {{< /block >}}
-
 
 {{< block >}}
 
