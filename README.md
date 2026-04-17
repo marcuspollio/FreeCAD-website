@@ -1,5 +1,5 @@
 > [!NOTE]
-> This is a temporary development repository: the [official repository](https://github.com/FreeCAD) will be available at a later time. More documentation will be added later as well.
+> This temporary development repository is now archived. Please use the [official FreeCAD repository](https://github.com/freecad/website) for contributions (April 2026).
 
 [Contributing](#contributing) • [Development](#development) • [Structure](#structure) • [Guidelines](#guidelines) • [Theme](#theme) • [Resources](#resources) • [License](#license)
 
